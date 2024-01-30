@@ -696,7 +696,7 @@ class CustomDocument extends Document {
           <div
             dangerouslySetInnerHTML={{
               __html:
-                "<script src=\"https://unpkg.com/aos@2.3.4/dist/aos.js\"></script>\n<script src='https://unpkg.com/@teleporthq/teleport-custom-scripts'></script>\n<script>\n    AOS.init();\n</script>\n<script>\n    const buttontoRight = document.getElementById('slideItRight');\n    const buttontoLeft = document.getElementById('slideItLeft');\n\n    buttontoRight.onclick = function () {\n      document.getElementById('items').scrollLeft += 300;\n    };\n    buttontoLeft.onclick = function () {\n      document.getElementById('items').scrollLeft -= 300;\n    };\n</script>",
+                '<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>\n<script src=\'https://unpkg.com/@teleporthq/teleport-custom-scripts\'></script>\n<script>\n    AOS.init();\n</script>',
             }}
           ></div>
         </body>
