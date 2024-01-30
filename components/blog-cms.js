@@ -1,7 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
 
-import { DataProvider, Repeater } from '@teleporthq/react-components'
+import {
+  DataProvider,
+  Repeater,
+  DateTimePrimitive,
+} from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
 const BlogCMS = (props) => {
@@ -48,17 +52,44 @@ const BlogCMS = (props) => {
                                 className="blog-cms-image"
                               />
                               <div className="blog-cms-container3">
-                                <button className="blog-cms-button button-secondary button">
-                                  {props.button}
-                                </button>
-                                <span className="blog-cms-text4">
-                                  {context_sp2aum?.date}
-                                </span>
+                                <div className="blog-cms-tags">
+                                  <Repeater
+                                    items={context_sp2aum?.tag || []}
+                                    renderItem={(context_9oxe3a) => (
+                                      <>
+                                        <span className="blog-cms-text4">
+                                          {context_9oxe3a?.tagName}
+                                        </span>
+                                      </>
+                                    )}
+                                    renderEmpty={() => (
+                                      <>
+                                        <span>{props.text8}</span>
+                                      </>
+                                    )}
+                                  />
+                                </div>
+                                <div className="blog-cms-date">
+                                  <span className="blog-cms-date-time">
+                                    <DateTimePrimitive
+                                      format="MMM D, YYYY"
+                                      date={context_sp2aum?.date}
+                                    ></DateTimePrimitive>
+                                  </span>
+                                </div>
                               </div>
-                              <span className="blog-cms-text5">
+                              <span className="blog-cms-text6">
                                 {context_sp2aum?.title}
                               </span>
-                              <span>{props.text6}</span>
+                              <div className="blog-cms-container4">
+                                <span>{props.text6}</span>
+                                <svg
+                                  viewBox="0 0 1024 1024"
+                                  className="blog-cms-icon"
+                                >
+                                  <path d="M810 298h86v256h-648l154 154-60 60-256-256 256-256 60 60-154 154h562v-172z"></path>
+                                </svg>
+                              </div>
                             </div>
                           </a>
                         </Link>
@@ -161,21 +192,91 @@ const BlogCMS = (props) => {
             flex-direction: row;
             justify-content: space-between;
           }
-          .blog-cms-button {
-            font-size: 12px;
-            text-transform: uppercase;
+          .blog-cms-tags {
+            flex: 0 0 auto;
+            width: 70%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
           }
           .blog-cms-text4 {
+            color: var(--dl-color-scheme-white);
+            padding: var(--dl-space-space-halfunit);
             font-size: 12px;
             font-style: normal;
             font-weight: 700;
+            border-color: var(--dl-color-scheme-darkgray);
+            border-width: 1px;
+            margin-right: var(--dl-space-space-unit);
+            border-radius: var(--dl-radius-radius-radius8);
+            background-color: var(--dl-color-scheme-darkgray);
+          }
+          .blog-cms-date {
+            flex: 0 0 auto;
+            width: 30%;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+          }
+          .blog-cms-date-time {
+            font-size: 12px;
+            text-align: right;
+            font-weight: 700;
+          }
+          .blog-cms-text6 {
+            font-style: normal;
+            font-weight: 600;
+          }
+          .blog-cms-container4 {
+            flex: 0 0 auto;
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+          }
+          .blog-cms-icon {
+            width: 24px;
+            height: 24px;
+            margin-left: var(--dl-space-space-halfunit);
           }
 
+          @media (max-width: 1600px) {
+            .blog-cms-container3 {
+              width: 100%;
+              flex-direction: row;
+            }
+            .blog-cms-tags {
+              width: 70%;
+              flex-direction: row;
+            }
+            .blog-cms-text4 {
+              color: var(--dl-color-scheme-white);
+              padding: var(--dl-space-space-halfunit);
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 700;
+              border-color: var(--dl-color-scheme-white80);
+              border-width: 1px;
+              margin-right: var(--dl-space-space-halfunit);
+              border-radius: var(--dl-radius-radius-radius8);
+              background-color: var(--dl-color-scheme-darkgray);
+            }
+            .blog-cms-date {
+              width: 30%;
+              align-items: flex-end;
+            }
+            .blog-cms-date-time {
+              font-size: 12px;
+              text-align: right;
+              font-weight: 700;
+            }
+          }
           @media (max-width: 1200px) {
             .blog-cms-image {
               height: 180px;
             }
-            .blog-cms-text5 {
+            .blog-cms-text6 {
               font-style: normal;
               font-weight: 700;
               margin-bottom: var(--dl-space-space-unit);
@@ -221,9 +322,13 @@ BlogCMS.defaultProps = {
   button: 'Web Design',
   text21: 'Air Duct Cleaning',
   text6: 'Read More',
+  text7: 'Text',
+  imageAlt1: 'image',
   rootClassName: '',
+  text10: 'Text',
   imagealt: 'clean air duct',
   text3: 'Next',
+  text8: 'Text',
   text5: 'Next',
   rootClassName1: '',
   text1: 'Read More',
@@ -232,6 +337,8 @@ BlogCMS.defaultProps = {
   imageAlt: 'image',
   imageSrc: '086d8dc4-0839-4d98-b708-54162939fad4',
   text11: 'Dec 8, 2022',
+  imageSrc1: 'https://play.teleporthq.io/static/svg/default-img.svg',
+  text9: 'Text',
 }
 
 BlogCMS.propTypes = {
@@ -239,9 +346,13 @@ BlogCMS.propTypes = {
   button: PropTypes.string,
   text21: PropTypes.string,
   text6: PropTypes.string,
+  text7: PropTypes.string,
+  imageAlt1: PropTypes.string,
   rootClassName: PropTypes.string,
+  text10: PropTypes.string,
   imagealt: PropTypes.string,
   text3: PropTypes.string,
+  text8: PropTypes.string,
   text5: PropTypes.string,
   rootClassName1: PropTypes.string,
   text1: PropTypes.string,
@@ -250,6 +361,8 @@ BlogCMS.propTypes = {
   imageAlt: PropTypes.string,
   imageSrc: PropTypes.string,
   text11: PropTypes.string,
+  imageSrc1: PropTypes.string,
+  text9: PropTypes.string,
 }
 
 export default BlogCMS

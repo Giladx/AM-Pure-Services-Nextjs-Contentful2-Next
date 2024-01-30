@@ -2,14 +2,18 @@ import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 
-import { DataProvider, Repeater } from '@teleporthq/react-components'
+import {
+  DataProvider,
+  Repeater,
+  DateTimePrimitive,
+} from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
 import Navigation from '../../../components/navigation'
 import Banner from '../../../components/banner'
 import Footer from '../../../components/footer'
-import postPageInitialPaths57cd3Resource from '../../../resources/post-page-initial-paths-57cd3'
-import postPageInitialProps9308cResource from '../../../resources/post-page-initial-props-9308c'
+import postPageInitialPaths205bdResource from '../../../resources/post-page-initial-paths-205bd'
+import postPageInitialProps75181Resource from '../../../resources/post-page-initial-props-75181'
 
 const Post11 = (props) => {
   return (
@@ -48,15 +52,12 @@ const Post11 = (props) => {
                     items={params}
                     renderItem={(PostEntities) => (
                       <>
-                        <div className="post11-blog-cards-container">
-                          <Link href={`/post/${PostEntities?.slug}`}>
-                            <a className="post11-link">
+                        <Link href={`/post/${PostEntities?.slug}`}>
+                          <a>
+                            <div className="post11-blog-cards-container">
                               <div className="post11-blog-card">
                                 <img
-                                  alt={
-                                    PostEntities?.coverImage?.alt ||
-                                    'am pure services'
-                                  }
+                                  alt="image"
                                   src={
                                     PostEntities?.coverImage?.url ||
                                     'https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/a9b9a8f2-be01-41ae-838f-381e8ec5a736/dbcd9cd3-bed8-454a-b81b-2a33e9433078?org_if_sml=1&q=80&force_format=original'
@@ -65,23 +66,49 @@ const Post11 = (props) => {
                                   className="post11-image"
                                 />
                                 <div className="post11-container1">
-                                  <button className="post11-button button-secondary button">
-                                    Fallback value
-                                  </button>
-                                  <span className="post11-text3">
-                                    {[0]?.date}
-                                    {PostEntities?.date}
-                                  </span>
+                                  <div className="post11-tags">
+                                    <Repeater
+                                      items={PostEntities?.tag || []}
+                                      renderItem={(context_9oxe3a) => (
+                                        <>
+                                          <span className="post11-text3">
+                                            {context_9oxe3a?.tagName}
+                                          </span>
+                                        </>
+                                      )}
+                                      renderEmpty={() => (
+                                        <>
+                                          <span>Text</span>
+                                        </>
+                                      )}
+                                    />
+                                  </div>
+                                  <div className="post11-date">
+                                    <span className="post11-date-time">
+                                      <DateTimePrimitive
+                                        format="MMM D, YYYY"
+                                        date={PostEntities?.date}
+                                      ></DateTimePrimitive>
+                                    </span>
+                                  </div>
                                 </div>
-                                <span className="post11-text4">
+                                <span className="post11-text5">
                                   {[0]?.title}
                                   {PostEntities?.title}
                                 </span>
-                                <span>Read More</span>
+                                <div className="post11-container2">
+                                  <span>Read More</span>
+                                  <svg
+                                    viewBox="0 0 1024 1024"
+                                    className="post11-icon"
+                                  >
+                                    <path d="M810 298h86v256h-648l154 154-60 60-256-256 256-256 60 60-154 154h562v-172z"></path>
+                                  </svg>
+                                </div>
                               </div>
-                            </a>
-                          </Link>
-                        </div>
+                            </div>
+                          </a>
+                        </Link>
                       </>
                     )}
                   />
@@ -153,9 +180,7 @@ const Post11 = (props) => {
             align-items: flex-start;
             flex-direction: row;
             justify-content: space-between;
-          }
-          .post11-link {
-            display: contents;
+            text-decoration: none;
           }
           .post11-blog-card {
             flex: 0 0 auto;
@@ -183,23 +208,90 @@ const Post11 = (props) => {
             flex-direction: row;
             justify-content: space-between;
           }
-          .post11-button {
-            font-size: 12px;
-            text-transform: uppercase;
+          .post11-tags {
+            flex: 0 0 auto;
+            width: 70%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
           }
           .post11-text3 {
+            color: var(--dl-color-scheme-white);
+            padding: var(--dl-space-space-halfunit);
             font-size: 12px;
             font-style: normal;
             font-weight: 700;
+            border-color: var(--dl-color-scheme-darkgray);
+            border-width: 1px;
+            margin-right: var(--dl-space-space-unit);
+            border-radius: var(--dl-radius-radius-radius8);
+            background-color: var(--dl-color-scheme-darkgray);
           }
-          .post11-text4 {
-            margin-bottom: var(--dl-space-space-unit);
+          .post11-date {
+            flex: 0 0 auto;
+            width: 30%;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+          }
+          .post11-date-time {
+            font-size: 12px;
+            text-align: right;
+            font-weight: 700;
+          }
+          .post11-text5 {
+            font-style: normal;
+            font-weight: 600;
+          }
+          .post11-container2 {
+            flex: 0 0 auto;
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+          }
+          .post11-icon {
+            width: 24px;
+            height: 24px;
+            margin-left: var(--dl-space-space-halfunit);
+          }
+          @media (max-width: 1600px) {
+            .post11-container1 {
+              width: 100%;
+              flex-direction: row;
+            }
+            .post11-tags {
+              width: 70%;
+              flex-direction: row;
+            }
+            .post11-text3 {
+              color: var(--dl-color-scheme-white);
+              padding: var(--dl-space-space-halfunit);
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 700;
+              border-color: var(--dl-color-scheme-white80);
+              border-width: 1px;
+              margin-right: var(--dl-space-space-halfunit);
+              border-radius: var(--dl-radius-radius-radius8);
+              background-color: var(--dl-color-scheme-darkgray);
+            }
+            .post11-date {
+              width: 30%;
+              align-items: flex-end;
+            }
+            .post11-date-time {
+              font-size: 12px;
+              text-align: right;
+              font-weight: 700;
+            }
           }
           @media (max-width: 1200px) {
             .post11-image {
               height: 180px;
             }
-            .post11-text4 {
+            .post11-text5 {
               font-style: normal;
               font-weight: 700;
               margin-bottom: var(--dl-space-space-unit);
@@ -258,7 +350,7 @@ export default Post11
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPaths57cd3Resource({
+    const response = await postPageInitialPaths205bdResource({
       content_type: 'post',
     })
     const totalCount = response?.meta?.pagination?.total
@@ -286,7 +378,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialProps9308cResource({
+    const response = await postPageInitialProps75181Resource({
       ...context?.params,
       skip: (context.params.page - 1) * 9,
     })

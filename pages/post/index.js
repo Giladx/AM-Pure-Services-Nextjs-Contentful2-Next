@@ -2,13 +2,17 @@ import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 
-import { DataProvider, Repeater } from '@teleporthq/react-components'
+import {
+  DataProvider,
+  Repeater,
+  DateTimePrimitive,
+} from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
 import Navigation from '../../components/navigation'
 import Banner from '../../components/banner'
 import Footer from '../../components/footer'
-import postPageInitialProps5d601Resource from '../../resources/post-page-initial-props-5d601'
+import postPageInitialPropsBff09Resource from '../../resources/post-page-initial-props-bff09'
 
 const Post1 = (props) => {
   return (
@@ -47,15 +51,12 @@ const Post1 = (props) => {
                     items={params}
                     renderItem={(PostEntities) => (
                       <>
-                        <div className="post1-blog-cards-container">
-                          <Link href={`/post/${PostEntities?.slug}`}>
-                            <a className="post1-link">
+                        <Link href={`/post/${PostEntities?.slug}`}>
+                          <a>
+                            <div className="post1-blog-cards-container">
                               <div className="post1-blog-card">
                                 <img
-                                  alt={
-                                    PostEntities?.coverImage?.alt ||
-                                    'am pure services'
-                                  }
+                                  alt="image"
                                   src={
                                     PostEntities?.coverImage?.url ||
                                     'https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/a9b9a8f2-be01-41ae-838f-381e8ec5a736/dbcd9cd3-bed8-454a-b81b-2a33e9433078?org_if_sml=1&q=80&force_format=original'
@@ -64,23 +65,49 @@ const Post1 = (props) => {
                                   className="post1-image"
                                 />
                                 <div className="post1-container1">
-                                  <button className="post1-button button-secondary button">
-                                    Fallback value
-                                  </button>
-                                  <span className="post1-text3">
-                                    {[0]?.date}
-                                    {PostEntities?.date}
-                                  </span>
+                                  <div className="post1-tags">
+                                    <Repeater
+                                      items={PostEntities?.tag || []}
+                                      renderItem={(context_9oxe3a) => (
+                                        <>
+                                          <span className="post1-text3">
+                                            {context_9oxe3a?.tagName}
+                                          </span>
+                                        </>
+                                      )}
+                                      renderEmpty={() => (
+                                        <>
+                                          <span>Text</span>
+                                        </>
+                                      )}
+                                    />
+                                  </div>
+                                  <div className="post1-date">
+                                    <span className="post1-date-time">
+                                      <DateTimePrimitive
+                                        format="MMM D, YYYY"
+                                        date={PostEntities?.date}
+                                      ></DateTimePrimitive>
+                                    </span>
+                                  </div>
                                 </div>
-                                <span className="post1-text4">
+                                <span className="post1-text5">
                                   {[0]?.title}
                                   {PostEntities?.title}
                                 </span>
-                                <span>Read More</span>
+                                <div className="post1-container2">
+                                  <span>Read More</span>
+                                  <svg
+                                    viewBox="0 0 1024 1024"
+                                    className="post1-icon"
+                                  >
+                                    <path d="M810 298h86v256h-648l154 154-60 60-256-256 256-256 60 60-154 154h562v-172z"></path>
+                                  </svg>
+                                </div>
                               </div>
-                            </a>
-                          </Link>
-                        </div>
+                            </div>
+                          </a>
+                        </Link>
                       </>
                     )}
                   />
@@ -152,9 +179,7 @@ const Post1 = (props) => {
             align-items: flex-start;
             flex-direction: row;
             justify-content: space-between;
-          }
-          .post1-link {
-            display: contents;
+            text-decoration: none;
           }
           .post1-blog-card {
             flex: 0 0 auto;
@@ -182,23 +207,90 @@ const Post1 = (props) => {
             flex-direction: row;
             justify-content: space-between;
           }
-          .post1-button {
-            font-size: 12px;
-            text-transform: uppercase;
+          .post1-tags {
+            flex: 0 0 auto;
+            width: 70%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
           }
           .post1-text3 {
+            color: var(--dl-color-scheme-white);
+            padding: var(--dl-space-space-halfunit);
             font-size: 12px;
             font-style: normal;
             font-weight: 700;
+            border-color: var(--dl-color-scheme-darkgray);
+            border-width: 1px;
+            margin-right: var(--dl-space-space-unit);
+            border-radius: var(--dl-radius-radius-radius8);
+            background-color: var(--dl-color-scheme-darkgray);
           }
-          .post1-text4 {
-            margin-bottom: var(--dl-space-space-unit);
+          .post1-date {
+            flex: 0 0 auto;
+            width: 30%;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+          }
+          .post1-date-time {
+            font-size: 12px;
+            text-align: right;
+            font-weight: 700;
+          }
+          .post1-text5 {
+            font-style: normal;
+            font-weight: 600;
+          }
+          .post1-container2 {
+            flex: 0 0 auto;
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+          }
+          .post1-icon {
+            width: 24px;
+            height: 24px;
+            margin-left: var(--dl-space-space-halfunit);
+          }
+          @media (max-width: 1600px) {
+            .post1-container1 {
+              width: 100%;
+              flex-direction: row;
+            }
+            .post1-tags {
+              width: 70%;
+              flex-direction: row;
+            }
+            .post1-text3 {
+              color: var(--dl-color-scheme-white);
+              padding: var(--dl-space-space-halfunit);
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 700;
+              border-color: var(--dl-color-scheme-white80);
+              border-width: 1px;
+              margin-right: var(--dl-space-space-halfunit);
+              border-radius: var(--dl-radius-radius-radius8);
+              background-color: var(--dl-color-scheme-darkgray);
+            }
+            .post1-date {
+              width: 30%;
+              align-items: flex-end;
+            }
+            .post1-date-time {
+              font-size: 12px;
+              text-align: right;
+              font-weight: 700;
+            }
           }
           @media (max-width: 1200px) {
             .post1-image {
               height: 180px;
             }
-            .post1-text4 {
+            .post1-text5 {
               font-style: normal;
               font-weight: 700;
               margin-bottom: var(--dl-space-space-unit);
@@ -257,7 +349,7 @@ export default Post1
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialProps5d601Resource({
+    const response = await postPageInitialPropsBff09Resource({
       ...context?.params,
     })
     if (!response) {
