@@ -13,8 +13,8 @@ import Navigation from '../../components/navigation'
 import Blog from '../../components/blog'
 import Banner from '../../components/banner'
 import Footer from '../../components/footer'
-import postPageInitialPaths1b18cResource from '../../resources/post-page-initial-paths-1b18c'
-import postPageInitialProps81722Resource from '../../resources/post-page-initial-props-81722'
+import postPageInitialPaths069a2Resource from '../../resources/post-page-initial-paths-069a2'
+import postPageInitialProps31913Resource from '../../resources/post-page-initial-props-31913'
 
 const Post = (props) => {
   return (
@@ -217,6 +217,7 @@ const Post = (props) => {
             display: flex;
             align-self: center;
             align-items: flex-start;
+            margin-bottom: var(--dl-space-space-halfunit);
             flex-direction: row;
             justify-content: flex-end;
           }
@@ -283,6 +284,7 @@ const Post = (props) => {
             }
             .post-image1 {
               width: 24px;
+              display: none;
             }
             .post-date {
               width: 50%;
@@ -307,11 +309,28 @@ const Post = (props) => {
               width: 100%;
               padding: 15px;
             }
+            .post-author {
+              align-items: center;
+            }
           }
           @media (max-width: 479px) {
             .post-text {
               width: 100%;
               font-size: 35px;
+            }
+            .post-details {
+              padding-left: var(--dl-space-space-halfunit);
+              padding-right: var(--dl-space-space-halfunit);
+            }
+            .post-author {
+              width: 55%;
+            }
+            .post-date {
+              width: 45%;
+              justify-content: flex-end;
+            }
+            .post-date-time {
+              text-align: right;
             }
           }
         `}
@@ -332,7 +351,7 @@ export default Post
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPaths1b18cResource({
+    const response = await postPageInitialPaths069a2Resource({
       content_type: 'post',
       select: 'fields.slug',
     })
@@ -356,7 +375,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialProps81722Resource({
+    const response = await postPageInitialProps31913Resource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {
