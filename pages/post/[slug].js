@@ -1,7 +1,11 @@
 import React from 'react'
 import Head from 'next/head'
 
-import { DataProvider, Repeater } from '@teleporthq/react-components'
+import {
+  DataProvider,
+  DateTimePrimitive,
+  Repeater,
+} from '@teleporthq/react-components'
 import RichText from '@madebyconnor/rich-text-to-jsx'
 import PropTypes from 'prop-types'
 
@@ -9,8 +13,8 @@ import Navigation from '../../components/navigation'
 import Blog from '../../components/blog'
 import Banner from '../../components/banner'
 import Footer from '../../components/footer'
-import postPageInitialPaths6bed2Resource from '../../resources/post-page-initial-paths-6bed2'
-import postPageInitialPropsD2511Resource from '../../resources/post-page-initial-props-d2511'
+import postPageInitialPathsCbcbfResource from '../../resources/post-page-initial-paths-cbcbf'
+import postPageInitialPropsB957bResource from '../../resources/post-page-initial-props-b957b'
 
 const Post = (props) => {
   return (
@@ -43,17 +47,40 @@ const Post = (props) => {
                     <span className="post-text">{PostEntity?.title}</span>
                   </div>
                 </div>
-                <div className="post-container1">
+                <div className="post-post">
                   <img
                     alt={PostEntity?.coverImage?.alt}
                     src={
                       PostEntity?.coverImage?.url ||
                       'https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/a9b9a8f2-be01-41ae-838f-381e8ec5a736/dbcd9cd3-bed8-454a-b81b-2a33e9433078?org_if_sml=1&q=80&force_format=original'
                     }
-                    loading="lazy"
+                    loading="eager"
                     className="post-image"
                   />
-                  <div className="post-container2">
+                  <div className="post-details">
+                    <div className="post-author">
+                      <span>Author:</span>
+                      <img
+                        src={PostEntity?.author?.picture?.url}
+                        alt={PostEntity?.author?.picture?.name}
+                        loading="lazy"
+                        className="post-image1"
+                      />
+                      <span className="post-name">
+                        {PostEntity?.author?.name}
+                      </span>
+                    </div>
+                    <div className="post-date">
+                      <span className="post-text2">Date:</span>
+                      <span className="post-date-time">
+                        <DateTimePrimitive
+                          format="MMM D, YYYY"
+                          date={PostEntity?.date}
+                        ></DateTimePrimitive>
+                      </span>
+                    </div>
+                  </div>
+                  <div className="post-container1">
                     <RichText richText={PostEntity?.content}></RichText>
                   </div>
                   <img
@@ -63,9 +90,9 @@ const Post = (props) => {
                       'https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/a9b9a8f2-be01-41ae-838f-381e8ec5a736/dbcd9cd3-bed8-454a-b81b-2a33e9433078?org_if_sml=1&q=80&force_format=original'
                     }
                     loading="lazy"
-                    className="post-image1"
+                    className="post-image2"
                   />
-                  <div className="post-container3">
+                  <div className="post-container2">
                     <RichText richText={PostEntity?.content2 || ' '}></RichText>
                   </div>
                   <img
@@ -75,9 +102,9 @@ const Post = (props) => {
                       'https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/a9b9a8f2-be01-41ae-838f-381e8ec5a736/dbcd9cd3-bed8-454a-b81b-2a33e9433078?org_if_sml=1&q=80&force_format=original'
                     }
                     loading="lazy"
-                    className="post-image2"
+                    className="post-image3"
                   />
-                  <div className="post-container4">
+                  <div className="post-container3">
                     <RichText richText={PostEntity?.content3 || ' '}></RichText>
                   </div>
                 </div>
@@ -130,6 +157,7 @@ const Post = (props) => {
             justify-content: center;
           }
           .post-text {
+            width: 100%;
             font-size: 48px;
             align-self: center;
             font-style: normal;
@@ -138,7 +166,7 @@ const Post = (props) => {
             margin-bottom: 0px;
             text-transform: uppercase;
           }
-          .post-container1 {
+          .post-post {
             gap: 12px;
             width: 800px;
             display: flex;
@@ -149,20 +177,59 @@ const Post = (props) => {
           .post-image {
             width: 100%;
             object-fit: cover;
-            margin-bottom: var(--dl-space-space-twounits);
           }
-          .post-container2 {
-            width: 100%;
-            align-self: stretch;
-            line-height: 2;
+          .post-details {
+            flex: 0 0 auto;
+            width: auto;
+            height: auto;
+            display: flex;
+            border-color: var(--dl-color-scheme-darkgray);
+            border-width: 1px;
+            padding-left: var(--dl-space-space-unit);
             margin-bottom: var(--dl-space-space-twounits);
+            padding-right: var(--dl-space-space-unit);
+            border-top-width: 0px;
+            border-left-width: 0px;
+            border-right-width: 0px;
+            border-bottom-width: 1px;
+          }
+          .post-author {
+            flex: 0 0 auto;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
           }
           .post-image1 {
-            width: 100%;
+            width: 70px;
             object-fit: cover;
-            margin-bottom: var(--dl-space-space-twounits);
+            margin-left: var(--dl-space-space-halfunit);
           }
-          .post-container3 {
+          .post-name {
+            font-weight: 700;
+            margin-left: var(--dl-space-space-halfunit);
+          }
+          .post-date {
+            flex: 0 0 auto;
+            width: 50%;
+            height: auto;
+            display: flex;
+            align-self: center;
+            align-items: flex-start;
+            flex-direction: row;
+            justify-content: flex-end;
+          }
+          .post-text2 {
+            width: var(--dl-size-size-small);
+          }
+          .post-date-time {
+            width: auto;
+            height: 100%;
+            align-self: flex-end;
+            font-weight: 700;
+            margin-left: var(--dl-space-space-halfunit);
+          }
+          .post-container1 {
             width: 100%;
             align-self: stretch;
             line-height: 2;
@@ -173,7 +240,18 @@ const Post = (props) => {
             object-fit: cover;
             margin-bottom: var(--dl-space-space-twounits);
           }
-          .post-container4 {
+          .post-container2 {
+            width: 100%;
+            align-self: stretch;
+            line-height: 2;
+            margin-bottom: var(--dl-space-space-twounits);
+          }
+          .post-image3 {
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: var(--dl-space-space-twounits);
+          }
+          .post-container3 {
             width: 100%;
             align-self: stretch;
             line-height: 2;
@@ -187,11 +265,44 @@ const Post = (props) => {
               text-transform: uppercase;
             }
           }
-          @media (max-width: 767px) {
-            .post-text {
-              font-size: 30px;
+          @media (max-width: 991px) {
+            .post-title-wrap {
+              width: 100%;
             }
-            .post-container1 {
+            .post-text {
+              margin: 0p0x;
+              padding: var(--dl-space-space-unit);
+              text-align: center;
+            }
+            .post-author {
+              width: 50%;
+              align-items: flex-start;
+              flex-direction: row;
+              justify-content: flex-start;
+            }
+            .post-image1 {
+              width: 24px;
+            }
+            .post-date {
+              width: 50%;
+            }
+            .post-date-time {
+              align-self: flex-end;
+            }
+          }
+          @media (max-width: 767px) {
+            .post-title-wrap {
+              width: 100%;
+              padding-top: var(--dl-space-space-unit);
+              padding-left: var(--dl-space-space-unit);
+              padding-right: var(--dl-space-space-unit);
+              padding-bottom: var(--dl-space-space-unit);
+            }
+            .post-text {
+              width: 100%;
+              font-size: 42px;
+            }
+            .post-post {
               width: 100%;
               padding: 15px;
             }
@@ -199,7 +310,7 @@ const Post = (props) => {
           @media (max-width: 479px) {
             .post-text {
               width: 100%;
-              font-size: 16px;
+              font-size: 35px;
             }
           }
         `}
@@ -220,7 +331,7 @@ export default Post
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPaths6bed2Resource({
+    const response = await postPageInitialPathsCbcbfResource({
       content_type: 'post',
       select: 'fields.slug',
     })
@@ -244,7 +355,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialPropsD2511Resource({
+    const response = await postPageInitialPropsB957bResource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {

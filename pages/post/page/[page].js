@@ -12,8 +12,8 @@ import PropTypes from 'prop-types'
 import Navigation from '../../../components/navigation'
 import Banner from '../../../components/banner'
 import Footer from '../../../components/footer'
-import postPageInitialPaths6e13cResource from '../../../resources/post-page-initial-paths-6e13c'
-import postPageInitialPropsD2152Resource from '../../../resources/post-page-initial-props-d2152'
+import postPageInitialPaths0c8eaResource from '../../../resources/post-page-initial-paths-0c8ea'
+import postPageInitialProps5ea0aResource from '../../../resources/post-page-initial-props-5ea0a'
 
 const Post11 = (props) => {
   return (
@@ -350,7 +350,7 @@ export default Post11
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPaths6e13cResource({
+    const response = await postPageInitialPaths0c8eaResource({
       content_type: 'post',
     })
     const totalCount = response?.meta?.pagination?.total
@@ -378,7 +378,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialPropsD2152Resource({
+    const response = await postPageInitialProps5ea0aResource({
       ...context?.params,
       skip: (context.params.page - 1) * 9,
     })
