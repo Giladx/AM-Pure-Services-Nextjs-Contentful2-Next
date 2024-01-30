@@ -13,8 +13,8 @@ import Navigation from '../../components/navigation'
 import Blog from '../../components/blog'
 import Banner from '../../components/banner'
 import Footer from '../../components/footer'
-import postPageInitialPathsCbcbfResource from '../../resources/post-page-initial-paths-cbcbf'
-import postPageInitialPropsB957bResource from '../../resources/post-page-initial-props-b957b'
+import postPageInitialPaths1b18cResource from '../../resources/post-page-initial-paths-1b18c'
+import postPageInitialProps81722Resource from '../../resources/post-page-initial-props-81722'
 
 const Post = (props) => {
   return (
@@ -183,7 +183,7 @@ const Post = (props) => {
             width: auto;
             height: auto;
             display: flex;
-            border-color: var(--dl-color-scheme-darkgray);
+            border-color: rgba(216, 216, 216, 0.8);
             border-width: 1px;
             padding-left: var(--dl-space-space-unit);
             margin-bottom: var(--dl-space-space-twounits);
@@ -198,6 +198,7 @@ const Post = (props) => {
             width: 50%;
             display: flex;
             align-items: center;
+            margin-bottom: var(--dl-space-space-halfunit);
             flex-direction: row;
           }
           .post-image1 {
@@ -331,7 +332,7 @@ export default Post
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPathsCbcbfResource({
+    const response = await postPageInitialPaths1b18cResource({
       content_type: 'post',
       select: 'fields.slug',
     })
@@ -355,7 +356,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialPropsB957bResource({
+    const response = await postPageInitialProps81722Resource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {
