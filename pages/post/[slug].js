@@ -13,8 +13,8 @@ import Navigation from '../../components/navigation'
 import Blog from '../../components/blog'
 import Banner from '../../components/banner'
 import Footer from '../../components/footer'
-import postPageInitialPaths069a2Resource from '../../resources/post-page-initial-paths-069a2'
-import postPageInitialProps31913Resource from '../../resources/post-page-initial-props-31913'
+import postPageInitialPathsC0f1eResource from '../../resources/post-page-initial-paths-c0f1e'
+import postPageInitialProps9ad88Resource from '../../resources/post-page-initial-props-9ad88'
 
 const Post = (props) => {
   return (
@@ -61,8 +61,8 @@ const Post = (props) => {
                     <div className="post-author">
                       <span>Author:</span>
                       <img
-                        src={PostEntity?.author?.picture?.url}
                         alt={PostEntity?.author?.picture?.name}
+                        src={PostEntity?.author?.picture?.url}
                         loading="lazy"
                         className="post-image1"
                       />
@@ -183,11 +183,13 @@ const Post = (props) => {
             width: auto;
             height: auto;
             display: flex;
+            align-items: center;
             border-color: rgba(216, 216, 216, 0.8);
             border-width: 1px;
             padding-left: var(--dl-space-space-unit);
             margin-bottom: var(--dl-space-space-twounits);
             padding-right: var(--dl-space-space-unit);
+            flex-direction: row;
             border-top-width: 0px;
             border-left-width: 0px;
             border-right-width: 0px;
@@ -197,6 +199,7 @@ const Post = (props) => {
             flex: 0 0 auto;
             width: 50%;
             display: flex;
+            align-self: center;
             align-items: center;
             margin-bottom: var(--dl-space-space-halfunit);
             flex-direction: row;
@@ -351,7 +354,7 @@ export default Post
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPaths069a2Resource({
+    const response = await postPageInitialPathsC0f1eResource({
       content_type: 'post',
       select: 'fields.slug',
     })
@@ -375,7 +378,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialProps31913Resource({
+    const response = await postPageInitialProps9ad88Resource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {
