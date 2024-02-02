@@ -2,8 +2,10 @@ import { normalize } from '@teleporthq/cms-mappers/contentful'
 
 export default async function (params = {}) {
   const urlParams = {
-    content_type: 'post',
-    limit: 3,
+    content_type: 'tag',
+    ...(params['tagName'] && {
+      'fields.tagName': params['tagName'],
+    }),
   }
   const data = await fetch(
     `${process.env.CMS_URL}/entries?${new URLSearchParams(urlParams)}`,

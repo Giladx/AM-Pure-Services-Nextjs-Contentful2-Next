@@ -12,7 +12,7 @@ import PropTypes from 'prop-types'
 import Navigation from '../../components/navigation'
 import Banner from '../../components/banner'
 import Footer from '../../components/footer'
-import postPageInitialPropsC6546Resource from '../../resources/post-page-initial-props-c6546'
+import postPageInitialPropsF2f33Resource from '../../resources/post-page-initial-props-f2f33'
 
 const Post1 = (props) => {
   return (
@@ -349,7 +349,7 @@ export default Post1
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialPropsC6546Resource({
+    const response = await postPageInitialPropsF2f33Resource({
       ...context?.params,
     })
     if (!response) {

@@ -11,11 +11,13 @@ const AboutUs = (props) => {
         <div className="about-us-max-width max-content-container">
           <div className="about-us-text-container">
             <span className="about-us-text">{props.text}</span>
-            <h2 className="about-us-text1 Heading1">
+            <h2 data-aos="fade-right" className="about-us-text1 Heading1">
               Peace of Mind, Guaranteed with Us.
             </h2>
-            <span className="about-us-text2">{props.text1}</span>
-            <div className="about-us-checklist">
+            <span data-aos="fade-left" className="about-us-text2">
+              {props.text1}
+            </span>
+            <div data-aos="fade-down" className="about-us-checklist">
               <div className="about-us-check-item">
                 <svg viewBox="0 0 1024 1024" className="about-us-icon">
                   <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
@@ -59,6 +61,7 @@ const AboutUs = (props) => {
               alt={props.imageAlt}
               src={props.imageSrc}
               loading="lazy"
+              data-aos="fade"
               className="about-us-image"
             />
           </div>
