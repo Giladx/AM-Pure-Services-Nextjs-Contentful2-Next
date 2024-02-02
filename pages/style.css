@@ -414,10 +414,10 @@
   text-decoration: none;
 }
 .Heading1 {
-  font-size: 56px;
+  font-size: 3.11em;
   font-family: Rubik;
   font-weight: 900;
-  line-height: 70px;
+  line-height: em;
   letter-spacing: 0.01em;
   text-decoration: none;
 }

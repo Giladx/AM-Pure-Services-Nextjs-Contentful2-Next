@@ -4,8 +4,8 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import tagPageInitialPaths7f207Resource from '../../../resources/tag-page-initial-paths-7f207'
-import tagPageInitialPropsB2f9aResource from '../../../resources/tag-page-initial-props-b2f9a'
+import tagPageInitialPaths0a55bResource from '../../../resources/tag-page-initial-paths-0a55b'
+import tagPageInitialPropsB92a4Resource from '../../../resources/tag-page-initial-props-b92a4'
 
 const Tag11 = (props) => {
   return (
@@ -90,7 +90,7 @@ export default Tag11
 
 export async function getStaticPaths() {
   try {
-    const response = await tagPageInitialPaths7f207Resource({
+    const response = await tagPageInitialPaths0a55bResource({
       content_type: 'tag',
     })
     const totalCount = response?.meta?.pagination?.total
@@ -118,7 +118,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await tagPageInitialPropsB2f9aResource({
+    const response = await tagPageInitialPropsB92a4Resource({
       ...context?.params,
       skip: (context.params.page - 1) * 10,
     })

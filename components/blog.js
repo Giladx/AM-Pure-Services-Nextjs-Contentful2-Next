@@ -11,7 +11,7 @@ const Blog = (props) => {
       <div className={`blog-blog section-container ${props.rootClassName} `}>
         <div className="blog-max-width max-content-container">
           <span className="blog-text">{props.text}</span>
-          <h2 className="blog-text1 Heading2">
+          <h2 className="blog-text1 Heading1">
             <span>Our Services</span>
             <br></br>
           </h2>
