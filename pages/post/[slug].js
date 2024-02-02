@@ -13,8 +13,8 @@ import Navigation from '../../components/navigation'
 import Blog from '../../components/blog'
 import Banner from '../../components/banner'
 import Footer from '../../components/footer'
-import postPageInitialPaths9a5b9Resource from '../../resources/post-page-initial-paths-9a5b9'
-import postPageInitialProps20f3fResource from '../../resources/post-page-initial-props-20f3f'
+import postPageInitialPathsC17e3Resource from '../../resources/post-page-initial-paths-c17e3'
+import postPageInitialProps26a42Resource from '../../resources/post-page-initial-props-26a42'
 
 const Post = (props) => {
   return (
@@ -299,6 +299,7 @@ const Post = (props) => {
           @media (max-width: 767px) {
             .post-title-wrap {
               width: 100%;
+              margin-top: var(--dl-space-space-oneandhalfunits);
               padding-top: var(--dl-space-space-unit);
               padding-left: var(--dl-space-space-unit);
               padding-right: var(--dl-space-space-unit);
@@ -319,6 +320,10 @@ const Post = (props) => {
             }
           }
           @media (max-width: 479px) {
+            .post-title-wrap {
+              padding: var(--dl-space-space-unit);
+              margin-top: var(--dl-space-space-oneandhalfunits);
+            }
             .post-text {
               width: 100%;
               font-size: 35px;
@@ -360,7 +365,7 @@ export default Post
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPaths9a5b9Resource({
+    const response = await postPageInitialPathsC17e3Resource({
       content_type: 'post',
       select: 'fields.slug',
     })
@@ -384,7 +389,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialProps20f3fResource({
+    const response = await postPageInitialProps26a42Resource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {
