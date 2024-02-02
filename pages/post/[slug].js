@@ -13,8 +13,8 @@ import Navigation from '../../components/navigation'
 import Blog from '../../components/blog'
 import Banner from '../../components/banner'
 import Footer from '../../components/footer'
-import postPageInitialPathsC17e3Resource from '../../resources/post-page-initial-paths-c17e3'
-import postPageInitialProps26a42Resource from '../../resources/post-page-initial-props-26a42'
+import postPageInitialPathsD8d3bResource from '../../resources/post-page-initial-paths-d8d3b'
+import postPageInitialProps52d17Resource from '../../resources/post-page-initial-props-52d17'
 
 const Post = (props) => {
   return (
@@ -158,7 +158,7 @@ const Post = (props) => {
           }
           .post-text {
             width: 100%;
-            font-size: 48px;
+            font-size: 3em;
             align-self: center;
             font-style: normal;
             font-family: Rubik;
@@ -263,7 +263,7 @@ const Post = (props) => {
           }
           @media (max-width: 1200px) {
             .post-text {
-              font-size: 48px;
+              font-size: 2.5em;
               font-style: normal;
               font-family: Rubik;
               font-weight: 900;
@@ -307,7 +307,7 @@ const Post = (props) => {
             }
             .post-text {
               width: 100%;
-              font-size: 42px;
+              font-size: 2em;
             }
             .post-post {
               width: 100%;
@@ -326,7 +326,7 @@ const Post = (props) => {
             }
             .post-text {
               width: 100%;
-              font-size: 35px;
+              font-size: 1.5em;
             }
             .post-post {
               margin-top: var(--dl-space-space-twounits);
@@ -365,7 +365,7 @@ export default Post
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPathsC17e3Resource({
+    const response = await postPageInitialPathsD8d3bResource({
       content_type: 'post',
       select: 'fields.slug',
     })
@@ -389,7 +389,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialProps26a42Resource({
+    const response = await postPageInitialProps52d17Resource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {
