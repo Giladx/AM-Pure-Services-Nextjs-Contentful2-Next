@@ -343,7 +343,7 @@ const Home = (props) => {
           }
           .home-animation {
             height: auto;
-            margin-bottom: var(--dl-space-space-sixunits);
+            margin-bottom: var(--dl-space-space-fiveunits);
           }
           .home-content1 {
             width: 100%;
@@ -533,6 +533,7 @@ const Home = (props) => {
             }
             .home-animation {
               height: auto;
+              margin-bottom: var(--dl-space-space-threeunits);
             }
             .home-image5 {
               height: 960px;
@@ -581,6 +582,9 @@ const Home = (props) => {
               margin-bottom: var(--dl-space-space-unit);
             }
             .home-text03 {
+              margin-bottom: var(--dl-space-space-twounits);
+            }
+            .home-animation {
               margin-bottom: var(--dl-space-space-twounits);
             }
             .home-content1 {
@@ -655,6 +659,9 @@ const Home = (props) => {
             }
             .home-content-wrap {
               width: 100%;
+            }
+            .home-animation {
+              margin-bottom: var(--dl-space-space-unit);
             }
             .home-content-wrap1 {
               width: 100%;
