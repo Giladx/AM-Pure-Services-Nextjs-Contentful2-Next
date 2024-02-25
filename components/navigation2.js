@@ -306,7 +306,7 @@ Navigation2.defaultProps = {
   button: '(888)-503-1722',
   button1: '(888)-503-1722',
   button2: '(888)-503-1722',
-  imageSrc1: '1cb6f7b1-163c-4d62-89d2-6889168ed0f1',
+  imageSrc1: '/external/logo-651.svg',
   imageAlt1: 'image',
 }
 

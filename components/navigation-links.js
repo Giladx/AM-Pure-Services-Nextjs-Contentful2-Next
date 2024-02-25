@@ -12,23 +12,28 @@ const NavigationLinks = (props) => {
             {props.link1}
           </a>
         </Link>
-        <Link href="/post">
+        <Link href="/services">
           <a className="navigation-links-link1 Navigation-LinkLaptopMobile">
             {props.link2}
           </a>
         </Link>
+        <Link href="/post">
+          <a className="navigation-links-link3 Navigation-LinkLaptopMobile">
+            {props.link21}
+          </a>
+        </Link>
         <Link href="/about">
-          <a className="navigation-links-link2 Navigation-LinkLaptopMobile">
+          <a className="navigation-links-link4 Navigation-LinkLaptopMobile">
             {props.link3}
           </a>
         </Link>
         <Link href="/contact">
-          <a className="navigation-links-link3 Navigation-LinkLaptopMobile">
+          <a className="navigation-links-link5 Navigation-LinkLaptopMobile">
             {props.link4}
           </a>
         </Link>
         <Link href="/business-relations">
-          <a className="navigation-links-link4 Navigation-LinkLaptopMobile">
+          <a className="navigation-links-link6 Navigation-LinkLaptopMobile">
             {props.link5}
           </a>
         </Link>
@@ -54,12 +59,6 @@ const NavigationLinks = (props) => {
             margin-left: var(--dl-space-space-oneandhalfunits);
             text-decoration: none;
           }
-          .navigation-links-link2 {
-            cursor: pointer;
-            transition: 0.3s;
-            margin-left: var(--dl-space-space-oneandhalfunits);
-            text-decoration: none;
-          }
           .navigation-links-link3 {
             cursor: pointer;
             transition: 0.3s;
@@ -70,10 +69,32 @@ const NavigationLinks = (props) => {
             cursor: pointer;
             transition: 0.3s;
             margin-left: var(--dl-space-space-oneandhalfunits);
+            text-decoration: none;
+          }
+          .navigation-links-link5 {
+            cursor: pointer;
+            transition: 0.3s;
+            margin-left: var(--dl-space-space-oneandhalfunits);
+            text-decoration: none;
+          }
+          .navigation-links-link6 {
+            cursor: pointer;
+            transition: 0.3s;
+            margin-left: var(--dl-space-space-oneandhalfunits);
             margin-right: var(--dl-space-space-oneandhalfunits);
             text-decoration: none;
           }
 
+          .navigation-links-root-class-name8 {
+            width: auto;
+            min-width: auto;
+            margin-right: 0px;
+          }
+          .navigation-links-root-class-name9 {
+            width: auto;
+            min-width: auto;
+            margin-right: 0px;
+          }
           .navigation-links-root-class-name17 {
             width: auto;
             min-width: auto;
@@ -83,15 +104,52 @@ const NavigationLinks = (props) => {
             .navigation-links-link1 {
               margin-left: 15px;
             }
-            .navigation-links-link2 {
-              margin-left: 15px;
-            }
             .navigation-links-link3 {
               margin-left: 15px;
             }
             .navigation-links-link4 {
               margin-left: 15px;
+            }
+            .navigation-links-link5 {
+              margin-left: 15px;
+            }
+            .navigation-links-link6 {
+              margin-left: 15px;
               margin-right: 15px;
+            }
+          }
+          @media (max-width: 991px) {
+            .navigation-links-nav {
+              align-items: flex-start;
+              flex-direction: column;
+            }
+            .navigation-links-link {
+              padding-bottom: var(--dl-space-space-unit);
+            }
+            .navigation-links-link1 {
+              margin-left: 0px;
+              margin-right: 0px;
+              padding-bottom: var(--dl-space-space-unit);
+            }
+            .navigation-links-link3 {
+              margin-left: 0px;
+              margin-right: 0px;
+              padding-bottom: var(--dl-space-space-unit);
+            }
+            .navigation-links-link4 {
+              margin-left: 0px;
+              margin-right: 0px;
+              padding-bottom: var(--dl-space-space-unit);
+            }
+            .navigation-links-link5 {
+              margin-left: 0px;
+              margin-right: 0px;
+              padding-bottom: var(--dl-space-space-unit);
+            }
+            .navigation-links-link6 {
+              margin-left: 0px;
+              margin-right: 0px;
+              padding-bottom: var(--dl-space-space-unit);
             }
           }
           @media (max-width: 767px) {
@@ -106,15 +164,19 @@ const NavigationLinks = (props) => {
               margin-left: 0px;
               margin-bottom: var(--dl-space-space-unit);
             }
-            .navigation-links-link2 {
-              margin-left: 0px;
-              margin-bottom: var(--dl-space-space-unit);
-            }
             .navigation-links-link3 {
               margin-left: 0px;
               margin-bottom: var(--dl-space-space-unit);
             }
             .navigation-links-link4 {
+              margin-left: 0px;
+              margin-bottom: var(--dl-space-space-unit);
+            }
+            .navigation-links-link5 {
+              margin-left: 0px;
+              margin-bottom: var(--dl-space-space-unit);
+            }
+            .navigation-links-link6 {
               margin-left: 0px;
               margin-bottom: var(--dl-space-space-unit);
             }
@@ -126,6 +188,7 @@ const NavigationLinks = (props) => {
 }
 
 NavigationLinks.defaultProps = {
+  link21: 'BLOG',
   link3: 'ABOUT',
   rootClassName: '',
   link2: 'SERVICES',
@@ -135,6 +198,7 @@ NavigationLinks.defaultProps = {
 }
 
 NavigationLinks.propTypes = {
+  link21: PropTypes.string,
   link3: PropTypes.string,
   rootClassName: PropTypes.string,
   link2: PropTypes.string,

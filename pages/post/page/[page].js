@@ -2,18 +2,14 @@ import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 
-import {
-  DataProvider,
-  Repeater,
-  DateTimePrimitive,
-} from '@teleporthq/react-components'
+import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
 import Navigation from '../../../components/navigation'
 import Banner from '../../../components/banner'
 import Footer from '../../../components/footer'
-import postPageInitialPaths67779Resource from '../../../resources/post-page-initial-paths-67779'
-import postPageInitialProps305adResource from '../../../resources/post-page-initial-props-305ad'
+import postPageInitialPathsTqTResource from '../../../resources/post-page-initial-paths-tq_t_'
+import postPageInitialPropsTqIlResource from '../../../resources/post-page-initial-props-tq_il'
 
 const Post11 = (props) => {
   return (
@@ -39,7 +35,7 @@ const Post11 = (props) => {
         <Navigation rootClassName="navigation-root-class-name9"></Navigation>
         <div className="post11-title">
           <span className="post11-text">
-            <span>SERVICES</span>
+            <span>BLOG</span>
             <br></br>
           </span>
         </div>
@@ -54,57 +50,42 @@ const Post11 = (props) => {
                       <>
                         <Link href={`/post/${PostEntities?.slug}`}>
                           <a>
-                            <div className="post11-blog-cards-container">
-                              <div className="post11-blog-card">
-                                <img
-                                  alt="image"
-                                  src={
-                                    PostEntities?.coverImage?.url ||
-                                    'https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/a9b9a8f2-be01-41ae-838f-381e8ec5a736/dbcd9cd3-bed8-454a-b81b-2a33e9433078?org_if_sml=1&q=80&force_format=original'
-                                  }
-                                  loading="lazy"
-                                  className="post11-image"
+                            <div className="post11-blog-card">
+                              <img
+                                alt="image"
+                                src={PostEntities?.coverImage?.url}
+                                loading="lazy"
+                                className="post11-image"
+                              />
+                              <div className="post11-container1">
+                                <Repeater
+                                  items={PostEntities?.tag || ' '}
+                                  renderItem={(context_8pi5th) => (
+                                    <>
+                                      <span className="post11-text3">
+                                        {context_8pi5th?.tagName}
+                                      </span>
+                                    </>
+                                  )}
                                 />
-                                <div className="post11-container1">
-                                  <div className="post11-tags">
-                                    <Repeater
-                                      items={PostEntities?.tag || []}
-                                      renderItem={(context_9oxe3a) => (
-                                        <>
-                                          <span className="post11-text3">
-                                            {context_9oxe3a?.tagName}
-                                          </span>
-                                        </>
-                                      )}
-                                      renderEmpty={() => (
-                                        <>
-                                          <span>Text</span>
-                                        </>
-                                      )}
-                                    />
-                                  </div>
-                                  <div className="post11-date">
-                                    <span className="post11-date-time">
-                                      <DateTimePrimitive
-                                        format="MMM D, YYYY"
-                                        date={PostEntities?.date}
-                                      ></DateTimePrimitive>
-                                    </span>
-                                  </div>
-                                </div>
-                                <span className="post11-text5">
-                                  {[0]?.title}
-                                  {PostEntities?.title}
+                                <button className="post11-button button-secondary button">
+                                  {PostEntities?.tag}
+                                </button>
+                                <span className="post11-text4">
+                                  Dec 8, 2022
                                 </span>
-                                <div className="post11-container2">
-                                  <span>Read More</span>
-                                  <svg
-                                    viewBox="0 0 1024 1024"
-                                    className="post11-icon"
-                                  >
-                                    <path d="M810 298h86v256h-648l154 154-60 60-256-256 256-256 60 60-154 154h562v-172z"></path>
-                                  </svg>
-                                </div>
+                              </div>
+                              <span className="post11-text5">
+                                {PostEntities?.title}
+                              </span>
+                              <div className="post11-container2">
+                                <span className="post11-text6">Read More</span>
+                                <svg
+                                  viewBox="0 0 1024 1024"
+                                  className="post11-icon"
+                                >
+                                  <path d="M810 298h86v256h-648l154 154-60 60-256-256 256-256 60 60-154 154h562v-172z"></path>
+                                </svg>
                               </div>
                             </div>
                           </a>
@@ -148,7 +129,7 @@ const Post11 = (props) => {
             font-size: 48px;
             align-self: center;
             text-align: center;
-            font-family: Rubik;
+            font-family: 'Rubik';
             font-weight: 900;
             line-height: 1.3em;
             letter-spacing: 0.01em;
@@ -172,15 +153,6 @@ const Post11 = (props) => {
             grid-gap: 1.5rem;
             align-self: center;
             grid-template-columns: repeat(3, 1fr);
-          }
-          .post11-blog-cards-container {
-            flex: 0 0 auto;
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: row;
-            justify-content: space-between;
-            text-decoration: none;
           }
           .post11-blog-card {
             flex: 0 0 auto;
@@ -208,40 +180,37 @@ const Post11 = (props) => {
             flex-direction: row;
             justify-content: space-between;
           }
-          .post11-tags {
-            flex: 0 0 auto;
-            width: 70%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: row;
-          }
           .post11-text3 {
             color: var(--dl-color-scheme-white);
-            padding: var(--dl-space-space-halfunit);
+            width: auto;
             font-size: 12px;
             font-style: normal;
-            font-weight: 700;
+            text-align: center;
+            font-weight: 900;
+            line-height: 1.2;
+            padding-top: var(--dl-space-space-halfunit);
             border-color: var(--dl-color-scheme-darkgray);
             border-width: 1px;
-            margin-right: var(--dl-space-space-unit);
+            padding-left: var(--dl-space-space-unit);
             border-radius: var(--dl-radius-radius-radius8);
+            padding-right: var(--dl-space-space-unit);
+            padding-bottom: var(--dl-space-space-halfunit);
             background-color: var(--dl-color-scheme-darkgray);
           }
-          .post11-date {
-            flex: 0 0 auto;
-            width: 30%;
-            display: flex;
-            align-items: flex-end;
-            flex-direction: column;
-          }
-          .post11-date-time {
+          .post11-button {
+            display: none;
             font-size: 12px;
-            text-align: right;
-            font-weight: 700;
+            text-transform: uppercase;
+          }
+          .post11-text4 {
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 900;
           }
           .post11-text5 {
             font-style: normal;
-            font-weight: 600;
+            font-weight: 300;
+            margin-bottom: var(--dl-space-space-halfunit);
           }
           .post11-container2 {
             flex: 0 0 auto;
@@ -251,41 +220,14 @@ const Post11 = (props) => {
             align-items: flex-start;
             justify-content: flex-start;
           }
+          .post11-text6 {
+            font-style: normal;
+            font-weight: 900;
+          }
           .post11-icon {
             width: 24px;
             height: 24px;
             margin-left: var(--dl-space-space-halfunit);
-          }
-          @media (max-width: 1600px) {
-            .post11-container1 {
-              width: 100%;
-              flex-direction: row;
-            }
-            .post11-tags {
-              width: 70%;
-              flex-direction: row;
-            }
-            .post11-text3 {
-              color: var(--dl-color-scheme-white);
-              padding: var(--dl-space-space-halfunit);
-              font-size: 12px;
-              font-style: normal;
-              font-weight: 700;
-              border-color: var(--dl-color-scheme-white80);
-              border-width: 1px;
-              margin-right: var(--dl-space-space-halfunit);
-              border-radius: var(--dl-radius-radius-radius8);
-              background-color: var(--dl-color-scheme-darkgray);
-            }
-            .post11-date {
-              width: 30%;
-              align-items: flex-end;
-            }
-            .post11-date-time {
-              font-size: 12px;
-              text-align: right;
-              font-weight: 700;
-            }
           }
           @media (max-width: 1200px) {
             .post11-image {
@@ -303,10 +245,6 @@ const Post11 = (props) => {
               width: var(--dl-size-size-maxwidth);
               max-width: 480px;
               grid-template-columns: repeat(1, 1fr);
-            }
-            .post11-blog-cards-container {
-              align-items: center;
-              flex-direction: column;
             }
             .post11-blog-card {
               max-width: 550px;
@@ -329,7 +267,8 @@ const Post11 = (props) => {
               padding: 15px;
             }
             .post11-blog-card {
-              max-width: 350px;
+              max-width: auto;
+              flex-direction: column;
             }
           }
         `}
@@ -350,7 +289,7 @@ export default Post11
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPaths67779Resource({
+    const response = await postPageInitialPathsTqTResource({
       content_type: 'post',
     })
     const totalCount = response?.meta?.pagination?.total
@@ -378,7 +317,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialProps305adResource({
+    const response = await postPageInitialPropsTqIlResource({
       ...context?.params,
       skip: (context.params.page - 1) * 9,
     })
