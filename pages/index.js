@@ -2,6 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 
+import Script from 'dangerous-html/react'
+
 import Navigation from '../components/navigation'
 import ListContainer from '../components/list-container'
 import Packages from '../components/packages'
@@ -9,6 +11,7 @@ import AboutUs from '../components/about-us'
 import Process from '../components/process'
 import BlogCMS from '../components/blog-cms'
 import Banner from '../components/banner'
+import ServiceAreas from '../components/service-areas'
 import Footer from '../components/footer'
 
 const Home = (props) => {
@@ -83,15 +86,32 @@ const Home = (props) => {
               </div>
             </div>
           </div>
+          <div className="home-reviews">
+            <div className="home-container2">
+              <img
+                alt="image"
+                src="/google-review-logo-200h.webp"
+                className="home-image3"
+              />
+              <div className="home-separator"></div>
+            </div>
+            <div className="home-container3">
+              <div className="home-container4">
+                <Script
+                  html={`<div class='sk-ww-google-reviews' data-embed-id='25371174'></div><script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>`}
+                ></Script>
+              </div>
+            </div>
+          </div>
           <div className="home-content">
-            <div data-aos="fade-up" className="home-image3">
+            <div data-aos="fade-up" className="home-image4">
               <img
                 alt="image"
                 sizes="(min-width: 992px) 1200px, (min-width: 768px) 800px, 480px"
                 src="/undraw_absorbed_in_re_ymd6-1500w-1500w.webp"
                 loading="lazy"
                 srcSet="/undraw_absorbed_in_re_ymd6-1500w-1500w.webp 1200w, /undraw_absorbed_in_re_ymd6-1500w-tablet.webp 800w, /undraw_absorbed_in_re_ymd6-1500w-mobile.webp 480w"
-                className="home-image4"
+                className="home-image5"
               />
             </div>
             <div data-aos="fade-up" className="home-content-wrap">
@@ -173,13 +193,13 @@ const Home = (props) => {
                 time only!
               </span>
             </div>
-            <div className="home-image5">
+            <div className="home-image6">
               <img
                 alt="image"
                 src="/undraw_all_the_data_h4ki.svg"
                 loading="lazy"
                 data-aos="fade-left"
-                className="home-image6"
+                className="home-image7"
               />
             </div>
           </div>
@@ -192,6 +212,7 @@ const Home = (props) => {
           <Process></Process>
           <BlogCMS rootClassName="blog-cms-root-class-name"></BlogCMS>
           <Banner rootClassName="banner-root-class-name"></Banner>
+          <ServiceAreas></ServiceAreas>
         </main>
         <Footer></Footer>
       </div>
@@ -289,15 +310,54 @@ const Home = (props) => {
             margin-right: var(--dl-space-space-fiveunits);
             margin-bottom: var(--dl-space-space-twounits);
           }
+          .home-reviews {
+            width: 100%;
+            height: auto;
+            display: flex;
+            overflow: hidden;
+            align-items: flex-start;
+            padding-top: var(--dl-space-space-twounits);
+            padding-left: var(--dl-space-space-fourunits);
+            padding-right: var(--dl-space-space-fourunits);
+            flex-direction: column;
+            padding-bottom: var(--dl-space-space-twounits);
+          }
+          .home-container2 {
+            flex: 0 0 auto;
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            padding-top: var(--dl-space-space-oneandhalfunits);
+            flex-direction: column;
+            justify-content: center;
+          }
+          .home-image3 {
+            width: 200px;
+            object-fit: cover;
+            margin-bottom: var(--dl-space-space-unit);
+          }
+          .home-separator {
+            width: 200px;
+            height: 2px;
+            background-color: #595959;
+          }
+          .home-container3 {
+            width: 100%;
+            height: 372px;
+          }
+          .home-container4 {
+            display: contents;
+          }
           .home-content {
             width: 100%;
-            height: 820px;
+            height: auto;
             display: flex;
             position: relative;
             align-items: center;
             justify-content: center;
           }
-          .home-image3 {
+          .home-image4 {
             flex: 0 0 auto;
             width: 50%;
             height: 566px;
@@ -306,7 +366,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .home-image4 {
+          .home-image5 {
             width: 616px;
             height: 100%;
             align-self: center;
@@ -433,7 +493,7 @@ const Home = (props) => {
             font-style: normal;
             font-weight: 400;
           }
-          .home-image5 {
+          .home-image6 {
             flex: 0 0 auto;
             width: 50%;
             height: auto;
@@ -443,13 +503,19 @@ const Home = (props) => {
             justify-content: center;
             background-color: var(--dl-color-scheme-lightgreen);
           }
-          .home-image6 {
+          .home-image7 {
             width: 100%;
             height: 825px;
             object-fit: fill;
           }
           @media (max-width: 1600px) {
-            .home-image4 {
+            .home-reviews {
+              height: 520px;
+            }
+            .home-container3 {
+              height: 418px;
+            }
+            .home-image5 {
               width: 616px;
               height: 544px;
             }
@@ -461,25 +527,29 @@ const Home = (props) => {
             .home-content-wrap1 {
               height: 654px;
             }
-            .home-image5 {
+            .home-image6 {
               height: 788px;
             }
-            .home-image6 {
+            .home-image7 {
               height: 820px;
               padding-bottom: 0px;
             }
           }
           @media (max-width: 1200px) {
+            .home-reviews {
+              padding-left: var(--dl-space-space-twounits);
+              padding-right: var(--dl-space-space-twounits);
+            }
             .home-content {
               height: 820px;
               align-self: center;
               align-items: center;
               justify-content: center;
             }
-            .home-image3 {
+            .home-image4 {
               height: 568px;
             }
-            .home-image4 {
+            .home-image5 {
               width: 504px;
               height: 452px;
               margin-right: 0px;
@@ -509,11 +579,11 @@ const Home = (props) => {
               font-style: normal;
               font-weight: 700;
             }
-            .home-image5 {
+            .home-image6 {
               height: 816px;
               position: relative;
             }
-            .home-image6 {
+            .home-image7 {
               height: 796px;
               align-self: center;
             }
@@ -528,17 +598,28 @@ const Home = (props) => {
               min-height: auto;
               margin-bottom: 42px;
             }
-            .home-image4 {
+            .home-reviews {
+              height: 530px;
+              padding-left: var(--dl-space-space-unit);
+              padding-right: var(--dl-space-space-unit);
+            }
+            .home-container2 {
+              padding: var(--dl-space-space-oneandhalfunits);
+            }
+            .home-container3 {
+              height: 380px;
+            }
+            .home-image5 {
               height: 656px;
             }
             .home-animation {
               height: auto;
               margin-bottom: var(--dl-space-space-threeunits);
             }
-            .home-image5 {
+            .home-image6 {
               height: 960px;
             }
-            .home-image6 {
+            .home-image7 {
               height: 920px;
               align-self: center;
             }
@@ -564,14 +645,19 @@ const Home = (props) => {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-right: var(--dl-space-space-oneandhalfunits);
             }
+            .home-reviews {
+              height: 560px;
+              padding-left: var(--dl-space-space-unit);
+              padding-right: var(--dl-space-space-unit);
+            }
             .home-content {
               flex-direction: column;
             }
-            .home-image3 {
+            .home-image4 {
               width: 100%;
               height: auto;
             }
-            .home-image4 {
+            .home-image5 {
               width: 100%;
               height: var(--dl-size-size-xxlarge);
             }
@@ -609,11 +695,11 @@ const Home = (props) => {
             .home-text34 {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .home-image5 {
+            .home-image6 {
               width: 100%;
               height: auto;
             }
-            .home-image6 {
+            .home-image7 {
               height: var(--dl-size-size-xxlarge);
             }
           }
@@ -653,6 +739,11 @@ const Home = (props) => {
               height: auto;
               margin-left: var(--dl-space-space-halfunit);
               margin-right: var(--dl-space-space-halfunit);
+            }
+            .home-reviews {
+              padding-left: var(--dl-space-space-unit);
+              margin-bottom: var(--dl-space-space-twounits);
+              padding-right: var(--dl-space-space-unit);
             }
             .home-content {
               height: auto;

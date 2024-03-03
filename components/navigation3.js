@@ -310,7 +310,7 @@ Navigation3.defaultProps = {
   imageAlt: 'logo',
   imageAlt1: 'image',
   imageSrc: '20769734-2b37-4566-8316-77ad864b1180',
-  imageSrc1: '74d9581c-fe87-44e6-a655-e9b85c652d8c',
+  imageSrc1: '/external/logo-651.svg',
   button1: '(888)-503-1722',
 }
 

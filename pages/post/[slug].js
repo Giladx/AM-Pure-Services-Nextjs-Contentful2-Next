@@ -13,8 +13,8 @@ import Navigation from '../../components/navigation'
 import Blog from '../../components/blog'
 import Banner from '../../components/banner'
 import Footer from '../../components/footer'
-import postPageInitialPathsTqXuResource from '../../resources/post-page-initial-paths-tq_xu'
-import postPageInitialPropsTqJjResource from '../../resources/post-page-initial-props-tq_jj'
+import postPageInitialPropsTqV3Resource from '../../resources/post-page-initial-props-tq_v3'
+import postPageInitialPathsTqW8Resource from '../../resources/post-page-initial-paths-tq_w8'
 
 const Post = (props) => {
   return (
@@ -363,33 +363,9 @@ Post.propTypes = {
 
 export default Post
 
-export async function getStaticPaths() {
-  try {
-    const response = await postPageInitialPathsTqXuResource({
-      content_type: 'post',
-      select: 'fields.slug',
-    })
-    return {
-      paths: (response?.data || []).map((item) => {
-        return {
-          params: {
-            slug: (item?.fields?.slug).toString(),
-          },
-        }
-      }),
-      fallback: 'blocking',
-    }
-  } catch (error) {
-    return {
-      paths: [],
-      fallback: 'blocking',
-    }
-  }
-}
-
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialPropsTqJjResource({
+    const response = await postPageInitialPropsTqV3Resource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {
@@ -407,6 +383,30 @@ export async function getStaticProps(context) {
   } catch (error) {
     return {
       notFound: true,
+    }
+  }
+}
+
+export async function getStaticPaths() {
+  try {
+    const response = await postPageInitialPathsTqW8Resource({
+      content_type: 'post',
+      select: 'fields.slug',
+    })
+    return {
+      paths: (response?.data || []).map((item) => {
+        return {
+          params: {
+            slug: (item?.fields?.slug).toString(),
+          },
+        }
+      }),
+      fallback: 'blocking',
+    }
+  } catch (error) {
+    return {
+      paths: [],
+      fallback: 'blocking',
     }
   }
 }

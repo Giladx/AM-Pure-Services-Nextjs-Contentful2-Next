@@ -8,6 +8,8 @@ import {
 } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
+import blogCmsResource from '../resources/blog-cms'
+
 const BlogCMS = (props) => {
   return (
     <>
@@ -21,20 +23,6 @@ const BlogCMS = (props) => {
         </div>
         <div className="blog-cms-container2">
           <DataProvider
-            fetchData={(params) =>
-              fetch(
-                `/api/blog-cms-resource-blog-cms?${new URLSearchParams(
-                  params
-                )}`,
-                {
-                  headers: {
-                    'Content-Type': 'application/json',
-                  },
-                }
-              )
-                .then((res) => res.json())
-                .then((data) => data)
-            }
             renderSuccess={(params) => (
               <>
                 <Repeater
@@ -99,6 +87,10 @@ const BlogCMS = (props) => {
                 />
               </>
             )}
+            initialData={props.contextSp2aumProp}
+            persistDataDuringLoading={true}
+            initialData={props.contextSp2aumProp}
+            persistDataDuringLoading={true}
           />
         </div>
       </div>
@@ -366,3 +358,35 @@ BlogCMS.propTypes = {
 }
 
 export default BlogCMS
+
+export async function getStaticProps(context) {
+  try {
+    const contextSp2aumProp = await blogCmsResource({
+      ...context?.params,
+    })
+    if (!contextSp2aumProp) {
+      return {
+        notFound: true,
+      }
+    }
+    const contextSp2aumProp = await blogCmsResource({
+      ...context?.params,
+    })
+    if (!contextSp2aumProp) {
+      return {
+        notFound: true,
+      }
+    }
+    return {
+      props: {
+        contextSp2aumProp: contextSp2aumProp,
+        contextSp2aumProp: contextSp2aumProp,
+      },
+      revalidate: 60,
+    }
+  } catch (error) {
+    return {
+      notFound: true,
+    }
+  }
+}

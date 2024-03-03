@@ -4,8 +4,8 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import tagPageInitialPathsTqXtResource from '../../../resources/tag-page-initial-paths-tq_xt'
-import tagPageInitialPropsTq7xResource from '../../../resources/tag-page-initial-props-tq_7x'
+import tagPageInitialPropsTqNkResource from '../../../resources/tag-page-initial-props-tq_nk'
+import tagPageInitialPathsTqKrResource from '../../../resources/tag-page-initial-paths-tq_kr'
 
 const Tag11 = (props) => {
   return (
@@ -88,9 +88,34 @@ Tag11.propTypes = {
 
 export default Tag11
 
+export async function getStaticProps(context) {
+  try {
+    const response = await tagPageInitialPropsTqNkResource({
+      ...context?.params,
+      skip: (context.params.page - 1) * 10,
+    })
+    if (!response) {
+      return {
+        notFound: true,
+      }
+    }
+    return {
+      props: {
+        tagEntities: response,
+        ...response?.meta,
+      },
+      revalidate: 10,
+    }
+  } catch (error) {
+    return {
+      notFound: true,
+    }
+  }
+}
+
 export async function getStaticPaths() {
   try {
-    const response = await tagPageInitialPathsTqXtResource({
+    const response = await tagPageInitialPathsTqKrResource({
       content_type: 'tag',
     })
     const totalCount = response?.meta?.pagination?.total
@@ -112,31 +137,6 @@ export async function getStaticPaths() {
     return {
       paths: [],
       fallback: 'blocking',
-    }
-  }
-}
-
-export async function getStaticProps(context) {
-  try {
-    const response = await tagPageInitialPropsTq7xResource({
-      ...context?.params,
-      skip: (context.params.page - 1) * 10,
-    })
-    if (!response) {
-      return {
-        notFound: true,
-      }
-    }
-    return {
-      props: {
-        tagEntities: response,
-        ...response?.meta,
-      },
-      revalidate: 10,
-    }
-  } catch (error) {
-    return {
-      notFound: true,
     }
   }
 }

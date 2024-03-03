@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 import Navigation from '../../components/navigation'
 import Banner from '../../components/banner'
 import Footer from '../../components/footer'
-import postPageInitialPropsTqVgResource from '../../resources/post-page-initial-props-tq_vg'
+import postPageInitialPropsTqOmResource from '../../resources/post-page-initial-props-tq_om'
 
 const Post1 = (props) => {
   return (
@@ -67,9 +67,6 @@ const Post1 = (props) => {
                                     </>
                                   )}
                                 />
-                                <button className="post1-button button-secondary button">
-                                  {PostEntities?.tag}
-                                </button>
                                 <span className="post1-text4">Dec 8, 2022</span>
                               </div>
                               <span className="post1-text5">
@@ -194,11 +191,6 @@ const Post1 = (props) => {
             padding-bottom: var(--dl-space-space-halfunit);
             background-color: var(--dl-color-scheme-darkgray);
           }
-          .post1-button {
-            display: none;
-            font-size: 12px;
-            text-transform: uppercase;
-          }
           .post1-text4 {
             font-size: 12px;
             font-style: normal;
@@ -286,7 +278,7 @@ export default Post1
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialPropsTqVgResource({
+    const response = await postPageInitialPropsTqOmResource({
       ...context?.params,
     })
     if (!response) {

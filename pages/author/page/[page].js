@@ -4,8 +4,8 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import authorPageInitialPathsTqAqResource from '../../../resources/author-page-initial-paths-tq_aq'
-import authorPageInitialPropsTqH6Resource from '../../../resources/author-page-initial-props-tq_h6'
+import authorPageInitialPropsTqJjResource from '../../../resources/author-page-initial-props-tq_jj'
+import authorPageInitialPathsTq7Resource from '../../../resources/author-page-initial-paths-tq__7'
 
 const Author1 = (props) => {
   return (
@@ -93,9 +93,34 @@ Author1.propTypes = {
 
 export default Author1
 
+export async function getStaticProps(context) {
+  try {
+    const response = await authorPageInitialPropsTqJjResource({
+      ...context?.params,
+      skip: (context.params.page - 1) * 10,
+    })
+    if (!response) {
+      return {
+        notFound: true,
+      }
+    }
+    return {
+      props: {
+        authorEntities: response,
+        ...response?.meta,
+      },
+      revalidate: 10,
+    }
+  } catch (error) {
+    return {
+      notFound: true,
+    }
+  }
+}
+
 export async function getStaticPaths() {
   try {
-    const response = await authorPageInitialPathsTqAqResource({
+    const response = await authorPageInitialPathsTq7Resource({
       content_type: 'author',
     })
     const totalCount = response?.meta?.pagination?.total
@@ -117,31 +142,6 @@ export async function getStaticPaths() {
     return {
       paths: [],
       fallback: 'blocking',
-    }
-  }
-}
-
-export async function getStaticProps(context) {
-  try {
-    const response = await authorPageInitialPropsTqH6Resource({
-      ...context?.params,
-      skip: (context.params.page - 1) * 10,
-    })
-    if (!response) {
-      return {
-        notFound: true,
-      }
-    }
-    return {
-      props: {
-        authorEntities: response,
-        ...response?.meta,
-      },
-      revalidate: 10,
-    }
-  } catch (error) {
-    return {
-      notFound: true,
     }
   }
 }

@@ -181,6 +181,11 @@ const NavigationLinks = (props) => {
               margin-bottom: var(--dl-space-space-unit);
             }
           }
+          @media (max-width: 479px) {
+            .navigation-links-link {
+              margin-bottom: var(--dl-space-space-unit);
+            }
+          }
         `}
       </style>
     </>
@@ -189,6 +194,7 @@ const NavigationLinks = (props) => {
 
 NavigationLinks.defaultProps = {
   link21: 'BLOG',
+  link51: 'REVIEWS',
   link3: 'ABOUT',
   rootClassName: '',
   link2: 'SERVICES',
@@ -199,6 +205,7 @@ NavigationLinks.defaultProps = {
 
 NavigationLinks.propTypes = {
   link21: PropTypes.string,
+  link51: PropTypes.string,
   link3: PropTypes.string,
   rootClassName: PropTypes.string,
   link2: PropTypes.string,

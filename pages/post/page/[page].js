@@ -8,8 +8,8 @@ import PropTypes from 'prop-types'
 import Navigation from '../../../components/navigation'
 import Banner from '../../../components/banner'
 import Footer from '../../../components/footer'
-import postPageInitialPathsTqTResource from '../../../resources/post-page-initial-paths-tq_t_'
-import postPageInitialPropsTqIlResource from '../../../resources/post-page-initial-props-tq_il'
+import postPageInitialPropsTqRfResource from '../../../resources/post-page-initial-props-tq_rf'
+import postPageInitialPathsTqV2Resource from '../../../resources/post-page-initial-paths-tq_v2'
 
 const Post11 = (props) => {
   return (
@@ -68,9 +68,6 @@ const Post11 = (props) => {
                                     </>
                                   )}
                                 />
-                                <button className="post11-button button-secondary button">
-                                  {PostEntities?.tag}
-                                </button>
                                 <span className="post11-text4">
                                   Dec 8, 2022
                                 </span>
@@ -197,11 +194,6 @@ const Post11 = (props) => {
             padding-bottom: var(--dl-space-space-halfunit);
             background-color: var(--dl-color-scheme-darkgray);
           }
-          .post11-button {
-            display: none;
-            font-size: 12px;
-            text-transform: uppercase;
-          }
           .post11-text4 {
             font-size: 12px;
             font-style: normal;
@@ -287,9 +279,34 @@ Post11.propTypes = {
 
 export default Post11
 
+export async function getStaticProps(context) {
+  try {
+    const response = await postPageInitialPropsTqRfResource({
+      ...context?.params,
+      skip: (context.params.page - 1) * 9,
+    })
+    if (!response) {
+      return {
+        notFound: true,
+      }
+    }
+    return {
+      props: {
+        postEntities: response,
+        ...response?.meta,
+      },
+      revalidate: 10,
+    }
+  } catch (error) {
+    return {
+      notFound: true,
+    }
+  }
+}
+
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPathsTqTResource({
+    const response = await postPageInitialPathsTqV2Resource({
       content_type: 'post',
     })
     const totalCount = response?.meta?.pagination?.total
@@ -311,31 +328,6 @@ export async function getStaticPaths() {
     return {
       paths: [],
       fallback: 'blocking',
-    }
-  }
-}
-
-export async function getStaticProps(context) {
-  try {
-    const response = await postPageInitialPropsTqIlResource({
-      ...context?.params,
-      skip: (context.params.page - 1) * 9,
-    })
-    if (!response) {
-      return {
-        notFound: true,
-      }
-    }
-    return {
-      props: {
-        postEntities: response,
-        ...response?.meta,
-      },
-      revalidate: 10,
-    }
-  } catch (error) {
-    return {
-      notFound: true,
     }
   }
 }

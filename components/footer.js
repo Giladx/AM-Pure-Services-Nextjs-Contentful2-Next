@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
+import footerResource from '../resources/footer'
+
 const Footer = (props) => {
   return (
     <>
@@ -19,20 +21,6 @@ const Footer = (props) => {
                   <a className="footer-link">{props.text2}</a>
                 </Link>
                 <DataProvider
-                  fetchData={(params) =>
-                    fetch(
-                      `/api/footer-resource-footer?${new URLSearchParams(
-                        params
-                      )}`,
-                      {
-                        headers: {
-                          'Content-Type': 'application/json',
-                        },
-                      }
-                    )
-                      .then((res) => res.json())
-                      .then((data) => data)
-                  }
                   renderSuccess={(params) => (
                     <>
                       <Repeater
@@ -49,6 +37,10 @@ const Footer = (props) => {
                       />
                     </>
                   )}
+                  initialData={props.contextFdk6dnProp}
+                  persistDataDuringLoading={true}
+                  initialData={props.contextFdk6dnProp}
+                  persistDataDuringLoading={true}
                 />
               </div>
             </div>
@@ -186,6 +178,7 @@ const Footer = (props) => {
             text-decoration: none;
           }
           .footer-link04 {
+            margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
           .footer-contact-container {
@@ -401,6 +394,7 @@ const Footer = (props) => {
 }
 
 Footer.defaultProps = {
+  text81: 'REVIEWS',
   text3: 'AIR DUCT CLEANING',
   text1: 'Product',
   textinputPlaceholder: 'Enter your e-mail address',
@@ -424,6 +418,7 @@ Footer.defaultProps = {
 }
 
 Footer.propTypes = {
+  text81: PropTypes.string,
   text3: PropTypes.string,
   text1: PropTypes.string,
   textinputPlaceholder: PropTypes.string,
@@ -447,3 +442,35 @@ Footer.propTypes = {
 }
 
 export default Footer
+
+export async function getStaticProps(context) {
+  try {
+    const contextFdk6dnProp = await footerResource({
+      ...context?.params,
+    })
+    if (!contextFdk6dnProp) {
+      return {
+        notFound: true,
+      }
+    }
+    const contextFdk6dnProp = await footerResource({
+      ...context?.params,
+    })
+    if (!contextFdk6dnProp) {
+      return {
+        notFound: true,
+      }
+    }
+    return {
+      props: {
+        contextFdk6dnProp: contextFdk6dnProp,
+        contextFdk6dnProp: contextFdk6dnProp,
+      },
+      revalidate: 60,
+    }
+  } catch (error) {
+    return {
+      notFound: true,
+    }
+  }
+}
