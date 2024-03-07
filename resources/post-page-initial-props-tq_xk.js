@@ -3,8 +3,8 @@ import { normalize } from '@teleporthq/cms-mappers/contentful'
 export default async function (params = {}) {
   const urlParams = {
     content_type: 'post',
-    order: 'sys.createdAt',
-    limit: 100,
+    limit: 9,
+    skip: 0,
   }
   const data = await fetch(
     `${process.env.CMS_URL}/entries?${new URLSearchParams(urlParams)}`,

@@ -1,11 +1,13 @@
 import React from 'react'
+import Link from 'next/link'
 import Head from 'next/head'
 
 import Script from 'dangerous-html/react'
+import { DataProvider, Repeater } from '@teleporthq/react-components'
 
 import Navigation from '../components/navigation'
 import Banner from '../components/banner'
-import Footer from '../components/footer'
+import businessRelationsResource from '../resources/business-relations'
 
 const BusinessRelations = (props) => {
   return (
@@ -154,7 +156,106 @@ const BusinessRelations = (props) => {
           </div>
           <Banner rootClassName="banner-root-class-name4"></Banner>
         </main>
-        <Footer></Footer>
+        <div className="business-relations-footer section-container">
+          <div className="business-relations-max-width max-content-container">
+            <div className="business-relations-top-part">
+              <div className="business-relations-links-container">
+                <div className="business-relations-product-container">
+                  <span className="business-relations-text10">Product</span>
+                  <Link href="/monthly-specials">
+                    <a className="business-relations-link">MONTHLY SPECIALS</a>
+                  </Link>
+                  <DataProvider
+                    renderSuccess={(params) => (
+                      <>
+                        <div className="business-relations-container3">
+                          <Repeater
+                            items={params}
+                            renderItem={(context_i5k88b) => (
+                              <>
+                                <span className="business-relations-text11">
+                                  {context_i5k88b?.title}
+                                </span>
+                              </>
+                            )}
+                          />
+                        </div>
+                      </>
+                    )}
+                    initialData={props.contextI5k88bProp}
+                    persistDataDuringLoading={true}
+                  />
+                </div>
+              </div>
+              <div className="business-relations-navigate-container">
+                <span className="business-relations-text12">Info</span>
+                <Link href="/about">
+                  <a className="business-relations-link1">
+                    <span>ABOUT</span>
+                    <br></br>
+                  </a>
+                </Link>
+                <Link href="/restrictions">
+                  <a className="business-relations-link2">RESTRICTIONS</a>
+                </Link>
+                <Link href="/contact">
+                  <a className="business-relations-link3">CONTACT</a>
+                </Link>
+              </div>
+              <div className="business-relations-contact-container">
+                <span className="business-relations-text15">Contact Us</span>
+                <a href="tel:+18885031722" className="business-relations-link4">
+                  (888) 503-1722
+                </a>
+                <a
+                  href="mailto:service@ampureservices.com?subject=Site Service Request"
+                  className="business-relations-link5"
+                >
+                  SERVICE@AMPURESERVICES.COM
+                </a>
+              </div>
+              <div className="business-relations-subscribe-container">
+                <span className="business-relations-text16">
+                  Subscribe to our newsletter
+                </span>
+                <input
+                  type="text"
+                  id="newsletter"
+                  placeholder="Enter your e-mail address"
+                  className="business-relations-textinput input"
+                />
+                <button className="button-primary button">Subscribe</button>
+              </div>
+            </div>
+          </div>
+          <div className="business-relations-separator"></div>
+          <footer className="business-relations-max-width1 max-content-container">
+            <Link href="/">
+              <a>
+                <img
+                  alt="image"
+                  src="20769734-2b37-4566-8316-77ad864b1180"
+                  width="150"
+                  height="68"
+                  className="business-relations-image"
+                />
+              </a>
+            </Link>
+            <Link href="/">
+              <a className="business-relations-link7">
+                All rights reserved @ AM Pure Services
+              </a>
+            </Link>
+            <a
+              href="https://011.ninja/bio"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="business-relations-link8"
+            >
+              Developed by 011.ninja
+            </a>
+          </footer>
+        </div>
       </div>
       <style jsx>
         {`
@@ -220,6 +321,172 @@ const BusinessRelations = (props) => {
           .business-relations-container2 {
             display: contents;
           }
+          .business-relations-footer {
+            position: relative;
+          }
+          .business-relations-max-width {
+            max-width: var(--dl-size-size-maxwidth);
+            padding-left: 0px;
+            padding-right: 0px;
+          }
+          .business-relations-top-part {
+            width: 100%;
+            display: flex;
+            align-items: stretch;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          .business-relations-links-container {
+            width: 25%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          .business-relations-product-container {
+            flex: 0 0 auto;
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .business-relations-text10 {
+            color: var(--dl-color-scheme-green);
+            font-weight: 700;
+            margin-bottom: var(--dl-space-space-oneandhalfunits);
+          }
+          .business-relations-link {
+            color: var(--dl-color-scheme-darkblue);
+            margin-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+          }
+          .business-relations-container3 {
+            display: grid;
+          }
+          .business-relations-text11 {
+            margin-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+          }
+          .business-relations-navigate-container {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: flex-start;
+            margin-left: 0px;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .business-relations-text12 {
+            color: var(--dl-color-scheme-green);
+            font-weight: 700;
+            margin-bottom: var(--dl-space-space-oneandhalfunits);
+          }
+          .business-relations-link1 {
+            margin-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+          }
+          .business-relations-link2 {
+            margin-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+          }
+          .business-relations-link3 {
+            margin-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+          }
+          .business-relations-contact-container {
+            display: flex;
+            align-items: flex-start;
+            margin-left: var(--dl-space-space-twounits);
+            margin-right: var(--dl-space-space-twounits);
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .business-relations-text15 {
+            color: var(--dl-color-scheme-green);
+            font-weight: 700;
+            margin-bottom: var(--dl-space-space-oneandhalfunits);
+          }
+          .business-relations-link4 {
+            margin-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+          }
+          .business-relations-link5 {
+            font-size: 14px;
+            font-style: normal;
+            font-family: Rubik;
+            font-weight: 900;
+            line-height: 1.6;
+            letter-spacing: 0.02em;
+            text-transform: capitalize;
+            text-decoration: none;
+          }
+          .business-relations-subscribe-container {
+            flex: 0 0 auto;
+            width: 30%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+          .business-relations-text16 {
+            color: var(--dl-color-scheme-green);
+            font-weight: 700;
+            margin-bottom: var(--dl-space-space-oneandhalfunits);
+          }
+          .business-relations-textinput {
+            outline: none;
+            align-self: stretch;
+            padding-top: 4px;
+            border-color: rgba(0, 0, 0, 0.1);
+            padding-left: 0px;
+            border-radius: 0px;
+            margin-bottom: var(--dl-space-space-twounits);
+            padding-bottom: 4px;
+            border-top-width: 0px;
+            border-left-width: 0px;
+            border-right-width: 0px;
+            border-bottom-width: 1px;
+          }
+          .business-relations-separator {
+            width: 100%;
+            height: 1px;
+            margin-top: var(--dl-space-space-twounits);
+            margin-bottom: var(--dl-space-space-twounits);
+            background-color: #d9d9d9;
+          }
+          .business-relations-max-width1 {
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          .business-relations-image {
+            width: 150px;
+            object-fit: cover;
+            text-decoration: none;
+          }
+          .business-relations-link7 {
+            width: auto;
+            font-style: normal;
+            text-align: center;
+            font-weight: 300;
+            text-decoration: none;
+          }
+          .business-relations-link8 {
+            font-style: normal;
+            font-weight: 300;
+            text-decoration: none;
+          }
+          @media (max-width: 1600px) {
+            .business-relations-navigate-container {
+              margin-left: var(--dl-space-space-oneandhalfunits);
+            }
+            .business-relations-contact-container {
+              margin-left: var(--dl-space-space-oneandhalfunits);
+            }
+            .business-relations-link7 {
+              width: auto;
+              text-align: center;
+            }
+          }
           @media (max-width: 1200px) {
             .business-relations-text {
               font-size: 48px;
@@ -247,6 +514,40 @@ const BusinessRelations = (props) => {
             .business-relations-text08 {
               font-weight: 700;
             }
+            .business-relations-max-width {
+              padding-left: 0px;
+              padding-right: 0px;
+            }
+            .business-relations-navigate-container {
+              margin-left: var(--dl-space-space-oneandhalfunits);
+            }
+            .business-relations-contact-container {
+              align-self: flex-start;
+              margin-left: var(--dl-space-space-oneandhalfunits);
+            }
+            .business-relations-link4 {
+              margin-bottom: var(--dl-space-space-unit);
+            }
+            .business-relations-link5 {
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 900;
+              line-height: 1.3;
+              margin-bottom: var(--dl-space-space-unit);
+              letter-spacing: auto;
+            }
+            .business-relations-link7 {
+              width: auto;
+              text-align: center;
+            }
+          }
+          @media (max-width: 991px) {
+            .business-relations-link7 {
+              text-align: center;
+            }
+            .business-relations-link8 {
+              text-align: center;
+            }
           }
           @media (max-width: 767px) {
             .business-relations-text {
@@ -257,6 +558,35 @@ const BusinessRelations = (props) => {
               padding-left: var(--dl-space-space-twounits);
               padding-right: var(--dl-space-space-twounits);
             }
+            .business-relations-top-part {
+              align-items: center;
+              flex-direction: column;
+              justify-content: space-between;
+            }
+            .business-relations-links-container {
+              width: 100%;
+              align-items: flex-start;
+              margin-bottom: var(--dl-space-space-oneandhalfunits);
+              flex-direction: row;
+            }
+            .business-relations-product-container {
+              margin-left: var(--dl-space-space-oneandhalfunits);
+            }
+            .business-relations-navigate-container {
+              align-self: flex-start;
+              margin-bottom: var(--dl-space-space-oneandhalfunits);
+            }
+            .business-relations-subscribe-container {
+              width: 100%;
+              padding-left: var(--dl-space-space-oneandhalfunits);
+              padding-right: var(--dl-space-space-oneandhalfunits);
+            }
+            .business-relations-link7 {
+              text-align: center;
+            }
+            .business-relations-link8 {
+              text-align: center;
+            }
           }
           @media (max-width: 479px) {
             .business-relations-text {
@@ -264,6 +594,42 @@ const BusinessRelations = (props) => {
             }
             .business-relations-text01 {
               font-size: 16px;
+            }
+            .business-relations-top-part {
+              align-items: center;
+              flex-direction: column;
+            }
+            .business-relations-links-container {
+              position: relative;
+            }
+            .business-relations-product-container {
+              width: auto;
+            }
+            .business-relations-navigate-container {
+              width: auto;
+              align-self: flex-start;
+              margin-left: var(--dl-space-space-oneandhalfunits);
+              margin-bottom: var(--dl-space-space-oneandhalfunits);
+              flex-direction: column;
+            }
+            .business-relations-contact-container {
+              width: auto;
+              align-items: flex-start;
+              margin-left: var(--dl-space-space-oneandhalfunits);
+              margin-bottom: 0px;
+            }
+            .business-relations-link5 {
+              margin-bottom: var(--dl-space-space-oneandhalfunits);
+            }
+            .business-relations-max-width1 {
+              flex-direction: column;
+            }
+            .business-relations-image {
+              margin-bottom: var(--dl-space-space-unit);
+            }
+            .business-relations-link7 {
+              text-align: center;
+              margin-bottom: var(--dl-space-space-oneandhalfunits);
             }
           }
         `}
@@ -273,3 +639,26 @@ const BusinessRelations = (props) => {
 }
 
 export default BusinessRelations
+
+export async function getStaticProps(context) {
+  try {
+    const contextI5k88bProp = await businessRelationsResource({
+      ...context?.params,
+    })
+    if (!contextI5k88bProp) {
+      return {
+        notFound: true,
+      }
+    }
+    return {
+      props: {
+        contextI5k88bProp: contextI5k88bProp,
+      },
+      revalidate: 60,
+    }
+  } catch (error) {
+    return {
+      notFound: true,
+    }
+  }
+}

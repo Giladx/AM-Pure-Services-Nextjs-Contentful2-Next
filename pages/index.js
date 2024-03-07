@@ -3,16 +3,21 @@ import Link from 'next/link'
 import Head from 'next/head'
 
 import Script from 'dangerous-html/react'
+import {
+  DataProvider,
+  Repeater,
+  DateTimePrimitive,
+} from '@teleporthq/react-components'
 
 import Navigation from '../components/navigation'
 import ListContainer from '../components/list-container'
 import Packages from '../components/packages'
 import AboutUs from '../components/about-us'
 import Process from '../components/process'
-import BlogCMS from '../components/blog-cms'
 import Banner from '../components/banner'
 import ServiceAreas from '../components/service-areas'
-import Footer from '../components/footer'
+import homeResource from '../resources/home'
+import home1Resource from '../resources/home1'
 
 const Home = (props) => {
   return (
@@ -55,7 +60,7 @@ const Home = (props) => {
           </div>
           <div className="home-stickers">
             <div className="home-sticker-wrap">
-              <div className="home-container1">
+              <div className="home-container01">
                 <img
                   alt="image"
                   src="/elite-solid-border-500w.webp"
@@ -72,7 +77,7 @@ const Home = (props) => {
                   height="146"
                   loading="lazy"
                   data-aos="fade-up"
-                  className="home-image1"
+                  className="home-image01"
                 />
                 <img
                   alt="image"
@@ -81,22 +86,22 @@ const Home = (props) => {
                   height="160"
                   loading="lazy"
                   data-aos="fade-left"
-                  className="home-image2"
+                  className="home-image02"
                 />
               </div>
             </div>
           </div>
           <div className="home-reviews">
-            <div className="home-container2">
+            <div className="home-container02">
               <img
                 alt="image"
                 src="/google-review-logo-200h.webp"
-                className="home-image3"
+                className="home-image03"
               />
               <div className="home-separator"></div>
             </div>
-            <div className="home-container3">
-              <div className="home-container4">
+            <div className="home-container03">
+              <div className="home-container04">
                 <Script
                   html={`<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
 <div style="height:auto;" class="elfsight-app-022a64ba-bfe8-4981-9894-9414187371fe" data-elfsight-app-lazy></div>`}
@@ -105,14 +110,14 @@ const Home = (props) => {
             </div>
           </div>
           <div className="home-content">
-            <div data-aos="fade-up" className="home-image4">
+            <div data-aos="fade-up" className="home-image04">
               <img
                 alt="image"
                 sizes="(min-width: 992px) 1200px, (min-width: 768px) 800px, 480px"
                 src="/undraw_absorbed_in_re_ymd6-1500w-1500w.webp"
                 loading="lazy"
                 srcSet="/undraw_absorbed_in_re_ymd6-1500w-1500w.webp 1200w, /undraw_absorbed_in_re_ymd6-1500w-tablet.webp 800w, /undraw_absorbed_in_re_ymd6-1500w-mobile.webp 480w"
-                className="home-image5"
+                className="home-image05"
               />
             </div>
             <div data-aos="fade-up" className="home-content-wrap">
@@ -194,13 +199,13 @@ const Home = (props) => {
                 time only!
               </span>
             </div>
-            <div className="home-image6">
+            <div className="home-image06">
               <img
                 alt="image"
                 src="/undraw_all_the_data_h4ki.svg"
                 loading="lazy"
                 data-aos="fade-left"
-                className="home-image7"
+                className="home-image07"
               />
             </div>
           </div>
@@ -211,11 +216,186 @@ const Home = (props) => {
             rootClassName="about-us-root-class-name"
           ></AboutUs>
           <Process></Process>
-          <BlogCMS rootClassName="blog-cms-root-class-name"></BlogCMS>
+          <div className="home-blog">
+            <div className="home-container05">
+              <span className="home-text35">from blog</span>
+              <h2 className="home-text36">
+                <span>Our Services</span>
+                <br></br>
+              </h2>
+            </div>
+            <DataProvider
+              renderSuccess={(params) => (
+                <>
+                  <div className="home-container06">
+                    <Repeater
+                      items={params}
+                      renderItem={(context_1m1e3a) => (
+                        <>
+                          <div className="home-blog-cards-container">
+                            <Link href={`/post/${context_1m1e3a?.slug}`}>
+                              <a className="home-link01">
+                                <div className="home-blog-card">
+                                  <img
+                                    alt="image"
+                                    src={context_1m1e3a?.coverImage?.url}
+                                    loading="lazy"
+                                    className="home-image08"
+                                  />
+                                  <div className="home-container07">
+                                    <div className="home-tags">
+                                      <Repeater
+                                        items={context_1m1e3a?.tag || []}
+                                        renderItem={(context_9oxe3a) => (
+                                          <>
+                                            <span className="home-text39">
+                                              {context_9oxe3a?.tagName}
+                                            </span>
+                                          </>
+                                        )}
+                                        renderEmpty={() => (
+                                          <>
+                                            <span>Text</span>
+                                          </>
+                                        )}
+                                      />
+                                    </div>
+                                    <div className="home-date">
+                                      <span className="home-date-time">
+                                        <DateTimePrimitive
+                                          format="DD/MM/YYYY"
+                                          date={context_1m1e3a?.date}
+                                        ></DateTimePrimitive>
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <span className="home-text41">
+                                    {context_1m1e3a?.title}
+                                  </span>
+                                  <div className="home-container08">
+                                    <span>Read More</span>
+                                    <svg
+                                      viewBox="0 0 1024 1024"
+                                      className="home-icon"
+                                    >
+                                      <path d="M810 298h86v256h-648l154 154-60 60-256-256 256-256 60 60-154 154h562v-172z"></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </a>
+                            </Link>
+                          </div>
+                        </>
+                      )}
+                    />
+                  </div>
+                </>
+              )}
+              initialData={props.context1m1e3aProp}
+              persistDataDuringLoading={true}
+            />
+          </div>
           <Banner rootClassName="banner-root-class-name"></Banner>
           <ServiceAreas></ServiceAreas>
         </main>
-        <Footer></Footer>
+        <div className="home-footer section-container">
+          <div className="home-max-width1 max-content-container">
+            <div className="home-top-part">
+              <div className="home-links-container">
+                <div className="home-product-container">
+                  <span className="home-text43">Product</span>
+                  <Link href="/monthly-specials">
+                    <a className="home-link02">MONTHLY SPECIALS</a>
+                  </Link>
+                  <DataProvider
+                    renderSuccess={(params) => (
+                      <>
+                        <div className="home-container09">
+                          <Repeater
+                            items={params}
+                            renderItem={(context_0mvdz) => (
+                              <>
+                                <span className="home-text44">
+                                  {context_0mvdz?.title}
+                                </span>
+                              </>
+                            )}
+                          />
+                        </div>
+                      </>
+                    )}
+                    initialData={props.context0mvdzProp}
+                    persistDataDuringLoading={true}
+                  />
+                </div>
+              </div>
+              <div className="home-navigate-container">
+                <span className="home-text45">Info</span>
+                <Link href="/about">
+                  <a className="home-link03">
+                    <span>ABOUT</span>
+                    <br></br>
+                  </a>
+                </Link>
+                <Link href="/restrictions">
+                  <a className="home-link04">RESTRICTIONS</a>
+                </Link>
+                <Link href="/contact">
+                  <a className="home-link05">CONTACT</a>
+                </Link>
+              </div>
+              <div className="home-contact-container">
+                <span className="home-text48">Contact Us</span>
+                <a href="tel:+18885031722" className="home-link06">
+                  (888) 503-1722
+                </a>
+                <a
+                  href="mailto:service@ampureservices.com?subject=Site Service Request"
+                  className="home-link07"
+                >
+                  SERVICE@AMPURESERVICES.COM
+                </a>
+              </div>
+              <div className="home-subscribe-container">
+                <span className="home-text49">Subscribe to our newsletter</span>
+                <input
+                  type="text"
+                  id="newsletter"
+                  placeholder="Enter your e-mail address"
+                  className="home-textinput input"
+                />
+                <button className="button-primary button">Subscribe</button>
+              </div>
+            </div>
+          </div>
+          <div className="home-separator1"></div>
+          <footer className="home-max-width2 max-content-container">
+            <Link href="/">
+              <a>
+                <img
+                  alt="image"
+                  src="20769734-2b37-4566-8316-77ad864b1180"
+                  width="150"
+                  height="68"
+                  className="home-image09"
+                />
+              </a>
+            </Link>
+            <Link href="/">
+              <a className="home-link09">
+                All rights reserved @ AM Pure Services
+              </a>
+            </Link>
+            <a
+              href="https://011.ninja/bio"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="home-link10"
+            >
+              Developed by 011.ninja
+            </a>
+          </footer>
+        </div>
       </div>
       <style jsx>
         {`
@@ -279,7 +459,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .home-container1 {
+          .home-container01 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -295,7 +475,7 @@ const Home = (props) => {
             margin-right: var(--dl-space-space-fiveunits);
             margin-bottom: var(--dl-space-space-twounits);
           }
-          .home-image1 {
+          .home-image01 {
             width: auto;
             margin-top: var(--dl-space-space-twounits);
             object-fit: cover;
@@ -303,7 +483,7 @@ const Home = (props) => {
             margin-right: var(--dl-space-space-fiveunits);
             margin-bottom: var(--dl-space-space-twounits);
           }
-          .home-image2 {
+          .home-image02 {
             width: auto;
             margin-top: var(--dl-space-space-twounits);
             object-fit: cover;
@@ -323,7 +503,7 @@ const Home = (props) => {
             flex-direction: column;
             padding-bottom: var(--dl-space-space-twounits);
           }
-          .home-container2 {
+          .home-container02 {
             width: 100%;
             height: auto;
             display: flex;
@@ -332,7 +512,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .home-image3 {
+          .home-image03 {
             width: 180px;
             object-fit: cover;
             margin-bottom: var(--dl-space-space-unit);
@@ -342,11 +522,11 @@ const Home = (props) => {
             height: 2px;
             background-color: #595959;
           }
-          .home-container3 {
+          .home-container03 {
             width: 100%;
             height: 420px;
           }
-          .home-container4 {
+          .home-container04 {
             display: contents;
           }
           .home-content {
@@ -357,7 +537,7 @@ const Home = (props) => {
             align-items: center;
             justify-content: center;
           }
-          .home-image4 {
+          .home-image04 {
             flex: 0 0 auto;
             width: 50%;
             height: 566px;
@@ -366,7 +546,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .home-image5 {
+          .home-image05 {
             width: 616px;
             height: 100%;
             align-self: center;
@@ -493,7 +673,7 @@ const Home = (props) => {
             font-style: normal;
             font-weight: 400;
           }
-          .home-image6 {
+          .home-image06 {
             flex: 0 0 auto;
             width: 50%;
             height: auto;
@@ -503,19 +683,305 @@ const Home = (props) => {
             justify-content: center;
             background-color: var(--dl-color-scheme-lightgreen);
           }
-          .home-image7 {
+          .home-image07 {
             width: 100%;
             height: 825px;
             object-fit: fill;
+          }
+          .home-blog {
+            flex: 0 0 auto;
+            width: 100%;
+            height: auto;
+            display: flex;
+            position: relative;
+            align-self: center;
+            align-items: center;
+            padding-top: var(--dl-space-space-sixunits);
+            flex-direction: column;
+            padding-bottom: var(--dl-space-space-sixunits);
+            justify-content: center;
+          }
+          .home-container05 {
+            flex: 0 0 auto;
+            width: auto;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .home-text35 {
+            color: var(--dl-color-scheme-green);
+            font-style: normal;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 4px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+          }
+          .home-text36 {
+            font-size: 46px;
+            font-style: normal;
+            text-align: center;
+            font-family: Rubik;
+            font-weight: 900;
+            line-height: px;
+            margin-bottom: var(--dl-space-space-unit);
+            letter-spacing: 0.01em;
+            text-decoration: none;
+          }
+          .home-container06 {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+          }
+          .home-blog-cards-container {
+            flex: 0 0 auto;
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          .home-link01 {
+            display: contents;
+          }
+          .home-blog-card {
+            flex: 0 0 auto;
+            width: 100%;
+            cursor: pointer;
+            display: flex;
+            max-width: 300px;
+            align-items: flex-start;
+            flex-direction: column;
+            text-decoration: none;
+          }
+          .home-image08 {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--dl-radius-radius-radius8);
+            margin-bottom: var(--dl-space-space-halfunit);
+          }
+          .home-container07 {
+            flex: 0 0 auto;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--dl-space-space-oneandhalfunits);
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          .home-tags {
+            flex: 0 0 auto;
+            width: 70%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+          }
+          .home-text39 {
+            color: var(--dl-color-scheme-white);
+            padding: var(--dl-space-space-halfunit);
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            border-color: var(--dl-color-scheme-darkgray);
+            border-width: 1px;
+            margin-right: var(--dl-space-space-unit);
+            border-radius: var(--dl-radius-radius-radius8);
+            background-color: var(--dl-color-scheme-darkgray);
+          }
+          .home-date {
+            flex: 0 0 auto;
+            width: 30%;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+          }
+          .home-date-time {
+            font-size: 12px;
+            text-align: right;
+            font-weight: 700;
+          }
+          .home-text41 {
+            font-style: normal;
+            font-weight: 600;
+          }
+          .home-container08 {
+            flex: 0 0 auto;
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+          }
+          .home-icon {
+            width: 24px;
+            height: 24px;
+            margin-left: var(--dl-space-space-halfunit);
+          }
+          .home-footer {
+            position: relative;
+          }
+          .home-max-width1 {
+            max-width: var(--dl-size-size-maxwidth);
+            padding-left: 0px;
+            padding-right: 0px;
+          }
+          .home-top-part {
+            width: 100%;
+            display: flex;
+            align-items: stretch;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          .home-links-container {
+            width: 25%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          .home-product-container {
+            flex: 0 0 auto;
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-text43 {
+            color: var(--dl-color-scheme-green);
+            font-weight: 700;
+            margin-bottom: var(--dl-space-space-oneandhalfunits);
+          }
+          .home-link02 {
+            color: var(--dl-color-scheme-darkblue);
+            margin-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+          }
+          .home-container09 {
+            display: grid;
+          }
+          .home-text44 {
+            margin-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+          }
+          .home-navigate-container {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: flex-start;
+            margin-left: 0px;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-text45 {
+            color: var(--dl-color-scheme-green);
+            font-weight: 700;
+            margin-bottom: var(--dl-space-space-oneandhalfunits);
+          }
+          .home-link03 {
+            margin-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+          }
+          .home-link04 {
+            margin-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+          }
+          .home-link05 {
+            margin-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+          }
+          .home-contact-container {
+            display: flex;
+            align-items: flex-start;
+            margin-left: var(--dl-space-space-twounits);
+            margin-right: var(--dl-space-space-twounits);
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-text48 {
+            color: var(--dl-color-scheme-green);
+            font-weight: 700;
+            margin-bottom: var(--dl-space-space-oneandhalfunits);
+          }
+          .home-link06 {
+            margin-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+          }
+          .home-link07 {
+            font-size: 14px;
+            font-style: normal;
+            font-family: Rubik;
+            font-weight: 900;
+            line-height: 1.6;
+            letter-spacing: 0.02em;
+            text-transform: capitalize;
+            text-decoration: none;
+          }
+          .home-subscribe-container {
+            flex: 0 0 auto;
+            width: 30%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+          .home-text49 {
+            color: var(--dl-color-scheme-green);
+            font-weight: 700;
+            margin-bottom: var(--dl-space-space-oneandhalfunits);
+          }
+          .home-textinput {
+            outline: none;
+            align-self: stretch;
+            padding-top: 4px;
+            border-color: rgba(0, 0, 0, 0.1);
+            padding-left: 0px;
+            border-radius: 0px;
+            margin-bottom: var(--dl-space-space-twounits);
+            padding-bottom: 4px;
+            border-top-width: 0px;
+            border-left-width: 0px;
+            border-right-width: 0px;
+            border-bottom-width: 1px;
+          }
+          .home-separator1 {
+            width: 100%;
+            height: 1px;
+            margin-top: var(--dl-space-space-twounits);
+            margin-bottom: var(--dl-space-space-twounits);
+            background-color: #d9d9d9;
+          }
+          .home-max-width2 {
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          .home-image09 {
+            width: 150px;
+            object-fit: cover;
+            text-decoration: none;
+          }
+          .home-link09 {
+            width: auto;
+            font-style: normal;
+            text-align: center;
+            font-weight: 300;
+            text-decoration: none;
+          }
+          .home-link10 {
+            font-style: normal;
+            font-weight: 300;
+            text-decoration: none;
           }
           @media (max-width: 1600px) {
             .home-reviews {
               height: 641px;
             }
-            .home-container3 {
+            .home-container03 {
               height: 439px;
             }
-            .home-image5 {
+            .home-image05 {
               width: 616px;
               height: 544px;
             }
@@ -527,12 +993,51 @@ const Home = (props) => {
             .home-content-wrap1 {
               height: 654px;
             }
-            .home-image6 {
+            .home-image06 {
               height: 788px;
             }
-            .home-image7 {
+            .home-image07 {
               height: 820px;
               padding-bottom: 0px;
+            }
+            .home-container07 {
+              width: 100%;
+              flex-direction: row;
+            }
+            .home-tags {
+              width: 70%;
+              flex-direction: row;
+            }
+            .home-text39 {
+              color: var(--dl-color-scheme-white);
+              padding: var(--dl-space-space-halfunit);
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 700;
+              border-color: var(--dl-color-scheme-white80);
+              border-width: 1px;
+              margin-right: var(--dl-space-space-halfunit);
+              border-radius: var(--dl-radius-radius-radius8);
+              background-color: var(--dl-color-scheme-darkgray);
+            }
+            .home-date {
+              width: 30%;
+              align-items: flex-end;
+            }
+            .home-date-time {
+              font-size: 12px;
+              text-align: right;
+              font-weight: 700;
+            }
+            .home-navigate-container {
+              margin-left: var(--dl-space-space-oneandhalfunits);
+            }
+            .home-contact-container {
+              margin-left: var(--dl-space-space-oneandhalfunits);
+            }
+            .home-link09 {
+              width: auto;
+              text-align: center;
             }
           }
           @media (max-width: 1200px) {
@@ -546,10 +1051,10 @@ const Home = (props) => {
               align-items: center;
               justify-content: center;
             }
-            .home-image4 {
+            .home-image04 {
               height: 568px;
             }
-            .home-image5 {
+            .home-image05 {
               width: 504px;
               height: 452px;
               margin-right: 0px;
@@ -579,13 +1084,48 @@ const Home = (props) => {
               font-style: normal;
               font-weight: 700;
             }
-            .home-image6 {
+            .home-image06 {
               height: 816px;
               position: relative;
             }
-            .home-image7 {
+            .home-image07 {
               height: 796px;
               align-self: center;
+            }
+            .home-image08 {
+              height: 180px;
+            }
+            .home-text41 {
+              font-style: normal;
+              font-weight: 700;
+              margin-bottom: var(--dl-space-space-unit);
+              text-transform: uppercase;
+            }
+            .home-max-width1 {
+              padding-left: 0px;
+              padding-right: 0px;
+            }
+            .home-navigate-container {
+              margin-left: var(--dl-space-space-oneandhalfunits);
+            }
+            .home-contact-container {
+              align-self: flex-start;
+              margin-left: var(--dl-space-space-oneandhalfunits);
+            }
+            .home-link06 {
+              margin-bottom: var(--dl-space-space-unit);
+            }
+            .home-link07 {
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 900;
+              line-height: 1.3;
+              margin-bottom: var(--dl-space-space-unit);
+              letter-spacing: auto;
+            }
+            .home-link09 {
+              width: auto;
+              text-align: center;
             }
           }
           @media (max-width: 991px) {
@@ -603,10 +1143,10 @@ const Home = (props) => {
               padding-left: var(--dl-space-space-unit);
               padding-right: var(--dl-space-space-unit);
             }
-            .home-container2 {
+            .home-container02 {
               padding: var(--dl-space-space-oneandhalfunits);
             }
-            .home-container3 {
+            .home-container03 {
               height: 437px;
               padding-left: var(--dl-space-space-unit);
               padding-right: var(--dl-space-space-unit);
@@ -614,19 +1154,32 @@ const Home = (props) => {
             .home-content {
               height: 807px;
             }
-            .home-image5 {
+            .home-image05 {
               height: 656px;
             }
             .home-animation {
               height: auto;
               margin-bottom: var(--dl-space-space-threeunits);
             }
-            .home-image6 {
+            .home-image06 {
               height: 960px;
             }
-            .home-image7 {
+            .home-image07 {
               height: 920px;
               align-self: center;
+            }
+            .home-blog-cards-container {
+              align-items: center;
+              flex-direction: column;
+            }
+            .home-blog-card {
+              max-width: 550px;
+            }
+            .home-link09 {
+              text-align: center;
+            }
+            .home-link10 {
+              text-align: center;
             }
           }
           @media (max-width: 767px) {
@@ -635,18 +1188,18 @@ const Home = (props) => {
               height: 738px;
               padding-bottom: 0px;
             }
-            .home-container1 {
+            .home-container01 {
               width: 100%;
             }
             .home-image {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-right: var(--dl-space-space-oneandhalfunits);
             }
-            .home-image1 {
+            .home-image01 {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-right: var(--dl-space-space-oneandhalfunits);
             }
-            .home-image2 {
+            .home-image02 {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-right: var(--dl-space-space-oneandhalfunits);
             }
@@ -658,11 +1211,11 @@ const Home = (props) => {
             .home-content {
               flex-direction: column;
             }
-            .home-image4 {
+            .home-image04 {
               width: 100%;
               height: auto;
             }
-            .home-image5 {
+            .home-image05 {
               width: 100%;
               height: var(--dl-size-size-xxlarge);
             }
@@ -700,12 +1253,51 @@ const Home = (props) => {
             .home-text34 {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .home-image6 {
+            .home-image06 {
               width: 100%;
               height: auto;
             }
-            .home-image7 {
+            .home-image07 {
               height: var(--dl-size-size-xxlarge);
+            }
+            .home-container06 {
+              width: 100%;
+              grid-template-columns: repeat(1, 1fr);
+            }
+            .home-blog-card {
+              max-width: 450px;
+            }
+            .home-image08 {
+              height: auto;
+            }
+            .home-top-part {
+              align-items: center;
+              flex-direction: column;
+              justify-content: space-between;
+            }
+            .home-links-container {
+              width: 100%;
+              align-items: flex-start;
+              margin-bottom: var(--dl-space-space-oneandhalfunits);
+              flex-direction: row;
+            }
+            .home-product-container {
+              margin-left: var(--dl-space-space-oneandhalfunits);
+            }
+            .home-navigate-container {
+              align-self: flex-start;
+              margin-bottom: var(--dl-space-space-oneandhalfunits);
+            }
+            .home-subscribe-container {
+              width: 100%;
+              padding-left: var(--dl-space-space-oneandhalfunits);
+              padding-right: var(--dl-space-space-oneandhalfunits);
+            }
+            .home-link09 {
+              text-align: center;
+            }
+            .home-link10 {
+              text-align: center;
             }
           }
           @media (max-width: 479px) {
@@ -724,7 +1316,7 @@ const Home = (props) => {
             .home-sticker-wrap {
               width: 100%;
             }
-            .home-container1 {
+            .home-container01 {
               width: 100%;
             }
             .home-image {
@@ -733,13 +1325,13 @@ const Home = (props) => {
               margin-left: var(--dl-space-space-halfunit);
               margin-right: var(--dl-space-space-halfunit);
             }
-            .home-image1 {
+            .home-image01 {
               width: 30%;
               height: auto;
               margin-left: 0px;
               margin-right: 0px;
             }
-            .home-image2 {
+            .home-image02 {
               width: 30%;
               height: auto;
               margin-left: var(--dl-space-space-halfunit);
@@ -763,6 +1355,45 @@ const Home = (props) => {
             .home-content-wrap1 {
               width: 100%;
             }
+            .home-blog-card {
+              max-width: 350px;
+            }
+            .home-top-part {
+              align-items: center;
+              flex-direction: column;
+            }
+            .home-links-container {
+              position: relative;
+            }
+            .home-product-container {
+              width: auto;
+            }
+            .home-navigate-container {
+              width: auto;
+              align-self: flex-start;
+              margin-left: var(--dl-space-space-oneandhalfunits);
+              margin-bottom: var(--dl-space-space-oneandhalfunits);
+              flex-direction: column;
+            }
+            .home-contact-container {
+              width: auto;
+              align-items: flex-start;
+              margin-left: var(--dl-space-space-oneandhalfunits);
+              margin-bottom: 0px;
+            }
+            .home-link07 {
+              margin-bottom: var(--dl-space-space-oneandhalfunits);
+            }
+            .home-max-width2 {
+              flex-direction: column;
+            }
+            .home-image09 {
+              margin-bottom: var(--dl-space-space-unit);
+            }
+            .home-link09 {
+              text-align: center;
+              margin-bottom: var(--dl-space-space-oneandhalfunits);
+            }
           }
         `}
       </style>
@@ -771,3 +1402,35 @@ const Home = (props) => {
 }
 
 export default Home
+
+export async function getStaticProps(context) {
+  try {
+    const context0mvdzProp = await home1Resource({
+      ...context?.params,
+    })
+    if (!context0mvdzProp) {
+      return {
+        notFound: true,
+      }
+    }
+    const context1m1e3aProp = await homeResource({
+      ...context?.params,
+    })
+    if (!context1m1e3aProp) {
+      return {
+        notFound: true,
+      }
+    }
+    return {
+      props: {
+        context0mvdzProp: context0mvdzProp,
+        context1m1e3aProp: context1m1e3aProp,
+      },
+      revalidate: 60,
+    }
+  } catch (error) {
+    return {
+      notFound: true,
+    }
+  }
+}

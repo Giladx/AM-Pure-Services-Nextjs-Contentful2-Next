@@ -6,7 +6,6 @@ import Script from 'dangerous-html/react'
 import Navigation from '../components/navigation'
 import Process from '../components/process'
 import Banner from '../components/banner'
-import Footer from '../components/footer'
 
 const Contact = (props) => {
   return (
@@ -149,7 +148,6 @@ const Contact = (props) => {
         </div>
         <Process rootClassName="process-root-class-name"></Process>
         <Banner rootClassName="banner-root-class-name7"></Banner>
-        <Footer rootClassName="footer-root-class-name1"></Footer>
       </div>
       <style jsx>
         {`

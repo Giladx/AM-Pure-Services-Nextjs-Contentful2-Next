@@ -6,7 +6,6 @@ import Script from 'dangerous-html/react'
 import Navigation from '../components/navigation'
 import Process from '../components/process'
 import Banner from '../components/banner'
-import Footer from '../components/footer'
 
 const OrderRquest = (props) => {
   return (
@@ -140,7 +139,6 @@ const OrderRquest = (props) => {
         </div>
         <Process rootClassName="process-root-class-name1"></Process>
         <Banner rootClassName="banner-root-class-name8"></Banner>
-        <Footer rootClassName="footer-root-class-name2"></Footer>
       </div>
       <style jsx>
         {`

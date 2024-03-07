@@ -86,6 +86,9 @@ const BlogCard = (props) => {
             .blog-card-root-class-name21 {
               height: auto;
             }
+            .blog-card-root-class-name23 {
+              height: auto;
+            }
           }
           @media (max-width: 991px) {
             .blog-card-blog-card {
@@ -141,7 +144,13 @@ const BlogCard = (props) => {
             .blog-card-root-class-name18 {
               margin-bottom: var(--dl-space-space-twounits);
             }
+            .blog-card-root-class-name19 {
+              margin-bottom: var(--dl-space-space-twounits);
+            }
             .blog-card-root-class-name20 {
+              margin-bottom: var(--dl-space-space-twounits);
+            }
+            .blog-card-root-class-name22 {
               margin-bottom: var(--dl-space-space-twounits);
             }
           }

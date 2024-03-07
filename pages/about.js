@@ -1,9 +1,12 @@
 import React from 'react'
+import Link from 'next/link'
 import Head from 'next/head'
+
+import { DataProvider, Repeater } from '@teleporthq/react-components'
 
 import Navigation from '../components/navigation'
 import Banner from '../components/banner'
-import Footer from '../components/footer'
+import aboutResource from '../resources/about'
 
 const About = (props) => {
   return (
@@ -97,7 +100,106 @@ const About = (props) => {
           </span>
           <Banner rootClassName="banner-root-class-name4"></Banner>
         </main>
-        <Footer></Footer>
+        <div className="about-footer section-container">
+          <div className="about-max-width max-content-container">
+            <div className="about-top-part">
+              <div className="about-links-container">
+                <div className="about-product-container">
+                  <span className="about-text31">Product</span>
+                  <Link href="/monthly-specials">
+                    <a className="about-link">MONTHLY SPECIALS</a>
+                  </Link>
+                  <DataProvider
+                    renderSuccess={(params) => (
+                      <>
+                        <div className="about-container1">
+                          <Repeater
+                            items={params}
+                            renderItem={(context_jfwijc) => (
+                              <>
+                                <span className="about-text32">
+                                  {context_jfwijc?.title}
+                                </span>
+                              </>
+                            )}
+                          />
+                        </div>
+                      </>
+                    )}
+                    initialData={props.contextJfwijcProp}
+                    persistDataDuringLoading={true}
+                  />
+                </div>
+              </div>
+              <div className="about-navigate-container">
+                <span className="about-text33">Info</span>
+                <Link href="/about">
+                  <a className="about-link1">
+                    <span>ABOUT</span>
+                    <br></br>
+                  </a>
+                </Link>
+                <Link href="/restrictions">
+                  <a className="about-link2">RESTRICTIONS</a>
+                </Link>
+                <Link href="/contact">
+                  <a className="about-link3">CONTACT</a>
+                </Link>
+              </div>
+              <div className="about-contact-container">
+                <span className="about-text36">Contact Us</span>
+                <a href="tel:+18885031722" className="about-link4">
+                  (888) 503-1722
+                </a>
+                <a
+                  href="mailto:service@ampureservices.com?subject=Site Service Request"
+                  className="about-link5"
+                >
+                  SERVICE@AMPURESERVICES.COM
+                </a>
+              </div>
+              <div className="about-subscribe-container">
+                <span className="about-text37">
+                  Subscribe to our newsletter
+                </span>
+                <input
+                  type="text"
+                  id="newsletter"
+                  placeholder="Enter your e-mail address"
+                  className="about-textinput input"
+                />
+                <button className="button-primary button">Subscribe</button>
+              </div>
+            </div>
+          </div>
+          <div className="about-separator"></div>
+          <footer className="about-max-width1 max-content-container">
+            <Link href="/">
+              <a>
+                <img
+                  alt="image"
+                  src="20769734-2b37-4566-8316-77ad864b1180"
+                  width="150"
+                  height="68"
+                  className="about-image"
+                />
+              </a>
+            </Link>
+            <Link href="/">
+              <a className="about-link7">
+                All rights reserved @ AM Pure Services
+              </a>
+            </Link>
+            <a
+              href="https://011.ninja/bio"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="about-link8"
+            >
+              Developed by 011.ninja
+            </a>
+          </footer>
+        </div>
       </div>
       <style jsx>
         {`
@@ -163,12 +265,212 @@ const About = (props) => {
           .about-text30 {
             font-weight: 700;
           }
+          .about-footer {
+            position: relative;
+          }
+          .about-max-width {
+            max-width: var(--dl-size-size-maxwidth);
+            padding-left: 0px;
+            padding-right: 0px;
+          }
+          .about-top-part {
+            width: 100%;
+            display: flex;
+            align-items: stretch;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          .about-links-container {
+            width: 25%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          .about-product-container {
+            flex: 0 0 auto;
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .about-text31 {
+            color: var(--dl-color-scheme-green);
+            font-weight: 700;
+            margin-bottom: var(--dl-space-space-oneandhalfunits);
+          }
+          .about-link {
+            color: var(--dl-color-scheme-darkblue);
+            margin-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+          }
+          .about-container1 {
+            display: grid;
+          }
+          .about-text32 {
+            margin-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+          }
+          .about-navigate-container {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: flex-start;
+            margin-left: 0px;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .about-text33 {
+            color: var(--dl-color-scheme-green);
+            font-weight: 700;
+            margin-bottom: var(--dl-space-space-oneandhalfunits);
+          }
+          .about-link1 {
+            margin-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+          }
+          .about-link2 {
+            margin-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+          }
+          .about-link3 {
+            margin-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+          }
+          .about-contact-container {
+            display: flex;
+            align-items: flex-start;
+            margin-left: var(--dl-space-space-twounits);
+            margin-right: var(--dl-space-space-twounits);
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .about-text36 {
+            color: var(--dl-color-scheme-green);
+            font-weight: 700;
+            margin-bottom: var(--dl-space-space-oneandhalfunits);
+          }
+          .about-link4 {
+            margin-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+          }
+          .about-link5 {
+            font-size: 14px;
+            font-style: normal;
+            font-family: Rubik;
+            font-weight: 900;
+            line-height: 1.6;
+            letter-spacing: 0.02em;
+            text-transform: capitalize;
+            text-decoration: none;
+          }
+          .about-subscribe-container {
+            flex: 0 0 auto;
+            width: 30%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+          .about-text37 {
+            color: var(--dl-color-scheme-green);
+            font-weight: 700;
+            margin-bottom: var(--dl-space-space-oneandhalfunits);
+          }
+          .about-textinput {
+            outline: none;
+            align-self: stretch;
+            padding-top: 4px;
+            border-color: rgba(0, 0, 0, 0.1);
+            padding-left: 0px;
+            border-radius: 0px;
+            margin-bottom: var(--dl-space-space-twounits);
+            padding-bottom: 4px;
+            border-top-width: 0px;
+            border-left-width: 0px;
+            border-right-width: 0px;
+            border-bottom-width: 1px;
+          }
+          .about-separator {
+            width: 100%;
+            height: 1px;
+            margin-top: var(--dl-space-space-twounits);
+            margin-bottom: var(--dl-space-space-twounits);
+            background-color: #d9d9d9;
+          }
+          .about-max-width1 {
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          .about-image {
+            width: 150px;
+            object-fit: cover;
+            text-decoration: none;
+          }
+          .about-link7 {
+            width: auto;
+            font-style: normal;
+            text-align: center;
+            font-weight: 300;
+            text-decoration: none;
+          }
+          .about-link8 {
+            font-style: normal;
+            font-weight: 300;
+            text-decoration: none;
+          }
+          @media (max-width: 1600px) {
+            .about-navigate-container {
+              margin-left: var(--dl-space-space-oneandhalfunits);
+            }
+            .about-contact-container {
+              margin-left: var(--dl-space-space-oneandhalfunits);
+            }
+            .about-link7 {
+              width: auto;
+              text-align: center;
+            }
+          }
           @media (max-width: 1200px) {
             .about-text {
               font-size: 48px;
               font-style: normal;
               font-family: Rubik;
               font-weight: 900;
+            }
+            .about-max-width {
+              padding-left: 0px;
+              padding-right: 0px;
+            }
+            .about-navigate-container {
+              margin-left: var(--dl-space-space-oneandhalfunits);
+            }
+            .about-contact-container {
+              align-self: flex-start;
+              margin-left: var(--dl-space-space-oneandhalfunits);
+            }
+            .about-link4 {
+              margin-bottom: var(--dl-space-space-unit);
+            }
+            .about-link5 {
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 900;
+              line-height: 1.3;
+              margin-bottom: var(--dl-space-space-unit);
+              letter-spacing: auto;
+            }
+            .about-link7 {
+              width: auto;
+              text-align: center;
+            }
+          }
+          @media (max-width: 991px) {
+            .about-link7 {
+              text-align: center;
+            }
+            .about-link8 {
+              text-align: center;
             }
           }
           @media (max-width: 767px) {
@@ -180,10 +482,75 @@ const About = (props) => {
               padding-left: var(--dl-space-space-twounits);
               padding-right: var(--dl-space-space-twounits);
             }
+            .about-top-part {
+              align-items: center;
+              flex-direction: column;
+              justify-content: space-between;
+            }
+            .about-links-container {
+              width: 100%;
+              align-items: flex-start;
+              margin-bottom: var(--dl-space-space-oneandhalfunits);
+              flex-direction: row;
+            }
+            .about-product-container {
+              margin-left: var(--dl-space-space-oneandhalfunits);
+            }
+            .about-navigate-container {
+              align-self: flex-start;
+              margin-bottom: var(--dl-space-space-oneandhalfunits);
+            }
+            .about-subscribe-container {
+              width: 100%;
+              padding-left: var(--dl-space-space-oneandhalfunits);
+              padding-right: var(--dl-space-space-oneandhalfunits);
+            }
+            .about-link7 {
+              text-align: center;
+            }
+            .about-link8 {
+              text-align: center;
+            }
           }
           @media (max-width: 479px) {
             .about-text {
               font-size: 25px;
+            }
+            .about-top-part {
+              align-items: center;
+              flex-direction: column;
+            }
+            .about-links-container {
+              position: relative;
+            }
+            .about-product-container {
+              width: auto;
+            }
+            .about-navigate-container {
+              width: auto;
+              align-self: flex-start;
+              margin-left: var(--dl-space-space-oneandhalfunits);
+              margin-bottom: var(--dl-space-space-oneandhalfunits);
+              flex-direction: column;
+            }
+            .about-contact-container {
+              width: auto;
+              align-items: flex-start;
+              margin-left: var(--dl-space-space-oneandhalfunits);
+              margin-bottom: 0px;
+            }
+            .about-link5 {
+              margin-bottom: var(--dl-space-space-oneandhalfunits);
+            }
+            .about-max-width1 {
+              flex-direction: column;
+            }
+            .about-image {
+              margin-bottom: var(--dl-space-space-unit);
+            }
+            .about-link7 {
+              text-align: center;
+              margin-bottom: var(--dl-space-space-oneandhalfunits);
             }
           }
         `}
@@ -193,3 +560,26 @@ const About = (props) => {
 }
 
 export default About
+
+export async function getStaticProps(context) {
+  try {
+    const contextJfwijcProp = await aboutResource({
+      ...context?.params,
+    })
+    if (!contextJfwijcProp) {
+      return {
+        notFound: true,
+      }
+    }
+    return {
+      props: {
+        contextJfwijcProp: contextJfwijcProp,
+      },
+      revalidate: 60,
+    }
+  } catch (error) {
+    return {
+      notFound: true,
+    }
+  }
+}
