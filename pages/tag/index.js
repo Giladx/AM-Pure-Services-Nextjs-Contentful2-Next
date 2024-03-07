@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import tagPageInitialPropsTqRjResource from '../../resources/tag-page-initial-props-tq_rj'
+import tagPageInitialPropsTqOfResource from '../../resources/tag-page-initial-props-tq_of'
 
 const Tag1 = (props) => {
   return (
@@ -30,18 +30,20 @@ const Tag1 = (props) => {
         <DataProvider
           renderSuccess={(params) => (
             <>
-              <Repeater
-                items={params}
-                renderItem={(TagEntities) => (
-                  <>
-                    <div className="tag1-container1">
-                      <button type="button" className="tag1-button button">
-                        {TagEntities?.tagName}
-                      </button>
-                    </div>
-                  </>
-                )}
-              />
+              <div>
+                <Repeater
+                  items={params}
+                  renderItem={(TagEntities) => (
+                    <>
+                      <div className="tag1-container2">
+                        <button type="button" className="tag1-button button">
+                          {TagEntities?.tagName}
+                        </button>
+                      </div>
+                    </>
+                  )}
+                />
+              </div>
             </>
           )}
           initialData={props.tagEntities}
@@ -59,7 +61,7 @@ const Tag1 = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .tag1-container1 {
+          .tag1-container2 {
             gap: 12px;
             width: 100%;
             display: flex;
@@ -89,7 +91,7 @@ export default Tag1
 
 export async function getStaticProps(context) {
   try {
-    const response = await tagPageInitialPropsTqRjResource({
+    const response = await tagPageInitialPropsTqOfResource({
       ...context?.params,
     })
     if (!response) {

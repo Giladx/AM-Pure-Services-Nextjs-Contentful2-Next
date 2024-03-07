@@ -4,8 +4,8 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import tagPageInitialPropsTqNkResource from '../../../resources/tag-page-initial-props-tq_nk'
-import tagPageInitialPathsTqKrResource from '../../../resources/tag-page-initial-paths-tq_kr'
+import tagPageInitialPropsTqFpResource from '../../../resources/tag-page-initial-props-tq_fp'
+import tagPageInitialPathsTq46Resource from '../../../resources/tag-page-initial-paths-tq_46'
 
 const Tag11 = (props) => {
   return (
@@ -31,18 +31,20 @@ const Tag11 = (props) => {
         <DataProvider
           renderSuccess={(params) => (
             <>
-              <Repeater
-                items={params}
-                renderItem={(TagEntities) => (
-                  <>
-                    <div className="tag11-container1">
-                      <button type="button" className="tag11-button button">
-                        {TagEntities?.tagName}
-                      </button>
-                    </div>
-                  </>
-                )}
-              />
+              <div>
+                <Repeater
+                  items={params}
+                  renderItem={(TagEntities) => (
+                    <>
+                      <div className="tag11-container2">
+                        <button type="button" className="tag11-button button">
+                          {TagEntities?.tagName}
+                        </button>
+                      </div>
+                    </>
+                  )}
+                />
+              </div>
             </>
           )}
           initialData={props.tagEntities}
@@ -60,7 +62,7 @@ const Tag11 = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .tag11-container1 {
+          .tag11-container2 {
             gap: 12px;
             width: 100%;
             display: flex;
@@ -90,7 +92,7 @@ export default Tag11
 
 export async function getStaticProps(context) {
   try {
-    const response = await tagPageInitialPropsTqNkResource({
+    const response = await tagPageInitialPropsTqFpResource({
       ...context?.params,
       skip: (context.params.page - 1) * 10,
     })
@@ -115,7 +117,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await tagPageInitialPathsTqKrResource({
+    const response = await tagPageInitialPathsTq46Resource({
       content_type: 'tag',
     })
     const totalCount = response?.meta?.pagination?.total

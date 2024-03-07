@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import authorPageInitialPropsTqEgResource from '../../resources/author-page-initial-props-tq_eg'
+import authorPageInitialPropsTqZtResource from '../../resources/author-page-initial-props-tq_zt'
 
 const Author = (props) => {
   return (
@@ -30,21 +30,23 @@ const Author = (props) => {
         <DataProvider
           renderSuccess={(params) => (
             <>
-              <Repeater
-                items={params}
-                renderItem={(AuthorEntities) => (
-                  <>
-                    <div className="author-container1">
-                      <h1>{AuthorEntities?.name}</h1>
-                      <img
-                        alt={AuthorEntities?.picture?.name}
-                        src={AuthorEntities?.picture?.url}
-                        className="author-image"
-                      />
-                    </div>
-                  </>
-                )}
-              />
+              <div>
+                <Repeater
+                  items={params}
+                  renderItem={(AuthorEntities) => (
+                    <>
+                      <div className="author-container2">
+                        <h1>{AuthorEntities?.name}</h1>
+                        <img
+                          alt={AuthorEntities?.picture?.name}
+                          src={AuthorEntities?.picture?.url}
+                          className="author-image"
+                        />
+                      </div>
+                    </>
+                  )}
+                />
+              </div>
             </>
           )}
           initialData={props.authorEntities}
@@ -62,7 +64,7 @@ const Author = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .author-container1 {
+          .author-container2 {
             gap: 12px;
             width: 100%;
             display: flex;
@@ -94,7 +96,7 @@ export default Author
 
 export async function getStaticProps(context) {
   try {
-    const response = await authorPageInitialPropsTqEgResource({
+    const response = await authorPageInitialPropsTqZtResource({
       ...context?.params,
     })
     if (!response) {

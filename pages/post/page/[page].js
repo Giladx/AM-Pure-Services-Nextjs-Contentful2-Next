@@ -8,8 +8,8 @@ import PropTypes from 'prop-types'
 import Navigation from '../../../components/navigation'
 import Banner from '../../../components/banner'
 import Footer from '../../../components/footer'
-import postPageInitialPropsTqRfResource from '../../../resources/post-page-initial-props-tq_rf'
-import postPageInitialPathsTqV2Resource from '../../../resources/post-page-initial-paths-tq_v2'
+import postPageInitialPropsTqRJResource from '../../../resources/post-page-initial-props-tq_r-j'
+import postPageInitialPathsTqVvResource from '../../../resources/post-page-initial-paths-tq_vv'
 
 const Post11 = (props) => {
   return (
@@ -40,10 +40,10 @@ const Post11 = (props) => {
           </span>
         </div>
         <div className="post11-blog-posts">
-          <div className="post11-grid">
-            <DataProvider
-              renderSuccess={(params) => (
-                <>
+          <DataProvider
+            renderSuccess={(params) => (
+              <>
+                <div className="post11-container1">
                   <Repeater
                     items={params}
                     renderItem={(PostEntities) => (
@@ -57,7 +57,7 @@ const Post11 = (props) => {
                                 loading="lazy"
                                 className="post11-image"
                               />
-                              <div className="post11-container1">
+                              <div className="post11-container2">
                                 <Repeater
                                   items={PostEntities?.tag || ' '}
                                   renderItem={(context_8pi5th) => (
@@ -75,7 +75,7 @@ const Post11 = (props) => {
                               <span className="post11-text5">
                                 {PostEntities?.title}
                               </span>
-                              <div className="post11-container2">
+                              <div className="post11-container3">
                                 <span className="post11-text6">Read More</span>
                                 <svg
                                   viewBox="0 0 1024 1024"
@@ -90,13 +90,13 @@ const Post11 = (props) => {
                       </>
                     )}
                   />
-                </>
-              )}
-              initialData={props.postEntities}
-              persistDataDuringLoading={true}
-              key={props?.pagination?.page}
-            />
-          </div>
+                </div>
+              </>
+            )}
+            initialData={props.postEntities}
+            persistDataDuringLoading={true}
+            key={props?.pagination?.page}
+          />
         </div>
         <Banner rootClassName="banner-root-class-name21"></Banner>
         <Footer rootClassName="footer-root-class-name4"></Footer>
@@ -142,13 +142,9 @@ const Post11 = (props) => {
             padding-bottom: var(--dl-space-space-sixunits);
             justify-content: center;
           }
-          .post11-grid {
-            width: auto;
-            height: auto;
-            margin: auto 0;
+          .post11-container1 {
             display: grid;
-            grid-gap: 1.5rem;
-            align-self: center;
+            grid-gap: 20px;
             grid-template-columns: repeat(3, 1fr);
           }
           .post11-blog-card {
@@ -168,7 +164,7 @@ const Post11 = (props) => {
             border-radius: var(--dl-radius-radius-radius8);
             margin-bottom: var(--dl-space-space-halfunit);
           }
-          .post11-container1 {
+          .post11-container2 {
             flex: 0 0 auto;
             width: 100%;
             display: flex;
@@ -204,7 +200,7 @@ const Post11 = (props) => {
             font-weight: 300;
             margin-bottom: var(--dl-space-space-halfunit);
           }
-          .post11-container2 {
+          .post11-container3 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -233,10 +229,8 @@ const Post11 = (props) => {
             }
           }
           @media (max-width: 991px) {
-            .post11-grid {
-              width: var(--dl-size-size-maxwidth);
-              max-width: 480px;
-              grid-template-columns: repeat(1, 1fr);
+            .post11-container1 {
+              grid-template-columns: repeat(2, 1fr);
             }
             .post11-blog-card {
               max-width: 550px;
@@ -246,6 +240,11 @@ const Post11 = (props) => {
             .post11-text {
               font-size: 30px;
             }
+            .post11-container1 {
+              width: 100%;
+              padding: 15px;
+              grid-template-columns: repeat(1, 1fr);
+            }
             .post11-blog-card {
               max-width: 450px;
             }
@@ -253,10 +252,6 @@ const Post11 = (props) => {
           @media (max-width: 479px) {
             .post11-text {
               font-size: 25px;
-            }
-            .post11-grid {
-              width: 100%;
-              padding: 15px;
             }
             .post11-blog-card {
               max-width: auto;
@@ -281,7 +276,7 @@ export default Post11
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialPropsTqRfResource({
+    const response = await postPageInitialPropsTqRJResource({
       ...context?.params,
       skip: (context.params.page - 1) * 9,
     })
@@ -306,7 +301,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPathsTqV2Resource({
+    const response = await postPageInitialPathsTqVvResource({
       content_type: 'post',
     })
     const totalCount = response?.meta?.pagination?.total

@@ -4,8 +4,8 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import authorPageInitialPropsTqJjResource from '../../../resources/author-page-initial-props-tq_jj'
-import authorPageInitialPathsTq7Resource from '../../../resources/author-page-initial-paths-tq__7'
+import authorPageInitialPropsTqMResource from '../../../resources/author-page-initial-props-tq_-m'
+import authorPageInitialPathsTqVRResource from '../../../resources/author-page-initial-paths-tq_v-r'
 
 const Author1 = (props) => {
   return (
@@ -31,21 +31,23 @@ const Author1 = (props) => {
         <DataProvider
           renderSuccess={(params) => (
             <>
-              <Repeater
-                items={params}
-                renderItem={(AuthorEntities) => (
-                  <>
-                    <div className="author1-container1">
-                      <h1>{AuthorEntities?.name}</h1>
-                      <img
-                        alt={AuthorEntities?.picture?.name}
-                        src={AuthorEntities?.picture?.url}
-                        className="author1-image"
-                      />
-                    </div>
-                  </>
-                )}
-              />
+              <div>
+                <Repeater
+                  items={params}
+                  renderItem={(AuthorEntities) => (
+                    <>
+                      <div className="author1-container2">
+                        <h1>{AuthorEntities?.name}</h1>
+                        <img
+                          alt={AuthorEntities?.picture?.name}
+                          src={AuthorEntities?.picture?.url}
+                          className="author1-image"
+                        />
+                      </div>
+                    </>
+                  )}
+                />
+              </div>
             </>
           )}
           initialData={props.authorEntities}
@@ -63,7 +65,7 @@ const Author1 = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .author1-container1 {
+          .author1-container2 {
             gap: 12px;
             width: 100%;
             display: flex;
@@ -95,7 +97,7 @@ export default Author1
 
 export async function getStaticProps(context) {
   try {
-    const response = await authorPageInitialPropsTqJjResource({
+    const response = await authorPageInitialPropsTqMResource({
       ...context?.params,
       skip: (context.params.page - 1) * 10,
     })
@@ -120,7 +122,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await authorPageInitialPathsTq7Resource({
+    const response = await authorPageInitialPathsTqVRResource({
       content_type: 'author',
     })
     const totalCount = response?.meta?.pagination?.total

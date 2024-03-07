@@ -98,7 +98,8 @@ const Home = (props) => {
             <div className="home-container3">
               <div className="home-container4">
                 <Script
-                  html={`<div class='sk-ww-google-reviews' data-embed-id='25371174'></div><script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>`}
+                  html={`<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div style="height:auto;" class="elfsight-app-022a64ba-bfe8-4981-9894-9414187371fe" data-elfsight-app-lazy></div>`}
                 ></Script>
               </div>
             </div>
@@ -323,7 +324,6 @@ const Home = (props) => {
             padding-bottom: var(--dl-space-space-twounits);
           }
           .home-container2 {
-            flex: 0 0 auto;
             width: 100%;
             height: auto;
             display: flex;
@@ -333,7 +333,7 @@ const Home = (props) => {
             justify-content: center;
           }
           .home-image3 {
-            width: 200px;
+            width: 180px;
             object-fit: cover;
             margin-bottom: var(--dl-space-space-unit);
           }
@@ -344,7 +344,7 @@ const Home = (props) => {
           }
           .home-container3 {
             width: 100%;
-            height: 372px;
+            height: 420px;
           }
           .home-container4 {
             display: contents;
@@ -510,10 +510,10 @@ const Home = (props) => {
           }
           @media (max-width: 1600px) {
             .home-reviews {
-              height: 520px;
+              height: 641px;
             }
             .home-container3 {
-              height: 418px;
+              height: 439px;
             }
             .home-image5 {
               width: 616px;
@@ -599,7 +599,7 @@ const Home = (props) => {
               margin-bottom: 42px;
             }
             .home-reviews {
-              height: 530px;
+              height: 664px;
               padding-left: var(--dl-space-space-unit);
               padding-right: var(--dl-space-space-unit);
             }
@@ -607,7 +607,12 @@ const Home = (props) => {
               padding: var(--dl-space-space-oneandhalfunits);
             }
             .home-container3 {
-              height: 380px;
+              height: 437px;
+              padding-left: var(--dl-space-space-unit);
+              padding-right: var(--dl-space-space-unit);
+            }
+            .home-content {
+              height: 807px;
             }
             .home-image5 {
               height: 656px;
@@ -646,7 +651,7 @@ const Home = (props) => {
               margin-right: var(--dl-space-space-oneandhalfunits);
             }
             .home-reviews {
-              height: 560px;
+              height: 660px;
               padding-left: var(--dl-space-space-unit);
               padding-right: var(--dl-space-space-unit);
             }
@@ -741,6 +746,7 @@ const Home = (props) => {
               margin-right: var(--dl-space-space-halfunit);
             }
             .home-reviews {
+              height: 698px;
               padding-left: var(--dl-space-space-unit);
               margin-bottom: var(--dl-space-space-twounits);
               padding-right: var(--dl-space-space-unit);

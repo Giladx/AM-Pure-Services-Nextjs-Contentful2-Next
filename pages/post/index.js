@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 import Navigation from '../../components/navigation'
 import Banner from '../../components/banner'
 import Footer from '../../components/footer'
-import postPageInitialPropsTqOmResource from '../../resources/post-page-initial-props-tq_om'
+import postPageInitialPropsTqFbResource from '../../resources/post-page-initial-props-tq_fb'
 
 const Post1 = (props) => {
   return (
@@ -39,10 +39,10 @@ const Post1 = (props) => {
           </span>
         </div>
         <div className="post1-blog-posts">
-          <div className="post1-grid">
-            <DataProvider
-              renderSuccess={(params) => (
-                <>
+          <DataProvider
+            renderSuccess={(params) => (
+              <>
+                <div className="post1-container1">
                   <Repeater
                     items={params}
                     renderItem={(PostEntities) => (
@@ -56,7 +56,7 @@ const Post1 = (props) => {
                                 loading="lazy"
                                 className="post1-image"
                               />
-                              <div className="post1-container1">
+                              <div className="post1-container2">
                                 <Repeater
                                   items={PostEntities?.tag || ' '}
                                   renderItem={(context_8pi5th) => (
@@ -72,7 +72,7 @@ const Post1 = (props) => {
                               <span className="post1-text5">
                                 {PostEntities?.title}
                               </span>
-                              <div className="post1-container2">
+                              <div className="post1-container3">
                                 <span className="post1-text6">Read More</span>
                                 <svg
                                   viewBox="0 0 1024 1024"
@@ -87,13 +87,13 @@ const Post1 = (props) => {
                       </>
                     )}
                   />
-                </>
-              )}
-              initialData={props.postEntities}
-              persistDataDuringLoading={true}
-              key={props?.pagination?.page}
-            />
-          </div>
+                </div>
+              </>
+            )}
+            initialData={props.postEntities}
+            persistDataDuringLoading={true}
+            key={props?.pagination?.page}
+          />
         </div>
         <Banner rootClassName="banner-root-class-name21"></Banner>
         <Footer rootClassName="footer-root-class-name4"></Footer>
@@ -139,13 +139,9 @@ const Post1 = (props) => {
             padding-bottom: var(--dl-space-space-sixunits);
             justify-content: center;
           }
-          .post1-grid {
-            width: auto;
-            height: auto;
-            margin: auto 0;
+          .post1-container1 {
             display: grid;
-            grid-gap: 1.5rem;
-            align-self: center;
+            grid-gap: 20px;
             grid-template-columns: repeat(3, 1fr);
           }
           .post1-blog-card {
@@ -165,7 +161,7 @@ const Post1 = (props) => {
             border-radius: var(--dl-radius-radius-radius8);
             margin-bottom: var(--dl-space-space-halfunit);
           }
-          .post1-container1 {
+          .post1-container2 {
             flex: 0 0 auto;
             width: 100%;
             display: flex;
@@ -201,7 +197,7 @@ const Post1 = (props) => {
             font-weight: 300;
             margin-bottom: var(--dl-space-space-halfunit);
           }
-          .post1-container2 {
+          .post1-container3 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -230,10 +226,8 @@ const Post1 = (props) => {
             }
           }
           @media (max-width: 991px) {
-            .post1-grid {
-              width: var(--dl-size-size-maxwidth);
-              max-width: 480px;
-              grid-template-columns: repeat(1, 1fr);
+            .post1-container1 {
+              grid-template-columns: repeat(2, 1fr);
             }
             .post1-blog-card {
               max-width: 550px;
@@ -243,6 +237,11 @@ const Post1 = (props) => {
             .post1-text {
               font-size: 30px;
             }
+            .post1-container1 {
+              width: 100%;
+              padding: 15px;
+              grid-template-columns: repeat(1, 1fr);
+            }
             .post1-blog-card {
               max-width: 450px;
             }
@@ -250,10 +249,6 @@ const Post1 = (props) => {
           @media (max-width: 479px) {
             .post1-text {
               font-size: 25px;
-            }
-            .post1-grid {
-              width: 100%;
-              padding: 15px;
             }
             .post1-blog-card {
               max-width: auto;
@@ -278,7 +273,7 @@ export default Post1
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialPropsTqOmResource({
+    const response = await postPageInitialPropsTqFbResource({
       ...context?.params,
     })
     if (!response) {

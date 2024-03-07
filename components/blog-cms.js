@@ -21,10 +21,10 @@ const BlogCMS = (props) => {
             <br></br>
           </h2>
         </div>
-        <div className="blog-cms-container2">
-          <DataProvider
-            renderSuccess={(params) => (
-              <>
+        <DataProvider
+          renderSuccess={(params) => (
+            <>
+              <div className="blog-cms-container2">
                 <Repeater
                   items={params}
                   renderItem={(context_sp2aum) => (
@@ -85,14 +85,14 @@ const BlogCMS = (props) => {
                     </>
                   )}
                 />
-              </>
-            )}
-            initialData={props.contextSp2aumProp}
-            persistDataDuringLoading={true}
-            initialData={props.contextSp2aumProp}
-            persistDataDuringLoading={true}
-          />
-        </div>
+              </div>
+            </>
+          )}
+          initialData={props.contextSp2aumProp}
+          persistDataDuringLoading={true}
+          initialData={props.contextSp2aumProp}
+          persistDataDuringLoading={true}
+        />
       </div>
       <style jsx>
         {`
@@ -139,12 +139,8 @@ const BlogCMS = (props) => {
             text-decoration: none;
           }
           .blog-cms-container2 {
-            width: auto;
-            height: auto;
-            margin: auto 0;
             display: grid;
-            grid-gap: 1.5rem;
-            align-self: center;
+            grid-gap: 20px;
             grid-template-columns: repeat(3, 1fr);
           }
           .blog-cms-blog-cards-container {
@@ -276,11 +272,6 @@ const BlogCMS = (props) => {
             }
           }
           @media (max-width: 991px) {
-            .blog-cms-container2 {
-              width: var(--dl-size-size-maxwidth);
-              max-width: 480px;
-              grid-template-columns: repeat(1, 1fr);
-            }
             .blog-cms-blog-cards-container {
               align-items: center;
               flex-direction: column;
@@ -290,15 +281,18 @@ const BlogCMS = (props) => {
             }
           }
           @media (max-width: 767px) {
+            .blog-cms-container2 {
+              width: 100%;
+              grid-template-columns: repeat(1, 1fr);
+            }
             .blog-cms-blog-card {
               max-width: 450px;
             }
+            .blog-cms-image {
+              height: auto;
+            }
           }
           @media (max-width: 479px) {
-            .blog-cms-container2 {
-              width: 100%;
-              padding: 15px;
-            }
             .blog-cms-blog-card {
               max-width: 350px;
             }

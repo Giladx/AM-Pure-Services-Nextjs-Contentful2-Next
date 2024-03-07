@@ -231,15 +231,15 @@ const ServiceAreas = (props) => {
 }
 
 ServiceAreas.defaultProps = {
-  heading: 'Service Areas',
   imageSrc:
     'https://images.unsplash.com/photo-1548603613-53d4508a85f8?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDM0fHxjYWxsJTIwdXN8ZW58MHx8fHwxNzA5MjAyMDA4fDA&ixlib=rb-4.0.3&w=1500',
+  heading: 'Service Areas',
   imageAlt: 'image',
 }
 
 ServiceAreas.propTypes = {
-  heading: PropTypes.string,
   imageSrc: PropTypes.string,
+  heading: PropTypes.string,
   imageAlt: PropTypes.string,
 }
 

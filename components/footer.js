@@ -23,18 +23,20 @@ const Footer = (props) => {
                 <DataProvider
                   renderSuccess={(params) => (
                     <>
-                      <Repeater
-                        items={params}
-                        renderItem={(context_fdk6dn) => (
-                          <>
-                            <Link href={`/post/${context_fdk6dn?.slug}`}>
-                              <a className="footer-link01">
-                                {context_fdk6dn?.title}
-                              </a>
-                            </Link>
-                          </>
-                        )}
-                      />
+                      <div>
+                        <Repeater
+                          items={params}
+                          renderItem={(context_fdk6dn) => (
+                            <>
+                              <Link href={`/post/${context_fdk6dn?.slug}`}>
+                                <a className="footer-link01">
+                                  {context_fdk6dn?.title}
+                                </a>
+                              </Link>
+                            </>
+                          )}
+                        />
+                      </div>
                     </>
                   )}
                   initialData={props.contextFdk6dnProp}
