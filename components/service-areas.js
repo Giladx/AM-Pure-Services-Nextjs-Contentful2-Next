@@ -175,6 +175,7 @@ const ServiceAreas = (props) => {
             object-fit: cover;
             flex-shrink: 0;
             margin-left: var(--dl-space-space-fourunits);
+            border-radius: var(--dl-radius-radius-radius8);
             object-position: left;
           }
           @media (max-width: 991px) {
