@@ -524,7 +524,7 @@ const Home = (props) => {
           }
           .home-container03 {
             width: 100%;
-            height: 420px;
+            height: 402px;
           }
           .home-container04 {
             display: contents;
@@ -979,7 +979,7 @@ const Home = (props) => {
               height: 641px;
             }
             .home-container03 {
-              height: 439px;
+              height: 421px;
             }
             .home-image05 {
               width: 616px;
@@ -1147,7 +1147,7 @@ const Home = (props) => {
               padding: var(--dl-space-space-oneandhalfunits);
             }
             .home-container03 {
-              height: 437px;
+              height: 423px;
               padding-left: var(--dl-space-space-unit);
               padding-right: var(--dl-space-space-unit);
             }
@@ -1342,6 +1342,9 @@ const Home = (props) => {
               padding-left: var(--dl-space-space-unit);
               margin-bottom: var(--dl-space-space-twounits);
               padding-right: var(--dl-space-space-unit);
+            }
+            .home-container03 {
+              height: 415px;
             }
             .home-content {
               height: auto;
