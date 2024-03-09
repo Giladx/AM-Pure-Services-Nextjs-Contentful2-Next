@@ -376,7 +376,7 @@ const Home = (props) => {
               <a>
                 <img
                   alt="image"
-                  src="20769734-2b37-4566-8316-77ad864b1180"
+                  src="/logoam-200h.webp"
                   width="150"
                   height="68"
                   className="home-image09"
