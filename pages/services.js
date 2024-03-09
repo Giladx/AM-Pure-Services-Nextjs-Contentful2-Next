@@ -145,9 +145,11 @@ const Services = (props) => {
                             items={params}
                             renderItem={(context_fwbrpn) => (
                               <>
-                                <span className="services-text12">
-                                  {context_fwbrpn?.title}
-                                </span>
+                                <Link href={`/post/${context_fwbrpn?.slug}`}>
+                                  <a className="services-link02">
+                                    {context_fwbrpn?.title}
+                                  </a>
+                                </Link>
                               </>
                             )}
                           />
@@ -160,34 +162,34 @@ const Services = (props) => {
                 </div>
               </div>
               <div className="services-navigate-container">
-                <span className="services-text13">Info</span>
+                <span className="services-text12">Info</span>
                 <Link href="/about">
-                  <a className="services-link02">
+                  <a className="services-link03">
                     <span>ABOUT</span>
                     <br></br>
                   </a>
                 </Link>
                 <Link href="/restrictions">
-                  <a className="services-link03">RESTRICTIONS</a>
+                  <a className="services-link04">RESTRICTIONS</a>
                 </Link>
                 <Link href="/contact">
-                  <a className="services-link04">CONTACT</a>
+                  <a className="services-link05">CONTACT</a>
                 </Link>
               </div>
               <div className="services-contact-container">
-                <span className="services-text16">Contact Us</span>
-                <a href="tel:+18885031722" className="services-link05">
+                <span className="services-text15">Contact Us</span>
+                <a href="tel:+18885031722" className="services-link06">
                   (888) 503-1722
                 </a>
                 <a
                   href="mailto:service@ampureservices.com?subject=Site Service Request"
-                  className="services-link06"
+                  className="services-link07"
                 >
                   SERVICE@AMPURESERVICES.COM
                 </a>
               </div>
               <div className="services-subscribe-container">
-                <span className="services-text17">
+                <span className="services-text16">
                   Subscribe to our newsletter
                 </span>
                 <input
@@ -214,7 +216,7 @@ const Services = (props) => {
               </a>
             </Link>
             <Link href="/">
-              <a className="services-link08">
+              <a className="services-link09">
                 All rights reserved @ AM Pure Services
               </a>
             </Link>
@@ -222,7 +224,7 @@ const Services = (props) => {
               href="https://011.ninja/bio"
               target="_blank"
               rel="noreferrer noopener"
-              className="services-link09"
+              className="services-link10"
             >
               Developed by 011.ninja
             </a>
@@ -443,7 +445,7 @@ const Services = (props) => {
           .services-container5 {
             display: grid;
           }
-          .services-text12 {
+          .services-link02 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -455,20 +457,20 @@ const Services = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .services-text13 {
+          .services-text12 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
-          }
-          .services-link02 {
-            margin-bottom: var(--dl-space-space-unit);
-            text-decoration: none;
           }
           .services-link03 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
           .services-link04 {
+            margin-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+          }
+          .services-link05 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -480,16 +482,16 @@ const Services = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .services-text16 {
+          .services-text15 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .services-link05 {
+          .services-link06 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .services-link06 {
+          .services-link07 {
             font-size: 14px;
             font-style: normal;
             font-family: Rubik;
@@ -506,7 +508,7 @@ const Services = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .services-text17 {
+          .services-text16 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
@@ -541,14 +543,14 @@ const Services = (props) => {
             object-fit: cover;
             text-decoration: none;
           }
-          .services-link08 {
+          .services-link09 {
             width: auto;
             font-style: normal;
             text-align: center;
             font-weight: 300;
             text-decoration: none;
           }
-          .services-link09 {
+          .services-link10 {
             font-style: normal;
             font-weight: 300;
             text-decoration: none;
@@ -589,7 +591,7 @@ const Services = (props) => {
             .services-contact-container {
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .services-link08 {
+            .services-link09 {
               width: auto;
               text-align: center;
             }
@@ -615,10 +617,10 @@ const Services = (props) => {
               align-self: flex-start;
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .services-link05 {
+            .services-link06 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .services-link06 {
+            .services-link07 {
               font-size: 16px;
               font-style: normal;
               font-weight: 900;
@@ -626,7 +628,7 @@ const Services = (props) => {
               margin-bottom: var(--dl-space-space-unit);
               letter-spacing: auto;
             }
-            .services-link08 {
+            .services-link09 {
               width: auto;
               text-align: center;
             }
@@ -639,10 +641,10 @@ const Services = (props) => {
             .services-blog-card {
               max-width: 550px;
             }
-            .services-link08 {
+            .services-link09 {
               text-align: center;
             }
-            .services-link09 {
+            .services-link10 {
               text-align: center;
             }
           }
@@ -683,10 +685,10 @@ const Services = (props) => {
               padding-left: var(--dl-space-space-oneandhalfunits);
               padding-right: var(--dl-space-space-oneandhalfunits);
             }
-            .services-link08 {
+            .services-link09 {
               text-align: center;
             }
-            .services-link09 {
+            .services-link10 {
               text-align: center;
             }
           }
@@ -720,7 +722,7 @@ const Services = (props) => {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-bottom: 0px;
             }
-            .services-link06 {
+            .services-link07 {
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }
             .services-max-width1 {
@@ -729,7 +731,7 @@ const Services = (props) => {
             .services-image1 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .services-link08 {
+            .services-link09 {
               text-align: center;
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }

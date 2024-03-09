@@ -173,9 +173,11 @@ const BusinessRelations = (props) => {
                             items={params}
                             renderItem={(context_i5k88b) => (
                               <>
-                                <span className="business-relations-text11">
-                                  {context_i5k88b?.title}
-                                </span>
+                                <Link href={`/post/${context_i5k88b?.slug}`}>
+                                  <a className="business-relations-link01">
+                                    {context_i5k88b?.title}
+                                  </a>
+                                </Link>
                               </>
                             )}
                           />
@@ -188,34 +190,37 @@ const BusinessRelations = (props) => {
                 </div>
               </div>
               <div className="business-relations-navigate-container">
-                <span className="business-relations-text12">Info</span>
+                <span className="business-relations-text11">Info</span>
                 <Link href="/about">
-                  <a className="business-relations-link1">
+                  <a className="business-relations-link02">
                     <span>ABOUT</span>
                     <br></br>
                   </a>
                 </Link>
                 <Link href="/restrictions">
-                  <a className="business-relations-link2">RESTRICTIONS</a>
+                  <a className="business-relations-link03">RESTRICTIONS</a>
                 </Link>
                 <Link href="/contact">
-                  <a className="business-relations-link3">CONTACT</a>
+                  <a className="business-relations-link04">CONTACT</a>
                 </Link>
               </div>
               <div className="business-relations-contact-container">
-                <span className="business-relations-text15">Contact Us</span>
-                <a href="tel:+18885031722" className="business-relations-link4">
+                <span className="business-relations-text14">Contact Us</span>
+                <a
+                  href="tel:+18885031722"
+                  className="business-relations-link05"
+                >
                   (888) 503-1722
                 </a>
                 <a
                   href="mailto:service@ampureservices.com?subject=Site Service Request"
-                  className="business-relations-link5"
+                  className="business-relations-link06"
                 >
                   SERVICE@AMPURESERVICES.COM
                 </a>
               </div>
               <div className="business-relations-subscribe-container">
-                <span className="business-relations-text16">
+                <span className="business-relations-text15">
                   Subscribe to our newsletter
                 </span>
                 <input
@@ -242,7 +247,7 @@ const BusinessRelations = (props) => {
               </a>
             </Link>
             <Link href="/">
-              <a className="business-relations-link7">
+              <a className="business-relations-link08">
                 All rights reserved @ AM Pure Services
               </a>
             </Link>
@@ -250,7 +255,7 @@ const BusinessRelations = (props) => {
               href="https://011.ninja/bio"
               target="_blank"
               rel="noreferrer noopener"
-              className="business-relations-link8"
+              className="business-relations-link09"
             >
               Developed by 011.ninja
             </a>
@@ -365,7 +370,7 @@ const BusinessRelations = (props) => {
           .business-relations-container3 {
             display: grid;
           }
-          .business-relations-text11 {
+          .business-relations-link01 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -377,20 +382,20 @@ const BusinessRelations = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .business-relations-text12 {
+          .business-relations-text11 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .business-relations-link1 {
+          .business-relations-link02 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .business-relations-link2 {
+          .business-relations-link03 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .business-relations-link3 {
+          .business-relations-link04 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -402,16 +407,16 @@ const BusinessRelations = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .business-relations-text15 {
+          .business-relations-text14 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .business-relations-link4 {
+          .business-relations-link05 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .business-relations-link5 {
+          .business-relations-link06 {
             font-size: 14px;
             font-style: normal;
             font-family: Rubik;
@@ -428,7 +433,7 @@ const BusinessRelations = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .business-relations-text16 {
+          .business-relations-text15 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
@@ -463,14 +468,14 @@ const BusinessRelations = (props) => {
             object-fit: cover;
             text-decoration: none;
           }
-          .business-relations-link7 {
+          .business-relations-link08 {
             width: auto;
             font-style: normal;
             text-align: center;
             font-weight: 300;
             text-decoration: none;
           }
-          .business-relations-link8 {
+          .business-relations-link09 {
             font-style: normal;
             font-weight: 300;
             text-decoration: none;
@@ -482,7 +487,7 @@ const BusinessRelations = (props) => {
             .business-relations-contact-container {
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .business-relations-link7 {
+            .business-relations-link08 {
               width: auto;
               text-align: center;
             }
@@ -525,10 +530,10 @@ const BusinessRelations = (props) => {
               align-self: flex-start;
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .business-relations-link4 {
+            .business-relations-link05 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .business-relations-link5 {
+            .business-relations-link06 {
               font-size: 16px;
               font-style: normal;
               font-weight: 900;
@@ -536,16 +541,16 @@ const BusinessRelations = (props) => {
               margin-bottom: var(--dl-space-space-unit);
               letter-spacing: auto;
             }
-            .business-relations-link7 {
+            .business-relations-link08 {
               width: auto;
               text-align: center;
             }
           }
           @media (max-width: 991px) {
-            .business-relations-link7 {
+            .business-relations-link08 {
               text-align: center;
             }
-            .business-relations-link8 {
+            .business-relations-link09 {
               text-align: center;
             }
           }
@@ -581,10 +586,10 @@ const BusinessRelations = (props) => {
               padding-left: var(--dl-space-space-oneandhalfunits);
               padding-right: var(--dl-space-space-oneandhalfunits);
             }
-            .business-relations-link7 {
+            .business-relations-link08 {
               text-align: center;
             }
-            .business-relations-link8 {
+            .business-relations-link09 {
               text-align: center;
             }
           }
@@ -618,7 +623,7 @@ const BusinessRelations = (props) => {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-bottom: 0px;
             }
-            .business-relations-link5 {
+            .business-relations-link06 {
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }
             .business-relations-max-width1 {
@@ -627,7 +632,7 @@ const BusinessRelations = (props) => {
             .business-relations-image {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .business-relations-link7 {
+            .business-relations-link08 {
               text-align: center;
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }

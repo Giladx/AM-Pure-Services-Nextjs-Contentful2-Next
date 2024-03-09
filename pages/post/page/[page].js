@@ -7,8 +7,8 @@ import PropTypes from 'prop-types'
 
 import Navigation from '../../../components/navigation'
 import Banner from '../../../components/banner'
-import postPageInitialPropsTqLcResource from '../../../resources/post-page-initial-props-tq_lc'
-import postPageInitialPathsTqEoResource from '../../../resources/post-page-initial-paths-tq_eo'
+import postPageInitialPropsTqIrResource from '../../../resources/post-page-initial-props-tq_ir'
+import postPageInitialPathsTqXBResource from '../../../resources/post-page-initial-paths-tq_x-b'
 import post1Resource from '../../../resources/post1'
 
 const Post11 = (props) => {
@@ -116,9 +116,11 @@ const Post11 = (props) => {
                             items={params}
                             renderItem={(context_0kxs0s) => (
                               <>
-                                <span className="post11-text08">
-                                  {context_0kxs0s?.title}
-                                </span>
+                                <Link href={`/post/${context_0kxs0s?.slug}`}>
+                                  <a className="post11-link02">
+                                    {context_0kxs0s?.title}
+                                  </a>
+                                </Link>
                               </>
                             )}
                           />
@@ -131,34 +133,34 @@ const Post11 = (props) => {
                 </div>
               </div>
               <div className="post11-navigate-container">
-                <span className="post11-text09">Info</span>
+                <span className="post11-text08">Info</span>
                 <Link href="/about">
-                  <a className="post11-link02">
+                  <a className="post11-link03">
                     <span>ABOUT</span>
                     <br></br>
                   </a>
                 </Link>
                 <Link href="/restrictions">
-                  <a className="post11-link03">RESTRICTIONS</a>
+                  <a className="post11-link04">RESTRICTIONS</a>
                 </Link>
                 <Link href="/contact">
-                  <a className="post11-link04">CONTACT</a>
+                  <a className="post11-link05">CONTACT</a>
                 </Link>
               </div>
               <div className="post11-contact-container">
-                <span className="post11-text12">Contact Us</span>
-                <a href="tel:+18885031722" className="post11-link05">
+                <span className="post11-text11">Contact Us</span>
+                <a href="tel:+18885031722" className="post11-link06">
                   (888) 503-1722
                 </a>
                 <a
                   href="mailto:service@ampureservices.com?subject=Site Service Request"
-                  className="post11-link06"
+                  className="post11-link07"
                 >
                   SERVICE@AMPURESERVICES.COM
                 </a>
               </div>
               <div className="post11-subscribe-container">
-                <span className="post11-text13">
+                <span className="post11-text12">
                   Subscribe to our newsletter
                 </span>
                 <input
@@ -185,7 +187,7 @@ const Post11 = (props) => {
               </a>
             </Link>
             <Link href="/">
-              <a className="post11-link08">
+              <a className="post11-link09">
                 All rights reserved @ AM Pure Services
               </a>
             </Link>
@@ -193,7 +195,7 @@ const Post11 = (props) => {
               href="https://011.ninja/bio"
               target="_blank"
               rel="noreferrer noopener"
-              className="post11-link09"
+              className="post11-link10"
             >
               Developed by 011.ninja
             </a>
@@ -360,7 +362,7 @@ const Post11 = (props) => {
           .post11-container4 {
             display: grid;
           }
-          .post11-text08 {
+          .post11-link02 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -372,20 +374,20 @@ const Post11 = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .post11-text09 {
+          .post11-text08 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
-          }
-          .post11-link02 {
-            margin-bottom: var(--dl-space-space-unit);
-            text-decoration: none;
           }
           .post11-link03 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
           .post11-link04 {
+            margin-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+          }
+          .post11-link05 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -397,16 +399,16 @@ const Post11 = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .post11-text12 {
+          .post11-text11 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .post11-link05 {
+          .post11-link06 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .post11-link06 {
+          .post11-link07 {
             font-size: 14px;
             font-style: normal;
             font-family: Rubik;
@@ -423,7 +425,7 @@ const Post11 = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .post11-text13 {
+          .post11-text12 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
@@ -458,14 +460,14 @@ const Post11 = (props) => {
             object-fit: cover;
             text-decoration: none;
           }
-          .post11-link08 {
+          .post11-link09 {
             width: auto;
             font-style: normal;
             text-align: center;
             font-weight: 300;
             text-decoration: none;
           }
-          .post11-link09 {
+          .post11-link10 {
             font-style: normal;
             font-weight: 300;
             text-decoration: none;
@@ -477,7 +479,7 @@ const Post11 = (props) => {
             .post11-contact-container {
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .post11-link08 {
+            .post11-link09 {
               width: auto;
               text-align: center;
             }
@@ -503,10 +505,10 @@ const Post11 = (props) => {
               align-self: flex-start;
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .post11-link05 {
+            .post11-link06 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .post11-link06 {
+            .post11-link07 {
               font-size: 16px;
               font-style: normal;
               font-weight: 900;
@@ -514,7 +516,7 @@ const Post11 = (props) => {
               margin-bottom: var(--dl-space-space-unit);
               letter-spacing: auto;
             }
-            .post11-link08 {
+            .post11-link09 {
               width: auto;
               text-align: center;
             }
@@ -526,10 +528,10 @@ const Post11 = (props) => {
             .post11-blog-card {
               max-width: 550px;
             }
-            .post11-link08 {
+            .post11-link09 {
               text-align: center;
             }
-            .post11-link09 {
+            .post11-link10 {
               text-align: center;
             }
           }
@@ -568,10 +570,10 @@ const Post11 = (props) => {
               padding-left: var(--dl-space-space-oneandhalfunits);
               padding-right: var(--dl-space-space-oneandhalfunits);
             }
-            .post11-link08 {
+            .post11-link09 {
               text-align: center;
             }
-            .post11-link09 {
+            .post11-link10 {
               text-align: center;
             }
           }
@@ -606,7 +608,7 @@ const Post11 = (props) => {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-bottom: 0px;
             }
-            .post11-link06 {
+            .post11-link07 {
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }
             .post11-max-width1 {
@@ -615,7 +617,7 @@ const Post11 = (props) => {
             .post11-image1 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .post11-link08 {
+            .post11-link09 {
               text-align: center;
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }
@@ -646,7 +648,7 @@ export async function getStaticProps(context) {
         notFound: true,
       }
     }
-    const response = await postPageInitialPropsTqLcResource({
+    const response = await postPageInitialPropsTqIrResource({
       ...context?.params,
       skip: (context.params.page - 1) * 9,
     })
@@ -672,7 +674,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPathsTqEoResource({
+    const response = await postPageInitialPathsTqXBResource({
       content_type: 'post',
     })
     const totalCount = response?.meta?.pagination?.total

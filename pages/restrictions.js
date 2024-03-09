@@ -51,7 +51,7 @@ const Restrictions = (props) => {
           </div>
           <div className="restrictions-content">
             <div className="restrictions-content-wrap">
-              <span className="restrictions-text003">
+              <span className="restrictions-text03">
                 <span>
                   All goods and services are subject to a written agreement
                   between the customer and AM Pure, to be signed when the
@@ -65,11 +65,11 @@ const Restrictions = (props) => {
                 </span>
                 <br></br>
               </span>
-              <span className="restrictions-text008">
+              <span className="restrictions-text08">
                 <span>100% satisfaction:</span>
                 <br></br>
               </span>
-              <span className="restrictions-text011">
+              <span className="restrictions-text11">
                 <span>
                   If a customer has a complaint about a service performed by AM
                   Pure technician, he needs to allow AM Pure representative to
@@ -96,11 +96,11 @@ const Restrictions = (props) => {
                   />
                 </span>
               </span>
-              <span className="restrictions-text019">
+              <span className="restrictions-text19">
                 <span>Additional services:</span>
                 <br></br>
               </span>
-              <span className="restrictions-text022">
+              <span className="restrictions-text22">
                 <span>
                   Additional services refer to services other than the customer
                   ordered by phone with AM Pure representative/dispatcher or any
@@ -123,11 +123,11 @@ const Restrictions = (props) => {
                   the work agreement.
                 </span>
               </span>
-              <span className="restrictions-text030">
+              <span className="restrictions-text30">
                 <span>&quot;Annual Cleaning&quot; Package and coupon:</span>
                 <br></br>
               </span>
-              <span className="restrictions-text033">
+              <span className="restrictions-text33">
                 <span>
                   The &quot;Annual cleaning&quot; is the package name.
                 </span>
@@ -147,10 +147,10 @@ const Restrictions = (props) => {
                 </span>
                 <br></br>
               </span>
-              <span className="restrictions-text042">
+              <span className="restrictions-text42">
                 &quot;Duct Cleaning&quot; Package and coupon:
               </span>
-              <span className="restrictions-text043">
+              <span className="restrictions-text43">
                 <span>The &quot;duct cleaning&quot; is the package name.</span>
                 <br></br>
                 <br></br>
@@ -185,11 +185,11 @@ const Restrictions = (props) => {
                 <br></br>
                 <br></br>
               </span>
-              <span className="restrictions-text062">
+              <span className="restrictions-text62">
                 <span>Monthly specials on site:</span>
                 <br></br>
               </span>
-              <span className="restrictions-text065">
+              <span className="restrictions-text65">
                 <span>
                   The packages on the monthly specials page on AM Pure website
                   may have restrictions.
@@ -206,19 +206,19 @@ const Restrictions = (props) => {
                   to time.
                 </span>
               </span>
-              <span className="restrictions-text073">
+              <span className="restrictions-text73">
                 <span>Certified technician:</span>
                 <br></br>
               </span>
-              <span className="restrictions-text076">
+              <span className="restrictions-text76">
                 <span>
                   AM Pure certified technicians are certified by AM Pure staff
                   according to AM Pure standards.
                 </span>
                 <br></br>
               </span>
-              <span className="restrictions-text079">Insurance:</span>
-              <span className="restrictions-text080">
+              <span className="restrictions-text79">Insurance:</span>
+              <span className="restrictions-text80">
                 <span>
                   All AM Pure employees are insured under Michigan workers comp
                   insurance law.
@@ -239,8 +239,8 @@ const Restrictions = (props) => {
           </div>
           <div className="restrictions-blog">
             <div className="restrictions-container1">
-              <span className="restrictions-text085">from blog</span>
-              <h2 className="restrictions-text086">
+              <span className="restrictions-text85">from blog</span>
+              <h2 className="restrictions-text86">
                 <span>Our Services</span>
                 <br></br>
               </h2>
@@ -269,7 +269,7 @@ const Restrictions = (props) => {
                                         items={context_7mpc8m?.tag || []}
                                         renderItem={(context_9oxe3a) => (
                                           <>
-                                            <span className="restrictions-text089">
+                                            <span className="restrictions-text89">
                                               {context_9oxe3a?.tagName}
                                             </span>
                                           </>
@@ -290,7 +290,7 @@ const Restrictions = (props) => {
                                       </span>
                                     </div>
                                   </div>
-                                  <span className="restrictions-text091">
+                                  <span className="restrictions-text91">
                                     {context_7mpc8m?.title}
                                   </span>
                                   <div className="restrictions-container4">
@@ -323,7 +323,7 @@ const Restrictions = (props) => {
             <div className="restrictions-top-part">
               <div className="restrictions-links-container">
                 <div className="restrictions-product-container">
-                  <span className="restrictions-text093">Product</span>
+                  <span className="restrictions-text93">Product</span>
                   <Link href="/monthly-specials">
                     <a className="restrictions-link01">MONTHLY SPECIALS</a>
                   </Link>
@@ -335,9 +335,11 @@ const Restrictions = (props) => {
                             items={params}
                             renderItem={(context_xps4qr) => (
                               <>
-                                <span className="restrictions-text094">
-                                  {context_xps4qr?.title}
-                                </span>
+                                <Link href={`/post/${context_xps4qr?.slug}`}>
+                                  <a className="restrictions-link02">
+                                    {context_xps4qr?.title}
+                                  </a>
+                                </Link>
                               </>
                             )}
                           />
@@ -350,34 +352,34 @@ const Restrictions = (props) => {
                 </div>
               </div>
               <div className="restrictions-navigate-container">
-                <span className="restrictions-text095">Info</span>
+                <span className="restrictions-text94">Info</span>
                 <Link href="/about">
-                  <a className="restrictions-link02">
+                  <a className="restrictions-link03">
                     <span>ABOUT</span>
                     <br></br>
                   </a>
                 </Link>
                 <Link href="/restrictions">
-                  <a className="restrictions-link03">RESTRICTIONS</a>
+                  <a className="restrictions-link04">RESTRICTIONS</a>
                 </Link>
                 <Link href="/contact">
-                  <a className="restrictions-link04">CONTACT</a>
+                  <a className="restrictions-link05">CONTACT</a>
                 </Link>
               </div>
               <div className="restrictions-contact-container">
-                <span className="restrictions-text098">Contact Us</span>
-                <a href="tel:+18885031722" className="restrictions-link05">
+                <span className="restrictions-text97">Contact Us</span>
+                <a href="tel:+18885031722" className="restrictions-link06">
                   (888) 503-1722
                 </a>
                 <a
                   href="mailto:service@ampureservices.com?subject=Site Service Request"
-                  className="restrictions-link06"
+                  className="restrictions-link07"
                 >
                   SERVICE@AMPURESERVICES.COM
                 </a>
               </div>
               <div className="restrictions-subscribe-container">
-                <span className="restrictions-text099">
+                <span className="restrictions-text98">
                   Subscribe to our newsletter
                 </span>
                 <input
@@ -404,7 +406,7 @@ const Restrictions = (props) => {
               </a>
             </Link>
             <Link href="/">
-              <a className="restrictions-link08">
+              <a className="restrictions-link09">
                 All rights reserved @ AM Pure Services
               </a>
             </Link>
@@ -412,7 +414,7 @@ const Restrictions = (props) => {
               href="https://011.ninja/bio"
               target="_blank"
               rel="noreferrer noopener"
-              className="restrictions-link09"
+              className="restrictions-link10"
             >
               Developed by 011.ninja
             </a>
@@ -489,92 +491,77 @@ const Restrictions = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .restrictions-text003 {
+          .restrictions-text03 {
             height: 100%;
             font-size: 18px;
             font-style: normal;
             font-weight: 700;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text008 {
+          .restrictions-text08 {
             font-size: 18px;
             align-self: flex-start;
             font-style: normal;
             font-weight: 700;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text011 {
-            height: 100%;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 400;
-            margin-bottom: var(--dl-space-space-unit);
-          }
-          .restrictions-text019 {
-            font-size: 18px;
-            align-self: flex-start;
-            font-style: normal;
-            font-weight: 700;
-            margin-bottom: var(--dl-space-space-unit);
-          }
-          .restrictions-text022 {
+          .restrictions-text11 {
             height: 100%;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text030 {
+          .restrictions-text19 {
             font-size: 18px;
             align-self: flex-start;
             font-style: normal;
             font-weight: 700;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text033 {
+          .restrictions-text22 {
             height: 100%;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text042 {
+          .restrictions-text30 {
             font-size: 18px;
             align-self: flex-start;
             font-style: normal;
             font-weight: 700;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text043 {
+          .restrictions-text33 {
             height: 100%;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text062 {
+          .restrictions-text42 {
             font-size: 18px;
             align-self: flex-start;
             font-style: normal;
             font-weight: 700;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text065 {
+          .restrictions-text43 {
             height: 100%;
             font-size: 18px;
-            align-self: flex-start;
             font-style: normal;
             font-weight: 400;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text073 {
+          .restrictions-text62 {
             font-size: 18px;
             align-self: flex-start;
             font-style: normal;
             font-weight: 700;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text076 {
+          .restrictions-text65 {
             height: 100%;
             font-size: 18px;
             align-self: flex-start;
@@ -582,14 +569,29 @@ const Restrictions = (props) => {
             font-weight: 400;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text079 {
+          .restrictions-text73 {
             font-size: 18px;
             align-self: flex-start;
             font-style: normal;
             font-weight: 700;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text080 {
+          .restrictions-text76 {
+            height: 100%;
+            font-size: 18px;
+            align-self: flex-start;
+            font-style: normal;
+            font-weight: 400;
+            margin-bottom: var(--dl-space-space-unit);
+          }
+          .restrictions-text79 {
+            font-size: 18px;
+            align-self: flex-start;
+            font-style: normal;
+            font-weight: 700;
+            margin-bottom: var(--dl-space-space-unit);
+          }
+          .restrictions-text80 {
             height: 100%;
             font-size: 18px;
             align-self: flex-start;
@@ -619,7 +621,7 @@ const Restrictions = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .restrictions-text085 {
+          .restrictions-text85 {
             color: var(--dl-color-scheme-green);
             font-style: normal;
             text-align: center;
@@ -628,7 +630,7 @@ const Restrictions = (props) => {
             letter-spacing: 0.1em;
             text-transform: uppercase;
           }
-          .restrictions-text086 {
+          .restrictions-text86 {
             font-size: 46px;
             font-style: normal;
             text-align: center;
@@ -688,7 +690,7 @@ const Restrictions = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .restrictions-text089 {
+          .restrictions-text89 {
             color: var(--dl-color-scheme-white);
             padding: var(--dl-space-space-halfunit);
             font-size: 12px;
@@ -712,7 +714,7 @@ const Restrictions = (props) => {
             text-align: right;
             font-weight: 700;
           }
-          .restrictions-text091 {
+          .restrictions-text91 {
             font-style: normal;
             font-weight: 600;
           }
@@ -760,7 +762,7 @@ const Restrictions = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .restrictions-text093 {
+          .restrictions-text93 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
@@ -773,7 +775,7 @@ const Restrictions = (props) => {
           .restrictions-container5 {
             display: grid;
           }
-          .restrictions-text094 {
+          .restrictions-link02 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -785,20 +787,20 @@ const Restrictions = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .restrictions-text095 {
+          .restrictions-text94 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
-          }
-          .restrictions-link02 {
-            margin-bottom: var(--dl-space-space-unit);
-            text-decoration: none;
           }
           .restrictions-link03 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
           .restrictions-link04 {
+            margin-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+          }
+          .restrictions-link05 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -810,16 +812,16 @@ const Restrictions = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .restrictions-text098 {
+          .restrictions-text97 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .restrictions-link05 {
+          .restrictions-link06 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .restrictions-link06 {
+          .restrictions-link07 {
             font-size: 14px;
             font-style: normal;
             font-family: Rubik;
@@ -836,7 +838,7 @@ const Restrictions = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .restrictions-text099 {
+          .restrictions-text98 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
@@ -871,14 +873,14 @@ const Restrictions = (props) => {
             object-fit: cover;
             text-decoration: none;
           }
-          .restrictions-link08 {
+          .restrictions-link09 {
             width: auto;
             font-style: normal;
             text-align: center;
             font-weight: 300;
             text-decoration: none;
           }
-          .restrictions-link09 {
+          .restrictions-link10 {
             font-style: normal;
             font-weight: 300;
             text-decoration: none;
@@ -895,7 +897,7 @@ const Restrictions = (props) => {
               width: 70%;
               flex-direction: row;
             }
-            .restrictions-text089 {
+            .restrictions-text89 {
               color: var(--dl-color-scheme-white);
               padding: var(--dl-space-space-halfunit);
               font-size: 12px;
@@ -922,7 +924,7 @@ const Restrictions = (props) => {
             .restrictions-contact-container {
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .restrictions-link08 {
+            .restrictions-link09 {
               width: auto;
               text-align: center;
             }
@@ -942,7 +944,7 @@ const Restrictions = (props) => {
             .restrictions-image {
               height: 180px;
             }
-            .restrictions-text091 {
+            .restrictions-text91 {
               font-style: normal;
               font-weight: 700;
               margin-bottom: var(--dl-space-space-unit);
@@ -959,10 +961,10 @@ const Restrictions = (props) => {
               align-self: flex-start;
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .restrictions-link05 {
+            .restrictions-link06 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .restrictions-link06 {
+            .restrictions-link07 {
               font-size: 16px;
               font-style: normal;
               font-weight: 900;
@@ -970,7 +972,7 @@ const Restrictions = (props) => {
               margin-bottom: var(--dl-space-space-unit);
               letter-spacing: auto;
             }
-            .restrictions-link08 {
+            .restrictions-link09 {
               width: auto;
               text-align: center;
             }
@@ -986,10 +988,10 @@ const Restrictions = (props) => {
             .restrictions-blog-card {
               max-width: 550px;
             }
-            .restrictions-link08 {
+            .restrictions-link09 {
               text-align: center;
             }
-            .restrictions-link09 {
+            .restrictions-link10 {
               text-align: center;
             }
           }
@@ -1037,10 +1039,10 @@ const Restrictions = (props) => {
               padding-left: var(--dl-space-space-oneandhalfunits);
               padding-right: var(--dl-space-space-oneandhalfunits);
             }
-            .restrictions-link08 {
+            .restrictions-link09 {
               text-align: center;
             }
-            .restrictions-link09 {
+            .restrictions-link10 {
               text-align: center;
             }
           }
@@ -1077,7 +1079,7 @@ const Restrictions = (props) => {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-bottom: 0px;
             }
-            .restrictions-link06 {
+            .restrictions-link07 {
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }
             .restrictions-max-width1 {
@@ -1086,7 +1088,7 @@ const Restrictions = (props) => {
             .restrictions-image1 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .restrictions-link08 {
+            .restrictions-link09 {
               text-align: center;
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }

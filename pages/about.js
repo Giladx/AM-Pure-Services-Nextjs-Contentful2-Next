@@ -117,9 +117,11 @@ const About = (props) => {
                             items={params}
                             renderItem={(context_jfwijc) => (
                               <>
-                                <span className="about-text32">
-                                  {context_jfwijc?.title}
-                                </span>
+                                <Link href={`/post/${context_jfwijc?.slug}`}>
+                                  <a className="about-link01">
+                                    {context_jfwijc?.title}
+                                  </a>
+                                </Link>
                               </>
                             )}
                           />
@@ -132,34 +134,34 @@ const About = (props) => {
                 </div>
               </div>
               <div className="about-navigate-container">
-                <span className="about-text33">Info</span>
+                <span className="about-text32">Info</span>
                 <Link href="/about">
-                  <a className="about-link1">
+                  <a className="about-link02">
                     <span>ABOUT</span>
                     <br></br>
                   </a>
                 </Link>
                 <Link href="/restrictions">
-                  <a className="about-link2">RESTRICTIONS</a>
+                  <a className="about-link03">RESTRICTIONS</a>
                 </Link>
                 <Link href="/contact">
-                  <a className="about-link3">CONTACT</a>
+                  <a className="about-link04">CONTACT</a>
                 </Link>
               </div>
               <div className="about-contact-container">
-                <span className="about-text36">Contact Us</span>
-                <a href="tel:+18885031722" className="about-link4">
+                <span className="about-text35">Contact Us</span>
+                <a href="tel:+18885031722" className="about-link05">
                   (888) 503-1722
                 </a>
                 <a
                   href="mailto:service@ampureservices.com?subject=Site Service Request"
-                  className="about-link5"
+                  className="about-link06"
                 >
                   SERVICE@AMPURESERVICES.COM
                 </a>
               </div>
               <div className="about-subscribe-container">
-                <span className="about-text37">
+                <span className="about-text36">
                   Subscribe to our newsletter
                 </span>
                 <input
@@ -186,7 +188,7 @@ const About = (props) => {
               </a>
             </Link>
             <Link href="/">
-              <a className="about-link7">
+              <a className="about-link08">
                 All rights reserved @ AM Pure Services
               </a>
             </Link>
@@ -194,7 +196,7 @@ const About = (props) => {
               href="https://011.ninja/bio"
               target="_blank"
               rel="noreferrer noopener"
-              className="about-link8"
+              className="about-link09"
             >
               Developed by 011.ninja
             </a>
@@ -309,7 +311,7 @@ const About = (props) => {
           .about-container1 {
             display: grid;
           }
-          .about-text32 {
+          .about-link01 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -321,20 +323,20 @@ const About = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .about-text33 {
+          .about-text32 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .about-link1 {
+          .about-link02 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .about-link2 {
+          .about-link03 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .about-link3 {
+          .about-link04 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -346,16 +348,16 @@ const About = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .about-text36 {
+          .about-text35 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .about-link4 {
+          .about-link05 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .about-link5 {
+          .about-link06 {
             font-size: 14px;
             font-style: normal;
             font-family: Rubik;
@@ -372,7 +374,7 @@ const About = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .about-text37 {
+          .about-text36 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
@@ -407,14 +409,14 @@ const About = (props) => {
             object-fit: cover;
             text-decoration: none;
           }
-          .about-link7 {
+          .about-link08 {
             width: auto;
             font-style: normal;
             text-align: center;
             font-weight: 300;
             text-decoration: none;
           }
-          .about-link8 {
+          .about-link09 {
             font-style: normal;
             font-weight: 300;
             text-decoration: none;
@@ -426,7 +428,7 @@ const About = (props) => {
             .about-contact-container {
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .about-link7 {
+            .about-link08 {
               width: auto;
               text-align: center;
             }
@@ -449,10 +451,10 @@ const About = (props) => {
               align-self: flex-start;
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .about-link4 {
+            .about-link05 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .about-link5 {
+            .about-link06 {
               font-size: 16px;
               font-style: normal;
               font-weight: 900;
@@ -460,16 +462,16 @@ const About = (props) => {
               margin-bottom: var(--dl-space-space-unit);
               letter-spacing: auto;
             }
-            .about-link7 {
+            .about-link08 {
               width: auto;
               text-align: center;
             }
           }
           @media (max-width: 991px) {
-            .about-link7 {
+            .about-link08 {
               text-align: center;
             }
-            .about-link8 {
+            .about-link09 {
               text-align: center;
             }
           }
@@ -505,10 +507,10 @@ const About = (props) => {
               padding-left: var(--dl-space-space-oneandhalfunits);
               padding-right: var(--dl-space-space-oneandhalfunits);
             }
-            .about-link7 {
+            .about-link08 {
               text-align: center;
             }
-            .about-link8 {
+            .about-link09 {
               text-align: center;
             }
           }
@@ -539,7 +541,7 @@ const About = (props) => {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-bottom: 0px;
             }
-            .about-link5 {
+            .about-link06 {
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }
             .about-max-width1 {
@@ -548,7 +550,7 @@ const About = (props) => {
             .about-image {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .about-link7 {
+            .about-link08 {
               text-align: center;
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }

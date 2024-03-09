@@ -150,9 +150,11 @@ const MonthlySpecials = (props) => {
                             items={params}
                             renderItem={(context_rxexon) => (
                               <>
-                                <span className="monthly-specials-text13">
-                                  {context_rxexon?.title}
-                                </span>
+                                <Link href={`/post/${context_rxexon?.slug}`}>
+                                  <a className="monthly-specials-link02">
+                                    {context_rxexon?.title}
+                                  </a>
+                                </Link>
                               </>
                             )}
                           />
@@ -165,34 +167,34 @@ const MonthlySpecials = (props) => {
                 </div>
               </div>
               <div className="monthly-specials-navigate-container">
-                <span className="monthly-specials-text14">Info</span>
+                <span className="monthly-specials-text13">Info</span>
                 <Link href="/about">
-                  <a className="monthly-specials-link02">
+                  <a className="monthly-specials-link03">
                     <span>ABOUT</span>
                     <br></br>
                   </a>
                 </Link>
                 <Link href="/restrictions">
-                  <a className="monthly-specials-link03">RESTRICTIONS</a>
+                  <a className="monthly-specials-link04">RESTRICTIONS</a>
                 </Link>
                 <Link href="/contact">
-                  <a className="monthly-specials-link04">CONTACT</a>
+                  <a className="monthly-specials-link05">CONTACT</a>
                 </Link>
               </div>
               <div className="monthly-specials-contact-container">
-                <span className="monthly-specials-text17">Contact Us</span>
-                <a href="tel:+18885031722" className="monthly-specials-link05">
+                <span className="monthly-specials-text16">Contact Us</span>
+                <a href="tel:+18885031722" className="monthly-specials-link06">
                   (888) 503-1722
                 </a>
                 <a
                   href="mailto:service@ampureservices.com?subject=Site Service Request"
-                  className="monthly-specials-link06"
+                  className="monthly-specials-link07"
                 >
                   SERVICE@AMPURESERVICES.COM
                 </a>
               </div>
               <div className="monthly-specials-subscribe-container">
-                <span className="monthly-specials-text18">
+                <span className="monthly-specials-text17">
                   Subscribe to our newsletter
                 </span>
                 <input
@@ -219,7 +221,7 @@ const MonthlySpecials = (props) => {
               </a>
             </Link>
             <Link href="/">
-              <a className="monthly-specials-link08">
+              <a className="monthly-specials-link09">
                 All rights reserved @ AM Pure Services
               </a>
             </Link>
@@ -227,7 +229,7 @@ const MonthlySpecials = (props) => {
               href="https://011.ninja/bio"
               target="_blank"
               rel="noreferrer noopener"
-              className="monthly-specials-link09"
+              className="monthly-specials-link10"
             >
               Developed by 011.ninja
             </a>
@@ -478,7 +480,7 @@ const MonthlySpecials = (props) => {
           .monthly-specials-container5 {
             display: grid;
           }
-          .monthly-specials-text13 {
+          .monthly-specials-link02 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -490,20 +492,20 @@ const MonthlySpecials = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .monthly-specials-text14 {
+          .monthly-specials-text13 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
-          }
-          .monthly-specials-link02 {
-            margin-bottom: var(--dl-space-space-unit);
-            text-decoration: none;
           }
           .monthly-specials-link03 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
           .monthly-specials-link04 {
+            margin-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+          }
+          .monthly-specials-link05 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -515,16 +517,16 @@ const MonthlySpecials = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .monthly-specials-text17 {
+          .monthly-specials-text16 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .monthly-specials-link05 {
+          .monthly-specials-link06 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .monthly-specials-link06 {
+          .monthly-specials-link07 {
             font-size: 14px;
             font-style: normal;
             font-family: Rubik;
@@ -541,7 +543,7 @@ const MonthlySpecials = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .monthly-specials-text18 {
+          .monthly-specials-text17 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
@@ -576,14 +578,14 @@ const MonthlySpecials = (props) => {
             object-fit: cover;
             text-decoration: none;
           }
-          .monthly-specials-link08 {
+          .monthly-specials-link09 {
             width: auto;
             font-style: normal;
             text-align: center;
             font-weight: 300;
             text-decoration: none;
           }
-          .monthly-specials-link09 {
+          .monthly-specials-link10 {
             font-style: normal;
             font-weight: 300;
             text-decoration: none;
@@ -624,7 +626,7 @@ const MonthlySpecials = (props) => {
             .monthly-specials-contact-container {
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .monthly-specials-link08 {
+            .monthly-specials-link09 {
               width: auto;
               text-align: center;
             }
@@ -650,10 +652,10 @@ const MonthlySpecials = (props) => {
               align-self: flex-start;
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .monthly-specials-link05 {
+            .monthly-specials-link06 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .monthly-specials-link06 {
+            .monthly-specials-link07 {
               font-size: 16px;
               font-style: normal;
               font-weight: 900;
@@ -661,7 +663,7 @@ const MonthlySpecials = (props) => {
               margin-bottom: var(--dl-space-space-unit);
               letter-spacing: auto;
             }
-            .monthly-specials-link08 {
+            .monthly-specials-link09 {
               width: auto;
               text-align: center;
             }
@@ -674,10 +676,10 @@ const MonthlySpecials = (props) => {
             .monthly-specials-blog-card {
               max-width: 550px;
             }
-            .monthly-specials-link08 {
+            .monthly-specials-link09 {
               text-align: center;
             }
-            .monthly-specials-link09 {
+            .monthly-specials-link10 {
               text-align: center;
             }
           }
@@ -721,10 +723,10 @@ const MonthlySpecials = (props) => {
               padding-left: var(--dl-space-space-oneandhalfunits);
               padding-right: var(--dl-space-space-oneandhalfunits);
             }
-            .monthly-specials-link08 {
+            .monthly-specials-link09 {
               text-align: center;
             }
-            .monthly-specials-link09 {
+            .monthly-specials-link10 {
               text-align: center;
             }
           }
@@ -761,7 +763,7 @@ const MonthlySpecials = (props) => {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-bottom: 0px;
             }
-            .monthly-specials-link06 {
+            .monthly-specials-link07 {
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }
             .monthly-specials-max-width1 {
@@ -770,7 +772,7 @@ const MonthlySpecials = (props) => {
             .monthly-specials-image1 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .monthly-specials-link08 {
+            .monthly-specials-link09 {
               text-align: center;
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }
