@@ -495,7 +495,7 @@ const Home = (props) => {
           }
           .home-reviews {
             width: 100%;
-            height: 577px;
+            height: 644px;
             display: flex;
             overflow: hidden;
             align-items: flex-start;
@@ -526,7 +526,7 @@ const Home = (props) => {
           }
           .home-container03 {
             width: 100%;
-            height: 400px;
+            height: 539px;
           }
           .home-container04 {
             display: contents;
@@ -978,10 +978,10 @@ const Home = (props) => {
           }
           @media (max-width: 1600px) {
             .home-reviews {
-              height: 588px;
+              height: 662px;
             }
             .home-container03 {
-              height: 405px;
+              height: 537px;
             }
             .home-image05 {
               width: 616px;
