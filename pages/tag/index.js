@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import tagPageInitialPropsTqKResource from '../../resources/tag-page-initial-props-tq_k_'
+import tagPageInitialPropsTqOvResource from '../../resources/tag-page-initial-props-tq_ov'
 
 const Tag1 = (props) => {
   return (
@@ -91,7 +91,7 @@ export default Tag1
 
 export async function getStaticProps(context) {
   try {
-    const response = await tagPageInitialPropsTqKResource({
+    const response = await tagPageInitialPropsTqOvResource({
       ...context?.params,
     })
     if (!response) {

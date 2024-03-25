@@ -13,8 +13,8 @@ import PropTypes from 'prop-types'
 import Navigation from '../../components/navigation'
 import BlogCard from '../../components/blog-card'
 import Banner from '../../components/banner'
-import postPageInitialPropsTqV1Resource from '../../resources/post-page-initial-props-tq_v1'
-import postPageInitialPathsTqJiResource from '../../resources/post-page-initial-paths-tq_ji'
+import postPageInitialPropsTqHtResource from '../../resources/post-page-initial-props-tq_ht'
+import postPageInitialPathsTqImResource from '../../resources/post-page-initial-paths-tq_im'
 import postResource from '../../resources/post'
 
 const Post = (props) => {
@@ -823,7 +823,7 @@ export async function getStaticProps(context) {
         notFound: true,
       }
     }
-    const response = await postPageInitialPropsTqV1Resource({
+    const response = await postPageInitialPropsTqHtResource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {
@@ -848,7 +848,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPathsTqJiResource({
+    const response = await postPageInitialPathsTqImResource({
       content_type: 'post',
       select: 'fields.slug',
     })

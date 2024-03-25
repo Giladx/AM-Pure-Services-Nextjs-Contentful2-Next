@@ -7,8 +7,8 @@ import PropTypes from 'prop-types'
 
 import Navigation from '../../../components/navigation'
 import Banner from '../../../components/banner'
-import postPageInitialPropsTq1tResource from '../../../resources/post-page-initial-props-tq_1t'
-import postPageInitialPathsTqK2Resource from '../../../resources/post-page-initial-paths-tq_k2'
+import postPageInitialPropsTqLdResource from '../../../resources/post-page-initial-props-tq_ld'
+import postPageInitialPathsTqVyResource from '../../../resources/post-page-initial-paths-tq_vy'
 import post1Resource from '../../../resources/post1'
 
 const Post11 = (props) => {
@@ -648,7 +648,7 @@ export async function getStaticProps(context) {
         notFound: true,
       }
     }
-    const response = await postPageInitialPropsTq1tResource({
+    const response = await postPageInitialPropsTqLdResource({
       ...context?.params,
       skip: (context.params.page - 1) * 9,
     })
@@ -674,7 +674,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPathsTqK2Resource({
+    const response = await postPageInitialPathsTqVyResource({
       content_type: 'post',
     })
     const totalCount = response?.meta?.pagination?.total

@@ -52,9 +52,13 @@ const Reviews = (props) => {
           .reviews-iframe {
             flex: 0 0 auto;
             width: 100%;
-            height: 100px;
+            height: auto;
             display: flex;
             align-items: flex-start;
+          }
+          .reviews-container1 {
+            width: 100%;
+            margin-top: var(--dl-space-space-sixunits);
           }
           .reviews-container2 {
             display: contents;
@@ -69,7 +73,6 @@ const Reviews = (props) => {
             }
             .reviews-container1 {
               width: 100%;
-              height: 1080px;
             }
           }
         `}

@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
+import Script from 'dangerous-html/react'
 import PropTypes from 'prop-types'
 
 import NavigationLinks from './navigation-links'
@@ -16,9 +17,8 @@ const Navigation = (props) => {
           <Link href="/">
             <a className="navigation-link">
               <img
-                id="logo"
                 alt="logo"
-                src="/logoam-200h.webp"
+                src="91874469-53be-4f66-8d46-f7f0ad90ccb0"
                 width="150"
                 height="68"
                 loading="lazy"
@@ -37,9 +37,15 @@ const Navigation = (props) => {
             <div className="navigation-buttons">
               <a
                 href="tel:+18885031722"
-                className="navigation-register1 button-secondary button button-md"
+                className="navigation-get-100-off button-secondary button button-md"
               >
                 {props.button3}
+              </a>
+              <a
+                href="tel:+18885031722"
+                className="navigation-register1 button-secondary button button-md"
+              >
+                {props.button31}
               </a>
             </div>
           </div>
@@ -104,6 +110,69 @@ const Navigation = (props) => {
               </svg>
             </div>
           </div>
+          <div>
+            <div className="navigation-container1">
+              <Script
+                html={`<style>
+header.inverted {
+  background-color: rgba(255,255,255,0.8);
+  box-shadow: 0 3px 5px 0.3px rgba(0, 0, 0, 0.1);
+}
+header.inverted a {
+  color: #0e436b;
+}
+</style>
+
+<script>
+var className = "inverted";
+var scrollTrigger = 60;
+
+window.onscroll = function() {
+  // We add pageYOffset for compatibility with IE.
+  if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) {
+    document.getElementsByTagName("header")[0].classList.add(className);
+  } else {
+    document.getElementsByTagName("header")[0].classList.remove(className);
+  }
+};
+
+// Nav Elements
+window.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('scroll', function() {
+        var content = document.getElementById('navsearch');
+        if (window.pageYOffset >= content.offsetTop + 60) {
+            content.style.filter = 'invert(1)';
+        } else {
+            content.style.filter = 'invert(0)';
+        }
+    });
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+  window.addEventListener('scroll', function() {
+      var content = document.getElementById('navmenu');
+      if (window.pageYOffset >= content.offsetTop + 60) {
+          content.style.filter = 'invert(1)';
+      } else {
+          content.style.filter = 'invert(0)';
+      }
+  });
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+  window.addEventListener('scroll', function() {
+      var content = document.getElementById('logo');
+      if (window.pageYOffset >= content.offsetTop + 60) {
+          content.style.filter = 'invert(1)';
+      } else {
+          content.style.filter = 'invert(0)';
+      }
+  });
+});
+</script>`}
+              ></Script>
+            </div>
+          </div>
         </header>
       </header>
       <style jsx>
@@ -117,13 +186,12 @@ const Navigation = (props) => {
             align-items: center;
             flex-direction: column;
             justify-content: center;
-            background-color: var(--dl-color-scheme-white);
           }
           .navigation-navbar-interactive {
             width: 100%;
             display: flex;
             max-width: var(--dl-size-size-maxwidth);
-            min-width: 1170px;
+            min-width: 1440px;
             align-items: center;
             padding-top: var(--dl-space-space-halfunit);
             padding-left: var(--dl-space-space-oneandhalfunits);
@@ -134,7 +202,7 @@ const Navigation = (props) => {
             display: contents;
           }
           .navigation-image {
-            width: 150px;
+            width: 160px;
             height: auto;
             text-decoration: none;
           }
@@ -150,9 +218,21 @@ const Navigation = (props) => {
           }
           .navigation-buttons {
             display: flex;
+            position: relative;
             align-items: center;
             flex-direction: row;
             justify-content: space-between;
+          }
+          .navigation-get-100-off {
+            color: var(--dl-color-scheme-lightgreen);
+            width: auto;
+            font-size: 14px;
+            border-color: var(--dl-color-scheme-green);
+            border-width: 1px;
+            margin-right: var(--dl-space-space-unit);
+            text-transform: uppercase;
+            text-decoration: none;
+            background-color: var(--dl-color-scheme-green);
           }
           .navigation-register1 {
             color: var(--dl-color-scheme-green);
@@ -240,6 +320,9 @@ const Navigation = (props) => {
             width: var(--dl-size-size-xsmall);
             height: var(--dl-size-size-xsmall);
           }
+          .navigation-container1 {
+            display: contents;
+          }
 
           .navigation-root-class-name1 {
             display: none;
@@ -269,6 +352,9 @@ const Navigation = (props) => {
             .navigation-image {
               width: 140px;
             }
+            .navigation-get-100-off {
+              font-size: 14px;
+            }
             .navigation-register1 {
               font-size: 14px;
             }
@@ -277,6 +363,9 @@ const Navigation = (props) => {
             }
           }
           @media (max-width: 1200px) {
+            .navigation-get-100-off {
+              font-size: 14px;
+            }
             .navigation-register1 {
               font-size: 14px;
             }
@@ -384,9 +473,10 @@ const Navigation = (props) => {
 }
 
 Navigation.defaultProps = {
-  button111: '(888)-503-1722',
+  button111: 'Get 100$ Free',
   button11: '(888)-503-1722',
-  button3: '(888)-503-1722',
+  button3: 'Get 100$ off',
+  button31: '(888)-503-1722',
   rootClassName: '',
   imageSrc: '20769734-2b37-4566-8316-77ad864b1180',
   button: '(888)-503-1722',
@@ -401,6 +491,7 @@ Navigation.propTypes = {
   button111: PropTypes.string,
   button11: PropTypes.string,
   button3: PropTypes.string,
+  button31: PropTypes.string,
   rootClassName: PropTypes.string,
   imageSrc: PropTypes.string,
   button: PropTypes.string,

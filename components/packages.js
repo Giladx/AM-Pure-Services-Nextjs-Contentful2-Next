@@ -111,6 +111,7 @@ const Packages = (props) => {
             background-color: var(--dl-color-scheme-lightgreen);
           }
           .packages-max-width {
+            max-width: var(--dl-size-size-maxwidth);
             flex-direction: column;
           }
           .packages-heading-container {
