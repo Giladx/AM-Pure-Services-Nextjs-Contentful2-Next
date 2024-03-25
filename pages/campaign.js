@@ -31,7 +31,7 @@ const Campaign = (props) => {
         </Head>
         <div className="campaign-logo">
           <img
-            src="91874469-53be-4f66-8d46-f7f0ad90ccb0"
+            src="/91874469-53be-4f66-8d46-f7f0ad90ccb0no-shadow-200h.webp"
             alt="image"
             className="campaign-image"
           />
@@ -145,16 +145,6 @@ const Campaign = (props) => {
             </div>
           </div>
         </div>
-        <div className="campaign-cupon">
-          <h1 className="campaign-text12">Claim Your Coupon</h1>
-          <img
-            alt="pastedImage"
-            sizes="(min-width: 992px) 1200px, (min-width: 768px) 800px, 480px"
-            src="/external/pastedimage-24ar-1500w.webp"
-            srcSet="external//pastedimage-24ar-1500w.webp 1200w, external/pastedimage-24ar-tablet.webp 800w, external/pastedimage-24ar-mobile.webp 480w"
-            className="campaign-pasted-image"
-          />
-        </div>
         <div className="campaign-reviews">
           <div className="campaign-container07">
             <img
@@ -173,9 +163,26 @@ const Campaign = (props) => {
             </div>
           </div>
         </div>
+        <div className="campaign-cupon">
+          <h1 className="campaign-text12">Claim Your Coupon</h1>
+          <div className="campaign-container10">
+            <div className="campaign-container11">
+              <span className="campaign-text13">Coupon Voucher</span>
+              <span className="campaign-text14">100$ OFF</span>
+              <span className="campaign-text15">Deep Cleaning</span>
+            </div>
+            <div className="campaign-container12">
+              <img
+                alt="pastedImage"
+                src="/external/pastedimage-nbms-300w.webp"
+                className="campaign-pasted-image"
+              />
+            </div>
+          </div>
+        </div>
         <div className="campaign-stickers">
           <div className="campaign-sticker-wrap">
-            <div className="campaign-container10">
+            <div className="campaign-container13">
               <img
                 alt="image"
                 src="/elite-solid-border-500w.webp"
@@ -206,8 +213,8 @@ const Campaign = (props) => {
             </div>
           </div>
         </div>
-        <div className="campaign-container11">
-          <h1 className="campaign-text13">Get a Quote</h1>
+        <div className="campaign-container14">
+          <h1 className="campaign-text16">Get a Quote</h1>
           <form className="campaign-form">
             <input
               type="text"
@@ -258,7 +265,7 @@ const Campaign = (props) => {
             flex-direction: column;
           }
           .campaign-image {
-            width: 30%;
+            width: 50%;
             object-fit: cover;
           }
           .campaign-before-after {
@@ -537,20 +544,6 @@ const Campaign = (props) => {
           .campaign-slider-button-next {
             display: none;
           }
-          .campaign-cupon {
-            flex: 0 0 auto;
-            width: auto;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .campaign-text12 {
-            align-self: center;
-            font-style: normal;
-            font-weight: 900;
-            margin-bottom: var(--dl-space-space-unit);
-            text-transform: uppercase;
-          }
           .campaign-reviews {
             width: 100%;
             height: auto;
@@ -586,15 +579,57 @@ const Campaign = (props) => {
           .campaign-container08 {
             width: 1080px;
             height: 430px;
+            margin-bottom: var(--dl-space-space-twounits);
           }
           .campaign-container09 {
             display: contents;
+          }
+          .campaign-cupon {
+            flex: 0 0 auto;
+            width: 1080px;
+            display: flex;
+            padding: var(--dl-space-space-unit);
+            align-items: center;
+            border-color: var(--dl-color-scheme-green);
+            border-width: 1px;
+            border-radius: var(--dl-radius-radius-radius8);
+            flex-direction: column;
+            background-color: var(--dl-color-scheme-lightgreen);
+          }
+          .campaign-text12 {
+            align-self: center;
+            font-style: normal;
+            font-weight: 900;
+            margin-bottom: var(--dl-space-space-unit);
+            text-transform: uppercase;
+          }
+          .campaign-container10 {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+          .campaign-container11 {
+            flex: 0 0 auto;
+            width: 200px;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+          .campaign-container12 {
+            flex: 0 0 auto;
+            width: 200px;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
           }
           .campaign-stickers {
             flex: 0 0 auto;
             width: 100%;
             display: flex;
+            margin-top: var(--dl-space-space-twounits);
             align-items: center;
+            margin-bottom: var(--dl-space-space-twounits);
             justify-content: center;
           }
           .campaign-sticker-wrap {
@@ -605,7 +640,7 @@ const Campaign = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .campaign-container10 {
+          .campaign-container13 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -637,20 +672,18 @@ const Campaign = (props) => {
             margin-right: var(--dl-space-space-fiveunits);
             margin-bottom: var(--dl-space-space-twounits);
           }
-          .campaign-container11 {
+          .campaign-container14 {
             flex: 0 0 auto;
             width: 1080px;
             display: flex;
             padding: var(--dl-space-space-twounits);
-            margin-top: var(--dl-space-space-twounits);
             align-items: center;
             border-radius: var(--dl-radius-radius-radius8);
-            margin-bottom: var(--dl-space-space-twounits);
             flex-direction: column;
             justify-content: center;
             background-color: var(--dl-color-scheme-lightgreen);
           }
-          .campaign-text13 {
+          .campaign-text16 {
             font-style: normal;
             text-align: center;
             font-weight: 900;
@@ -701,8 +734,15 @@ const Campaign = (props) => {
             text-transform: uppercase;
           }
           @media (max-width: 1600px) {
+            .campaign-reviews {
+              width: 100%;
+              height: auto;
+            }
+            .campaign-container08 {
+              height: 486px;
+            }
             .campaign-cupon {
-              width: auto;
+              width: 1080px;
             }
             .campaign-text12 {
               align-self: center;
@@ -712,15 +752,59 @@ const Campaign = (props) => {
               margin-bottom: var(--dl-space-space-unit);
               text-transform: uppercase;
             }
-            .campaign-pasted-image {
-              margin-bottom: var(--dl-space-space-unit);
+            .campaign-container10 {
+              width: 60%;
+              border-color: var(--dl-color-scheme-green);
+              border-style: dashed;
+              border-width: 2px;
+              border-radius: var(--dl-radius-radius-radius8);
+              flex-direction: row;
             }
-            .campaign-reviews {
+            .campaign-container11 {
+              width: 70%;
+              height: 100%;
+              padding: var(--dl-space-space-threeunits);
+              align-self: center;
+              align-items: center;
+              border-color: var(--dl-color-scheme-green);
+              border-style: dashed;
+              border-width: 2px;
+              justify-content: center;
+              background-color: var(--dl-color-scheme-white80);
+              border-top-width: 0px;
+              border-left-width: 0px;
+              border-bottom-width: 0px;
+            }
+            .campaign-text13 {
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 700;
+              text-transform: uppercase;
+            }
+            .campaign-text14 {
+              font-size: 2em;
+              font-style: normal;
+              font-weight: 900;
+            }
+            .campaign-text15 {
+              font-style: normal;
+              font-weight: 300;
+              text-transform: uppercase;
+            }
+            .campaign-container12 {
+              width: 30%;
+              height: 202px;
+              padding: var(--dl-space-space-halfunit);
+              align-items: center;
+              border-color: var(--dl-color-scheme-green);
+              flex-direction: column;
+              justify-content: center;
+              background-color: var(--dl-color-scheme-white80);
+            }
+            .campaign-pasted-image {
               width: 100%;
               height: auto;
-            }
-            .campaign-container08 {
-              height: 486px;
+              align-self: center;
             }
           }
           @media (max-width: 1200px) {
@@ -733,17 +817,6 @@ const Campaign = (props) => {
             .campaign-slider-slide1 {
               flex-direction: row;
             }
-            .campaign-cupon {
-              width: auto;
-            }
-            .campaign-text12 {
-              align-self: center;
-              margin-bottom: var(--dl-space-space-unit);
-              text-transform: uppercase;
-            }
-            .campaign-pasted-image {
-              margin-bottom: var(--dl-space-space-unit);
-            }
             .campaign-reviews {
               height: auto;
               padding-left: var(--dl-space-space-twounits);
@@ -751,6 +824,15 @@ const Campaign = (props) => {
             }
             .campaign-container08 {
               height: 451px;
+              margin-bottom: 0px;
+            }
+            .campaign-cupon {
+              width: 1080px;
+            }
+            .campaign-text12 {
+              align-self: center;
+              margin-bottom: var(--dl-space-space-unit);
+              text-transform: uppercase;
             }
           }
           @media (max-width: 991px) {
@@ -758,7 +840,7 @@ const Campaign = (props) => {
               width: 50%;
             }
             .campaign-before-after {
-              width: 100%;
+              width: 90%;
             }
             .campaign-slider {
               padding: var(--dl-space-space-unit);
@@ -841,11 +923,6 @@ const Campaign = (props) => {
               height: auto;
               align-self: center;
             }
-            .campaign-cupon {
-              width: 100%;
-              align-items: center;
-              margin-bottom: var(--dl-space-space-unit);
-            }
             .campaign-reviews {
               width: 90%;
               height: 564px;
@@ -861,10 +938,15 @@ const Campaign = (props) => {
               padding-left: var(--dl-space-space-unit);
               padding-right: var(--dl-space-space-unit);
             }
+            .campaign-cupon {
+              width: 90%;
+              align-items: center;
+              margin-bottom: var(--dl-space-space-unit);
+            }
             .campaign-stickers {
               width: 90%;
             }
-            .campaign-container11 {
+            .campaign-container14 {
               width: 90%;
             }
           }
@@ -902,19 +984,15 @@ const Campaign = (props) => {
             .campaign-image06 {
               width: 95%;
             }
-            .campaign-text12 {
-              margin-bottom: 0px;
-            }
-            .campaign-pasted-image {
-              width: 100%;
-              padding: var(--dl-space-space-unit);
-            }
             .campaign-reviews {
               height: 636px;
               padding-left: var(--dl-space-space-unit);
               padding-right: var(--dl-space-space-unit);
             }
-            .campaign-container10 {
+            .campaign-text12 {
+              margin-bottom: 0px;
+            }
+            .campaign-container13 {
               width: 100%;
             }
             .campaign-image08 {
@@ -959,9 +1037,6 @@ const Campaign = (props) => {
               width: 95%;
               padding: 0px;
             }
-            .campaign-text12 {
-              margin-bottom: 0px;
-            }
             .campaign-reviews {
               height: 516px;
               padding: var(--dl-space-space-unit);
@@ -970,10 +1045,13 @@ const Campaign = (props) => {
             .campaign-container08 {
               height: 100%;
             }
+            .campaign-text12 {
+              margin-bottom: 0px;
+            }
             .campaign-sticker-wrap {
               width: 100%;
             }
-            .campaign-container10 {
+            .campaign-container13 {
               width: 100%;
             }
             .campaign-image08 {

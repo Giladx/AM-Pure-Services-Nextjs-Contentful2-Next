@@ -18,10 +18,10 @@ const Navigation = (props) => {
             <a className="navigation-link">
               <img
                 alt="logo"
-                src="91874469-53be-4f66-8d46-f7f0ad90ccb0"
                 width="150"
                 height="68"
                 loading="lazy"
+                src="/91874469-53be-4f66-8d46-f7f0ad90ccb0no-shadow-200h.webp"
                 className="navigation-image"
               />
             </a>
@@ -35,12 +35,11 @@ const Navigation = (props) => {
           <div data-thq="thq-navbar-nav" className="navigation-desktop-menu">
             <NavigationLinks rootClassName="navigation-links-root-class-name8"></NavigationLinks>
             <div className="navigation-buttons">
-              <a
-                href="tel:+18885031722"
-                className="navigation-get-100-off button-secondary button button-md"
-              >
-                {props.button3}
-              </a>
+              <Link href="/campaign">
+                <a className="navigation-link1 button-secondary button button-md">
+                  {props.button3}
+                </a>
+              </Link>
               <a
                 href="tel:+18885031722"
                 className="navigation-register1 button-secondary button button-md"
@@ -58,7 +57,7 @@ const Navigation = (props) => {
             <div className="navigation-nav">
               <div className="navigation-top">
                 <Link href="/">
-                  <a className="navigation-link1">
+                  <a className="navigation-link2">
                     <img
                       id="logo"
                       alt="logo"
@@ -223,7 +222,7 @@ window.addEventListener('DOMContentLoaded', function() {
             flex-direction: row;
             justify-content: space-between;
           }
-          .navigation-get-100-off {
+          .navigation-link1 {
             color: var(--dl-color-scheme-lightgreen);
             width: auto;
             font-size: 14px;
@@ -277,7 +276,7 @@ window.addEventListener('DOMContentLoaded', function() {
             margin-bottom: var(--dl-space-space-threeunits);
             justify-content: space-between;
           }
-          .navigation-link1 {
+          .navigation-link2 {
             display: contents;
           }
           .navigation-image1 {
@@ -352,7 +351,7 @@ window.addEventListener('DOMContentLoaded', function() {
             .navigation-image {
               width: 140px;
             }
-            .navigation-get-100-off {
+            .navigation-link1 {
               font-size: 14px;
             }
             .navigation-register1 {
@@ -363,7 +362,7 @@ window.addEventListener('DOMContentLoaded', function() {
             }
           }
           @media (max-width: 1200px) {
-            .navigation-get-100-off {
+            .navigation-link1 {
               font-size: 14px;
             }
             .navigation-register1 {
@@ -484,7 +483,6 @@ Navigation.defaultProps = {
   imageSrc1: '022d6c38-4e96-4be2-af25-3fdc5a3758ea',
   button2: '(888)-503-1722',
   button1: '(888)-503-1722',
-  imageAlt: 'logo',
 }
 
 Navigation.propTypes = {
@@ -499,7 +497,6 @@ Navigation.propTypes = {
   imageSrc1: PropTypes.string,
   button2: PropTypes.string,
   button1: PropTypes.string,
-  imageAlt: PropTypes.string,
 }
 
 export default Navigation
