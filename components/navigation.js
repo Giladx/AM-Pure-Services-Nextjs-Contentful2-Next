@@ -18,10 +18,10 @@ const Navigation = (props) => {
             <a className="navigation-link">
               <img
                 alt="logo"
+                src="/91874469-53be-4f66-8d46-f7f0ad90ccb0no-shadow-200h.webp"
                 width="150"
                 height="68"
                 loading="lazy"
-                src="/91874469-53be-4f66-8d46-f7f0ad90ccb0no-shadow-200h.webp"
                 className="navigation-image"
               />
             </a>
@@ -117,9 +117,9 @@ header.inverted {
   background-color: rgba(255,255,255,0.8);
   box-shadow: 0 3px 5px 0.3px rgba(0, 0, 0, 0.1);
 }
-header.inverted a {
+/*header.inverted a {
   color: #0e436b;
-}
+}*/
 </style>
 
 <script>
@@ -168,7 +168,8 @@ window.addEventListener('DOMContentLoaded', function() {
       }
   });
 });
-</script>`}
+</script>
+`}
               ></Script>
             </div>
           </div>
@@ -225,6 +226,7 @@ window.addEventListener('DOMContentLoaded', function() {
           .navigation-link1 {
             color: var(--dl-color-scheme-lightgreen);
             width: auto;
+            display: none;
             font-size: 14px;
             border-color: var(--dl-color-scheme-green);
             border-width: 1px;
