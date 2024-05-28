@@ -749,19 +749,9 @@ export async function getStaticProps(context) {
     const contextFwbrpnProp = await services1Resource({
       ...context?.params,
     })
-    if (!contextFwbrpnProp) {
-      return {
-        notFound: true,
-      }
-    }
     const contextTvp7o9Prop = await servicesResource({
       ...context?.params,
     })
-    if (!contextTvp7o9Prop) {
-      return {
-        notFound: true,
-      }
-    }
     return {
       props: {
         contextFwbrpnProp: contextFwbrpnProp,
@@ -771,7 +761,8 @@ export async function getStaticProps(context) {
     }
   } catch (error) {
     return {
-      notFound: true,
+      props: {},
+      revalidate: 60,
     }
   }
 }

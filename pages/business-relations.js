@@ -650,11 +650,6 @@ export async function getStaticProps(context) {
     const contextI5k88bProp = await businessRelationsResource({
       ...context?.params,
     })
-    if (!contextI5k88bProp) {
-      return {
-        notFound: true,
-      }
-    }
     return {
       props: {
         contextI5k88bProp: contextI5k88bProp,
@@ -663,7 +658,8 @@ export async function getStaticProps(context) {
     }
   } catch (error) {
     return {
-      notFound: true,
+      props: {},
+      revalidate: 60,
     }
   }
 }

@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 
 import Navigation from '../../components/navigation'
 import Banner from '../../components/banner'
-import postPageInitialPropsTqJpResource from '../../resources/post-page-initial-props-tq_jp'
+import postPageInitialPropsTqXnResource from '../../resources/post-page-initial-props-tq_xn'
 import post1Resource from '../../resources/post1'
 
 const Post1 = (props) => {
@@ -642,12 +642,7 @@ export async function getStaticProps(context) {
     const context0kxs0sProp = await post1Resource({
       ...context?.params,
     })
-    if (!context0kxs0sProp) {
-      return {
-        notFound: true,
-      }
-    }
-    const response = await postPageInitialPropsTqJpResource({
+    const response = await postPageInitialPropsTqXnResource({
       ...context?.params,
     })
     if (!response) {

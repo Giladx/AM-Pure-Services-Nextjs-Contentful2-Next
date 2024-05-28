@@ -1106,19 +1106,9 @@ export async function getStaticProps(context) {
     const contextXps4qrProp = await restrictions1Resource({
       ...context?.params,
     })
-    if (!contextXps4qrProp) {
-      return {
-        notFound: true,
-      }
-    }
     const context7mpc8mProp = await restrictionsResource({
       ...context?.params,
     })
-    if (!context7mpc8mProp) {
-      return {
-        notFound: true,
-      }
-    }
     return {
       props: {
         contextXps4qrProp: contextXps4qrProp,
@@ -1128,7 +1118,8 @@ export async function getStaticProps(context) {
     }
   } catch (error) {
     return {
-      notFound: true,
+      props: {},
+      revalidate: 60,
     }
   }
 }

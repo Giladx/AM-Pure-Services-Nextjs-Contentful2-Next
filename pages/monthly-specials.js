@@ -790,19 +790,9 @@ export async function getStaticProps(context) {
     const contextRxexonProp = await monthlySpecials1Resource({
       ...context?.params,
     })
-    if (!contextRxexonProp) {
-      return {
-        notFound: true,
-      }
-    }
     const contextKof7xProp = await monthlySpecialsResource({
       ...context?.params,
     })
-    if (!contextKof7xProp) {
-      return {
-        notFound: true,
-      }
-    }
     return {
       props: {
         contextRxexonProp: contextRxexonProp,
@@ -812,7 +802,8 @@ export async function getStaticProps(context) {
     }
   } catch (error) {
     return {
-      notFound: true,
+      props: {},
+      revalidate: 60,
     }
   }
 }

@@ -200,7 +200,19 @@ const Campaign = (props) => {
             <div className="campaign-container09">
               <div className="campaign-container10">
                 <Script
-                  html={`<script type="text/javascript" src="https://form.jotform.com/jsform/241006540660445"></script>`}
+                  html={`
+    <iframe
+      id="JotFormIFrame-241006540660445"
+      title="GET A QUOTE"
+      onload="window.parent.scrollTo(0,0)"
+      allowtransparency="true"
+      allow="geolocation; microphone; camera; fullscreen"
+      src="https://form.jotform.com/241006540660445"
+      frameborder="0"
+      style="min-width:100%;max-width:100%;height:720px;border:none;"
+      scrolling="no"/>
+    <script src='https://form.jotform.com/s/umd/latest/for-form-embed-handler.js'></script>
+    <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-241006540660445'", "https://form.jotform.com/")</script>`}
                 ></Script>
               </div>
             </div>
@@ -309,6 +321,41 @@ const Campaign = (props) => {
             </div>
           </div>
         </div>
+        <animate-on-reveal
+          animation="none"
+          duration="800ms"
+          delay="0s"
+          direction="normal"
+          easing="ease"
+          iteration="1"
+        >
+          <div
+            data-aos="fade"
+            data-thq-animate-on-reveal="true"
+            className="campaign-form1"
+          >
+            <h1 className="campaign-text26">Get a Quote</h1>
+            <div className="campaign-container18">
+              <div className="campaign-container19">
+                <Script
+                  html={`
+    <iframe
+      id="JotFormIFrame-241006540660445"
+      title="GET A QUOTE"
+      onload="window.parent.scrollTo(0,0)"
+      allowtransparency="true"
+      allow="geolocation; microphone; camera; fullscreen"
+      src="https://form.jotform.com/241006540660445"
+      frameborder="0"
+      style="min-width:100%;max-width:100%;height:720px;border:none;"
+      scrolling="no"/>
+    <script src='https://form.jotform.com/s/umd/latest/for-form-embed-handler.js'></script>
+    <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-241006540660445'", "https://form.jotform.com/")</script>`}
+                ></Script>
+              </div>
+            </div>
+          </div>
+        </animate-on-reveal>
       </div>
       <style jsx>
         {`
@@ -686,7 +733,7 @@ const Campaign = (props) => {
           }
           .campaign-container09 {
             width: 100%;
-            height: 680px;
+            height: 656px;
           }
           .campaign-container10 {
             display: contents;
@@ -694,7 +741,7 @@ const Campaign = (props) => {
           .campaign-reviews {
             width: 100%;
             height: auto;
-            display: flex;
+            display: none;
             overflow: hidden;
             align-items: center;
             padding-left: var(--dl-space-space-fourunits);
@@ -922,6 +969,30 @@ const Campaign = (props) => {
             margin-left: var(--dl-space-space-fiveunits);
             margin-right: var(--dl-space-space-fiveunits);
             margin-bottom: var(--dl-space-space-twounits);
+          }
+          .campaign-form1 {
+            flex: 0 0 auto;
+            width: 1080px;
+            display: flex;
+            padding: var(--dl-space-space-twounits);
+            align-items: center;
+            border-radius: var(--dl-radius-radius-radius8);
+            flex-direction: column;
+            justify-content: center;
+            background-color: var(--dl-color-scheme-lightgreen);
+          }
+          .campaign-text26 {
+            font-style: normal;
+            text-align: center;
+            font-weight: 900;
+            text-transform: uppercase;
+          }
+          .campaign-container18 {
+            width: 100%;
+            height: 668px;
+          }
+          .campaign-container19 {
+            display: contents;
           }
           @media (max-width: 1600px) {
             .campaign-reviews {
@@ -1151,6 +1222,9 @@ const Campaign = (props) => {
             .campaign-stickers {
               width: 90%;
             }
+            .campaign-form1 {
+              width: 90%;
+            }
           }
           @media (max-width: 767px) {
             .campaign-image {
@@ -1329,6 +1403,12 @@ const Campaign = (props) => {
               height: auto;
               margin-left: var(--dl-space-space-halfunit);
               margin-right: var(--dl-space-space-halfunit);
+            }
+            .campaign-form1 {
+              margin-bottom: var(--dl-space-space-twounits);
+            }
+            .campaign-container18 {
+              height: 751px;
             }
           }
         `}

@@ -27,6 +27,7 @@ const Refund = (props) => {
             property="og:image"
             content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/a9b9a8f2-be01-41ae-838f-381e8ec5a736/20f16b04-d5e9-437e-ac34-d5c544c97085?org_if_sml=1&amp;q=80&amp;force_format=original"
           />
+          <meta name="robots" content="noindex" />
         </Head>
         <div className="refund-container1">
           <div className="refund-container2">

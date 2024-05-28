@@ -4,8 +4,8 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import tagPageInitialPropsTqJIResource from '../../resources/tag-page-initial-props-tq_j-i'
-import tagPageInitialPathsTqXiResource from '../../resources/tag-page-initial-paths-tq_xi'
+import tagPageInitialPropsTqJlResource from '../../resources/tag-page-initial-props-tq_jl'
+import tagPageInitialPathsTqWtResource from '../../resources/tag-page-initial-paths-tq_wt'
 
 const Tag = (props) => {
   return (
@@ -84,7 +84,7 @@ export default Tag
 
 export async function getStaticProps(context) {
   try {
-    const response = await tagPageInitialPropsTqJIResource({
+    const response = await tagPageInitialPropsTqJlResource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {
@@ -107,7 +107,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await tagPageInitialPathsTqXiResource({
+    const response = await tagPageInitialPathsTqWtResource({
       content_type: 'tag',
       select: 'fields.tagName',
     })

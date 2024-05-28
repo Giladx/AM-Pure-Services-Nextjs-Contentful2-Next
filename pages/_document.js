@@ -20,7 +20,7 @@ class CustomDocument extends Document {
           <style
             dangerouslySetInnerHTML={{
               __html:
-                '\n  html {\n    font-family: Rubik;\n    font-size: 18px;\n  }\n\n  body {\n    font-weight: 400;\n    font-style:normal;\n    text-decoration: none;\n    text-transform: undefined;\n    letter-spacing: normal;\n    line-height: 1.3;\n    color: var(--dl-color-scheme-darkblue);\n    background-color: var(--dl-color-scheme-white);\n    \n  }\n\n  \n\n  ',
+                '\n  html {\n    font-family: Rubik;\n    font-size: 18px;\n  }\n\n  body {\n    font-weight: 400;\n    font-style:normal;\n    text-decoration: none;\n    text-transform: undefined;\n    letter-spacing: normal;\n    line-height: 1.3;\n    color: var(--dl-color-scheme-darkblue);\n    background-color: var(--dl-color-scheme-white);\n    \n    null\n  }\n\n  \n\n  ',
             }}
             data-tag="default-style-sheet"
           ></style>

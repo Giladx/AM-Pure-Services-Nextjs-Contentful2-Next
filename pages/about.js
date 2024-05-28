@@ -568,11 +568,6 @@ export async function getStaticProps(context) {
     const contextJfwijcProp = await aboutResource({
       ...context?.params,
     })
-    if (!contextJfwijcProp) {
-      return {
-        notFound: true,
-      }
-    }
     return {
       props: {
         contextJfwijcProp: contextJfwijcProp,
@@ -581,7 +576,8 @@ export async function getStaticProps(context) {
     }
   } catch (error) {
     return {
-      notFound: true,
+      props: {},
+      revalidate: 60,
     }
   }
 }

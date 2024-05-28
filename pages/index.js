@@ -1348,19 +1348,9 @@ export async function getStaticProps(context) {
     const context0mvdzProp = await home1Resource({
       ...context?.params,
     })
-    if (!context0mvdzProp) {
-      return {
-        notFound: true,
-      }
-    }
     const context1m1e3aProp = await homeResource({
       ...context?.params,
     })
-    if (!context1m1e3aProp) {
-      return {
-        notFound: true,
-      }
-    }
     return {
       props: {
         context0mvdzProp: context0mvdzProp,
@@ -1370,7 +1360,8 @@ export async function getStaticProps(context) {
     }
   } catch (error) {
     return {
-      notFound: true,
+      props: {},
+      revalidate: 60,
     }
   }
 }

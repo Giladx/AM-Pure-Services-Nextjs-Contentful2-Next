@@ -13,8 +13,8 @@ import PropTypes from 'prop-types'
 import Navigation from '../../components/navigation'
 import BlogCard from '../../components/blog-card'
 import Banner from '../../components/banner'
-import postPageInitialPropsTqULResource from '../../resources/post-page-initial-props-tq_u-l'
-import postPageInitialPathsTq43Resource from '../../resources/post-page-initial-paths-tq_43'
+import postPageInitialPropsTqVmResource from '../../resources/post-page-initial-props-tq_vm'
+import postPageInitialPathsTq8mResource from '../../resources/post-page-initial-paths-tq_8m'
 import postResource from '../../resources/post'
 
 const Post = (props) => {
@@ -818,12 +818,7 @@ export async function getStaticProps(context) {
     const contextGu7liProp = await postResource({
       ...context?.params,
     })
-    if (!contextGu7liProp) {
-      return {
-        notFound: true,
-      }
-    }
-    const response = await postPageInitialPropsTqULResource({
+    const response = await postPageInitialPropsTqVmResource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {
@@ -847,7 +842,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPathsTq43Resource({
+    const response = await postPageInitialPathsTq8mResource({
       content_type: 'post',
       select: 'fields.slug',
     })
