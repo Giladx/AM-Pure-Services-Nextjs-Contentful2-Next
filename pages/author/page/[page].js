@@ -4,8 +4,8 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import authorPageInitialPropsTqEyResource from '../../../resources/author-page-initial-props-tq_ey'
-import authorPageInitialPathsTqSmResource from '../../../resources/author-page-initial-paths-tq_sm'
+import authorPageInitialPropsTq9yResource from '../../../resources/author-page-initial-props-tq_9y'
+import authorPageInitialPathsTqCjResource from '../../../resources/author-page-initial-paths-tq_cj'
 
 const Author1 = (props) => {
   return (
@@ -97,7 +97,7 @@ export default Author1
 
 export async function getStaticProps(context) {
   try {
-    const response = await authorPageInitialPropsTqEyResource({
+    const response = await authorPageInitialPropsTq9yResource({
       ...context?.params,
       skip: (context.params.page - 1) * 10,
     })
@@ -122,7 +122,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await authorPageInitialPathsTqSmResource({
+    const response = await authorPageInitialPathsTqCjResource({
       content_type: 'author',
     })
     const totalCount = response?.meta?.pagination?.total
