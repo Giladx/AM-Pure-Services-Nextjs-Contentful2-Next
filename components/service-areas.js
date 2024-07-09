@@ -86,14 +86,22 @@ const ServiceAreas = (props) => {
                 className="service-areas-component6"
               ></FeatureCard4>
             </a>
+            <FeatureCard4
+              title="Genesee County"
+              description="(810) 671-0777"
+              description1=" "
+              description2=" "
+              rootClassName="rootClassName6"
+              className="service-areas-component7"
+            ></FeatureCard4>
             <a href="tel:+15174813849">
               <FeatureCard4
-                title="Ingham County"
-                description=" (517) 481-3849 "
+                title="Ann Arbor"
+                description="(734) 238-0529"
                 description1=" "
                 description2=" "
                 rootClassName="rootClassName10"
-                className="service-areas-component7"
+                className="service-areas-component8"
               ></FeatureCard4>
             </a>
           </div>
@@ -167,6 +175,9 @@ const ServiceAreas = (props) => {
             text-decoration: none;
           }
           .service-areas-component7 {
+            text-decoration: none;
+          }
+          .service-areas-component8 {
             text-decoration: none;
           }
           .service-areas-image {
