@@ -6,7 +6,7 @@ import Script from 'dangerous-html/react'
 const App = (props) => {
   return (
     <>
-      <div className="app-container">
+      <div className="app-container1">
         <Head>
           <title>
             App - AM Pure Services | Airduct Cleaning | Drayer Vent Cleaning
@@ -29,8 +29,8 @@ const App = (props) => {
           />
           <meta name="robots" content="noindex" />
         </Head>
-        <div className="app-container1">
-          <div className="app-container2">
+        <div className="app-container2">
+          <div className="app-container3">
             <Script
               html={`<iframe id="JotFormIFrame-221005831703443" title="AM Pure Services APP" src="https://www.jotform.com/app/221005831703443?appEmbedded=1" style="width:100%;height:100%;border: 0;"></iframe>`}
             ></Script>
@@ -39,7 +39,7 @@ const App = (props) => {
       </div>
       <style jsx>
         {`
-          .app-container {
+          .app-container1 {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -48,19 +48,19 @@ const App = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .app-container1 {
+          .app-container2 {
             width: 100%;
             height: 100vh;
             align-self: center;
           }
-          .app-container2 {
+          .app-container3 {
             display: contents;
           }
           @media (max-width: 479px) {
-            .app-container {
+            .app-container1 {
               align-items: center;
             }
-            .app-container1 {
+            .app-container2 {
               width: 100%;
               height: 100vh;
             }

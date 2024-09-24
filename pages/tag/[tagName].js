@@ -1,16 +1,16 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Head from 'next/head'
 
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import tagPageInitialPropsTqWResource from '../../resources/tag-page-initial-props-tq__w'
-import tagPageInitialPathsTqQsResource from '../../resources/tag-page-initial-paths-tq_qs'
+import tagPageInitialPropsTqGjResource from '../../resources/tag-page-initial-props-tq_gj'
+import tagPageInitialPathsTqPkResource from '../../resources/tag-page-initial-paths-tq_pk'
 
 const Tag = (props) => {
   return (
     <>
-      <div className="tag-container">
+      <div className="tag-container1">
         <Head>
           <title>
             Tag - AM Pure Services | Airduct Cleaning | Drayer Vent Cleaning
@@ -30,13 +30,13 @@ const Tag = (props) => {
         </Head>
         <DataProvider
           renderSuccess={(TagEntity) => (
-            <>
-              <div className="tag-container1">
+            <Fragment>
+              <div className="tag-container2">
                 <button type="button" className="tag-button button">
                   {TagEntity?.tagName}
                 </button>
               </div>
-            </>
+            </Fragment>
           )}
           initialData={props.tagEntity}
           persistDataDuringLoading={true}
@@ -45,7 +45,7 @@ const Tag = (props) => {
       </div>
       <style jsx>
         {`
-          .tag-container {
+          .tag-container1 {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -54,7 +54,7 @@ const Tag = (props) => {
             border-radius: var(--dl-radius-radius-radius8);
             flex-direction: column;
           }
-          .tag-container1 {
+          .tag-container2 {
             gap: 12px;
             width: 100%;
             display: flex;
@@ -84,7 +84,7 @@ export default Tag
 
 export async function getStaticProps(context) {
   try {
-    const response = await tagPageInitialPropsTqWResource({
+    const response = await tagPageInitialPropsTqGjResource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {
@@ -107,7 +107,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await tagPageInitialPathsTqQsResource({
+    const response = await tagPageInitialPathsTqPkResource({
       content_type: 'tag',
       select: 'fields.tagName',
     })

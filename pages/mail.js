@@ -5,7 +5,7 @@ const Mail = (props) => {
   useEffect(() => import('@lottiefiles/lottie-player'), [])
   return (
     <>
-      <div className="mail-container">
+      <div className="mail-container1">
         <Head>
           <title>
             mail - AM Pure Services | Airduct Cleaning | Drayer Vent Cleaning
@@ -28,8 +28,8 @@ const Mail = (props) => {
           />
           <meta name="robots" content="noindex" />
         </Head>
-        <div className="mail-container1">
-          <h1 className="mail-text Heading1">
+        <div className="mail-container2">
+          <h1 className="mail-text1 Heading1">
             Our Mail Server Is Working Over Time
           </h1>
           <div className="mail-div">
@@ -41,11 +41,21 @@ const Mail = (props) => {
               background="transparent"
             ></lottie-player>
           </div>
+          <a
+            href="https://bytii.cloud"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="mail-link"
+          >
+            <div className="mail-signature">
+              <span className="mail-text2">Bytii Cloud</span>
+            </div>
+          </a>
         </div>
       </div>
       <style jsx>
         {`
-          .mail-container {
+          .mail-container1 {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -53,7 +63,7 @@ const Mail = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .mail-container1 {
+          .mail-container2 {
             flex: 0 0 auto;
             width: 100%;
             height: 100vh;
@@ -62,7 +72,7 @@ const Mail = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .mail-text {
+          .mail-text1 {
             align-self: center;
             text-align: center;
             margin-bottom: var(--dl-space-space-twounits);
@@ -70,6 +80,24 @@ const Mail = (props) => {
           .mail-div {
             width: 300px;
             height: 300px;
+          }
+          .mail-link {
+            display: contents;
+          }
+          .mail-signature {
+            left: 5px;
+            bottom: 5px;
+            display: flex;
+            position: absolute;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            text-decoration: none;
+          }
+          .mail-text2 {
+            color: rgb(201, 206, 218);
+            font-style: normal;
+            font-weight: 300;
           }
         `}
       </style>

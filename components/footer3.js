@@ -8,40 +8,40 @@ const Footer3 = (props) => {
       <div
         className={`footer3-footer section-container ${props.rootClassName} `}
       >
-        <div className="footer3-max-width max-content-container">
+        <div className="footer3-max-width1 max-content-container">
           <div className="footer3-top-part">
             <div className="footer3-links-container">
               <div className="footer3-product-container">
-                <span className="footer3-text">{props.text1}</span>
-                <span className="footer3-text01">{props.text2}</span>
-                <span className="footer3-text02">{props.text3}</span>
-                <span className="footer3-text03">{props.text4}</span>
-                <span className="footer3-text04">{props.text5}</span>
+                <span className="footer3-text10">{props.text1}</span>
+                <span className="footer3-text11">{props.text2}</span>
+                <span className="footer3-text12">{props.text3}</span>
+                <span className="footer3-text13">{props.text4}</span>
+                <span className="footer3-text14">{props.text5}</span>
               </div>
             </div>
             <div className="footer3-navigate-container">
-              <span className="footer3-text05">{props.text6}</span>
-              <span className="footer3-text06">
+              <span className="footer3-text15">{props.text6}</span>
+              <span className="footer3-text16">
                 <span>ABOUT</span>
                 <br></br>
               </span>
-              <span className="footer3-text09">{props.text7}</span>
-              <span className="footer3-text10">{props.text8}</span>
+              <span className="footer3-text19">{props.text7}</span>
+              <span className="footer3-text20">{props.text8}</span>
             </div>
             <div className="footer3-contact-container">
-              <span className="footer3-text11">{props.text9}</span>
-              <a href="tel:+18885031722" className="footer3-link">
+              <span className="footer3-text21">{props.text9}</span>
+              <a href="tel:+18885031722" className="footer3-link1">
                 {props.text11}
               </a>
               <a
                 href="mailto:service@ampureservices.com?subject=Site Service Request"
-                className="footer3-link1"
+                className="footer3-link2"
               >
                 {props.text10}
               </a>
             </div>
             <div className="footer3-subscribe-container">
-              <span className="footer3-text12">{props.text}</span>
+              <span className="footer3-text22">{props.text}</span>
               <input
                 type="text"
                 placeholder={props.textinputPlaceholder}
@@ -52,7 +52,7 @@ const Footer3 = (props) => {
           </div>
         </div>
         <div className="footer3-separator"></div>
-        <footer className="footer3-max-width1 max-content-container">
+        <footer className="footer3-max-width2 max-content-container">
           <img
             alt="image"
             src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/a9b9a8f2-be01-41ae-838f-381e8ec5a736/7aea089d-8b4d-41e5-9950-540b31bacbed?org_if_sml=1&amp;q=8014046&amp;force_format=original"
@@ -60,8 +60,8 @@ const Footer3 = (props) => {
             height="68"
             className="footer3-image"
           />
-          <span className="footer3-text13">{props.text12}</span>
-          <span className="footer3-text14">{props.text121}</span>
+          <span className="footer3-text23">{props.text12}</span>
+          <span className="footer3-text24">{props.text121}</span>
         </footer>
       </div>
       <style jsx>
@@ -69,7 +69,7 @@ const Footer3 = (props) => {
           .footer3-footer {
             position: relative;
           }
-          .footer3-max-width {
+          .footer3-max-width1 {
             padding-left: 0px;
             padding-right: 0px;
           }
@@ -94,25 +94,25 @@ const Footer3 = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .footer3-text {
+          .footer3-text10 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .footer3-text01 {
+          .footer3-text11 {
             color: var(--dl-color-scheme-darkblue);
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .footer3-text02 {
+          .footer3-text12 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .footer3-text03 {
+          .footer3-text13 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .footer3-text04 {
+          .footer3-text14 {
             text-decoration: none;
           }
           .footer3-navigate-container {
@@ -123,20 +123,20 @@ const Footer3 = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .footer3-text05 {
+          .footer3-text15 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .footer3-text06 {
+          .footer3-text16 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .footer3-text09 {
+          .footer3-text19 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .footer3-text10 {
+          .footer3-text20 {
             text-decoration: none;
           }
           .footer3-contact-container {
@@ -147,16 +147,16 @@ const Footer3 = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .footer3-text11 {
+          .footer3-text21 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .footer3-link {
+          .footer3-link1 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .footer3-link1 {
+          .footer3-link2 {
             font-size: 14px;
             font-style: normal;
             font-family: Rubik;
@@ -173,7 +173,7 @@ const Footer3 = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .footer3-text12 {
+          .footer3-text22 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
@@ -199,7 +199,7 @@ const Footer3 = (props) => {
             margin-bottom: var(--dl-space-space-twounits);
             background-color: #d9d9d9;
           }
-          .footer3-max-width1 {
+          .footer3-max-width2 {
             flex-direction: row;
             justify-content: space-between;
           }
@@ -208,23 +208,23 @@ const Footer3 = (props) => {
             object-fit: cover;
             text-decoration: none;
           }
-          .footer3-text13 {
+          .footer3-text23 {
             width: auto;
             font-style: normal;
             text-align: center;
             font-weight: 300;
             text-decoration: none;
           }
-          .footer3-text14 {
+          .footer3-text24 {
             font-style: normal;
             font-weight: 300;
             text-decoration: none;
           }
 
-          .footer3-root-class-name1 {
+          .footer3root-class-name1 {
             display: none;
           }
-          .footer3-root-class-name2 {
+          .footer3root-class-name2 {
             display: none;
           }
 
@@ -235,13 +235,13 @@ const Footer3 = (props) => {
             .footer3-contact-container {
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .footer3-text13 {
+            .footer3-text23 {
               width: auto;
               text-align: center;
             }
           }
           @media (max-width: 1200px) {
-            .footer3-max-width {
+            .footer3-max-width1 {
               padding-left: 0px;
               padding-right: 0px;
             }
@@ -252,10 +252,10 @@ const Footer3 = (props) => {
               align-self: flex-start;
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .footer3-link {
+            .footer3-link1 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .footer3-link1 {
+            .footer3-link2 {
               font-size: 16px;
               font-style: normal;
               font-weight: 900;
@@ -263,16 +263,16 @@ const Footer3 = (props) => {
               margin-bottom: var(--dl-space-space-unit);
               letter-spacing: auto;
             }
-            .footer3-text13 {
+            .footer3-text23 {
               width: auto;
               text-align: center;
             }
           }
           @media (max-width: 991px) {
-            .footer3-text13 {
+            .footer3-text23 {
               text-align: center;
             }
-            .footer3-text14 {
+            .footer3-text24 {
               text-align: center;
             }
           }
@@ -300,10 +300,10 @@ const Footer3 = (props) => {
               padding-left: var(--dl-space-space-oneandhalfunits);
               padding-right: var(--dl-space-space-oneandhalfunits);
             }
-            .footer3-text13 {
+            .footer3-text23 {
               text-align: center;
             }
-            .footer3-text14 {
+            .footer3-text24 {
               text-align: center;
             }
           }
@@ -331,16 +331,16 @@ const Footer3 = (props) => {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-bottom: 0px;
             }
-            .footer3-link1 {
+            .footer3-link2 {
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }
-            .footer3-max-width1 {
+            .footer3-max-width2 {
               flex-direction: column;
             }
             .footer3-image {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .footer3-text13 {
+            .footer3-text23 {
               text-align: center;
             }
           }
@@ -356,10 +356,8 @@ Footer3.defaultProps = {
   text11: '(888) 503-1722',
   text3: 'AIR DUCT CLEANING',
   text10: 'SERVICE@AMPURESERVICES.COM',
-  imageSrc: '20769734-2b37-4566-8316-77ad864b1180',
   text9: 'Contact Us',
   textinputPlaceholder: 'Enter your e-mail address',
-  imageAlt: 'image',
   text12: 'All rights reserved @ AM Pure Services',
   text2: 'MONTHLY SPECIALS',
   text7: 'RESTRICTIONS',
@@ -378,10 +376,8 @@ Footer3.propTypes = {
   text11: PropTypes.string,
   text3: PropTypes.string,
   text10: PropTypes.string,
-  imageSrc: PropTypes.string,
   text9: PropTypes.string,
   textinputPlaceholder: PropTypes.string,
-  imageAlt: PropTypes.string,
   text12: PropTypes.string,
   text2: PropTypes.string,
   text7: PropTypes.string,

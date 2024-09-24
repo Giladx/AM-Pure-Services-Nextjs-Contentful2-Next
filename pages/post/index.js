@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 
@@ -7,13 +7,13 @@ import PropTypes from 'prop-types'
 
 import Navigation from '../../components/navigation'
 import Banner from '../../components/banner'
-import postPageInitialPropsTqLsResource from '../../resources/post-page-initial-props-tq_ls'
+import postPageInitialPropsTq8zResource from '../../resources/post-page-initial-props-tq_8z'
 import post1Resource from '../../resources/post1'
 
 const Post1 = (props) => {
   return (
     <>
-      <div className="post1-container">
+      <div className="post1-container1">
         <Head>
           <title>
             Post1 - AM Pure Services | Airduct Cleaning | Drayer Vent Cleaning
@@ -31,9 +31,9 @@ const Post1 = (props) => {
             content="Pure Services | Professional Airduct Cleaning Service | HVAC Systems | A/C Systems | Air Duct Cleaning | Drayer Vent Cleaning | Best Airduct"
           />
         </Head>
-        <Navigation rootClassName="navigation-root-class-name9"></Navigation>
+        <Navigation rootClassName="navigationroot-class-name9"></Navigation>
         <div className="post1-title">
-          <span className="post1-text">
+          <span className="post1-text10">
             <span>BLOG</span>
             <br></br>
           </span>
@@ -41,12 +41,12 @@ const Post1 = (props) => {
         <div className="post1-blog-posts">
           <DataProvider
             renderSuccess={(params) => (
-              <>
-                <div className="post1-container1">
+              <Fragment>
+                <div className="post1-container2">
                   <Repeater
                     items={params}
                     renderItem={(PostEntities) => (
-                      <>
+                      <Fragment>
                         <Link href={`/post/${PostEntities?.slug}`}>
                           <a>
                             <div className="post1-blog-card">
@@ -54,31 +54,31 @@ const Post1 = (props) => {
                                 alt="image"
                                 src={PostEntities?.coverImage?.url}
                                 loading="lazy"
-                                className="post1-image"
+                                className="post1-image1"
                               />
-                              <div className="post1-container2">
+                              <div className="post1-container3">
                                 <Repeater
                                   items={PostEntities?.tag || ' '}
                                   renderItem={(context_8pi5th) => (
-                                    <>
-                                      <span className="post1-text03">
+                                    <Fragment>
+                                      <span className="post1-text13">
                                         {context_8pi5th?.tagName}
                                       </span>
-                                    </>
+                                    </Fragment>
                                   )}
                                 />
-                                <span className="post1-text04">
+                                <span className="post1-text14">
                                   Dec 8, 2022
                                 </span>
                               </div>
-                              <span className="post1-text05">
+                              <span className="post1-text15">
                                 {PostEntities?.title}
                               </span>
-                              <div className="post1-container3">
-                                <span className="post1-text06">Read More</span>
+                              <div className="post1-container4">
+                                <span className="post1-text16">Read More</span>
                                 <svg
                                   viewBox="0 0 1024 1024"
-                                  className="post1-icon"
+                                  className="post1-icon1"
                                 >
                                   <path d="M810 298h86v256h-648l154 154-60 60-256-256 256-256 60 60-154 154h562v-172z"></path>
                                 </svg>
@@ -86,45 +86,45 @@ const Post1 = (props) => {
                             </div>
                           </a>
                         </Link>
-                      </>
+                      </Fragment>
                     )}
                   />
                 </div>
-              </>
+              </Fragment>
             )}
             initialData={props.postEntities}
             persistDataDuringLoading={true}
             key={props?.pagination?.page}
           />
         </div>
-        <Banner rootClassName="banner-root-class-name21"></Banner>
+        <Banner rootClassName="bannerroot-class-name21"></Banner>
         <div className="post1-footer section-container">
-          <div className="post1-max-width max-content-container">
+          <div className="post1-max-width1 max-content-container">
             <div className="post1-top-part">
               <div className="post1-links-container">
                 <div className="post1-product-container">
-                  <span className="post1-text07">Product</span>
+                  <span className="post1-text17">Product</span>
                   <Link href="/monthly-specials">
-                    <a className="post1-link01">MONTHLY SPECIALS</a>
+                    <a className="post1-link11">MONTHLY SPECIALS</a>
                   </Link>
                   <DataProvider
                     renderSuccess={(params) => (
-                      <>
-                        <div className="post1-container4">
+                      <Fragment>
+                        <div className="post1-container5">
                           <Repeater
                             items={params}
                             renderItem={(context_0kxs0s) => (
-                              <>
+                              <Fragment>
                                 <Link href={`/post/${context_0kxs0s?.slug}`}>
-                                  <a className="post1-link02">
+                                  <a className="post1-link12">
                                     {context_0kxs0s?.title}
                                   </a>
                                 </Link>
-                              </>
+                              </Fragment>
                             )}
                           />
                         </div>
-                      </>
+                      </Fragment>
                     )}
                     initialData={props.context0kxs0sProp}
                     persistDataDuringLoading={true}
@@ -132,34 +132,34 @@ const Post1 = (props) => {
                 </div>
               </div>
               <div className="post1-navigate-container">
-                <span className="post1-text08">Info</span>
+                <span className="post1-text18">Info</span>
                 <Link href="/about">
-                  <a className="post1-link03">
+                  <a className="post1-link13">
                     <span>ABOUT</span>
                     <br></br>
                   </a>
                 </Link>
                 <Link href="/restrictions">
-                  <a className="post1-link04">RESTRICTIONS</a>
+                  <a className="post1-link14">RESTRICTIONS</a>
                 </Link>
                 <Link href="/contact">
-                  <a className="post1-link05">CONTACT</a>
+                  <a className="post1-link15">CONTACT</a>
                 </Link>
               </div>
               <div className="post1-contact-container">
-                <span className="post1-text11">Contact Us</span>
-                <a href="tel:+18885031722" className="post1-link06">
+                <span className="post1-text21">Contact Us</span>
+                <a href="tel:+18885031722" className="post1-link16">
                   (888) 503-1722
                 </a>
                 <a
                   href="mailto:service@ampureservices.com?subject=Site Service Request"
-                  className="post1-link07"
+                  className="post1-link17"
                 >
                   SERVICE@AMPURESERVICES.COM
                 </a>
               </div>
               <div className="post1-subscribe-container">
-                <span className="post1-text12">
+                <span className="post1-text22">
                   Subscribe to our newsletter
                 </span>
                 <input
@@ -173,7 +173,7 @@ const Post1 = (props) => {
             </div>
           </div>
           <div className="post1-separator"></div>
-          <footer className="post1-max-width1 max-content-container">
+          <footer className="post1-max-width2 max-content-container">
             <Link href="/">
               <a>
                 <img
@@ -181,12 +181,12 @@ const Post1 = (props) => {
                   src="20769734-2b37-4566-8316-77ad864b1180"
                   width="150"
                   height="68"
-                  className="post1-image1"
+                  className="post1-image2"
                 />
               </a>
             </Link>
             <Link href="/">
-              <a className="post1-link09">
+              <a className="post1-link19">
                 All rights reserved @ AM Pure Services
               </a>
             </Link>
@@ -194,7 +194,7 @@ const Post1 = (props) => {
               href="https://011.ninja/bio"
               target="_blank"
               rel="noreferrer noopener"
-              className="post1-link10"
+              className="post1-link20"
             >
               Developed by 011.ninja
             </a>
@@ -203,7 +203,7 @@ const Post1 = (props) => {
       </div>
       <style jsx>
         {`
-          .post1-container {
+          .post1-container1 {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -221,7 +221,7 @@ const Post1 = (props) => {
             align-items: flex-start;
             background-color: var(--dl-color-scheme-lightgreen);
           }
-          .post1-text {
+          .post1-text10 {
             width: 100%;
             font-size: 48px;
             align-self: center;
@@ -242,7 +242,7 @@ const Post1 = (props) => {
             padding-bottom: var(--dl-space-space-sixunits);
             justify-content: center;
           }
-          .post1-container1 {
+          .post1-container2 {
             display: grid;
             grid-gap: 20px;
             grid-template-columns: repeat(3, 1fr);
@@ -257,14 +257,14 @@ const Post1 = (props) => {
             flex-direction: column;
             text-decoration: none;
           }
-          .post1-image {
+          .post1-image1 {
             width: 100%;
             height: 200px;
             object-fit: cover;
             border-radius: var(--dl-radius-radius-radius8);
             margin-bottom: var(--dl-space-space-halfunit);
           }
-          .post1-container2 {
+          .post1-container3 {
             flex: 0 0 auto;
             width: 100%;
             display: flex;
@@ -273,7 +273,7 @@ const Post1 = (props) => {
             flex-direction: row;
             justify-content: space-between;
           }
-          .post1-text03 {
+          .post1-text13 {
             color: var(--dl-color-scheme-white);
             width: auto;
             font-size: 12px;
@@ -290,17 +290,17 @@ const Post1 = (props) => {
             padding-bottom: var(--dl-space-space-halfunit);
             background-color: var(--dl-color-scheme-darkgray);
           }
-          .post1-text04 {
+          .post1-text14 {
             font-size: 12px;
             font-style: normal;
             font-weight: 900;
           }
-          .post1-text05 {
+          .post1-text15 {
             font-style: normal;
             font-weight: 300;
             margin-bottom: var(--dl-space-space-halfunit);
           }
-          .post1-container3 {
+          .post1-container4 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -308,11 +308,11 @@ const Post1 = (props) => {
             align-items: flex-start;
             justify-content: flex-start;
           }
-          .post1-text06 {
+          .post1-text16 {
             font-style: normal;
             font-weight: 900;
           }
-          .post1-icon {
+          .post1-icon1 {
             width: 24px;
             height: 24px;
             margin-left: var(--dl-space-space-halfunit);
@@ -320,7 +320,7 @@ const Post1 = (props) => {
           .post1-footer {
             position: relative;
           }
-          .post1-max-width {
+          .post1-max-width1 {
             max-width: var(--dl-size-size-maxwidth);
             padding-left: 0px;
             padding-right: 0px;
@@ -348,20 +348,20 @@ const Post1 = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .post1-text07 {
+          .post1-text17 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .post1-link01 {
+          .post1-link11 {
             color: var(--dl-color-scheme-darkblue);
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .post1-container4 {
+          .post1-container5 {
             display: grid;
           }
-          .post1-link02 {
+          .post1-link12 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -373,20 +373,20 @@ const Post1 = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .post1-text08 {
+          .post1-text18 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .post1-link03 {
+          .post1-link13 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .post1-link04 {
+          .post1-link14 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .post1-link05 {
+          .post1-link15 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -398,16 +398,16 @@ const Post1 = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .post1-text11 {
+          .post1-text21 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .post1-link06 {
+          .post1-link16 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .post1-link07 {
+          .post1-link17 {
             font-size: 14px;
             font-style: normal;
             font-family: Rubik;
@@ -424,7 +424,7 @@ const Post1 = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .post1-text12 {
+          .post1-text22 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
@@ -450,23 +450,23 @@ const Post1 = (props) => {
             margin-bottom: var(--dl-space-space-twounits);
             background-color: #d9d9d9;
           }
-          .post1-max-width1 {
+          .post1-max-width2 {
             flex-direction: row;
             justify-content: space-between;
           }
-          .post1-image1 {
+          .post1-image2 {
             width: 150px;
             object-fit: cover;
             text-decoration: none;
           }
-          .post1-link09 {
+          .post1-link19 {
             width: auto;
             font-style: normal;
             text-align: center;
             font-weight: 300;
             text-decoration: none;
           }
-          .post1-link10 {
+          .post1-link20 {
             font-style: normal;
             font-weight: 300;
             text-decoration: none;
@@ -478,22 +478,22 @@ const Post1 = (props) => {
             .post1-contact-container {
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .post1-link09 {
+            .post1-link19 {
               width: auto;
               text-align: center;
             }
           }
           @media (max-width: 1200px) {
-            .post1-image {
+            .post1-image1 {
               height: 180px;
             }
-            .post1-text05 {
+            .post1-text15 {
               font-style: normal;
               font-weight: 700;
               margin-bottom: var(--dl-space-space-unit);
               text-transform: uppercase;
             }
-            .post1-max-width {
+            .post1-max-width1 {
               padding-left: 0px;
               padding-right: 0px;
             }
@@ -504,10 +504,10 @@ const Post1 = (props) => {
               align-self: flex-start;
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .post1-link06 {
+            .post1-link16 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .post1-link07 {
+            .post1-link17 {
               font-size: 16px;
               font-style: normal;
               font-weight: 900;
@@ -515,30 +515,30 @@ const Post1 = (props) => {
               margin-bottom: var(--dl-space-space-unit);
               letter-spacing: auto;
             }
-            .post1-link09 {
+            .post1-link19 {
               width: auto;
               text-align: center;
             }
           }
           @media (max-width: 991px) {
-            .post1-container1 {
+            .post1-container2 {
               grid-template-columns: repeat(2, 1fr);
             }
             .post1-blog-card {
               max-width: 550px;
             }
-            .post1-link09 {
+            .post1-link19 {
               text-align: center;
             }
-            .post1-link10 {
+            .post1-link20 {
               text-align: center;
             }
           }
           @media (max-width: 767px) {
-            .post1-text {
+            .post1-text10 {
               font-size: 30px;
             }
-            .post1-container1 {
+            .post1-container2 {
               width: 100%;
               padding: 15px;
               grid-template-columns: repeat(1, 1fr);
@@ -569,15 +569,15 @@ const Post1 = (props) => {
               padding-left: var(--dl-space-space-oneandhalfunits);
               padding-right: var(--dl-space-space-oneandhalfunits);
             }
-            .post1-link09 {
+            .post1-link19 {
               text-align: center;
             }
-            .post1-link10 {
+            .post1-link20 {
               text-align: center;
             }
           }
           @media (max-width: 479px) {
-            .post1-text {
+            .post1-text10 {
               font-size: 25px;
             }
             .post1-blog-card {
@@ -607,16 +607,16 @@ const Post1 = (props) => {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-bottom: 0px;
             }
-            .post1-link07 {
+            .post1-link17 {
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }
-            .post1-max-width1 {
+            .post1-max-width2 {
               flex-direction: column;
             }
-            .post1-image1 {
+            .post1-image2 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .post1-link09 {
+            .post1-link19 {
               text-align: center;
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }
@@ -642,7 +642,7 @@ export async function getStaticProps(context) {
     const context0kxs0sProp = await post1Resource({
       ...context?.params,
     })
-    const response = await postPageInitialPropsTqLsResource({
+    const response = await postPageInitialPropsTq8zResource({
       ...context?.params,
     })
     if (!response) {

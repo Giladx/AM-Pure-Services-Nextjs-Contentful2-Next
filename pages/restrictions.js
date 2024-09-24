@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 
@@ -16,7 +16,7 @@ import restrictions1Resource from '../resources/restrictions1'
 const Restrictions = (props) => {
   return (
     <>
-      <div className="restrictions-container">
+      <div className="restrictions-container1">
         <Head>
           <title>
             Restrictions - AM Pure Services | Airduct Cleaning | Drayer Vent
@@ -43,7 +43,7 @@ const Restrictions = (props) => {
         <main className="restrictions-main">
           <div className="restrictions-title">
             <div className="restrictions-title-wrap">
-              <span className="restrictions-text">
+              <span className="restrictions-text100">
                 <span>Restrictions</span>
                 <br></br>
               </span>
@@ -51,7 +51,7 @@ const Restrictions = (props) => {
           </div>
           <div className="restrictions-content">
             <div className="restrictions-content-wrap">
-              <span className="restrictions-text03">
+              <span className="restrictions-text103">
                 <span>
                   All goods and services are subject to a written agreement
                   between the customer and AM Pure, to be signed when the
@@ -65,11 +65,11 @@ const Restrictions = (props) => {
                 </span>
                 <br></br>
               </span>
-              <span className="restrictions-text08">
+              <span className="restrictions-text108">
                 <span>100% satisfaction:</span>
                 <br></br>
               </span>
-              <span className="restrictions-text11">
+              <span className="restrictions-text111">
                 <span>
                   If a customer has a complaint about a service performed by AM
                   Pure technician, he needs to allow AM Pure representative to
@@ -96,11 +96,11 @@ const Restrictions = (props) => {
                   />
                 </span>
               </span>
-              <span className="restrictions-text19">
+              <span className="restrictions-text119">
                 <span>Additional services:</span>
                 <br></br>
               </span>
-              <span className="restrictions-text22">
+              <span className="restrictions-text122">
                 <span>
                   Additional services refer to services other than the customer
                   ordered by phone with AM Pure representative/dispatcher or any
@@ -123,11 +123,11 @@ const Restrictions = (props) => {
                   the work agreement.
                 </span>
               </span>
-              <span className="restrictions-text30">
+              <span className="restrictions-text130">
                 <span>&quot;Annual Cleaning&quot; Package and coupon:</span>
                 <br></br>
               </span>
-              <span className="restrictions-text33">
+              <span className="restrictions-text133">
                 <span>
                   The &quot;Annual cleaning&quot; is the package name.
                 </span>
@@ -147,10 +147,10 @@ const Restrictions = (props) => {
                 </span>
                 <br></br>
               </span>
-              <span className="restrictions-text42">
+              <span className="restrictions-text142">
                 &quot;Duct Cleaning&quot; Package and coupon:
               </span>
-              <span className="restrictions-text43">
+              <span className="restrictions-text143">
                 <span>The &quot;duct cleaning&quot; is the package name.</span>
                 <br></br>
                 <br></br>
@@ -185,11 +185,11 @@ const Restrictions = (props) => {
                 <br></br>
                 <br></br>
               </span>
-              <span className="restrictions-text62">
+              <span className="restrictions-text162">
                 <span>Monthly specials on site:</span>
                 <br></br>
               </span>
-              <span className="restrictions-text65">
+              <span className="restrictions-text165">
                 <span>
                   The packages on the monthly specials page on AM Pure website
                   may have restrictions.
@@ -206,19 +206,19 @@ const Restrictions = (props) => {
                   to time.
                 </span>
               </span>
-              <span className="restrictions-text73">
+              <span className="restrictions-text173">
                 <span>Certified technician:</span>
                 <br></br>
               </span>
-              <span className="restrictions-text76">
+              <span className="restrictions-text176">
                 <span>
                   AM Pure certified technicians are certified by AM Pure staff
                   according to AM Pure standards.
                 </span>
                 <br></br>
               </span>
-              <span className="restrictions-text79">Insurance:</span>
-              <span className="restrictions-text80">
+              <span className="restrictions-text179">Insurance:</span>
+              <span className="restrictions-text180">
                 <span>
                   All AM Pure employees are insured under Michigan workers comp
                   insurance law.
@@ -238,46 +238,46 @@ const Restrictions = (props) => {
             </div>
           </div>
           <div className="restrictions-blog">
-            <div className="restrictions-container1">
-              <span className="restrictions-text85">from blog</span>
-              <h2 className="restrictions-text86">
+            <div className="restrictions-container2">
+              <span className="restrictions-text185">from blog</span>
+              <h2 className="restrictions-text186">
                 <span>Our Services</span>
                 <br></br>
               </h2>
             </div>
             <DataProvider
               renderSuccess={(params) => (
-                <>
-                  <div className="restrictions-container2">
+                <Fragment>
+                  <div className="restrictions-container3">
                     <Repeater
                       items={params}
                       renderItem={(context_7mpc8m) => (
-                        <>
+                        <Fragment>
                           <div className="restrictions-blog-cards-container">
                             <Link href={`/post/${context_7mpc8m?.slug}`}>
-                              <a className="restrictions-link">
+                              <a className="restrictions-link10">
                                 <div className="restrictions-blog-card">
                                   <img
                                     alt="image"
                                     src={context_7mpc8m?.coverImage?.url}
                                     loading="lazy"
-                                    className="restrictions-image"
+                                    className="restrictions-image1"
                                   />
-                                  <div className="restrictions-container3">
+                                  <div className="restrictions-container4">
                                     <div className="restrictions-tags">
                                       <Repeater
                                         items={context_7mpc8m?.tag || []}
                                         renderItem={(context_9oxe3a) => (
-                                          <>
-                                            <span className="restrictions-text89">
+                                          <Fragment>
+                                            <span className="restrictions-text189">
                                               {context_9oxe3a?.tagName}
                                             </span>
-                                          </>
+                                          </Fragment>
                                         )}
                                         renderEmpty={() => (
-                                          <>
+                                          <Fragment>
                                             <span>Text</span>
-                                          </>
+                                          </Fragment>
                                         )}
                                       />
                                     </div>
@@ -290,14 +290,14 @@ const Restrictions = (props) => {
                                       </span>
                                     </div>
                                   </div>
-                                  <span className="restrictions-text91">
+                                  <span className="restrictions-text191">
                                     {context_7mpc8m?.title}
                                   </span>
-                                  <div className="restrictions-container4">
+                                  <div className="restrictions-container5">
                                     <span>Read More</span>
                                     <svg
                                       viewBox="0 0 1024 1024"
-                                      className="restrictions-icon"
+                                      className="restrictions-icon1"
                                     >
                                       <path d="M810 298h86v256h-648l154 154-60 60-256-256 256-256 60 60-154 154h562v-172z"></path>
                                     </svg>
@@ -306,45 +306,45 @@ const Restrictions = (props) => {
                               </a>
                             </Link>
                           </div>
-                        </>
+                        </Fragment>
                       )}
                     />
                   </div>
-                </>
+                </Fragment>
               )}
               initialData={props.context7mpc8mProp}
               persistDataDuringLoading={true}
             />
           </div>
         </main>
-        <Banner rootClassName="banner-root-class-name2"></Banner>
+        <Banner rootClassName="bannerroot-class-name2"></Banner>
         <div className="restrictions-footer section-container">
-          <div className="restrictions-max-width max-content-container">
+          <div className="restrictions-max-width1 max-content-container">
             <div className="restrictions-top-part">
               <div className="restrictions-links-container">
                 <div className="restrictions-product-container">
-                  <span className="restrictions-text93">Product</span>
+                  <span className="restrictions-text193">Product</span>
                   <Link href="/monthly-specials">
-                    <a className="restrictions-link01">MONTHLY SPECIALS</a>
+                    <a className="restrictions-link11">MONTHLY SPECIALS</a>
                   </Link>
                   <DataProvider
                     renderSuccess={(params) => (
-                      <>
-                        <div className="restrictions-container5">
+                      <Fragment>
+                        <div className="restrictions-container6">
                           <Repeater
                             items={params}
                             renderItem={(context_xps4qr) => (
-                              <>
+                              <Fragment>
                                 <Link href={`/post/${context_xps4qr?.slug}`}>
-                                  <a className="restrictions-link02">
+                                  <a className="restrictions-link12">
                                     {context_xps4qr?.title}
                                   </a>
                                 </Link>
-                              </>
+                              </Fragment>
                             )}
                           />
                         </div>
-                      </>
+                      </Fragment>
                     )}
                     initialData={props.contextXps4qrProp}
                     persistDataDuringLoading={true}
@@ -352,34 +352,34 @@ const Restrictions = (props) => {
                 </div>
               </div>
               <div className="restrictions-navigate-container">
-                <span className="restrictions-text94">Info</span>
+                <span className="restrictions-text194">Info</span>
                 <Link href="/about">
-                  <a className="restrictions-link03">
+                  <a className="restrictions-link13">
                     <span>ABOUT</span>
                     <br></br>
                   </a>
                 </Link>
                 <Link href="/restrictions">
-                  <a className="restrictions-link04">RESTRICTIONS</a>
+                  <a className="restrictions-link14">RESTRICTIONS</a>
                 </Link>
                 <Link href="/contact">
-                  <a className="restrictions-link05">CONTACT</a>
+                  <a className="restrictions-link15">CONTACT</a>
                 </Link>
               </div>
               <div className="restrictions-contact-container">
-                <span className="restrictions-text97">Contact Us</span>
-                <a href="tel:+18885031722" className="restrictions-link06">
+                <span className="restrictions-text197">Contact Us</span>
+                <a href="tel:+18885031722" className="restrictions-link16">
                   (888) 503-1722
                 </a>
                 <a
                   href="mailto:service@ampureservices.com?subject=Site Service Request"
-                  className="restrictions-link07"
+                  className="restrictions-link17"
                 >
                   SERVICE@AMPURESERVICES.COM
                 </a>
               </div>
               <div className="restrictions-subscribe-container">
-                <span className="restrictions-text98">
+                <span className="restrictions-text198">
                   Subscribe to our newsletter
                 </span>
                 <input
@@ -393,20 +393,20 @@ const Restrictions = (props) => {
             </div>
           </div>
           <div className="restrictions-separator"></div>
-          <footer className="restrictions-max-width1 max-content-container">
+          <footer className="restrictions-max-width2 max-content-container">
             <Link href="/">
               <a>
                 <img
                   alt="image"
-                  src="20769734-2b37-4566-8316-77ad864b1180"
+                  src="/logoam-200h.webp"
                   width="150"
                   height="68"
-                  className="restrictions-image1"
+                  className="restrictions-image2"
                 />
               </a>
             </Link>
             <Link href="/">
-              <a className="restrictions-link09">
+              <a className="restrictions-link19">
                 All rights reserved @ AM Pure Services
               </a>
             </Link>
@@ -414,16 +414,25 @@ const Restrictions = (props) => {
               href="https://011.ninja/bio"
               target="_blank"
               rel="noreferrer noopener"
-              className="restrictions-link10"
+              className="restrictions-link20"
             >
               Developed by 011.ninja
             </a>
           </footer>
+          <a
+            href="https://bytii.cloud"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div className="restrictions-signature">
+              <span className="restrictions-text199">Bytii Cloud</span>
+            </div>
+          </a>
         </div>
       </div>
       <style jsx>
         {`
-          .restrictions-container {
+          .restrictions-container1 {
             width: 100%;
             display: flex;
             position: relative;
@@ -457,7 +466,7 @@ const Restrictions = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .restrictions-text {
+          .restrictions-text100 {
             width: 100%;
             font-size: 48px;
             align-self: center;
@@ -491,92 +500,77 @@ const Restrictions = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .restrictions-text03 {
+          .restrictions-text103 {
             height: 100%;
             font-size: 18px;
             font-style: normal;
             font-weight: 700;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text08 {
+          .restrictions-text108 {
             font-size: 18px;
             align-self: flex-start;
             font-style: normal;
             font-weight: 700;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text11 {
-            height: 100%;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 400;
-            margin-bottom: var(--dl-space-space-unit);
-          }
-          .restrictions-text19 {
-            font-size: 18px;
-            align-self: flex-start;
-            font-style: normal;
-            font-weight: 700;
-            margin-bottom: var(--dl-space-space-unit);
-          }
-          .restrictions-text22 {
+          .restrictions-text111 {
             height: 100%;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text30 {
+          .restrictions-text119 {
             font-size: 18px;
             align-self: flex-start;
             font-style: normal;
             font-weight: 700;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text33 {
+          .restrictions-text122 {
             height: 100%;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text42 {
+          .restrictions-text130 {
             font-size: 18px;
             align-self: flex-start;
             font-style: normal;
             font-weight: 700;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text43 {
+          .restrictions-text133 {
             height: 100%;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text62 {
+          .restrictions-text142 {
             font-size: 18px;
             align-self: flex-start;
             font-style: normal;
             font-weight: 700;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text65 {
+          .restrictions-text143 {
             height: 100%;
             font-size: 18px;
-            align-self: flex-start;
             font-style: normal;
             font-weight: 400;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text73 {
+          .restrictions-text162 {
             font-size: 18px;
             align-self: flex-start;
             font-style: normal;
             font-weight: 700;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text76 {
+          .restrictions-text165 {
             height: 100%;
             font-size: 18px;
             align-self: flex-start;
@@ -584,14 +578,29 @@ const Restrictions = (props) => {
             font-weight: 400;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text79 {
+          .restrictions-text173 {
             font-size: 18px;
             align-self: flex-start;
             font-style: normal;
             font-weight: 700;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .restrictions-text80 {
+          .restrictions-text176 {
+            height: 100%;
+            font-size: 18px;
+            align-self: flex-start;
+            font-style: normal;
+            font-weight: 400;
+            margin-bottom: var(--dl-space-space-unit);
+          }
+          .restrictions-text179 {
+            font-size: 18px;
+            align-self: flex-start;
+            font-style: normal;
+            font-weight: 700;
+            margin-bottom: var(--dl-space-space-unit);
+          }
+          .restrictions-text180 {
             height: 100%;
             font-size: 18px;
             align-self: flex-start;
@@ -612,7 +621,7 @@ const Restrictions = (props) => {
             padding-bottom: var(--dl-space-space-sixunits);
             justify-content: center;
           }
-          .restrictions-container1 {
+          .restrictions-container2 {
             flex: 0 0 auto;
             width: auto;
             height: 100px;
@@ -621,7 +630,7 @@ const Restrictions = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .restrictions-text85 {
+          .restrictions-text185 {
             color: var(--dl-color-scheme-green);
             font-style: normal;
             text-align: center;
@@ -630,7 +639,7 @@ const Restrictions = (props) => {
             letter-spacing: 0.1em;
             text-transform: uppercase;
           }
-          .restrictions-text86 {
+          .restrictions-text186 {
             font-size: 46px;
             font-style: normal;
             text-align: center;
@@ -641,7 +650,7 @@ const Restrictions = (props) => {
             letter-spacing: 0.01em;
             text-decoration: none;
           }
-          .restrictions-container2 {
+          .restrictions-container3 {
             display: grid;
             grid-gap: 20px;
             grid-template-columns: repeat(3, 1fr);
@@ -654,7 +663,7 @@ const Restrictions = (props) => {
             flex-direction: row;
             justify-content: space-between;
           }
-          .restrictions-link {
+          .restrictions-link10 {
             display: contents;
           }
           .restrictions-blog-card {
@@ -667,14 +676,14 @@ const Restrictions = (props) => {
             flex-direction: column;
             text-decoration: none;
           }
-          .restrictions-image {
+          .restrictions-image1 {
             width: 100%;
             height: 200px;
             object-fit: cover;
             border-radius: var(--dl-radius-radius-radius8);
             margin-bottom: var(--dl-space-space-halfunit);
           }
-          .restrictions-container3 {
+          .restrictions-container4 {
             flex: 0 0 auto;
             width: 100%;
             display: flex;
@@ -690,7 +699,7 @@ const Restrictions = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .restrictions-text89 {
+          .restrictions-text189 {
             color: var(--dl-color-scheme-white);
             padding: var(--dl-space-space-halfunit);
             font-size: 12px;
@@ -714,11 +723,11 @@ const Restrictions = (props) => {
             text-align: right;
             font-weight: 700;
           }
-          .restrictions-text91 {
+          .restrictions-text191 {
             font-style: normal;
             font-weight: 600;
           }
-          .restrictions-container4 {
+          .restrictions-container5 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -726,7 +735,7 @@ const Restrictions = (props) => {
             align-items: flex-start;
             justify-content: flex-start;
           }
-          .restrictions-icon {
+          .restrictions-icon1 {
             width: 24px;
             height: 24px;
             margin-left: var(--dl-space-space-halfunit);
@@ -734,7 +743,7 @@ const Restrictions = (props) => {
           .restrictions-footer {
             position: relative;
           }
-          .restrictions-max-width {
+          .restrictions-max-width1 {
             max-width: var(--dl-size-size-maxwidth);
             padding-left: 0px;
             padding-right: 0px;
@@ -762,20 +771,20 @@ const Restrictions = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .restrictions-text93 {
+          .restrictions-text193 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .restrictions-link01 {
+          .restrictions-link11 {
             color: var(--dl-color-scheme-darkblue);
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .restrictions-container5 {
+          .restrictions-container6 {
             display: grid;
           }
-          .restrictions-link02 {
+          .restrictions-link12 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -787,20 +796,20 @@ const Restrictions = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .restrictions-text94 {
+          .restrictions-text194 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .restrictions-link03 {
+          .restrictions-link13 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .restrictions-link04 {
+          .restrictions-link14 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .restrictions-link05 {
+          .restrictions-link15 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -812,16 +821,16 @@ const Restrictions = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .restrictions-text97 {
+          .restrictions-text197 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .restrictions-link06 {
+          .restrictions-link16 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .restrictions-link07 {
+          .restrictions-link17 {
             font-size: 14px;
             font-style: normal;
             font-family: Rubik;
@@ -838,7 +847,7 @@ const Restrictions = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .restrictions-text98 {
+          .restrictions-text198 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
@@ -864,32 +873,47 @@ const Restrictions = (props) => {
             margin-bottom: var(--dl-space-space-twounits);
             background-color: #d9d9d9;
           }
-          .restrictions-max-width1 {
+          .restrictions-max-width2 {
             flex-direction: row;
             justify-content: space-between;
           }
-          .restrictions-image1 {
+          .restrictions-image2 {
             width: 150px;
             object-fit: cover;
             text-decoration: none;
           }
-          .restrictions-link09 {
+          .restrictions-link19 {
             width: auto;
             font-style: normal;
             text-align: center;
             font-weight: 300;
             text-decoration: none;
           }
-          .restrictions-link10 {
+          .restrictions-link20 {
             font-style: normal;
             font-weight: 300;
             text-decoration: none;
+          }
+          .restrictions-signature {
+            left: 5px;
+            bottom: 5px;
+            display: flex;
+            position: absolute;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            text-decoration: none;
+          }
+          .restrictions-text199 {
+            color: rgb(201, 206, 218);
+            font-style: normal;
+            font-weight: 300;
           }
           @media (max-width: 1600px) {
             .restrictions-content-wrap {
               width: 768px;
             }
-            .restrictions-container3 {
+            .restrictions-container4 {
               width: 100%;
               flex-direction: row;
             }
@@ -897,7 +921,7 @@ const Restrictions = (props) => {
               width: 70%;
               flex-direction: row;
             }
-            .restrictions-text89 {
+            .restrictions-text189 {
               color: var(--dl-color-scheme-white);
               padding: var(--dl-space-space-halfunit);
               font-size: 12px;
@@ -924,13 +948,13 @@ const Restrictions = (props) => {
             .restrictions-contact-container {
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .restrictions-link09 {
+            .restrictions-link19 {
               width: auto;
               text-align: center;
             }
           }
           @media (max-width: 1200px) {
-            .restrictions-text {
+            .restrictions-text100 {
               font-size: 48px;
               font-style: normal;
               font-family: Rubik;
@@ -941,16 +965,16 @@ const Restrictions = (props) => {
               max-width: auto;
               min-width: auto;
             }
-            .restrictions-image {
+            .restrictions-image1 {
               height: 180px;
             }
-            .restrictions-text91 {
+            .restrictions-text191 {
               font-style: normal;
               font-weight: 700;
               margin-bottom: var(--dl-space-space-unit);
               text-transform: uppercase;
             }
-            .restrictions-max-width {
+            .restrictions-max-width1 {
               padding-left: 0px;
               padding-right: 0px;
             }
@@ -961,10 +985,10 @@ const Restrictions = (props) => {
               align-self: flex-start;
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .restrictions-link06 {
+            .restrictions-link16 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .restrictions-link07 {
+            .restrictions-link17 {
               font-size: 16px;
               font-style: normal;
               font-weight: 900;
@@ -972,7 +996,7 @@ const Restrictions = (props) => {
               margin-bottom: var(--dl-space-space-unit);
               letter-spacing: auto;
             }
-            .restrictions-link09 {
+            .restrictions-link19 {
               width: auto;
               text-align: center;
             }
@@ -988,15 +1012,15 @@ const Restrictions = (props) => {
             .restrictions-blog-card {
               max-width: 550px;
             }
-            .restrictions-link09 {
+            .restrictions-link19 {
               text-align: center;
             }
-            .restrictions-link10 {
+            .restrictions-link20 {
               text-align: center;
             }
           }
           @media (max-width: 767px) {
-            .restrictions-text {
+            .restrictions-text100 {
               font-size: 30px;
             }
             .restrictions-content-wrap {
@@ -1006,14 +1030,14 @@ const Restrictions = (props) => {
               padding-left: var(--dl-space-space-unit);
               padding-right: var(--dl-space-space-unit);
             }
-            .restrictions-container2 {
+            .restrictions-container3 {
               width: 100%;
               grid-template-columns: repeat(1, 1fr);
             }
             .restrictions-blog-card {
               max-width: 450px;
             }
-            .restrictions-image {
+            .restrictions-image1 {
               height: auto;
             }
             .restrictions-top-part {
@@ -1039,15 +1063,15 @@ const Restrictions = (props) => {
               padding-left: var(--dl-space-space-oneandhalfunits);
               padding-right: var(--dl-space-space-oneandhalfunits);
             }
-            .restrictions-link09 {
+            .restrictions-link19 {
               text-align: center;
             }
-            .restrictions-link10 {
+            .restrictions-link20 {
               text-align: center;
             }
           }
           @media (max-width: 479px) {
-            .restrictions-text {
+            .restrictions-text100 {
               font-size: 25px;
             }
             .restrictions-content-wrap {
@@ -1079,16 +1103,16 @@ const Restrictions = (props) => {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-bottom: 0px;
             }
-            .restrictions-link07 {
+            .restrictions-link17 {
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }
-            .restrictions-max-width1 {
+            .restrictions-max-width2 {
               flex-direction: column;
             }
-            .restrictions-image1 {
+            .restrictions-image2 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .restrictions-link09 {
+            .restrictions-link19 {
               text-align: center;
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }

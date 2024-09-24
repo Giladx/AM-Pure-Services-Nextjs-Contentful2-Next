@@ -10,9 +10,9 @@ const Banner3 = (props) => {
       >
         <a href="tel:8885031722">
           <div className="banner3-max-width max-content-container">
-            <span className="banner3-text">{props.text}</span>
-            <h2 className="banner3-text1">
-              <span className="banner3-text2">CALL US NOW</span>
+            <span className="banner3-text1">{props.text}</span>
+            <h2 className="banner3-text2">
+              <span className="banner3-text3">CALL US NOW</span>
               <br className="Heading2"></br>
               <span className="Heading2">(888) 503 1722</span>
             </h2>
@@ -38,7 +38,7 @@ const Banner3 = (props) => {
           .banner3-max-width:hover {
             cursor: pointer;
           }
-          .banner3-text {
+          .banner3-text1 {
             color: var(--dl-color-scheme-white);
             font-style: normal;
             text-align: center;
@@ -47,7 +47,7 @@ const Banner3 = (props) => {
             letter-spacing: 0.1em;
             text-transform: uppercase;
           }
-          .banner3-text1 {
+          .banner3-text2 {
             color: var(--dl-color-scheme-white);
             width: 100%;
             font-size: 46px;
@@ -57,75 +57,75 @@ const Banner3 = (props) => {
             margin-bottom: var(--dl-space-space-unit);
             letter-spacing: 0.01em;
           }
-          .banner3-text2 {
+          .banner3-text3 {
             font-weight: 900;
           }
           .banner3-primary {
             margin-bottom: var(--dl-space-space-threeunits);
           }
-          .banner3-root-class-name {
+          .banner3root-class-name {
             width: 100%;
             align-self: center;
           }
 
-          .banner3-root-class-name2 {
+          .banner3root-class-name2 {
             width: 100%;
           }
-          .banner3-root-class-name3 {
+          .banner3root-class-name3 {
             width: 100%;
           }
-          .banner3-root-class-name4 {
+          .banner3root-class-name4 {
             width: 100%;
           }
 
-          .banner3-root-class-name6 {
+          .banner3root-class-name6 {
             width: 100%;
           }
-          .banner3-root-class-name7 {
+          .banner3root-class-name7 {
             display: none;
           }
-          .banner3-root-class-name8 {
+          .banner3root-class-name8 {
             display: none;
           }
-          .banner3-root-class-name9 {
+          .banner3root-class-name9 {
             width: 100%;
           }
-          .banner3-root-class-name10 {
+          .banner3root-class-name10 {
             width: 100%;
           }
-          .banner3-root-class-name11 {
+          .banner3root-class-name11 {
             width: 100%;
           }
-          .banner3-root-class-name12 {
+          .banner3root-class-name12 {
             width: 100%;
           }
-          .banner3-root-class-name13 {
+          .banner3root-class-name13 {
             width: 100%;
           }
-          .banner3-root-class-name14 {
+          .banner3root-class-name14 {
             width: 100%;
           }
-          .banner3-root-class-name15 {
+          .banner3root-class-name15 {
             width: 100%;
           }
-          .banner3-root-class-name16 {
+          .banner3root-class-name16 {
             width: 100%;
           }
-          .banner3-root-class-name17 {
+          .banner3root-class-name17 {
             width: 100%;
           }
-          .banner3-root-class-name18 {
+          .banner3root-class-name18 {
             width: 100%;
             align-self: center;
           }
-          .banner3-root-class-name19 {
+          .banner3root-class-name19 {
             width: 100%;
           }
           @media (max-width: 1200px) {
             .banner3-banner {
               width: 100%;
             }
-            .banner3-text1 {
+            .banner3-text2 {
               color: var(--dl-color-scheme-white);
               font-size: 46px;
               font-family: Rubik;
@@ -133,7 +133,7 @@ const Banner3 = (props) => {
               letter-spacing: 0.01em;
               text-decoration: none;
             }
-            .banner3-text2 {
+            .banner3-text3 {
               font-weight: 900;
             }
           }

@@ -8,14 +8,14 @@ const ServiceAreas = (props) => {
   return (
     <>
       <div className="service-areas-service-areas">
-        <div className="service-areas-container">
+        <div className="service-areas-container1">
           <h1 data-aos="fade-right" className="service-areas-text">
             {props.heading}
           </h1>
           <div data-aos="fade-left" className="service-areas-separator"></div>
         </div>
-        <div className="service-areas-container1">
-          <div className="service-areas-container2">
+        <div className="service-areas-container2">
+          <div className="service-areas-container3">
             <a href="tel:+13132218518">
               <FeatureCard4
                 title="Monroe County "
@@ -23,7 +23,7 @@ const ServiceAreas = (props) => {
                 description1=" "
                 description2=" "
                 rootClassName="rootClassName1"
-                className="service-areas-component"
+                className="service-areas-component1"
               ></FeatureCard4>
             </a>
             <a href="tel:+19472190208">
@@ -33,7 +33,7 @@ const ServiceAreas = (props) => {
                 description1=" Farmington hills - (248) 204-4711"
                 description2="West Bloomfield - (248) 817-4297"
                 rootClassName="rootClassName5"
-                className="service-areas-component1"
+                className="service-areas-component2"
               ></FeatureCard4>
             </a>
             <a href="tel:+17348003249">
@@ -43,7 +43,7 @@ const ServiceAreas = (props) => {
                 description1=" "
                 description2=" "
                 rootClassName="rootClassName4"
-                className="service-areas-component2"
+                className="service-areas-component3"
               ></FeatureCard4>
             </a>
             <a href="tel:+13135234027">
@@ -53,7 +53,7 @@ const ServiceAreas = (props) => {
                 description1=" "
                 description2=" "
                 rootClassName="rootClassName3"
-                className="service-areas-component3"
+                className="service-areas-component4"
               ></FeatureCard4>
             </a>
             <a href="tel:+12482120503">
@@ -63,7 +63,7 @@ const ServiceAreas = (props) => {
                 description1=" "
                 description2=" "
                 rootClassName="rootClassName2"
-                className="service-areas-component4"
+                className="service-areas-component5"
               ></FeatureCard4>
             </a>
             <a href="tel:+15867237907">
@@ -73,7 +73,7 @@ const ServiceAreas = (props) => {
                 description1=" "
                 description2=" "
                 rootClassName="rootClassName8"
-                className="service-areas-component5"
+                className="service-areas-component6"
               ></FeatureCard4>
             </a>
             <a href="tel:+18106710777">
@@ -83,7 +83,7 @@ const ServiceAreas = (props) => {
                 description1=" "
                 description2=" "
                 rootClassName="rootClassName9"
-                className="service-areas-component6"
+                className="service-areas-component7"
               ></FeatureCard4>
             </a>
             <FeatureCard4
@@ -92,7 +92,7 @@ const ServiceAreas = (props) => {
               description1=" "
               description2=" "
               rootClassName="rootClassName6"
-              className="service-areas-component7"
+              className="service-areas-component8"
             ></FeatureCard4>
             <a href="tel:+15174813849">
               <FeatureCard4
@@ -101,7 +101,7 @@ const ServiceAreas = (props) => {
                 description1=" "
                 description2=" "
                 rootClassName="rootClassName10"
-                className="service-areas-component8"
+                className="service-areas-component9"
               ></FeatureCard4>
             </a>
           </div>
@@ -123,7 +123,7 @@ const ServiceAreas = (props) => {
             max-width: 100%;
             flex-direction: column;
           }
-          .service-areas-container {
+          .service-areas-container1 {
             flex: 0 0 auto;
             display: flex;
             align-items: flex-start;
@@ -139,7 +139,7 @@ const ServiceAreas = (props) => {
             height: 2px;
             background-color: #595959;
           }
-          .service-areas-container1 {
+          .service-areas-container2 {
             flex: 0 0 auto;
             width: 100%;
             display: flex;
@@ -148,13 +148,10 @@ const ServiceAreas = (props) => {
             flex-direction: row;
             justify-content: space-between;
           }
-          .service-areas-container2 {
+          .service-areas-container3 {
             width: 100%;
             display: grid;
             grid-template-columns: 1fr 1fr;
-          }
-          .service-areas-component {
-            text-decoration: none;
           }
           .service-areas-component1 {
             text-decoration: none;
@@ -180,6 +177,9 @@ const ServiceAreas = (props) => {
           .service-areas-component8 {
             text-decoration: none;
           }
+          .service-areas-component9 {
+            text-decoration: none;
+          }
           .service-areas-image {
             width: 402px;
             height: 920px;
@@ -196,7 +196,7 @@ const ServiceAreas = (props) => {
             .service-areas-text {
               width: 100%;
             }
-            .service-areas-container1 {
+            .service-areas-container2 {
               flex-direction: column;
             }
             .service-areas-image {
@@ -214,7 +214,7 @@ const ServiceAreas = (props) => {
             .service-areas-text {
               text-align: center;
             }
-            .service-areas-container1 {
+            .service-areas-container2 {
               flex-direction: column;
             }
             .service-areas-image {
@@ -228,7 +228,7 @@ const ServiceAreas = (props) => {
               padding-right: var(--dl-space-space-unit);
               padding-bottom: var(--dl-space-space-twounits);
             }
-            .service-areas-container2 {
+            .service-areas-container3 {
               grid-template-columns: 1fr;
             }
             .service-areas-image {

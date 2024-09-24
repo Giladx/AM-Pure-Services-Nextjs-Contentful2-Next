@@ -9,8 +9,8 @@ const Process = (props) => {
         className={`process-process section-container ${props.rootClassName} `}
       >
         <div className="process-max-width max-content-container">
-          <span className="process-text">{props.text}</span>
-          <h2 className="process-text01 Heading2">
+          <span className="process-text10">{props.text}</span>
+          <h2 className="process-text11 Heading2">
             <span>
               We use a simple three step process.
               <span
@@ -22,25 +22,25 @@ const Process = (props) => {
             <br></br>
             <span>Take a look.</span>
           </h2>
-          <div className="process-step">
-            <span className="process-text05">{props.text1}</span>
-            <div className="process-container">
-              <span className="process-text06">{props.text4}</span>
-              <span className="process-text07">{props.text5}</span>
-            </div>
-          </div>
           <div className="process-step1">
-            <span className="process-text08">{props.text2}</span>
+            <span className="process-text15">{props.text1}</span>
             <div className="process-container1">
-              <span className="process-text09">{props.text6}</span>
-              <span className="process-text10">{props.text7}</span>
+              <span className="process-text16">{props.text4}</span>
+              <span className="process-text17">{props.text5}</span>
             </div>
           </div>
           <div className="process-step2">
-            <span className="process-text11">{props.text3}</span>
+            <span className="process-text18">{props.text2}</span>
             <div className="process-container2">
-              <span className="process-text12">{props.text8}</span>
-              <span className="process-text13">{props.text9}</span>
+              <span className="process-text19">{props.text6}</span>
+              <span className="process-text20">{props.text7}</span>
+            </div>
+          </div>
+          <div className="process-step3">
+            <span className="process-text21">{props.text3}</span>
+            <div className="process-container3">
+              <span className="process-text22">{props.text8}</span>
+              <span className="process-text23">{props.text9}</span>
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@ const Process = (props) => {
             flex-direction: column;
             justify-content: space-between;
           }
-          .process-text {
+          .process-text10 {
             color: var(--dl-color-scheme-white);
             font-style: normal;
             text-align: center;
@@ -65,46 +65,9 @@ const Process = (props) => {
             letter-spacing: 0.1em;
             text-transform: uppercase;
           }
-          .process-text01 {
+          .process-text11 {
             color: var(--dl-color-scheme-white);
             margin-bottom: var(--dl-space-space-fourunits);
-          }
-          .process-step {
-            flex: 0 0 auto;
-            width: 100%;
-            display: flex;
-            border-color: rgba(255, 255, 255, 0.2);
-            border-width: 1px;
-            margin-bottom: var(--dl-space-space-fourunits);
-            flex-direction: row;
-            padding-bottom: 53px;
-            border-top-width: 0px;
-            border-left-width: 0px;
-            border-right-width: 0px;
-            border-bottom-width: 1px;
-          }
-          .process-text05 {
-            color: var(--dl-color-scheme-white);
-            font-size: 64px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 61px;
-            margin-right: 180px;
-          }
-          .process-container {
-            flex: 1;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .process-text06 {
-            color: var(--dl-color-scheme-white);
-            font-size: 24px;
-            line-height: 31px;
-            margin-bottom: var(--dl-space-space-unit);
-          }
-          .process-text07 {
-            color: var(--dl-color-scheme-white80);
           }
           .process-step1 {
             flex: 0 0 auto;
@@ -120,7 +83,7 @@ const Process = (props) => {
             border-right-width: 0px;
             border-bottom-width: 1px;
           }
-          .process-text08 {
+          .process-text15 {
             color: var(--dl-color-scheme-white);
             font-size: 64px;
             font-style: normal;
@@ -134,13 +97,13 @@ const Process = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .process-text09 {
+          .process-text16 {
             color: var(--dl-color-scheme-white);
             font-size: 24px;
             line-height: 31px;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .process-text10 {
+          .process-text17 {
             color: var(--dl-color-scheme-white80);
           }
           .process-step2 {
@@ -149,6 +112,7 @@ const Process = (props) => {
             display: flex;
             border-color: rgba(255, 255, 255, 0.2);
             border-width: 1px;
+            margin-bottom: var(--dl-space-space-fourunits);
             flex-direction: row;
             padding-bottom: 53px;
             border-top-width: 0px;
@@ -156,7 +120,7 @@ const Process = (props) => {
             border-right-width: 0px;
             border-bottom-width: 1px;
           }
-          .process-text11 {
+          .process-text18 {
             color: var(--dl-color-scheme-white);
             font-size: 64px;
             font-style: normal;
@@ -170,40 +134,76 @@ const Process = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .process-text12 {
+          .process-text19 {
             color: var(--dl-color-scheme-white);
             font-size: 24px;
             line-height: 31px;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .process-text13 {
+          .process-text20 {
             color: var(--dl-color-scheme-white80);
           }
-          .process-root-class-name {
+          .process-step3 {
+            flex: 0 0 auto;
+            width: 100%;
+            display: flex;
+            border-color: rgba(255, 255, 255, 0.2);
+            border-width: 1px;
+            flex-direction: row;
+            padding-bottom: 53px;
+            border-top-width: 0px;
+            border-left-width: 0px;
+            border-right-width: 0px;
+            border-bottom-width: 1px;
+          }
+          .process-text21 {
+            color: var(--dl-color-scheme-white);
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 61px;
+            margin-right: 180px;
+          }
+          .process-container3 {
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+          .process-text22 {
+            color: var(--dl-color-scheme-white);
+            font-size: 24px;
+            line-height: 31px;
+            margin-bottom: var(--dl-space-space-unit);
+          }
+          .process-text23 {
+            color: var(--dl-color-scheme-white80);
+          }
+          .processroot-class-name {
             display: none;
           }
-          .process-root-class-name1 {
+          .processroot-class-name1 {
             display: none;
           }
           @media (max-width: 767px) {
-            .process-text05 {
+            .process-text15 {
               margin-right: var(--dl-space-space-fourunits);
             }
-            .process-text08 {
+            .process-text18 {
               margin-right: var(--dl-space-space-fourunits);
             }
-            .process-text11 {
+            .process-text21 {
               margin-right: var(--dl-space-space-fourunits);
             }
           }
           @media (max-width: 479px) {
-            .process-text05 {
+            .process-text15 {
               margin-right: var(--dl-space-space-twounits);
             }
-            .process-text08 {
+            .process-text18 {
               margin-right: var(--dl-space-space-twounits);
             }
-            .process-text11 {
+            .process-text21 {
               margin-right: var(--dl-space-space-twounits);
             }
           }

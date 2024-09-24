@@ -1,16 +1,16 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Head from 'next/head'
 
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import tagPageInitialPropsTqTsResource from '../../../resources/tag-page-initial-props-tq_ts'
-import tagPageInitialPathsTqHTResource from '../../../resources/tag-page-initial-paths-tq_h-t'
+import tagPageInitialPropsTqRsResource from '../../../resources/tag-page-initial-props-tq_rs'
+import tagPageInitialPathsTq25Resource from '../../../resources/tag-page-initial-paths-tq_25'
 
 const Tag11 = (props) => {
   return (
     <>
-      <div className="tag11-container">
+      <div className="tag11-container1">
         <Head>
           <title>
             Tag1 - AM Pure Services | Airduct Cleaning | Drayer Vent Cleaning
@@ -30,22 +30,22 @@ const Tag11 = (props) => {
         </Head>
         <DataProvider
           renderSuccess={(params) => (
-            <>
+            <Fragment>
               <div>
                 <Repeater
                   items={params}
                   renderItem={(TagEntities) => (
-                    <>
-                      <div className="tag11-container2">
+                    <Fragment>
+                      <div className="tag11-container3">
                         <button type="button" className="tag11-button button">
                           {TagEntities?.tagName}
                         </button>
                       </div>
-                    </>
+                    </Fragment>
                   )}
                 />
               </div>
-            </>
+            </Fragment>
           )}
           initialData={props.tagEntities}
           persistDataDuringLoading={true}
@@ -54,7 +54,7 @@ const Tag11 = (props) => {
       </div>
       <style jsx>
         {`
-          .tag11-container {
+          .tag11-container1 {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -62,7 +62,7 @@ const Tag11 = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .tag11-container2 {
+          .tag11-container3 {
             gap: 12px;
             width: 100%;
             display: flex;
@@ -92,7 +92,7 @@ export default Tag11
 
 export async function getStaticProps(context) {
   try {
-    const response = await tagPageInitialPropsTqTsResource({
+    const response = await tagPageInitialPropsTqRsResource({
       ...context?.params,
       skip: (context.params.page - 1) * 10,
     })
@@ -117,7 +117,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await tagPageInitialPathsTqHTResource({
+    const response = await tagPageInitialPathsTq25Resource({
       content_type: 'tag',
     })
     const totalCount = response?.meta?.pagination?.total

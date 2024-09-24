@@ -10,7 +10,7 @@ import Banner from '../components/banner'
 const Contact = (props) => {
   return (
     <>
-      <div className="contact-container">
+      <div className="contact-container1">
         <Head>
           <title>
             Contact - AM Pure Services | Airduct Cleaning | Drayer Vent Cleaning
@@ -32,18 +32,18 @@ const Contact = (props) => {
             content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/a9b9a8f2-be01-41ae-838f-381e8ec5a736/20f16b04-d5e9-437e-ac34-d5c544c97085?org_if_sml=1&amp;q=80&amp;force_format=original"
           />
         </Head>
-        <Navigation rootClassName="navigation-root-class-name1"></Navigation>
+        <Navigation rootClassName="navigationroot-class-name1"></Navigation>
         <div className="contact-title">
           <div className="contact-title-wrap">
-            <span className="contact-text">
+            <span className="contact-text1">
               <span>CONTACT</span>
               <br></br>
             </span>
           </div>
         </div>
         <div className="contact-contact-form">
-          <div className="contact-container1">
-            <div className="contact-container2">
+          <div className="contact-container2">
+            <div className="contact-container3">
               <Script
                 html={`
     <iframe
@@ -146,12 +146,12 @@ const Contact = (props) => {
             </div>
           </div>
         </div>
-        <Process rootClassName="process-root-class-name"></Process>
-        <Banner rootClassName="banner-root-class-name7"></Banner>
+        <Process rootClassName="processroot-class-name"></Process>
+        <Banner rootClassName="bannerroot-class-name7"></Banner>
       </div>
       <style jsx>
         {`
-          .contact-container {
+          .contact-container1 {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -177,7 +177,7 @@ const Contact = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .contact-text {
+          .contact-text1 {
             width: 100%;
             font-size: 48px;
             align-self: center;
@@ -194,16 +194,16 @@ const Contact = (props) => {
             display: flex;
             align-items: flex-start;
           }
-          .contact-container1 {
+          .contact-container2 {
             width: 100%;
             height: 100vh;
             margin-bottom: Infinitypx;
           }
-          .contact-container2 {
+          .contact-container3 {
             display: contents;
           }
           @media (max-width: 1200px) {
-            .contact-text {
+            .contact-text1 {
               font-size: 48px;
               font-style: normal;
               font-family: Rubik;
@@ -211,12 +211,12 @@ const Contact = (props) => {
             }
           }
           @media (max-width: 767px) {
-            .contact-text {
+            .contact-text1 {
               font-size: 30px;
             }
           }
           @media (max-width: 479px) {
-            .contact-text {
+            .contact-text1 {
               font-size: 25px;
             }
           }

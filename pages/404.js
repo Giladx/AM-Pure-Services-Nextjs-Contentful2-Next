@@ -31,10 +31,10 @@ const Page = (props) => {
           alt="image"
           sizes="(min-width: 768px) 800px, 480px"
           src="/404-800w.gif"
-          srcSet="/404-800w.gif 800w, /404-mobile.gif 480w"
+          srcSet="///404-800w.gif 800w, //404-mobile.gif 480w"
           className="page-image"
         />
-        <span className="page-text">Page Not Found</span>
+        <span className="page-text1">Page Not Found</span>
         <Link href="/">
           <a className="page-link">
             <span>Go Back </span>
@@ -59,7 +59,7 @@ const Page = (props) => {
             object-fit: cover;
             margin-bottom: var(--dl-space-space-twounits);
           }
-          .page-text {
+          .page-text1 {
             color: var(--dl-color-scheme-green);
             font-size: 3rem;
             font-style: normal;
@@ -81,31 +81,31 @@ const Page = (props) => {
             background-color: var(--dl-color-scheme-green);
           }
           @media (max-width: 1600px) {
-            .page-text {
+            .page-text1 {
               width: 100%;
               text-align: center;
             }
           }
           @media (max-width: 1200px) {
-            .page-text {
+            .page-text1 {
               width: 100%;
               text-align: center;
             }
           }
           @media (max-width: 991px) {
-            .page-text {
+            .page-text1 {
               width: 100%;
               text-align: center;
             }
           }
           @media (max-width: 767px) {
-            .page-text {
+            .page-text1 {
               width: 100%;
               text-align: center;
             }
           }
           @media (max-width: 479px) {
-            .page-text {
+            .page-text1 {
               color: var(--dl-color-scheme-darkgray);
               width: 100%;
               align-self: center;

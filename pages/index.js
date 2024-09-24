@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 
@@ -22,7 +22,7 @@ import home1Resource from '../resources/home1'
 const Home = (props) => {
   return (
     <>
-      <div className="home-container">
+      <div className="home-container10">
         <Head>
           <title>
             AM Pure Services | Airduct Cleaning | Drayer Vent Cleaning
@@ -44,12 +44,12 @@ const Home = (props) => {
             content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/a9b9a8f2-be01-41ae-838f-381e8ec5a736/20f16b04-d5e9-437e-ac34-d5c544c97085?org_if_sml=1&amp;q=80&amp;force_format=original"
           />
         </Head>
-        <Navigation rootClassName="navigation-root-class-name7"></Navigation>
+        <Navigation rootClassName="navigationroot-class-name7"></Navigation>
         <main className="home-main">
           <Hero></Hero>
           <div className="home-stickers">
             <div className="home-sticker-wrap">
-              <div className="home-container01">
+              <div className="home-container11">
                 <img
                   alt="image"
                   src="/elite-solid-border-500w.webp"
@@ -57,7 +57,7 @@ const Home = (props) => {
                   height="160"
                   loading="lazy"
                   data-aos="fade-right"
-                  className="home-image"
+                  className="home-image10"
                 />
                 <img
                   alt="image"
@@ -66,7 +66,7 @@ const Home = (props) => {
                   height="146"
                   loading="lazy"
                   data-aos="fade-up"
-                  className="home-image01"
+                  className="home-image11"
                 />
                 <img
                   alt="image"
@@ -75,22 +75,22 @@ const Home = (props) => {
                   height="160"
                   loading="lazy"
                   data-aos="fade-left"
-                  className="home-image02"
+                  className="home-image12"
                 />
               </div>
             </div>
           </div>
           <div className="home-reviews">
-            <div className="home-container02">
+            <div className="home-container12">
               <img
                 alt="image"
                 src="/google-review-logo-200h.webp"
-                className="home-image03"
+                className="home-image13"
               />
-              <div className="home-separator"></div>
+              <div className="home-separator1"></div>
             </div>
-            <div className="home-container03">
-              <div className="home-container04">
+            <div className="home-container13">
+              <div className="home-container14">
                 <Script
                   html={`<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
 <div style="height:auto;" class="elfsight-app-022a64ba-bfe8-4981-9894-9414187371fe" data-elfsight-app-lazy></div>`}
@@ -98,30 +98,30 @@ const Home = (props) => {
               </div>
             </div>
           </div>
-          <div className="home-content">
-            <div data-aos="fade-up" className="home-image04">
+          <div className="home-content1">
+            <div data-aos="fade-up" className="home-image14">
               <img
                 alt="image"
                 sizes="(min-width: 992px) 1200px, (min-width: 768px) 800px, 480px"
                 src="/undraw_absorbed_in_re_ymd6-1500w-1500w.webp"
                 loading="lazy"
-                srcSet="/undraw_absorbed_in_re_ymd6-1500w-1500w.webp 1200w, /undraw_absorbed_in_re_ymd6-1500w-tablet.webp 800w, /undraw_absorbed_in_re_ymd6-1500w-mobile.webp 480w"
-                className="home-image05"
+                srcSet="///undraw_absorbed_in_re_ymd6-1500w-1500w.webp 1200w, //undraw_absorbed_in_re_ymd6-1500w-tablet.webp 800w, //undraw_absorbed_in_re_ymd6-1500w-mobile.webp 480w"
+                className="home-image15"
               />
             </div>
-            <div data-aos="fade-up" className="home-content-wrap">
-              <span className="home-text Heading1">
+            <div data-aos="fade-up" className="home-content-wrap1">
+              <span className="home-text10 Heading1">
                 <span>AIR DUCT CLEANING</span>
                 <br></br>
               </span>
-              <span className="home-text03">
+              <span className="home-text13">
                 <span>
                   Is essential process to take full advantage of the cooling
                   &amp; heating system.
                 </span>
                 <br></br>
               </span>
-              <span className="home-text06">
+              <span className="home-text16">
                 <span>
                   The air ducts and filters must be kept clean. Air ducts and
                   filters accumulate dust, odors and even dust mites which can
@@ -145,56 +145,56 @@ const Home = (props) => {
             </div>
           </div>
           <div data-aos="fade-left" className="home-animation pure"></div>
-          <div className="home-content1">
-            <div data-aos="fade-right" className="home-content-wrap1">
-              <span className="home-text12">
+          <div className="home-content2">
+            <div data-aos="fade-right" className="home-content-wrap2">
+              <span className="home-text22">
                 <span>At AM Pure Services</span>
                 <br></br>
               </span>
-              <span className="home-text15 Heading1">
+              <span className="home-text25 Heading1">
                 <span>WE AIM TO BE THE BEST FOR YOU</span>
                 <br></br>
               </span>
-              <span className="home-text18">
+              <span className="home-text28">
                 <span>Here are few good reasons why:</span>
                 <br></br>
               </span>
-              <span className="home-text21">
+              <span className="home-text31">
                 <span>AVAILABILITY</span>
                 <br className="Heading1"></br>
               </span>
-              <span className="home-text24">
+              <span className="home-text34">
                 <span>
                   Weekends and same-day appointments, We are ready to deliver
                   our services.
                 </span>
                 <br></br>
               </span>
-              <span className="home-text27">
+              <span className="home-text37">
                 <span>PROFESSIONALITY</span>
                 <br></br>
               </span>
-              <span className="home-text30">
+              <span className="home-text40">
                 We train the best and brightest duct cleaning technicians that
                 Michigan has to offer. All technicians are certified at AM Pure,
                 allowing them to understand the needs of your air ducts.
               </span>
-              <span className="home-text31">
+              <span className="home-text41">
                 <span>COMPETITIVE</span>
                 <br></br>
               </span>
-              <span className="home-text34">
+              <span className="home-text44">
                 We will beat any competitor prices and service for a limited
                 time only!
               </span>
             </div>
-            <div className="home-image06">
+            <div className="home-image16">
               <img
                 alt="image"
                 src="/undraw_all_the_data_h4ki.svg"
                 loading="lazy"
                 data-aos="fade-left"
-                className="home-image07"
+                className="home-image17"
               />
             </div>
           </div>
@@ -202,50 +202,50 @@ const Home = (props) => {
           <AboutUs
             imageAlt="am pure services - air duct cleaning"
             imageSrc="https://images.unsplash.com/photo-1592967050810-fb4aa3f8bf9d?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDEwfHxNaWNoaWdhbnxlbnwwfHx8fDE2NzgyMDU5NDE&amp;ixlib=rb-4.0.3&amp;w=1000"
-            rootClassName="about-us-root-class-name"
+            rootClassName="about-usroot-class-name"
           ></AboutUs>
           <Process></Process>
           <div className="home-blog">
-            <div className="home-container05">
-              <span className="home-text35">from blog</span>
-              <h2 className="home-text36">
+            <div className="home-container15">
+              <span className="home-text45">from blog</span>
+              <h2 className="home-text46">
                 <span>Our Services</span>
                 <br></br>
               </h2>
             </div>
             <DataProvider
               renderSuccess={(params) => (
-                <>
-                  <div className="home-container06">
+                <Fragment>
+                  <div className="home-container16">
                     <Repeater
                       items={params}
                       renderItem={(context_1m1e3a) => (
-                        <>
+                        <Fragment>
                           <div className="home-blog-cards-container">
                             <Link href={`/post/${context_1m1e3a?.slug}`}>
-                              <a className="home-link">
+                              <a className="home-link10">
                                 <div className="home-blog-card">
                                   <img
                                     alt="image"
                                     src={context_1m1e3a?.coverImage?.url}
                                     loading="lazy"
-                                    className="home-image08"
+                                    className="home-image18"
                                   />
-                                  <div className="home-container07">
+                                  <div className="home-container17">
                                     <div className="home-tags">
                                       <Repeater
                                         items={context_1m1e3a?.tag || []}
                                         renderItem={(context_9oxe3a) => (
-                                          <>
-                                            <span className="home-text39">
+                                          <Fragment>
+                                            <span className="home-text49">
                                               {context_9oxe3a?.tagName}
                                             </span>
-                                          </>
+                                          </Fragment>
                                         )}
                                         renderEmpty={() => (
-                                          <>
+                                          <Fragment>
                                             <span>Text</span>
-                                          </>
+                                          </Fragment>
                                         )}
                                       />
                                     </div>
@@ -258,14 +258,14 @@ const Home = (props) => {
                                       </span>
                                     </div>
                                   </div>
-                                  <span className="home-text41">
+                                  <span className="home-text51">
                                     {context_1m1e3a?.title}
                                   </span>
-                                  <div className="home-container08">
+                                  <div className="home-container18">
                                     <span>Read More</span>
                                     <svg
                                       viewBox="0 0 1024 1024"
-                                      className="home-icon"
+                                      className="home-icon1"
                                     >
                                       <path d="M810 298h86v256h-648l154 154-60 60-256-256 256-256 60 60-154 154h562v-172z"></path>
                                     </svg>
@@ -274,46 +274,46 @@ const Home = (props) => {
                               </a>
                             </Link>
                           </div>
-                        </>
+                        </Fragment>
                       )}
                     />
                   </div>
-                </>
+                </Fragment>
               )}
               initialData={props.context1m1e3aProp}
               persistDataDuringLoading={true}
             />
           </div>
-          <Banner rootClassName="banner-root-class-name"></Banner>
+          <Banner rootClassName="bannerroot-class-name"></Banner>
           <ServiceAreas></ServiceAreas>
         </main>
         <div className="home-footer section-container">
-          <div className="home-max-width max-content-container">
+          <div className="home-max-width1 max-content-container">
             <div className="home-top-part">
               <div className="home-links-container">
                 <div className="home-product-container">
-                  <span className="home-text43">Product</span>
+                  <span className="home-text53">Product</span>
                   <Link href="/monthly-specials">
-                    <a className="home-link01">MONTHLY SPECIALS</a>
+                    <a className="home-link11">MONTHLY SPECIALS</a>
                   </Link>
                   <DataProvider
                     renderSuccess={(params) => (
-                      <>
-                        <div className="home-container09">
+                      <Fragment>
+                        <div className="home-container19">
                           <Repeater
                             items={params}
                             renderItem={(context_0mvdz) => (
-                              <>
+                              <Fragment>
                                 <Link href={`/post/${context_0mvdz?.slug}`}>
-                                  <a className="home-link02">
+                                  <a className="home-link12">
                                     {context_0mvdz?.title}
                                   </a>
                                 </Link>
-                              </>
+                              </Fragment>
                             )}
                           />
                         </div>
-                      </>
+                      </Fragment>
                     )}
                     initialData={props.context0mvdzProp}
                     persistDataDuringLoading={true}
@@ -321,34 +321,34 @@ const Home = (props) => {
                 </div>
               </div>
               <div className="home-navigate-container">
-                <span className="home-text44">Info</span>
+                <span className="home-text54">Info</span>
                 <Link href="/about">
-                  <a className="home-link03">
+                  <a className="home-link13">
                     <span>ABOUT</span>
                     <br></br>
                   </a>
                 </Link>
                 <Link href="/restrictions">
-                  <a className="home-link04">RESTRICTIONS</a>
+                  <a className="home-link14">RESTRICTIONS</a>
                 </Link>
                 <Link href="/contact">
-                  <a className="home-link05">CONTACT</a>
+                  <a className="home-link15">CONTACT</a>
                 </Link>
               </div>
               <div className="home-contact-container">
-                <span className="home-text47">Contact Us</span>
-                <a href="tel:+18885031722" className="home-link06">
+                <span className="home-text57">Contact Us</span>
+                <a href="tel:+18885031722" className="home-link16">
                   (888) 503-1722
                 </a>
                 <a
                   href="mailto:service@ampureservices.com?subject=Site Service Request"
-                  className="home-link07"
+                  className="home-link17"
                 >
                   SERVICE@AMPURESERVICES.COM
                 </a>
               </div>
               <div className="home-subscribe-container">
-                <span className="home-text48">Subscribe to our newsletter</span>
+                <span className="home-text58">Subscribe to our newsletter</span>
                 <input
                   type="text"
                   id="newsletter"
@@ -359,8 +359,8 @@ const Home = (props) => {
               </div>
             </div>
           </div>
-          <div className="home-separator1"></div>
-          <footer className="home-max-width1 max-content-container">
+          <div className="home-separator2"></div>
+          <footer className="home-max-width2 max-content-container">
             <Link href="/">
               <a>
                 <img
@@ -368,12 +368,12 @@ const Home = (props) => {
                   src="/logoam-200h.webp"
                   width="150"
                   height="68"
-                  className="home-image09"
+                  className="home-image19"
                 />
               </a>
             </Link>
             <Link href="/">
-              <a className="home-link09">
+              <a className="home-link19">
                 All rights reserved @ AM Pure Services
               </a>
             </Link>
@@ -381,16 +381,25 @@ const Home = (props) => {
               href="https://011.ninja/bio"
               target="_blank"
               rel="noreferrer noopener"
-              className="home-link10"
+              className="home-link20"
             >
               Developed by 011.ninja
             </a>
           </footer>
+          <a
+            href="https://bytii.cloud"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div className="home-signature">
+              <span className="home-text59">Bytii Cloud</span>
+            </div>
+          </a>
         </div>
       </div>
       <style jsx>
         {`
-          .home-container {
+          .home-container10 {
             width: 100%;
             display: flex;
             position: relative;
@@ -421,7 +430,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .home-container01 {
+          .home-container11 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -429,7 +438,7 @@ const Home = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home-image {
+          .home-image10 {
             width: auto;
             margin-top: var(--dl-space-space-twounits);
             object-fit: cover;
@@ -437,7 +446,7 @@ const Home = (props) => {
             margin-right: var(--dl-space-space-fiveunits);
             margin-bottom: var(--dl-space-space-twounits);
           }
-          .home-image01 {
+          .home-image11 {
             width: auto;
             margin-top: var(--dl-space-space-twounits);
             object-fit: cover;
@@ -445,7 +454,7 @@ const Home = (props) => {
             margin-right: var(--dl-space-space-fiveunits);
             margin-bottom: var(--dl-space-space-twounits);
           }
-          .home-image02 {
+          .home-image12 {
             width: auto;
             margin-top: var(--dl-space-space-twounits);
             object-fit: cover;
@@ -465,7 +474,7 @@ const Home = (props) => {
             flex-direction: column;
             padding-bottom: var(--dl-space-space-twounits);
           }
-          .home-container02 {
+          .home-container12 {
             width: 100%;
             height: auto;
             display: flex;
@@ -474,24 +483,24 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .home-image03 {
+          .home-image13 {
             width: 180px;
             object-fit: cover;
             margin-bottom: var(--dl-space-space-unit);
           }
-          .home-separator {
+          .home-separator1 {
             width: 200px;
             height: 2px;
             background-color: #595959;
           }
-          .home-container03 {
+          .home-container13 {
             width: 100%;
             height: 539px;
           }
-          .home-container04 {
+          .home-container14 {
             display: contents;
           }
-          .home-content {
+          .home-content1 {
             width: 100%;
             height: auto;
             display: flex;
@@ -499,7 +508,7 @@ const Home = (props) => {
             align-items: center;
             justify-content: center;
           }
-          .home-image04 {
+          .home-image14 {
             flex: 0 0 auto;
             width: 50%;
             height: 566px;
@@ -508,51 +517,11 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .home-image05 {
+          .home-image15 {
             width: 616px;
             height: 100%;
             align-self: center;
             object-fit: contain;
-          }
-          .home-content-wrap {
-            flex: 0 0 auto;
-            width: 50%;
-            height: auto;
-            display: flex;
-            padding: var(--dl-space-space-oneandhalfunits);
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-          }
-          .home-text {
-            width: 100%;
-            font-style: normal;
-          }
-          .home-text03 {
-            width: 100%;
-            font-size: 26px;
-            font-style: normal;
-            margin-top: var(--dl-space-space-twounits);
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: var(--dl-space-space-twounits);
-          }
-          .home-text06 {
-            width: 100%;
-            font-size: 26px;
-            font-style: normal;
-            font-weight: 400;
-          }
-          .home-animation {
-            height: auto;
-            margin-bottom: var(--dl-space-space-fiveunits);
-          }
-          .home-content1 {
-            width: 100%;
-            height: 820px;
-            display: flex;
-            position: relative;
-            align-items: center;
           }
           .home-content-wrap1 {
             flex: 0 0 auto;
@@ -564,7 +533,47 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .home-text12 {
+          .home-text10 {
+            width: 100%;
+            font-style: normal;
+          }
+          .home-text13 {
+            width: 100%;
+            font-size: 26px;
+            font-style: normal;
+            margin-top: var(--dl-space-space-twounits);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--dl-space-space-twounits);
+          }
+          .home-text16 {
+            width: 100%;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 400;
+          }
+          .home-animation {
+            height: auto;
+            margin-bottom: var(--dl-space-space-fiveunits);
+          }
+          .home-content2 {
+            width: 100%;
+            height: 820px;
+            display: flex;
+            position: relative;
+            align-items: center;
+          }
+          .home-content-wrap2 {
+            flex: 0 0 auto;
+            width: 50%;
+            height: auto;
+            display: flex;
+            padding: var(--dl-space-space-oneandhalfunits);
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .home-text22 {
             width: 100%;
             font-size: 26px;
             font-style: normal;
@@ -575,49 +584,17 @@ const Home = (props) => {
             padding-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .home-text15 {
+          .home-text25 {
             width: 100%;
             font-style: normal;
             margin-bottom: var(--dl-space-space-twounits);
           }
-          .home-text18 {
+          .home-text28 {
             width: 100%;
             font-size: 26px;
             font-style: normal;
             font-weight: 700;
             padding-bottom: var(--dl-space-space-twounits);
-          }
-          .home-text21 {
-            width: 100%;
-            font-size: 36px;
-            font-style: normal;
-            font-family: Rubik;
-            font-weight: 700;
-            line-height: 70px;
-            letter-spacing: 0.01em;
-            text-decoration: none;
-          }
-          .home-text24 {
-            width: 100%;
-            font-size: 26px;
-            font-style: normal;
-            font-weight: 400;
-          }
-          .home-text27 {
-            width: 100%;
-            font-size: 36px;
-            font-style: normal;
-            font-family: Rubik;
-            font-weight: 700;
-            line-height: 70px;
-            letter-spacing: 0.01em;
-            text-decoration: none;
-          }
-          .home-text30 {
-            width: 100%;
-            font-size: 26px;
-            font-style: normal;
-            font-weight: 400;
           }
           .home-text31 {
             width: 100%;
@@ -635,7 +612,39 @@ const Home = (props) => {
             font-style: normal;
             font-weight: 400;
           }
-          .home-image06 {
+          .home-text37 {
+            width: 100%;
+            font-size: 36px;
+            font-style: normal;
+            font-family: Rubik;
+            font-weight: 700;
+            line-height: 70px;
+            letter-spacing: 0.01em;
+            text-decoration: none;
+          }
+          .home-text40 {
+            width: 100%;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 400;
+          }
+          .home-text41 {
+            width: 100%;
+            font-size: 36px;
+            font-style: normal;
+            font-family: Rubik;
+            font-weight: 700;
+            line-height: 70px;
+            letter-spacing: 0.01em;
+            text-decoration: none;
+          }
+          .home-text44 {
+            width: 100%;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 400;
+          }
+          .home-image16 {
             flex: 0 0 auto;
             width: 50%;
             height: auto;
@@ -645,7 +654,7 @@ const Home = (props) => {
             justify-content: center;
             background-color: var(--dl-color-scheme-lightgreen);
           }
-          .home-image07 {
+          .home-image17 {
             width: 100%;
             height: 825px;
             object-fit: fill;
@@ -663,7 +672,7 @@ const Home = (props) => {
             padding-bottom: var(--dl-space-space-sixunits);
             justify-content: center;
           }
-          .home-container05 {
+          .home-container15 {
             flex: 0 0 auto;
             width: auto;
             height: 100px;
@@ -672,7 +681,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .home-text35 {
+          .home-text45 {
             color: var(--dl-color-scheme-green);
             font-style: normal;
             text-align: center;
@@ -681,7 +690,7 @@ const Home = (props) => {
             letter-spacing: 0.1em;
             text-transform: uppercase;
           }
-          .home-text36 {
+          .home-text46 {
             font-size: 46px;
             font-style: normal;
             text-align: center;
@@ -692,7 +701,7 @@ const Home = (props) => {
             letter-spacing: 0.01em;
             text-decoration: none;
           }
-          .home-container06 {
+          .home-container16 {
             display: grid;
             grid-gap: 20px;
             grid-template-columns: repeat(3, 1fr);
@@ -705,7 +714,7 @@ const Home = (props) => {
             flex-direction: row;
             justify-content: space-between;
           }
-          .home-link {
+          .home-link10 {
             display: contents;
           }
           .home-blog-card {
@@ -718,14 +727,14 @@ const Home = (props) => {
             flex-direction: column;
             text-decoration: none;
           }
-          .home-image08 {
+          .home-image18 {
             width: 100%;
             height: 200px;
             object-fit: cover;
             border-radius: var(--dl-radius-radius-radius8);
             margin-bottom: var(--dl-space-space-halfunit);
           }
-          .home-container07 {
+          .home-container17 {
             flex: 0 0 auto;
             width: 100%;
             display: flex;
@@ -741,7 +750,7 @@ const Home = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home-text39 {
+          .home-text49 {
             color: var(--dl-color-scheme-white);
             padding: var(--dl-space-space-halfunit);
             font-size: 12px;
@@ -765,11 +774,11 @@ const Home = (props) => {
             text-align: right;
             font-weight: 700;
           }
-          .home-text41 {
+          .home-text51 {
             font-style: normal;
             font-weight: 600;
           }
-          .home-container08 {
+          .home-container18 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -777,7 +786,7 @@ const Home = (props) => {
             align-items: flex-start;
             justify-content: flex-start;
           }
-          .home-icon {
+          .home-icon1 {
             width: 24px;
             height: 24px;
             margin-left: var(--dl-space-space-halfunit);
@@ -785,7 +794,7 @@ const Home = (props) => {
           .home-footer {
             position: relative;
           }
-          .home-max-width {
+          .home-max-width1 {
             max-width: var(--dl-size-size-maxwidth);
             padding-left: 0px;
             padding-right: 0px;
@@ -813,20 +822,20 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-text43 {
+          .home-text53 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .home-link01 {
+          .home-link11 {
             color: var(--dl-color-scheme-darkblue);
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .home-container09 {
+          .home-container19 {
             display: grid;
           }
-          .home-link02 {
+          .home-link12 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -838,20 +847,20 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-text44 {
+          .home-text54 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .home-link03 {
+          .home-link13 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .home-link04 {
+          .home-link14 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .home-link05 {
+          .home-link15 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -863,16 +872,16 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-text47 {
+          .home-text57 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .home-link06 {
+          .home-link16 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .home-link07 {
+          .home-link17 {
             font-size: 14px;
             font-style: normal;
             font-family: Rubik;
@@ -889,7 +898,7 @@ const Home = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .home-text48 {
+          .home-text58 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
@@ -908,61 +917,76 @@ const Home = (props) => {
             border-right-width: 0px;
             border-bottom-width: 1px;
           }
-          .home-separator1 {
+          .home-separator2 {
             width: 100%;
             height: 1px;
             margin-top: var(--dl-space-space-twounits);
             margin-bottom: var(--dl-space-space-twounits);
             background-color: #d9d9d9;
           }
-          .home-max-width1 {
+          .home-max-width2 {
             flex-direction: row;
             justify-content: space-between;
           }
-          .home-image09 {
+          .home-image19 {
             width: 150px;
             object-fit: cover;
             text-decoration: none;
           }
-          .home-link09 {
+          .home-link19 {
             width: auto;
             font-style: normal;
             text-align: center;
             font-weight: 300;
             text-decoration: none;
           }
-          .home-link10 {
+          .home-link20 {
             font-style: normal;
             font-weight: 300;
             text-decoration: none;
+          }
+          .home-signature {
+            left: 5px;
+            bottom: 5px;
+            display: flex;
+            position: absolute;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            text-decoration: none;
+          }
+          .home-text59 {
+            color: rgb(201, 206, 218);
+            font-style: normal;
+            font-weight: 300;
           }
           @media (max-width: 1600px) {
             .home-reviews {
               height: 662px;
             }
-            .home-container03 {
+            .home-container13 {
               height: 537px;
             }
-            .home-image05 {
+            .home-image15 {
               width: 616px;
               height: 544px;
             }
-            .home-content1 {
+            .home-content2 {
               height: 790px;
               align-items: center;
               justify-content: center;
             }
-            .home-content-wrap1 {
+            .home-content-wrap2 {
               height: 654px;
             }
-            .home-image06 {
+            .home-image16 {
               height: 788px;
             }
-            .home-image07 {
+            .home-image17 {
               height: 820px;
               padding-bottom: 0px;
             }
-            .home-container07 {
+            .home-container17 {
               width: 100%;
               flex-direction: row;
             }
@@ -970,7 +994,7 @@ const Home = (props) => {
               width: 70%;
               flex-direction: row;
             }
-            .home-text39 {
+            .home-text49 {
               color: var(--dl-color-scheme-white);
               padding: var(--dl-space-space-halfunit);
               font-size: 12px;
@@ -997,7 +1021,7 @@ const Home = (props) => {
             .home-contact-container {
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .home-link09 {
+            .home-link19 {
               width: auto;
               text-align: center;
             }
@@ -1008,32 +1032,32 @@ const Home = (props) => {
               padding-left: var(--dl-space-space-twounits);
               padding-right: var(--dl-space-space-twounits);
             }
-            .home-content {
+            .home-content1 {
               height: 820px;
               align-self: center;
               align-items: center;
               justify-content: center;
             }
-            .home-image04 {
+            .home-image14 {
               height: 568px;
             }
-            .home-image05 {
+            .home-image15 {
               width: 504px;
               height: 452px;
               margin-right: 0px;
             }
-            .home-text03 {
+            .home-text13 {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .home-content1 {
+            .home-content2 {
               height: auto;
             }
-            .home-content-wrap1 {
+            .home-content-wrap2 {
               height: 802px;
               padding: var(--dl-space-space-oneandhalfunits);
               margin-right: 0px;
             }
-            .home-text12 {
+            .home-text22 {
               font-size: 26px;
               font-style: normal;
               font-family: Rubik;
@@ -1042,29 +1066,29 @@ const Home = (props) => {
               letter-spacing: 0.01em;
               text-decoration: none;
             }
-            .home-text18 {
+            .home-text28 {
               font-size: 30px;
               font-style: normal;
               font-weight: 700;
             }
-            .home-image06 {
+            .home-image16 {
               height: 816px;
               position: relative;
             }
-            .home-image07 {
+            .home-image17 {
               height: 796px;
               align-self: center;
             }
-            .home-image08 {
+            .home-image18 {
               height: 180px;
             }
-            .home-text41 {
+            .home-text51 {
               font-style: normal;
               font-weight: 700;
               margin-bottom: var(--dl-space-space-unit);
               text-transform: uppercase;
             }
-            .home-max-width {
+            .home-max-width1 {
               padding-left: 0px;
               padding-right: 0px;
             }
@@ -1075,10 +1099,10 @@ const Home = (props) => {
               align-self: flex-start;
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .home-link06 {
+            .home-link16 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .home-link07 {
+            .home-link17 {
               font-size: 16px;
               font-style: normal;
               font-weight: 900;
@@ -1086,7 +1110,7 @@ const Home = (props) => {
               margin-bottom: var(--dl-space-space-unit);
               letter-spacing: auto;
             }
-            .home-link09 {
+            .home-link19 {
               width: auto;
               text-align: center;
             }
@@ -1097,28 +1121,28 @@ const Home = (props) => {
               padding-left: var(--dl-space-space-unit);
               padding-right: var(--dl-space-space-unit);
             }
-            .home-container02 {
+            .home-container12 {
               padding: var(--dl-space-space-oneandhalfunits);
             }
-            .home-container03 {
+            .home-container13 {
               height: 423px;
               padding-left: var(--dl-space-space-unit);
               padding-right: var(--dl-space-space-unit);
             }
-            .home-content {
+            .home-content1 {
               height: 807px;
             }
-            .home-image05 {
+            .home-image15 {
               height: 656px;
             }
             .home-animation {
               height: auto;
               margin-bottom: var(--dl-space-space-threeunits);
             }
-            .home-image06 {
+            .home-image16 {
               height: 960px;
             }
-            .home-image07 {
+            .home-image17 {
               height: 920px;
               align-self: center;
             }
@@ -1129,26 +1153,26 @@ const Home = (props) => {
             .home-blog-card {
               max-width: 550px;
             }
-            .home-link09 {
+            .home-link19 {
               text-align: center;
             }
-            .home-link10 {
+            .home-link20 {
               text-align: center;
             }
           }
           @media (max-width: 767px) {
-            .home-container01 {
+            .home-container11 {
               width: 100%;
             }
-            .home-image {
+            .home-image10 {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-right: var(--dl-space-space-oneandhalfunits);
             }
-            .home-image01 {
+            .home-image11 {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-right: var(--dl-space-space-oneandhalfunits);
             }
-            .home-image02 {
+            .home-image12 {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-right: var(--dl-space-space-oneandhalfunits);
             }
@@ -1157,66 +1181,66 @@ const Home = (props) => {
               padding-left: var(--dl-space-space-unit);
               padding-right: var(--dl-space-space-unit);
             }
-            .home-content {
+            .home-content1 {
               flex-direction: column;
             }
-            .home-image04 {
+            .home-image14 {
               width: 100%;
               height: auto;
             }
-            .home-image05 {
+            .home-image15 {
               width: 100%;
               height: var(--dl-size-size-xxlarge);
             }
-            .home-content-wrap {
+            .home-content-wrap1 {
               width: 100%;
             }
-            .home-text {
+            .home-text10 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .home-text03 {
+            .home-text13 {
               margin-bottom: var(--dl-space-space-twounits);
             }
             .home-animation {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .home-content1 {
+            .home-content2 {
               flex-direction: column;
             }
-            .home-content-wrap1 {
+            .home-content-wrap2 {
               width: 100%;
               height: auto;
             }
-            .home-text18 {
-              margin-bottom: var(--dl-space-space-twounits);
-            }
-            .home-text24 {
-              margin-bottom: var(--dl-space-space-twounits);
-            }
-            .home-text30 {
-              margin-top: 0px;
-              margin-left: 0px;
-              margin-right: 0px;
+            .home-text28 {
               margin-bottom: var(--dl-space-space-twounits);
             }
             .home-text34 {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .home-image06 {
+            .home-text40 {
+              margin-top: 0px;
+              margin-left: 0px;
+              margin-right: 0px;
+              margin-bottom: var(--dl-space-space-twounits);
+            }
+            .home-text44 {
+              margin-bottom: var(--dl-space-space-twounits);
+            }
+            .home-image16 {
               width: 100%;
               height: auto;
             }
-            .home-image07 {
+            .home-image17 {
               height: var(--dl-size-size-xxlarge);
             }
-            .home-container06 {
+            .home-container16 {
               width: 100%;
               grid-template-columns: repeat(1, 1fr);
             }
             .home-blog-card {
               max-width: 450px;
             }
-            .home-image08 {
+            .home-image18 {
               height: auto;
             }
             .home-top-part {
@@ -1242,10 +1266,10 @@ const Home = (props) => {
               padding-left: var(--dl-space-space-oneandhalfunits);
               padding-right: var(--dl-space-space-oneandhalfunits);
             }
-            .home-link09 {
+            .home-link19 {
               text-align: center;
             }
-            .home-link10 {
+            .home-link20 {
               text-align: center;
             }
           }
@@ -1253,22 +1277,22 @@ const Home = (props) => {
             .home-sticker-wrap {
               width: 100%;
             }
-            .home-container01 {
+            .home-container11 {
               width: 100%;
             }
-            .home-image {
+            .home-image10 {
               width: 30%;
               height: auto;
               margin-left: var(--dl-space-space-halfunit);
               margin-right: var(--dl-space-space-halfunit);
             }
-            .home-image01 {
+            .home-image11 {
               width: 30%;
               height: auto;
               margin-left: 0px;
               margin-right: 0px;
             }
-            .home-image02 {
+            .home-image12 {
               width: 30%;
               height: auto;
               margin-left: var(--dl-space-space-halfunit);
@@ -1280,19 +1304,19 @@ const Home = (props) => {
               margin-bottom: var(--dl-space-space-twounits);
               padding-right: var(--dl-space-space-unit);
             }
-            .home-container03 {
+            .home-container13 {
               height: 415px;
             }
-            .home-content {
+            .home-content1 {
               height: auto;
             }
-            .home-content-wrap {
+            .home-content-wrap1 {
               width: 100%;
             }
             .home-animation {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .home-content-wrap1 {
+            .home-content-wrap2 {
               width: 100%;
             }
             .home-blog-card {
@@ -1321,16 +1345,16 @@ const Home = (props) => {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-bottom: 0px;
             }
-            .home-link07 {
+            .home-link17 {
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }
-            .home-max-width1 {
+            .home-max-width2 {
               flex-direction: column;
             }
-            .home-image09 {
+            .home-image19 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .home-link09 {
+            .home-link19 {
               text-align: center;
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }

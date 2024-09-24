@@ -17,26 +17,18 @@ const SliderContainer11 = (props) => {
           <div data-thq="slider-wrapper" className="swiper-wrapper">
             <div
               data-thq="slider-slide"
-              className="slider-container11-slider-slide swiper-slide"
-            >
-              <h1 className="slider-container11-text">
-                WE BELIEVE IN ONE WAY: INTEGRITY
-              </h1>
-            </div>
-            <div
-              data-thq="slider-slide"
               className="slider-container11-slider-slide1 swiper-slide"
             >
               <h1 className="slider-container11-text1">
-                WE CARE FOR PEOPLE HEALTH
+                WE BELIEVE IN ONE WAY: INTEGRITY
               </h1>
             </div>
             <div
               data-thq="slider-slide"
               className="slider-container11-slider-slide2 swiper-slide"
             >
-              <h1 className="slider-container11-heading">
-                WE BELIEVE IN SAVING ENERGY
+              <h1 className="slider-container11-text2">
+                WE CARE FOR PEOPLE HEALTH
               </h1>
             </div>
             <div
@@ -44,7 +36,7 @@ const SliderContainer11 = (props) => {
               className="slider-container11-slider-slide3 swiper-slide"
             >
               <h1 className="slider-container11-heading1">
-                WE WILL GIVE YOU BEST PERFORMANCE
+                WE BELIEVE IN SAVING ENERGY
               </h1>
             </div>
             <div
@@ -52,6 +44,14 @@ const SliderContainer11 = (props) => {
               className="slider-container11-slider-slide4 swiper-slide"
             >
               <h1 className="slider-container11-heading2">
+                WE WILL GIVE YOU BEST PERFORMANCE
+              </h1>
+            </div>
+            <div
+              data-thq="slider-slide"
+              className="slider-container11-slider-slide5 swiper-slide"
+            >
+              <h1 className="slider-container11-heading3">
                 PURE CLEAN AIR DUCT FOR HEALTHY LIFE
               </h1>
             </div>
@@ -62,11 +62,7 @@ const SliderContainer11 = (props) => {
           >
             <div
               data-thq="slider-pagination-bullet"
-              className="slider-container11-slider-pagination-bullet swiper-pagination-bullet swiper-pagination-bullet-active"
-            ></div>
-            <div
-              data-thq="slider-pagination-bullet"
-              className="slider-container11-slider-pagination-bullet1 swiper-pagination-bullet"
+              className="slider-container11-slider-pagination-bullet1 swiper-pagination-bullet swiper-pagination-bullet-active"
             ></div>
             <div
               data-thq="slider-pagination-bullet"
@@ -79,6 +75,10 @@ const SliderContainer11 = (props) => {
             <div
               data-thq="slider-pagination-bullet"
               className="slider-container11-slider-pagination-bullet4 swiper-pagination-bullet"
+            ></div>
+            <div
+              data-thq="slider-pagination-bullet"
+              className="slider-container11-slider-pagination-bullet5 swiper-pagination-bullet"
             ></div>
           </div>
           <div
@@ -101,11 +101,11 @@ const SliderContainer11 = (props) => {
             height: 100%;
             display: inline-block;
           }
-          .slider-container11-slider-slide {
+          .slider-container11-slider-slide1 {
             display: flex;
             background-size: 100%;
           }
-          .slider-container11-text {
+          .slider-container11-text1 {
             color: #ffffff;
             width: auto;
             padding: var(--dl-space-space-twounits);
@@ -113,26 +113,15 @@ const SliderContainer11 = (props) => {
             align-self: center;
             text-align: center;
           }
-          .slider-container11-slider-slide1 {
-            display: flex;
-            text-align: center;
-          }
-          .slider-container11-text1 {
-            color: #ffffff;
-            width: 720px;
-            padding: var(--dl-space-space-twounits);
-            font-size: 5em;
-          }
           .slider-container11-slider-slide2 {
             display: flex;
             text-align: center;
           }
-          .slider-container11-heading {
+          .slider-container11-text2 {
             color: #ffffff;
             width: 720px;
             padding: var(--dl-space-space-twounits);
             font-size: 5em;
-            padding-bottom: 32px;
           }
           .slider-container11-slider-slide3 {
             display: flex;
@@ -143,6 +132,7 @@ const SliderContainer11 = (props) => {
             width: 720px;
             padding: var(--dl-space-space-twounits);
             font-size: 5em;
+            padding-bottom: 32px;
           }
           .slider-container11-slider-slide4 {
             display: flex;
@@ -154,14 +144,21 @@ const SliderContainer11 = (props) => {
             padding: var(--dl-space-space-twounits);
             font-size: 5em;
           }
+          .slider-container11-slider-slide5 {
+            display: flex;
+            text-align: center;
+          }
+          .slider-container11-heading3 {
+            color: #ffffff;
+            width: 720px;
+            padding: var(--dl-space-space-twounits);
+            font-size: 5em;
+          }
           .slider-container11-slider-pagination {
             display: block;
           }
-          .slider-container11-slider-pagination-bullet {
-            background: black;
-          }
           .slider-container11-slider-pagination-bullet1 {
-            background: #000000;
+            background: black;
           }
           .slider-container11-slider-pagination-bullet2 {
             background: #000000;
@@ -172,6 +169,9 @@ const SliderContainer11 = (props) => {
           .slider-container11-slider-pagination-bullet4 {
             background: #000000;
           }
+          .slider-container11-slider-pagination-bullet5 {
+            background: #000000;
+          }
           .slider-container11-slider-button-prev {
             display: none;
           }
@@ -179,53 +179,53 @@ const SliderContainer11 = (props) => {
             display: none;
           }
           @media (max-width: 1600px) {
-            .slider-container11-text {
-              width: 720px;
-            }
             .slider-container11-text1 {
               width: 720px;
             }
-            .slider-container11-heading {
+            .slider-container11-text2 {
               width: 720px;
             }
             .slider-container11-heading1 {
               width: 720px;
             }
             .slider-container11-heading2 {
+              width: 720px;
+            }
+            .slider-container11-heading3 {
               width: 720px;
             }
           }
           @media (max-width: 991px) {
-            .slider-container11-text {
-              font-size: 4.3em;
-            }
             .slider-container11-text1 {
               font-size: 4.3em;
             }
-            .slider-container11-heading {
+            .slider-container11-text2 {
               font-size: 4.3em;
             }
             .slider-container11-heading1 {
               font-size: 4.3em;
             }
             .slider-container11-heading2 {
+              font-size: 4.3em;
+            }
+            .slider-container11-heading3 {
               font-size: 4.3em;
             }
           }
           @media (max-width: 767px) {
-            .slider-container11-text {
-              font-size: 4em;
-            }
             .slider-container11-text1 {
               font-size: 4em;
             }
-            .slider-container11-heading {
+            .slider-container11-text2 {
               font-size: 4em;
             }
             .slider-container11-heading1 {
               font-size: 4em;
             }
             .slider-container11-heading2 {
+              font-size: 4em;
+            }
+            .slider-container11-heading3 {
               font-size: 4em;
             }
           }
@@ -234,15 +234,11 @@ const SliderContainer11 = (props) => {
               width: auto;
               justify-content: center;
             }
-            .slider-container11-text {
-              width: 360px;
-              font-size: 2.1em;
-            }
             .slider-container11-text1 {
               width: 360px;
               font-size: 2.1em;
             }
-            .slider-container11-heading {
+            .slider-container11-text2 {
               width: 360px;
               font-size: 2.1em;
             }
@@ -251,6 +247,10 @@ const SliderContainer11 = (props) => {
               font-size: 2.1em;
             }
             .slider-container11-heading2 {
+              width: 360px;
+              font-size: 2.1em;
+            }
+            .slider-container11-heading3 {
               width: 360px;
               font-size: 2.1em;
             }

@@ -9,8 +9,8 @@ const Blog = (props) => {
     <>
       <div className={`blog-blog section-container ${props.rootClassName} `}>
         <div className="blog-max-width max-content-container">
-          <span className="blog-text">{props.text}</span>
-          <h2 className="blog-text1 Heading1">
+          <span className="blog-text1">{props.text}</span>
+          <h2 className="blog-text2 Heading1">
             <span>Our Services</span>
             <br></br>
           </h2>
@@ -20,8 +20,8 @@ const Blog = (props) => {
               button="Duct Clean"
               imageAlt="clean air duct"
               imageSrc="/air_duct-1500w.webp"
-              rootClassName="blog-card-root-class-name6"
-              className="blog-component"
+              rootClassName="blog-cardroot-class-name6"
+              className="blog-component1"
             ></BlogCard>
             <BlogCard
               text="Read More"
@@ -29,8 +29,8 @@ const Blog = (props) => {
               text2="DRYER VENT CLEANING"
               button="DRYER VENT"
               imageSrc="/duct_cleaner-1500w.webp"
-              rootClassName="blog-card-root-class-name7"
-              className="blog-component1"
+              rootClassName="blog-cardroot-class-name7"
+              className="blog-component2"
             ></BlogCard>
             <BlogCard
               text="Read More"
@@ -38,8 +38,8 @@ const Blog = (props) => {
               text2="UV Light"
               button="UV"
               imageSrc="/photo-1618853606840-d2138cef5431-1500w.webp"
-              rootClassName="blog-card-root-class-name8"
-              className="blog-component2"
+              rootClassName="blog-cardroot-class-name8"
+              className="blog-component3"
             ></BlogCard>
           </div>
         </div>
@@ -60,7 +60,7 @@ const Blog = (props) => {
             flex-direction: column;
             justify-content: space-between;
           }
-          .blog-text {
+          .blog-text1 {
             color: var(--dl-color-scheme-green);
             font-style: normal;
             text-align: center;
@@ -69,7 +69,7 @@ const Blog = (props) => {
             letter-spacing: 0.1em;
             text-transform: uppercase;
           }
-          .blog-text1 {
+          .blog-text2 {
             text-align: center;
             margin-bottom: var(--dl-space-space-unit);
           }
@@ -81,13 +81,13 @@ const Blog = (props) => {
             flex-direction: row;
             justify-content: space-between;
           }
-          .blog-component {
-            text-decoration: none;
-          }
           .blog-component1 {
             text-decoration: none;
           }
           .blog-component2 {
+            text-decoration: none;
+          }
+          .blog-component3 {
             text-decoration: none;
           }
 

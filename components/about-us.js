@@ -10,49 +10,49 @@ const AboutUs = (props) => {
       >
         <div className="about-us-max-width max-content-container">
           <div className="about-us-text-container">
-            <span className="about-us-text">{props.text}</span>
-            <h2 data-aos="fade-right" className="about-us-text1 Heading1">
+            <span className="about-us-text1">{props.text}</span>
+            <h2 data-aos="fade-right" className="about-us-text2 Heading1">
               Peace of Mind, Guaranteed with Us.
             </h2>
-            <span data-aos="fade-left" className="about-us-text2">
+            <span data-aos="fade-left" className="about-us-text3">
               {props.text1}
             </span>
             <div data-aos="fade-down" className="about-us-checklist">
-              <div className="about-us-check-item">
-                <svg viewBox="0 0 1024 1024" className="about-us-icon">
-                  <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
-                </svg>
-                <span className="about-us-text3">{props.text2}</span>
-              </div>
               <div className="about-us-check-item1">
-                <svg viewBox="0 0 1024 1024" className="about-us-icon02">
-                  <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
-                </svg>
-                <span className="about-us-text4">{props.text3}</span>
-              </div>
-              <div className="about-us-check-item2">
-                <svg viewBox="0 0 1024 1024" className="about-us-icon04">
-                  <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
-                </svg>
-                <span className="about-us-text5">{props.text4}</span>
-              </div>
-              <div className="about-us-check-item3">
-                <svg viewBox="0 0 1024 1024" className="about-us-icon06">
-                  <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
-                </svg>
-                <span className="about-us-text6">{props.text5}</span>
-              </div>
-              <div className="about-us-check-item4">
-                <svg viewBox="0 0 1024 1024" className="about-us-icon08">
-                  <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
-                </svg>
-                <span className="about-us-text7">{props.text6}</span>
-              </div>
-              <div className="about-us-check-item5">
                 <svg viewBox="0 0 1024 1024" className="about-us-icon10">
                   <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
                 </svg>
-                <span className="about-us-text8">{props.text7}</span>
+                <span className="about-us-text4">{props.text2}</span>
+              </div>
+              <div className="about-us-check-item2">
+                <svg viewBox="0 0 1024 1024" className="about-us-icon12">
+                  <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+                </svg>
+                <span className="about-us-text5">{props.text3}</span>
+              </div>
+              <div className="about-us-check-item3">
+                <svg viewBox="0 0 1024 1024" className="about-us-icon14">
+                  <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+                </svg>
+                <span className="about-us-text6">{props.text4}</span>
+              </div>
+              <div className="about-us-check-item4">
+                <svg viewBox="0 0 1024 1024" className="about-us-icon16">
+                  <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+                </svg>
+                <span className="about-us-text7">{props.text5}</span>
+              </div>
+              <div className="about-us-check-item5">
+                <svg viewBox="0 0 1024 1024" className="about-us-icon18">
+                  <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+                </svg>
+                <span className="about-us-text8">{props.text6}</span>
+              </div>
+              <div className="about-us-check-item6">
+                <svg viewBox="0 0 1024 1024" className="about-us-icon20">
+                  <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+                </svg>
+                <span className="about-us-text9">{props.text7}</span>
               </div>
             </div>
           </div>
@@ -86,7 +86,7 @@ const AboutUs = (props) => {
             margin-right: var(--dl-space-space-unit);
             flex-direction: column;
           }
-          .about-us-text {
+          .about-us-text1 {
             color: var(--dl-color-scheme-green);
             font-style: normal;
             text-align: center;
@@ -95,10 +95,10 @@ const AboutUs = (props) => {
             letter-spacing: 0.1em;
             text-transform: uppercase;
           }
-          .about-us-text1 {
+          .about-us-text2 {
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .about-us-text2 {
+          .about-us-text3 {
             color: var(--dl-color-scheme-black80);
             font-size: 24px;
             font-style: normal;
@@ -116,23 +116,6 @@ const AboutUs = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .about-us-check-item {
-            flex: 0 0 auto;
-            display: flex;
-            align-items: center;
-            margin-bottom: var(--dl-space-space-unit);
-            flex-direction: row;
-          }
-          .about-us-icon {
-            fill: var(--dl-color-scheme-green);
-            width: 18px;
-            height: 18px;
-            margin-right: var(--dl-space-space-unit);
-          }
-          .about-us-text3 {
-            font-style: normal;
-            font-weight: 500;
-          }
           .about-us-check-item1 {
             flex: 0 0 auto;
             display: flex;
@@ -140,7 +123,7 @@ const AboutUs = (props) => {
             margin-bottom: var(--dl-space-space-unit);
             flex-direction: row;
           }
-          .about-us-icon02 {
+          .about-us-icon10 {
             fill: var(--dl-color-scheme-green);
             width: 18px;
             height: 18px;
@@ -157,7 +140,7 @@ const AboutUs = (props) => {
             margin-bottom: var(--dl-space-space-unit);
             flex-direction: row;
           }
-          .about-us-icon04 {
+          .about-us-icon12 {
             fill: var(--dl-color-scheme-green);
             width: 18px;
             height: 18px;
@@ -174,7 +157,7 @@ const AboutUs = (props) => {
             margin-bottom: var(--dl-space-space-unit);
             flex-direction: row;
           }
-          .about-us-icon06 {
+          .about-us-icon14 {
             fill: var(--dl-color-scheme-green);
             width: 18px;
             height: 18px;
@@ -191,7 +174,7 @@ const AboutUs = (props) => {
             margin-bottom: var(--dl-space-space-unit);
             flex-direction: row;
           }
-          .about-us-icon08 {
+          .about-us-icon16 {
             fill: var(--dl-color-scheme-green);
             width: 18px;
             height: 18px;
@@ -205,15 +188,32 @@ const AboutUs = (props) => {
             flex: 0 0 auto;
             display: flex;
             align-items: center;
+            margin-bottom: var(--dl-space-space-unit);
             flex-direction: row;
           }
-          .about-us-icon10 {
+          .about-us-icon18 {
             fill: var(--dl-color-scheme-green);
             width: 18px;
             height: 18px;
             margin-right: var(--dl-space-space-unit);
           }
           .about-us-text8 {
+            font-style: normal;
+            font-weight: 500;
+          }
+          .about-us-check-item6 {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+          }
+          .about-us-icon20 {
+            fill: var(--dl-color-scheme-green);
+            width: 18px;
+            height: 18px;
+            margin-right: var(--dl-space-space-unit);
+          }
+          .about-us-text9 {
             font-style: normal;
             font-weight: 500;
           }

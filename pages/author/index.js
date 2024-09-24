@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Head from 'next/head'
 
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import authorPageInitialPropsTqToResource from '../../resources/author-page-initial-props-tq_to'
+import authorPageInitialPropsTqCWResource from '../../resources/author-page-initial-props-tq_c-w'
 
 const Author = (props) => {
   return (
     <>
-      <div className="author-container">
+      <div className="author-container1">
         <Head>
           <title>
             Author - AM Pure Services | Airduct Cleaning | Drayer Vent Cleaning
@@ -29,13 +29,13 @@ const Author = (props) => {
         </Head>
         <DataProvider
           renderSuccess={(params) => (
-            <>
+            <Fragment>
               <div>
                 <Repeater
                   items={params}
                   renderItem={(AuthorEntities) => (
-                    <>
-                      <div className="author-container2">
+                    <Fragment>
+                      <div className="author-container3">
                         <h1>{AuthorEntities?.name}</h1>
                         <img
                           alt={AuthorEntities?.picture?.name}
@@ -43,11 +43,11 @@ const Author = (props) => {
                           className="author-image"
                         />
                       </div>
-                    </>
+                    </Fragment>
                   )}
                 />
               </div>
-            </>
+            </Fragment>
           )}
           initialData={props.authorEntities}
           persistDataDuringLoading={true}
@@ -56,7 +56,7 @@ const Author = (props) => {
       </div>
       <style jsx>
         {`
-          .author-container {
+          .author-container1 {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -64,7 +64,7 @@ const Author = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .author-container2 {
+          .author-container3 {
             gap: 12px;
             width: 100%;
             display: flex;
@@ -96,7 +96,7 @@ export default Author
 
 export async function getStaticProps(context) {
   try {
-    const response = await authorPageInitialPropsTqToResource({
+    const response = await authorPageInitialPropsTqCWResource({
       ...context?.params,
     })
     if (!response) {

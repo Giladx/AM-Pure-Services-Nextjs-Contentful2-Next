@@ -6,7 +6,7 @@ import Script from 'dangerous-html/react'
 const Info = (props) => {
   return (
     <>
-      <div className="info-container">
+      <div className="info-container1">
         <Head>
           <title>
             Info - AM Pure Services | Airduct Cleaning | Drayer Vent Cleaning
@@ -30,7 +30,7 @@ const Info = (props) => {
           <meta name="robots" content="noindex" />
         </Head>
         <div className="info-dead-end">
-          <h1 className="info-text">
+          <h1 className="info-text1">
             <span>Sorry your password could not be verified.</span>
             <br></br>
             <span>But you can always make yourself a sandcastle!</span>
@@ -40,14 +40,14 @@ const Info = (props) => {
             alt="image"
             sizes="(min-width: 992px) 1200px, (min-width: 768px) 800px, 480px"
             src="/fun1-1500w.gif"
-            srcSet="/fun1-1500w.gif 1200w, /fun1-tablet.gif 800w, /fun1-mobile.gif 480w"
+            srcSet="///fun1-1500w.gif 1200w, //fun1-tablet.gif 800w, //fun1-mobile.gif 480w"
             className="info-image"
           />
           <button id="backButton" type="button" className="info-button button">
-            <span className="info-text5">Try Again</span>
+            <span className="info-text6">Try Again</span>
           </button>
           <div>
-            <div className="info-container2">
+            <div className="info-container3">
               <Script
                 html={`<script>
   document.getElementById("backButton").addEventListener("click", () => {
@@ -57,11 +57,21 @@ const Info = (props) => {
               ></Script>
             </div>
           </div>
+          <a
+            href="https://bytii.cloud"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="info-link"
+          >
+            <div className="info-signature">
+              <span className="info-text7">Bytii Cloud</span>
+            </div>
+          </a>
         </div>
       </div>
       <style jsx>
         {`
-          .info-container {
+          .info-container1 {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -81,7 +91,7 @@ const Info = (props) => {
             flex-direction: column;
             padding-bottom: var(--dl-space-space-fourunits);
           }
-          .info-text {
+          .info-text1 {
             color: var(--dl-color-scheme-green);
             width: 100%;
             align-self: center;
@@ -104,12 +114,30 @@ const Info = (props) => {
             border-color: var(--dl-color-scheme-green);
             background-color: var(--dl-color-scheme-green);
           }
-          .info-text5 {
+          .info-text6 {
             font-style: normal;
             font-weight: 700;
           }
-          .info-container2 {
+          .info-container3 {
             display: contents;
+          }
+          .info-link {
+            display: contents;
+          }
+          .info-signature {
+            left: 5px;
+            bottom: 5px;
+            display: flex;
+            position: absolute;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            text-decoration: none;
+          }
+          .info-text7 {
+            color: rgb(201, 206, 218);
+            font-style: normal;
+            font-weight: 300;
           }
           @media (max-width: 479px) {
             .info-image {

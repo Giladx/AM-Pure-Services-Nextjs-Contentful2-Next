@@ -10,9 +10,9 @@ const Banner = (props) => {
       >
         <a href="tel:8885031722">
           <div className="banner-max-width max-content-container">
-            <span className="banner-text">{props.text}</span>
-            <h2 className="banner-text1">
-              <span className="banner-text2">CALL US NOW</span>
+            <span className="banner-text1">{props.text}</span>
+            <h2 className="banner-text2">
+              <span className="banner-text3">CALL US NOW</span>
               <br className="Heading2"></br>
               <span className="Heading2">(888) 503 1722</span>
             </h2>
@@ -38,7 +38,7 @@ const Banner = (props) => {
           .banner-max-width:hover {
             cursor: pointer;
           }
-          .banner-text {
+          .banner-text1 {
             color: var(--dl-color-scheme-white);
             font-style: normal;
             text-align: center;
@@ -47,7 +47,7 @@ const Banner = (props) => {
             letter-spacing: 0.1em;
             text-transform: uppercase;
           }
-          .banner-text1 {
+          .banner-text2 {
             color: var(--dl-color-scheme-white);
             width: 100%;
             font-size: 46px;
@@ -57,87 +57,87 @@ const Banner = (props) => {
             margin-bottom: var(--dl-space-space-unit);
             letter-spacing: 0.01em;
           }
-          .banner-text2 {
+          .banner-text3 {
             font-weight: 900;
           }
           .banner-primary {
             margin-bottom: var(--dl-space-space-threeunits);
           }
-          .banner-root-class-name {
+          .bannerroot-class-name {
             width: 100%;
             align-self: center;
           }
 
-          .banner-root-class-name2 {
+          .bannerroot-class-name2 {
             width: 100%;
           }
-          .banner-root-class-name3 {
+          .bannerroot-class-name3 {
             width: 100%;
           }
-          .banner-root-class-name4 {
+          .bannerroot-class-name4 {
             width: 100%;
           }
 
-          .banner-root-class-name6 {
+          .bannerroot-class-name6 {
             width: 100%;
           }
-          .banner-root-class-name7 {
+          .bannerroot-class-name7 {
             display: none;
           }
-          .banner-root-class-name8 {
+          .bannerroot-class-name8 {
             display: none;
           }
-          .banner-root-class-name9 {
+          .bannerroot-class-name9 {
             width: 100%;
           }
-          .banner-root-class-name10 {
+          .bannerroot-class-name10 {
             width: 100%;
           }
-          .banner-root-class-name11 {
+          .bannerroot-class-name11 {
             width: 100%;
           }
-          .banner-root-class-name12 {
+          .bannerroot-class-name12 {
             width: 100%;
           }
-          .banner-root-class-name13 {
+          .bannerroot-class-name13 {
             width: 100%;
           }
-          .banner-root-class-name14 {
+          .bannerroot-class-name14 {
             width: 100%;
           }
-          .banner-root-class-name15 {
+          .bannerroot-class-name15 {
             width: 100%;
           }
-          .banner-root-class-name16 {
+          .bannerroot-class-name16 {
             width: 100%;
           }
-          .banner-root-class-name17 {
+          .bannerroot-class-name17 {
             width: 100%;
           }
-          .banner-root-class-name18 {
+          .bannerroot-class-name18 {
             width: 100%;
             align-self: center;
           }
-          .banner-root-class-name19 {
+          .bannerroot-class-name19 {
             width: 100%;
           }
-          .banner-root-class-name20 {
+          .bannerroot-class-name20 {
             width: 100%;
           }
-          .banner-root-class-name21 {
+          .bannerroot-class-name21 {
             width: 100%;
           }
-          .banner-root-class-name22 {
+          .bannerroot-class-name22 {
             width: 100%;
           }
-          .banner-root-class-name23 {
+          .bannerroot-class-name23 {
             width: 100%;
           }
           @media (max-width: 1200px) {
             .banner-banner {
               width: 100%;
             }
-            .banner-text1 {
+            .banner-text2 {
               color: var(--dl-color-scheme-white);
               font-size: 46px;
               font-family: Rubik;
@@ -145,13 +145,13 @@ const Banner = (props) => {
               letter-spacing: 0.01em;
               text-decoration: none;
             }
-            .banner-text2 {
+            .banner-text3 {
               font-weight: 900;
             }
-            .banner-root-class-name {
+            .bannerroot-class-name {
               width: 100%;
             }
-            .banner-root-class-name18 {
+            .bannerroot-class-name18 {
               width: 100%;
             }
           }

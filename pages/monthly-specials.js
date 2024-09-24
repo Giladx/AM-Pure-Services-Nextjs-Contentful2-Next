@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 
@@ -17,7 +17,7 @@ import monthlySpecials1Resource from '../resources/monthly-specials1'
 const MonthlySpecials = (props) => {
   return (
     <>
-      <div className="monthly-specials-container">
+      <div className="monthly-specials-container1">
         <Head>
           <title>
             Monthly-Specials - AM Pure Services | Airduct Cleaning | Drayer Vent
@@ -44,55 +44,55 @@ const MonthlySpecials = (props) => {
         <main className="monthly-specials-main">
           <div className="monthly-specials-title">
             <div className="monthly-specials-title-wrap">
-              <span className="monthly-specials-text">
+              <span className="monthly-specials-text10">
                 <span>OUR MONTHLY</span>
                 <br></br>
               </span>
             </div>
-            <span className="monthly-specials-text03">SPECIALS</span>
+            <span className="monthly-specials-text13">SPECIALS</span>
           </div>
-          <Packages rootClassName="packages-root-class-name"></Packages>
+          <Packages rootClassName="packagesroot-class-name"></Packages>
           <div className="monthly-specials-blog">
-            <div className="monthly-specials-container1">
-              <span className="monthly-specials-text04">from blog</span>
-              <h2 className="monthly-specials-text05">
+            <div className="monthly-specials-container2">
+              <span className="monthly-specials-text14">from blog</span>
+              <h2 className="monthly-specials-text15">
                 <span>Our Services</span>
                 <br></br>
               </h2>
             </div>
             <DataProvider
               renderSuccess={(params) => (
-                <>
-                  <div className="monthly-specials-container2">
+                <Fragment>
+                  <div className="monthly-specials-container3">
                     <Repeater
                       items={params}
                       renderItem={(context_kof7x) => (
-                        <>
+                        <Fragment>
                           <div className="monthly-specials-blog-cards-container">
                             <Link href={`/post/${context_kof7x?.slug}`}>
-                              <a className="monthly-specials-link">
+                              <a className="monthly-specials-link10">
                                 <div className="monthly-specials-blog-card">
                                   <img
                                     alt="image"
                                     src={context_kof7x?.coverImage?.url}
                                     loading="lazy"
-                                    className="monthly-specials-image"
+                                    className="monthly-specials-image1"
                                   />
-                                  <div className="monthly-specials-container3">
+                                  <div className="monthly-specials-container4">
                                     <div className="monthly-specials-tags">
                                       <Repeater
                                         items={context_kof7x?.tag || []}
                                         renderItem={(context_9oxe3a) => (
-                                          <>
-                                            <span className="monthly-specials-text08">
+                                          <Fragment>
+                                            <span className="monthly-specials-text18">
                                               {context_9oxe3a?.tagName}
                                             </span>
-                                          </>
+                                          </Fragment>
                                         )}
                                         renderEmpty={() => (
-                                          <>
+                                          <Fragment>
                                             <span>Text</span>
-                                          </>
+                                          </Fragment>
                                         )}
                                       />
                                     </div>
@@ -105,14 +105,14 @@ const MonthlySpecials = (props) => {
                                       </span>
                                     </div>
                                   </div>
-                                  <span className="monthly-specials-text10">
+                                  <span className="monthly-specials-text20">
                                     {context_kof7x?.title}
                                   </span>
-                                  <div className="monthly-specials-container4">
+                                  <div className="monthly-specials-container5">
                                     <span>Read More</span>
                                     <svg
                                       viewBox="0 0 1024 1024"
-                                      className="monthly-specials-icon"
+                                      className="monthly-specials-icon1"
                                     >
                                       <path d="M810 298h86v256h-648l154 154-60 60-256-256 256-256 60 60-154 154h562v-172z"></path>
                                     </svg>
@@ -121,45 +121,45 @@ const MonthlySpecials = (props) => {
                               </a>
                             </Link>
                           </div>
-                        </>
+                        </Fragment>
                       )}
                     />
                   </div>
-                </>
+                </Fragment>
               )}
               initialData={props.contextKof7xProp}
               persistDataDuringLoading={true}
             />
           </div>
-          <Banner rootClassName="banner-root-class-name3"></Banner>
+          <Banner rootClassName="bannerroot-class-name3"></Banner>
         </main>
         <div className="monthly-specials-footer section-container">
-          <div className="monthly-specials-max-width max-content-container">
+          <div className="monthly-specials-max-width1 max-content-container">
             <div className="monthly-specials-top-part">
               <div className="monthly-specials-links-container">
                 <div className="monthly-specials-product-container">
-                  <span className="monthly-specials-text12">Product</span>
+                  <span className="monthly-specials-text22">Product</span>
                   <Link href="/monthly-specials">
-                    <a className="monthly-specials-link01">MONTHLY SPECIALS</a>
+                    <a className="monthly-specials-link11">MONTHLY SPECIALS</a>
                   </Link>
                   <DataProvider
                     renderSuccess={(params) => (
-                      <>
-                        <div className="monthly-specials-container5">
+                      <Fragment>
+                        <div className="monthly-specials-container6">
                           <Repeater
                             items={params}
                             renderItem={(context_rxexon) => (
-                              <>
+                              <Fragment>
                                 <Link href={`/post/${context_rxexon?.slug}`}>
-                                  <a className="monthly-specials-link02">
+                                  <a className="monthly-specials-link12">
                                     {context_rxexon?.title}
                                   </a>
                                 </Link>
-                              </>
+                              </Fragment>
                             )}
                           />
                         </div>
-                      </>
+                      </Fragment>
                     )}
                     initialData={props.contextRxexonProp}
                     persistDataDuringLoading={true}
@@ -167,34 +167,34 @@ const MonthlySpecials = (props) => {
                 </div>
               </div>
               <div className="monthly-specials-navigate-container">
-                <span className="monthly-specials-text13">Info</span>
+                <span className="monthly-specials-text23">Info</span>
                 <Link href="/about">
-                  <a className="monthly-specials-link03">
+                  <a className="monthly-specials-link13">
                     <span>ABOUT</span>
                     <br></br>
                   </a>
                 </Link>
                 <Link href="/restrictions">
-                  <a className="monthly-specials-link04">RESTRICTIONS</a>
+                  <a className="monthly-specials-link14">RESTRICTIONS</a>
                 </Link>
                 <Link href="/contact">
-                  <a className="monthly-specials-link05">CONTACT</a>
+                  <a className="monthly-specials-link15">CONTACT</a>
                 </Link>
               </div>
               <div className="monthly-specials-contact-container">
-                <span className="monthly-specials-text16">Contact Us</span>
-                <a href="tel:+18885031722" className="monthly-specials-link06">
+                <span className="monthly-specials-text26">Contact Us</span>
+                <a href="tel:+18885031722" className="monthly-specials-link16">
                   (888) 503-1722
                 </a>
                 <a
                   href="mailto:service@ampureservices.com?subject=Site Service Request"
-                  className="monthly-specials-link07"
+                  className="monthly-specials-link17"
                 >
                   SERVICE@AMPURESERVICES.COM
                 </a>
               </div>
               <div className="monthly-specials-subscribe-container">
-                <span className="monthly-specials-text17">
+                <span className="monthly-specials-text27">
                   Subscribe to our newsletter
                 </span>
                 <input
@@ -208,20 +208,20 @@ const MonthlySpecials = (props) => {
             </div>
           </div>
           <div className="monthly-specials-separator"></div>
-          <footer className="monthly-specials-max-width1 max-content-container">
+          <footer className="monthly-specials-max-width2 max-content-container">
             <Link href="/">
               <a>
                 <img
                   alt="image"
-                  src="20769734-2b37-4566-8316-77ad864b1180"
+                  src="/logoam-200h.webp"
                   width="150"
                   height="68"
-                  className="monthly-specials-image1"
+                  className="monthly-specials-image2"
                 />
               </a>
             </Link>
             <Link href="/">
-              <a className="monthly-specials-link09">
+              <a className="monthly-specials-link19">
                 All rights reserved @ AM Pure Services
               </a>
             </Link>
@@ -229,16 +229,25 @@ const MonthlySpecials = (props) => {
               href="https://011.ninja/bio"
               target="_blank"
               rel="noreferrer noopener"
-              className="monthly-specials-link10"
+              className="monthly-specials-link20"
             >
               Developed by 011.ninja
             </a>
           </footer>
+          <a
+            href="https://bytii.cloud"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div className="monthly-specials-signature">
+              <span className="monthly-specials-text28">Bytii Cloud</span>
+            </div>
+          </a>
         </div>
       </div>
       <style jsx>
         {`
-          .monthly-specials-container {
+          .monthly-specials-container1 {
             width: 100%;
             display: flex;
             position: relative;
@@ -275,14 +284,14 @@ const MonthlySpecials = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .monthly-specials-text {
+          .monthly-specials-text10 {
             font-size: 48px;
             align-self: center;
             font-style: normal;
             font-family: Rubik;
             font-weight: 900;
           }
-          .monthly-specials-text03 {
+          .monthly-specials-text13 {
             font-size: 48px;
             align-self: center;
             font-style: normal;
@@ -317,7 +326,7 @@ const MonthlySpecials = (props) => {
             padding-bottom: var(--dl-space-space-sixunits);
             justify-content: center;
           }
-          .monthly-specials-container1 {
+          .monthly-specials-container2 {
             flex: 0 0 auto;
             width: auto;
             height: 100px;
@@ -326,7 +335,7 @@ const MonthlySpecials = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .monthly-specials-text04 {
+          .monthly-specials-text14 {
             color: var(--dl-color-scheme-green);
             font-style: normal;
             text-align: center;
@@ -335,7 +344,7 @@ const MonthlySpecials = (props) => {
             letter-spacing: 0.1em;
             text-transform: uppercase;
           }
-          .monthly-specials-text05 {
+          .monthly-specials-text15 {
             font-size: 46px;
             font-style: normal;
             text-align: center;
@@ -346,7 +355,7 @@ const MonthlySpecials = (props) => {
             letter-spacing: 0.01em;
             text-decoration: none;
           }
-          .monthly-specials-container2 {
+          .monthly-specials-container3 {
             display: grid;
             grid-gap: 20px;
             grid-template-columns: repeat(3, 1fr);
@@ -359,7 +368,7 @@ const MonthlySpecials = (props) => {
             flex-direction: row;
             justify-content: space-between;
           }
-          .monthly-specials-link {
+          .monthly-specials-link10 {
             display: contents;
           }
           .monthly-specials-blog-card {
@@ -372,14 +381,14 @@ const MonthlySpecials = (props) => {
             flex-direction: column;
             text-decoration: none;
           }
-          .monthly-specials-image {
+          .monthly-specials-image1 {
             width: 100%;
             height: 200px;
             object-fit: cover;
             border-radius: var(--dl-radius-radius-radius8);
             margin-bottom: var(--dl-space-space-halfunit);
           }
-          .monthly-specials-container3 {
+          .monthly-specials-container4 {
             flex: 0 0 auto;
             width: 100%;
             display: flex;
@@ -395,7 +404,7 @@ const MonthlySpecials = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .monthly-specials-text08 {
+          .monthly-specials-text18 {
             color: var(--dl-color-scheme-white);
             padding: var(--dl-space-space-halfunit);
             font-size: 12px;
@@ -419,11 +428,11 @@ const MonthlySpecials = (props) => {
             text-align: right;
             font-weight: 700;
           }
-          .monthly-specials-text10 {
+          .monthly-specials-text20 {
             font-style: normal;
             font-weight: 600;
           }
-          .monthly-specials-container4 {
+          .monthly-specials-container5 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -431,7 +440,7 @@ const MonthlySpecials = (props) => {
             align-items: flex-start;
             justify-content: flex-start;
           }
-          .monthly-specials-icon {
+          .monthly-specials-icon1 {
             width: 24px;
             height: 24px;
             margin-left: var(--dl-space-space-halfunit);
@@ -439,7 +448,7 @@ const MonthlySpecials = (props) => {
           .monthly-specials-footer {
             position: relative;
           }
-          .monthly-specials-max-width {
+          .monthly-specials-max-width1 {
             max-width: var(--dl-size-size-maxwidth);
             padding-left: 0px;
             padding-right: 0px;
@@ -467,20 +476,20 @@ const MonthlySpecials = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .monthly-specials-text12 {
+          .monthly-specials-text22 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .monthly-specials-link01 {
+          .monthly-specials-link11 {
             color: var(--dl-color-scheme-darkblue);
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .monthly-specials-container5 {
+          .monthly-specials-container6 {
             display: grid;
           }
-          .monthly-specials-link02 {
+          .monthly-specials-link12 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -492,20 +501,20 @@ const MonthlySpecials = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .monthly-specials-text13 {
+          .monthly-specials-text23 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .monthly-specials-link03 {
+          .monthly-specials-link13 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .monthly-specials-link04 {
+          .monthly-specials-link14 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .monthly-specials-link05 {
+          .monthly-specials-link15 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -517,16 +526,16 @@ const MonthlySpecials = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .monthly-specials-text16 {
+          .monthly-specials-text26 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .monthly-specials-link06 {
+          .monthly-specials-link16 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .monthly-specials-link07 {
+          .monthly-specials-link17 {
             font-size: 14px;
             font-style: normal;
             font-family: Rubik;
@@ -543,7 +552,7 @@ const MonthlySpecials = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .monthly-specials-text17 {
+          .monthly-specials-text27 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
@@ -569,29 +578,44 @@ const MonthlySpecials = (props) => {
             margin-bottom: var(--dl-space-space-twounits);
             background-color: #d9d9d9;
           }
-          .monthly-specials-max-width1 {
+          .monthly-specials-max-width2 {
             flex-direction: row;
             justify-content: space-between;
           }
-          .monthly-specials-image1 {
+          .monthly-specials-image2 {
             width: 150px;
             object-fit: cover;
             text-decoration: none;
           }
-          .monthly-specials-link09 {
+          .monthly-specials-link19 {
             width: auto;
             font-style: normal;
             text-align: center;
             font-weight: 300;
             text-decoration: none;
           }
-          .monthly-specials-link10 {
+          .monthly-specials-link20 {
             font-style: normal;
             font-weight: 300;
             text-decoration: none;
           }
+          .monthly-specials-signature {
+            left: 5px;
+            bottom: 5px;
+            display: flex;
+            position: absolute;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            text-decoration: none;
+          }
+          .monthly-specials-text28 {
+            color: rgb(201, 206, 218);
+            font-style: normal;
+            font-weight: 300;
+          }
           @media (max-width: 1600px) {
-            .monthly-specials-container3 {
+            .monthly-specials-container4 {
               width: 100%;
               flex-direction: row;
             }
@@ -599,7 +623,7 @@ const MonthlySpecials = (props) => {
               width: 70%;
               flex-direction: row;
             }
-            .monthly-specials-text08 {
+            .monthly-specials-text18 {
               color: var(--dl-color-scheme-white);
               padding: var(--dl-space-space-halfunit);
               font-size: 12px;
@@ -626,22 +650,22 @@ const MonthlySpecials = (props) => {
             .monthly-specials-contact-container {
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .monthly-specials-link09 {
+            .monthly-specials-link19 {
               width: auto;
               text-align: center;
             }
           }
           @media (max-width: 1200px) {
-            .monthly-specials-image {
+            .monthly-specials-image1 {
               height: 180px;
             }
-            .monthly-specials-text10 {
+            .monthly-specials-text20 {
               font-style: normal;
               font-weight: 700;
               margin-bottom: var(--dl-space-space-unit);
               text-transform: uppercase;
             }
-            .monthly-specials-max-width {
+            .monthly-specials-max-width1 {
               padding-left: 0px;
               padding-right: 0px;
             }
@@ -652,10 +676,10 @@ const MonthlySpecials = (props) => {
               align-self: flex-start;
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .monthly-specials-link06 {
+            .monthly-specials-link16 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .monthly-specials-link07 {
+            .monthly-specials-link17 {
               font-size: 16px;
               font-style: normal;
               font-weight: 900;
@@ -663,7 +687,7 @@ const MonthlySpecials = (props) => {
               margin-bottom: var(--dl-space-space-unit);
               letter-spacing: auto;
             }
-            .monthly-specials-link09 {
+            .monthly-specials-link19 {
               width: auto;
               text-align: center;
             }
@@ -676,28 +700,28 @@ const MonthlySpecials = (props) => {
             .monthly-specials-blog-card {
               max-width: 550px;
             }
-            .monthly-specials-link09 {
+            .monthly-specials-link19 {
               text-align: center;
             }
-            .monthly-specials-link10 {
+            .monthly-specials-link20 {
               text-align: center;
             }
           }
           @media (max-width: 767px) {
-            .monthly-specials-text {
+            .monthly-specials-text10 {
               font-size: 30px;
             }
-            .monthly-specials-text03 {
+            .monthly-specials-text13 {
               font-size: 35px;
             }
-            .monthly-specials-container2 {
+            .monthly-specials-container3 {
               width: 100%;
               grid-template-columns: repeat(1, 1fr);
             }
             .monthly-specials-blog-card {
               max-width: 450px;
             }
-            .monthly-specials-image {
+            .monthly-specials-image1 {
               height: auto;
             }
             .monthly-specials-top-part {
@@ -723,18 +747,18 @@ const MonthlySpecials = (props) => {
               padding-left: var(--dl-space-space-oneandhalfunits);
               padding-right: var(--dl-space-space-oneandhalfunits);
             }
-            .monthly-specials-link09 {
+            .monthly-specials-link19 {
               text-align: center;
             }
-            .monthly-specials-link10 {
+            .monthly-specials-link20 {
               text-align: center;
             }
           }
           @media (max-width: 479px) {
-            .monthly-specials-text {
+            .monthly-specials-text10 {
               font-size: 25px;
             }
-            .monthly-specials-text03 {
+            .monthly-specials-text13 {
               font-size: 25px;
             }
             .monthly-specials-blog-card {
@@ -763,16 +787,16 @@ const MonthlySpecials = (props) => {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-bottom: 0px;
             }
-            .monthly-specials-link07 {
+            .monthly-specials-link17 {
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }
-            .monthly-specials-max-width1 {
+            .monthly-specials-max-width2 {
               flex-direction: column;
             }
-            .monthly-specials-image1 {
+            .monthly-specials-image2 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .monthly-specials-link09 {
+            .monthly-specials-link19 {
               text-align: center;
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }

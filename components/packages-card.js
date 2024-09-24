@@ -14,18 +14,18 @@ const PackagesCard = (props) => {
         <span className="packages-card-price">{props.price}</span>
         <span className="packages-card-text">{props.start}</span>
         <div className="packages-card-features">
-          <span className="packages-card-details">{props.details111}</span>
-          <span className="packages-card-details1">{props.details}</span>
-          <span className="packages-card-details2">{props.details1}</span>
-          <span className="packages-card-details3">{props.details11}</span>
-          <span className="packages-card-details4">{props.details1111}</span>
+          <span className="packages-card-details1">{props.details111}</span>
+          <span className="packages-card-details2">{props.details}</span>
+          <span className="packages-card-details3">{props.details1}</span>
+          <span className="packages-card-details4">{props.details11}</span>
+          <span className="packages-card-details5">{props.details1111}</span>
         </div>
         <div className="packages-card-button-res">
           <Link href="/order-rquest">
             <a className="packages-card-link button">{props.button}</a>
           </Link>
-          <span className="packages-card-restrictions">{props.form}</span>
-          <span className="packages-card-restrictions1">{props.form1}</span>
+          <span className="packages-card-restrictions1">{props.form}</span>
+          <span className="packages-card-restrictions2">{props.form1}</span>
         </div>
       </div>
       <style jsx>
@@ -76,12 +76,6 @@ const PackagesCard = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .packages-card-details {
-            width: 100%;
-            height: auto;
-            text-align: center;
-            margin-bottom: var(--dl-space-space-halfunit);
-          }
           .packages-card-details1 {
             width: 100%;
             height: auto;
@@ -101,6 +95,12 @@ const PackagesCard = (props) => {
             margin-bottom: var(--dl-space-space-halfunit);
           }
           .packages-card-details4 {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            margin-bottom: var(--dl-space-space-halfunit);
+          }
+          .packages-card-details5 {
             width: 100%;
             height: auto;
             text-align: center;
@@ -128,10 +128,10 @@ const PackagesCard = (props) => {
             cursor: pointer;
             background-color: var(--dl-color-scheme-green);
           }
-          .packages-card-root-class-name {
+          .packages-cardroot-class-name {
             display: none;
           }
-          .packages-card-root-class-name1 {
+          .packages-cardroot-class-name1 {
             display: none;
           }
           @media (max-width: 1200px) {
@@ -152,10 +152,6 @@ const PackagesCard = (props) => {
               font-weight: 300;
               padding-bottom: var(--dl-space-space-oneandhalfunits);
             }
-            .packages-card-details {
-              width: 100%;
-              text-align: center;
-            }
             .packages-card-details1 {
               width: 100%;
               text-align: center;
@@ -172,6 +168,10 @@ const PackagesCard = (props) => {
               width: 100%;
               text-align: center;
             }
+            .packages-card-details5 {
+              width: 100%;
+              text-align: center;
+            }
             .packages-card-link {
               color: var(--dl-color-scheme-green);
               width: 100%;
@@ -179,10 +179,10 @@ const PackagesCard = (props) => {
               border-width: 1px;
               border-radius: var(--dl-radius-radius-radius8);
             }
-            .packages-card-restrictions {
+            .packages-card-restrictions1 {
               margin-top: var(--dl-space-space-unit);
             }
-            .packages-card-restrictions1 {
+            .packages-card-restrictions2 {
               margin-top: var(--dl-space-space-unit);
             }
           }

@@ -8,32 +8,32 @@ const NavigationLinks = (props) => {
     <>
       <nav className={`navigation-links-nav ${props.rootClassName} `}>
         <Link href="/monthly-specials">
-          <a className="navigation-links-link Navigation-LinkLaptopMobile">
+          <a className="navigation-links-link1 Navigation-LinkLaptopMobile">
             {props.link1}
           </a>
         </Link>
         <Link href="/services">
-          <a className="navigation-links-link1 Navigation-LinkLaptopMobile">
+          <a className="navigation-links-link2 Navigation-LinkLaptopMobile">
             {props.link2}
           </a>
         </Link>
         <Link href="/post">
-          <a className="navigation-links-link3 Navigation-LinkLaptopMobile">
+          <a className="navigation-links-link4 Navigation-LinkLaptopMobile">
             {props.link21}
           </a>
         </Link>
         <Link href="/about">
-          <a className="navigation-links-link4 Navigation-LinkLaptopMobile">
+          <a className="navigation-links-link5 Navigation-LinkLaptopMobile">
             {props.link3}
           </a>
         </Link>
         <Link href="/contact">
-          <a className="navigation-links-link5 Navigation-LinkLaptopMobile">
+          <a className="navigation-links-link6 Navigation-LinkLaptopMobile">
             {props.link4}
           </a>
         </Link>
         <Link href="/business-relations">
-          <a className="navigation-links-link6 Navigation-LinkLaptopMobile">
+          <a className="navigation-links-link7 Navigation-LinkLaptopMobile">
             {props.link5}
           </a>
         </Link>
@@ -48,18 +48,12 @@ const NavigationLinks = (props) => {
             align-items: center;
             flex-direction: row;
           }
-          .navigation-links-link {
-            cursor: pointer;
-            transition: 0.3s;
-            text-decoration: none;
-          }
           .navigation-links-link1 {
             cursor: pointer;
             transition: 0.3s;
-            margin-left: var(--dl-space-space-oneandhalfunits);
             text-decoration: none;
           }
-          .navigation-links-link3 {
+          .navigation-links-link2 {
             cursor: pointer;
             transition: 0.3s;
             margin-left: var(--dl-space-space-oneandhalfunits);
@@ -81,30 +75,33 @@ const NavigationLinks = (props) => {
             cursor: pointer;
             transition: 0.3s;
             margin-left: var(--dl-space-space-oneandhalfunits);
+            text-decoration: none;
+          }
+          .navigation-links-link7 {
+            cursor: pointer;
+            transition: 0.3s;
+            margin-left: var(--dl-space-space-oneandhalfunits);
             margin-right: var(--dl-space-space-oneandhalfunits);
             text-decoration: none;
           }
 
-          .navigation-links-root-class-name8 {
+          .navigation-linksroot-class-name8 {
             width: auto;
             min-width: auto;
             margin-right: 0px;
           }
-          .navigation-links-root-class-name9 {
+          .navigation-linksroot-class-name9 {
             width: auto;
             min-width: auto;
             margin-right: 0px;
           }
-          .navigation-links-root-class-name17 {
+          .navigation-linksroot-class-name17 {
             width: auto;
             min-width: auto;
             margin-right: 0px;
           }
           @media (max-width: 1600px) {
-            .navigation-links-link1 {
-              margin-left: 15px;
-            }
-            .navigation-links-link3 {
+            .navigation-links-link2 {
               margin-left: 15px;
             }
             .navigation-links-link4 {
@@ -114,6 +111,9 @@ const NavigationLinks = (props) => {
               margin-left: 15px;
             }
             .navigation-links-link6 {
+              margin-left: 15px;
+            }
+            .navigation-links-link7 {
               margin-left: 15px;
               margin-right: 15px;
             }
@@ -123,15 +123,10 @@ const NavigationLinks = (props) => {
               align-items: flex-start;
               flex-direction: column;
             }
-            .navigation-links-link {
-              padding-bottom: var(--dl-space-space-unit);
-            }
             .navigation-links-link1 {
-              margin-left: 0px;
-              margin-right: 0px;
               padding-bottom: var(--dl-space-space-unit);
             }
-            .navigation-links-link3 {
+            .navigation-links-link2 {
               margin-left: 0px;
               margin-right: 0px;
               padding-bottom: var(--dl-space-space-unit);
@@ -147,6 +142,11 @@ const NavigationLinks = (props) => {
               padding-bottom: var(--dl-space-space-unit);
             }
             .navigation-links-link6 {
+              margin-left: 0px;
+              margin-right: 0px;
+              padding-bottom: var(--dl-space-space-unit);
+            }
+            .navigation-links-link7 {
               margin-left: 0px;
               margin-right: 0px;
               padding-bottom: var(--dl-space-space-unit);
@@ -157,14 +157,10 @@ const NavigationLinks = (props) => {
               align-items: flex-start;
               flex-direction: column;
             }
-            .navigation-links-link {
+            .navigation-links-link1 {
               padding-bottom: var(--dl-space-space-unit);
             }
-            .navigation-links-link1 {
-              margin-left: 0px;
-              margin-bottom: var(--dl-space-space-unit);
-            }
-            .navigation-links-link3 {
+            .navigation-links-link2 {
               margin-left: 0px;
               margin-bottom: var(--dl-space-space-unit);
             }
@@ -180,9 +176,13 @@ const NavigationLinks = (props) => {
               margin-left: 0px;
               margin-bottom: var(--dl-space-space-unit);
             }
+            .navigation-links-link7 {
+              margin-left: 0px;
+              margin-bottom: var(--dl-space-space-unit);
+            }
           }
           @media (max-width: 479px) {
-            .navigation-links-link {
+            .navigation-links-link1 {
               margin-bottom: var(--dl-space-space-unit);
             }
           }
@@ -194,7 +194,6 @@ const NavigationLinks = (props) => {
 
 NavigationLinks.defaultProps = {
   link21: 'BLOG',
-  link51: 'REVIEWS',
   link3: 'ABOUT',
   rootClassName: '',
   link2: 'SERVICES',
@@ -205,7 +204,6 @@ NavigationLinks.defaultProps = {
 
 NavigationLinks.propTypes = {
   link21: PropTypes.string,
-  link51: PropTypes.string,
   link3: PropTypes.string,
   rootClassName: PropTypes.string,
   link2: PropTypes.string,

@@ -6,7 +6,7 @@ import Script from 'dangerous-html/react'
 const Refund = (props) => {
   return (
     <>
-      <div className="refund-container">
+      <div className="refund-container1">
         <Head>
           <title>
             Refund - AM Pure Services | Airduct Cleaning | Drayer Vent Cleaning
@@ -29,8 +29,8 @@ const Refund = (props) => {
           />
           <meta name="robots" content="noindex" />
         </Head>
-        <div className="refund-container1">
-          <div className="refund-container2">
+        <div className="refund-container2">
+          <div className="refund-container3">
             <Script
               html={`<iframe
 id="JotFormIFrame-210101469985053"
@@ -117,7 +117,7 @@ if (window.addEventListener) {
           </div>
         </div>
         <div>
-          <div className="refund-container4">
+          <div className="refund-container5">
             <Script
               html={`<script language="JavaScript">
 var passwordpg; 
@@ -133,7 +133,7 @@ else { window.location="/info";}
       </div>
       <style jsx>
         {`
-          .refund-container {
+          .refund-container1 {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -141,13 +141,13 @@ else { window.location="/info";}
             align-items: center;
             flex-direction: column;
           }
-          .refund-container1 {
+          .refund-container2 {
             width: 100%;
           }
-          .refund-container2 {
+          .refund-container3 {
             display: contents;
           }
-          .refund-container4 {
+          .refund-container5 {
             display: contents;
           }
         `}

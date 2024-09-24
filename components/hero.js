@@ -11,7 +11,7 @@ const Hero = (props) => {
       <div className="hero-hero section-container">
         <div className="hero-max-width max-content-container">
           <div className="hero-heading-container">
-            <ListContainer rootClassName="list-container-root-class-name1"></ListContainer>
+            <ListContainer rootClassName="list-containerroot-class-name1"></ListContainer>
             <Link href="/monthly-specials">
               <a className="hero-link button-primary button-lg button">
                 {props.primary}

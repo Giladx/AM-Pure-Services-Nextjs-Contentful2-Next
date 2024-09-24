@@ -7,7 +7,7 @@ import Script from 'dangerous-html/react'
 const Campaign = (props) => {
   return (
     <>
-      <div className="campaign-container">
+      <div className="campaign-container10">
         <Head>
           <title>
             Campaign - AM Pure Services | Airduct Cleaning | Drayer Vent
@@ -35,11 +35,11 @@ const Campaign = (props) => {
           <img
             alt="image"
             src="/91874469-53be-4f66-8d46-f7f0ad90ccb0no-shadow-200h.webp"
-            className="campaign-image"
+            className="campaign-image10"
           />
         </div>
         <div className="campaign-tiltle">
-          <h1 className="campaign-text">Professional air duct cleaning</h1>
+          <h1 className="campaign-text10">Professional air duct cleaning</h1>
         </div>
         <animate-on-reveal
           animation="fadeIn"
@@ -54,86 +54,86 @@ const Campaign = (props) => {
             data-thq-animate-on-reveal="true"
             className="campaign-before-after"
           >
-            <div className="campaign-slider">
+            <div className="campaign-slider1">
               <div
                 data-thq="slider"
                 data-loop="true"
                 data-autoplay="true"
                 data-navigation="false"
                 data-pagination="false"
-                className="campaign-slider1 swiper"
+                className="campaign-slider2 swiper"
               >
                 <div data-thq="slider-wrapper" className="swiper-wrapper">
                   <div
                     data-thq="slider-slide"
-                    className="campaign-slider-slide swiper-slide"
+                    className="campaign-slider-slide1 swiper-slide"
                   >
-                    <div className="campaign-slide">
-                      <img
-                        src="/photo_5_2024-03-24_17-04-29-200h.webp"
-                        className="campaign-image01"
-                      />
-                      <div className="campaign-container01">
-                        <span className="campaign-text01">Before</span>
-                        <span className="campaign-text02">After</span>
-                      </div>
-                    </div>
                     <div className="campaign-slide1">
                       <img
-                        src="/photo_2_2024-03-24_17-04-29-200h.webp"
-                        className="campaign-image02"
+                        src="/photo_5_2024-03-24_17-04-29-200h.webp"
+                        className="campaign-image11"
                       />
-                      <div className="campaign-container02">
-                        <span className="campaign-text03">Before</span>
-                        <span className="campaign-text04">After</span>
+                      <div className="campaign-container11">
+                        <span className="campaign-text11">Before</span>
+                        <span className="campaign-text12">After</span>
                       </div>
                     </div>
                     <div className="campaign-slide2">
                       <img
-                        src="/photo_4_2024-03-24_17-04-29-200h.webp"
-                        className="campaign-image03"
+                        src="/photo_2_2024-03-24_17-04-29-200h.webp"
+                        className="campaign-image12"
                       />
-                      <div className="campaign-container03">
-                        <span className="campaign-text05">Before</span>
-                        <span className="campaign-text06">After</span>
+                      <div className="campaign-container12">
+                        <span className="campaign-text13">Before</span>
+                        <span className="campaign-text14">After</span>
+                      </div>
+                    </div>
+                    <div className="campaign-slide3">
+                      <img
+                        src="/photo_4_2024-03-24_17-04-29-200h.webp"
+                        className="campaign-image13"
+                      />
+                      <div className="campaign-container13">
+                        <span className="campaign-text15">Before</span>
+                        <span className="campaign-text16">After</span>
                       </div>
                     </div>
                   </div>
                   <div
                     data-thq="slider-slide"
-                    className="campaign-slider-slide1 swiper-slide"
+                    className="campaign-slider-slide2 swiper-slide"
                   >
-                    <div className="campaign-slide3">
-                      <img
-                        alt="image"
-                        src="/photo_6_2024-03-24_17-04-29-200h.webp"
-                        className="campaign-image04"
-                      />
-                      <div className="campaign-container04">
-                        <span className="campaign-text07">Before</span>
-                        <span className="campaign-text08">After</span>
-                      </div>
-                    </div>
                     <div className="campaign-slide4">
                       <img
                         alt="image"
-                        src="/photo_7_2024-03-24_17-04-29-200h.webp"
-                        className="campaign-image05"
+                        src="/photo_6_2024-03-24_17-04-29-200h.webp"
+                        className="campaign-image14"
                       />
-                      <div className="campaign-container05">
-                        <span className="campaign-text09">Before</span>
-                        <span className="campaign-text10">After</span>
+                      <div className="campaign-container14">
+                        <span className="campaign-text17">Before</span>
+                        <span className="campaign-text18">After</span>
                       </div>
                     </div>
                     <div className="campaign-slide5">
                       <img
                         alt="image"
-                        src="/photo_8_2024-03-24_17-04-29-200h.webp"
-                        className="campaign-image06"
+                        src="/photo_7_2024-03-24_17-04-29-200h.webp"
+                        className="campaign-image15"
                       />
-                      <div className="campaign-container06">
-                        <span className="campaign-text11">Before</span>
-                        <span className="campaign-text12">After</span>
+                      <div className="campaign-container15">
+                        <span className="campaign-text19">Before</span>
+                        <span className="campaign-text20">After</span>
+                      </div>
+                    </div>
+                    <div className="campaign-slide6">
+                      <img
+                        alt="image"
+                        src="/photo_8_2024-03-24_17-04-29-200h.webp"
+                        className="campaign-image16"
+                      />
+                      <div className="campaign-container16">
+                        <span className="campaign-text21">Before</span>
+                        <span className="campaign-text22">After</span>
                       </div>
                     </div>
                   </div>
@@ -164,14 +164,14 @@ const Campaign = (props) => {
           </div>
         </animate-on-reveal>
         <div className="campaign-call-now">
-          <a href="tel:+18885031722" className="campaign-link button">
-            <span className="campaign-text13">Get An Estimate</span>
-            <svg viewBox="0 0 1024 1024" className="campaign-icon">
+          <a href="tel:+18885031722" className="campaign-link1 button">
+            <span className="campaign-text23">Get An Estimate</span>
+            <svg viewBox="0 0 1024 1024" className="campaign-icon1">
               <path d="M598 854v-684h-428v684h428zM598 42q34 0 59 26t25 60v768q0 34-25 60t-59 26h-428q-34 0-59-26t-25-60v-768q0-34 25-60t59-26h428zM768 418q40 42 40 94t-40 90l-42-44q36-50 0-98zM858 328q80 76 80 183t-80 181l-44-44q58-62 58-141t-58-135z"></path>
             </svg>
           </a>
           <div>
-            <div className="campaign-container08">
+            <div className="campaign-container18">
               <Script
                 html={`<style>
 .button:hover * {
@@ -194,11 +194,11 @@ const Campaign = (props) => {
           <div
             data-aos="fade"
             data-thq-animate-on-reveal="true"
-            className="campaign-form"
+            className="campaign-form1"
           >
-            <h1 className="campaign-text14">Get a Quote</h1>
-            <div className="campaign-container09">
-              <div className="campaign-container10">
+            <h1 className="campaign-text24">Get a Quote</h1>
+            <div className="campaign-container19">
+              <div className="campaign-container20">
                 <Script
                   html={`
     <iframe
@@ -231,16 +231,16 @@ const Campaign = (props) => {
             data-thq-animate-on-reveal="true"
             className="campaign-reviews"
           >
-            <div className="campaign-container11">
+            <div className="campaign-container21">
               <img
                 alt="image"
                 src="/google-review-logo-200h.webp"
-                className="campaign-image07"
+                className="campaign-image17"
               />
               <div className="campaign-separator"></div>
             </div>
-            <div className="campaign-container12">
-              <div className="campaign-container13">
+            <div className="campaign-container22">
+              <div className="campaign-container23">
                 <Script
                   html={`<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
 <div style="height:auto;" class="elfsight-app-022a64ba-bfe8-4981-9894-9414187371fe" data-elfsight-app-lazy></div>`}
@@ -250,19 +250,19 @@ const Campaign = (props) => {
           </div>
         </animate-on-reveal>
         <div data-aos="fade" className="campaign-coupon">
-          <h1 className="campaign-text15">
+          <h1 className="campaign-text25">
             <span>GET 100$ OFF DEEP CLEANING</span>
             <br></br>
           </h1>
           <Link href="/coupon">
-            <a className="campaign-link1">
-              <div className="campaign-container14">
-                <div className="campaign-container15">
-                  <span className="campaign-text18">Coupon Voucher</span>
-                  <span className="campaign-text19">100$ OFF</span>
-                  <span className="campaign-text20">Deep Cleaning</span>
+            <a className="campaign-link2">
+              <div className="campaign-container24">
+                <div className="campaign-container25">
+                  <span className="campaign-text28">Coupon Voucher</span>
+                  <span className="campaign-text29">100$ OFF</span>
+                  <span className="campaign-text30">Deep Cleaning</span>
                 </div>
-                <div className="campaign-container16">
+                <div className="campaign-container26">
                   <img
                     alt="pastedImage"
                     src="/external/pastedimage-n52k.svg"
@@ -273,12 +273,12 @@ const Campaign = (props) => {
             </a>
           </Link>
         </div>
-        <a href="tel:+18885031722" className="campaign-link2">
+        <a href="tel:+18885031722" className="campaign-link3">
           <div data-aos="fade" className="campaign-call-us section-container">
             <div className="campaign-max-width max-content-container">
-              <span className="campaign-text21">what are you waiting for?</span>
-              <h2 className="campaign-text22">
-                <span className="campaign-text23">CALL US NOW</span>
+              <span className="campaign-text31">what are you waiting for?</span>
+              <h2 className="campaign-text32">
+                <span className="campaign-text33">CALL US NOW</span>
                 <br className="Heading2"></br>
                 <span className="Heading2">(888) 503 1722</span>
               </h2>
@@ -290,7 +290,7 @@ const Campaign = (props) => {
         </a>
         <div className="campaign-stickers">
           <div className="campaign-sticker-wrap">
-            <div className="campaign-container17">
+            <div className="campaign-container27">
               <img
                 alt="image"
                 src="/elite-solid-border-500w.webp"
@@ -298,7 +298,7 @@ const Campaign = (props) => {
                 height="160"
                 loading="lazy"
                 data-aos="fade-right"
-                className="campaign-image08"
+                className="campaign-image18"
               />
               <img
                 alt="image"
@@ -307,7 +307,7 @@ const Campaign = (props) => {
                 height="146"
                 loading="lazy"
                 data-aos="fade-up"
-                className="campaign-image09"
+                className="campaign-image19"
               />
               <img
                 alt="image"
@@ -316,7 +316,7 @@ const Campaign = (props) => {
                 height="160"
                 loading="lazy"
                 data-aos="fade-left"
-                className="campaign-image10"
+                className="campaign-image20"
               />
             </div>
           </div>
@@ -332,11 +332,11 @@ const Campaign = (props) => {
           <div
             data-aos="fade"
             data-thq-animate-on-reveal="true"
-            className="campaign-form1"
+            className="campaign-form2"
           >
-            <h1 className="campaign-text26">Get a Quote</h1>
-            <div className="campaign-container18">
-              <div className="campaign-container19">
+            <h1 className="campaign-text36">Get a Quote</h1>
+            <div className="campaign-container28">
+              <div className="campaign-container29">
                 <Script
                   html={`
     <iframe
@@ -359,7 +359,7 @@ const Campaign = (props) => {
       </div>
       <style jsx>
         {`
-          .campaign-container {
+          .campaign-container10 {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -376,7 +376,7 @@ const Campaign = (props) => {
             margin-bottom: var(--dl-space-space-unit);
             flex-direction: column;
           }
-          .campaign-image {
+          .campaign-image10 {
             width: 50%;
             object-fit: cover;
             animation-name: fadeIn;
@@ -395,7 +395,7 @@ const Campaign = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .campaign-text {
+          .campaign-text10 {
             width: 100%;
             align-self: center;
             text-align: center;
@@ -413,7 +413,7 @@ const Campaign = (props) => {
             flex-direction: column;
             background-color: var(--dl-color-scheme-lightgreen);
           }
-          .campaign-slider {
+          .campaign-slider1 {
             flex: 0 0 auto;
             width: 100%;
             height: auto;
@@ -424,129 +424,10 @@ const Campaign = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .campaign-slider1 {
+          .campaign-slider2 {
             width: 100%;
             height: auto;
             display: inline-block;
-          }
-          .campaign-slider-slide {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            margin-bottom: var(--dl-space-space-twounits);
-            background-size: 100%;
-            justify-content: center;
-          }
-          .campaign-slide {
-            flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .campaign-image01 {
-            width: auto;
-            height: 100%;
-            margin: var(--dl-space-space-halfunit);
-            object-fit: cover;
-            border-radius: var(--dl-radius-radius-radius8);
-          }
-          .campaign-container01 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: row;
-          }
-          .campaign-text01 {
-            width: 50%;
-            height: 50%;
-            font-size: 24px;
-            align-self: flex-start;
-            text-align: center;
-            font-weight: bold;
-          }
-          .campaign-text02 {
-            width: 50%;
-            font-size: 24px;
-            text-align: center;
-            font-weight: bold;
-          }
-          .campaign-slide1 {
-            flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .campaign-image02 {
-            width: auto;
-            height: 100%;
-            margin: var(--dl-space-space-halfunit);
-            object-fit: cover;
-            border-radius: var(--dl-radius-radius-radius8);
-          }
-          .campaign-container02 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: row;
-          }
-          .campaign-text03 {
-            width: 50%;
-            height: 50%;
-            font-size: 24px;
-            align-self: flex-start;
-            text-align: center;
-            font-weight: bold;
-          }
-          .campaign-text04 {
-            width: 50%;
-            font-size: 24px;
-            text-align: center;
-            font-weight: bold;
-          }
-          .campaign-slide2 {
-            flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .campaign-image03 {
-            width: auto;
-            height: 100%;
-            margin: var(--dl-space-space-halfunit);
-            object-fit: cover;
-            border-radius: var(--dl-radius-radius-radius8);
-          }
-          .campaign-container03 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: row;
-          }
-          .campaign-text05 {
-            width: 50%;
-            height: 50%;
-            font-size: 24px;
-            align-self: flex-start;
-            text-align: center;
-            font-weight: bold;
-          }
-          .campaign-text06 {
-            width: 50%;
-            font-size: 24px;
-            text-align: center;
-            font-weight: bold;
           }
           .campaign-slider-slide1 {
             width: 100%;
@@ -556,7 +437,7 @@ const Campaign = (props) => {
             background-size: 100%;
             justify-content: center;
           }
-          .campaign-slide3 {
+          .campaign-slide1 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -564,88 +445,14 @@ const Campaign = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .campaign-image04 {
+          .campaign-image11 {
             width: auto;
             height: 100%;
             margin: var(--dl-space-space-halfunit);
             object-fit: cover;
             border-radius: var(--dl-radius-radius-radius8);
           }
-          .campaign-container04 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: row;
-          }
-          .campaign-text07 {
-            width: 50%;
-            height: 50%;
-            font-size: 24px;
-            align-self: flex-start;
-            text-align: center;
-            font-weight: bold;
-          }
-          .campaign-text08 {
-            width: 50%;
-            font-size: 24px;
-            text-align: center;
-            font-weight: bold;
-          }
-          .campaign-slide4 {
-            flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .campaign-image05 {
-            width: auto;
-            height: 100%;
-            margin: var(--dl-space-space-halfunit);
-            object-fit: cover;
-            border-radius: var(--dl-radius-radius-radius8);
-          }
-          .campaign-container05 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: row;
-          }
-          .campaign-text09 {
-            width: 50%;
-            height: 50%;
-            font-size: 24px;
-            align-self: flex-start;
-            text-align: center;
-            font-weight: bold;
-          }
-          .campaign-text10 {
-            width: 50%;
-            font-size: 24px;
-            text-align: center;
-            font-weight: bold;
-          }
-          .campaign-slide5 {
-            flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .campaign-image06 {
-            width: auto;
-            height: 100%;
-            margin: var(--dl-space-space-halfunit);
-            object-fit: cover;
-            border-radius: var(--dl-radius-radius-radius8);
-          }
-          .campaign-container06 {
+          .campaign-container11 {
             flex: 0 0 auto;
             width: 100%;
             height: auto;
@@ -662,6 +469,199 @@ const Campaign = (props) => {
             font-weight: bold;
           }
           .campaign-text12 {
+            width: 50%;
+            font-size: 24px;
+            text-align: center;
+            font-weight: bold;
+          }
+          .campaign-slide2 {
+            flex: 0 0 auto;
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+          .campaign-image12 {
+            width: auto;
+            height: 100%;
+            margin: var(--dl-space-space-halfunit);
+            object-fit: cover;
+            border-radius: var(--dl-radius-radius-radius8);
+          }
+          .campaign-container12 {
+            flex: 0 0 auto;
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+          }
+          .campaign-text13 {
+            width: 50%;
+            height: 50%;
+            font-size: 24px;
+            align-self: flex-start;
+            text-align: center;
+            font-weight: bold;
+          }
+          .campaign-text14 {
+            width: 50%;
+            font-size: 24px;
+            text-align: center;
+            font-weight: bold;
+          }
+          .campaign-slide3 {
+            flex: 0 0 auto;
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+          .campaign-image13 {
+            width: auto;
+            height: 100%;
+            margin: var(--dl-space-space-halfunit);
+            object-fit: cover;
+            border-radius: var(--dl-radius-radius-radius8);
+          }
+          .campaign-container13 {
+            flex: 0 0 auto;
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+          }
+          .campaign-text15 {
+            width: 50%;
+            height: 50%;
+            font-size: 24px;
+            align-self: flex-start;
+            text-align: center;
+            font-weight: bold;
+          }
+          .campaign-text16 {
+            width: 50%;
+            font-size: 24px;
+            text-align: center;
+            font-weight: bold;
+          }
+          .campaign-slider-slide2 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--dl-space-space-twounits);
+            background-size: 100%;
+            justify-content: center;
+          }
+          .campaign-slide4 {
+            flex: 0 0 auto;
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+          .campaign-image14 {
+            width: auto;
+            height: 100%;
+            margin: var(--dl-space-space-halfunit);
+            object-fit: cover;
+            border-radius: var(--dl-radius-radius-radius8);
+          }
+          .campaign-container14 {
+            flex: 0 0 auto;
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+          }
+          .campaign-text17 {
+            width: 50%;
+            height: 50%;
+            font-size: 24px;
+            align-self: flex-start;
+            text-align: center;
+            font-weight: bold;
+          }
+          .campaign-text18 {
+            width: 50%;
+            font-size: 24px;
+            text-align: center;
+            font-weight: bold;
+          }
+          .campaign-slide5 {
+            flex: 0 0 auto;
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+          .campaign-image15 {
+            width: auto;
+            height: 100%;
+            margin: var(--dl-space-space-halfunit);
+            object-fit: cover;
+            border-radius: var(--dl-radius-radius-radius8);
+          }
+          .campaign-container15 {
+            flex: 0 0 auto;
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+          }
+          .campaign-text19 {
+            width: 50%;
+            height: 50%;
+            font-size: 24px;
+            align-self: flex-start;
+            text-align: center;
+            font-weight: bold;
+          }
+          .campaign-text20 {
+            width: 50%;
+            font-size: 24px;
+            text-align: center;
+            font-weight: bold;
+          }
+          .campaign-slide6 {
+            flex: 0 0 auto;
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+          .campaign-image16 {
+            width: auto;
+            height: 100%;
+            margin: var(--dl-space-space-halfunit);
+            object-fit: cover;
+            border-radius: var(--dl-radius-radius-radius8);
+          }
+          .campaign-container16 {
+            flex: 0 0 auto;
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+          }
+          .campaign-text21 {
+            width: 50%;
+            height: 50%;
+            font-size: 24px;
+            align-self: flex-start;
+            text-align: center;
+            font-weight: bold;
+          }
+          .campaign-text22 {
             width: 50%;
             font-size: 24px;
             text-align: center;
@@ -684,7 +684,7 @@ const Campaign = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .campaign-link {
+          .campaign-link1 {
             color: var(--dl-color-scheme-white);
             cursor: pointer;
             display: flex;
@@ -705,16 +705,16 @@ const Campaign = (props) => {
             text-decoration: none;
             background-color: var(--dl-color-scheme-green);
           }
-          .campaign-icon {
+          .campaign-icon1 {
             fill: #f2f2f2;
             width: var(--dl-size-size-small);
             height: 100%;
             margin-left: var(--dl-space-space-unit);
           }
-          .campaign-container08 {
+          .campaign-container18 {
             display: contents;
           }
-          .campaign-form {
+          .campaign-form1 {
             flex: 0 0 auto;
             width: 1080px;
             display: flex;
@@ -725,17 +725,17 @@ const Campaign = (props) => {
             justify-content: center;
             background-color: var(--dl-color-scheme-lightgreen);
           }
-          .campaign-text14 {
+          .campaign-text24 {
             font-style: normal;
             text-align: center;
             font-weight: 900;
             text-transform: uppercase;
           }
-          .campaign-container09 {
+          .campaign-container19 {
             width: 100%;
             height: 656px;
           }
-          .campaign-container10 {
+          .campaign-container20 {
             display: contents;
           }
           .campaign-reviews {
@@ -749,7 +749,7 @@ const Campaign = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .campaign-container11 {
+          .campaign-container21 {
             width: 100%;
             height: auto;
             display: flex;
@@ -758,7 +758,7 @@ const Campaign = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .campaign-image07 {
+          .campaign-image17 {
             width: 180px;
             object-fit: cover;
             margin-bottom: var(--dl-space-space-unit);
@@ -768,12 +768,12 @@ const Campaign = (props) => {
             height: 2px;
             background-color: #595959;
           }
-          .campaign-container12 {
+          .campaign-container22 {
             width: 1080px;
             height: 430px;
             margin-bottom: var(--dl-space-space-twounits);
           }
-          .campaign-container13 {
+          .campaign-container23 {
             display: contents;
           }
           .campaign-coupon {
@@ -788,17 +788,17 @@ const Campaign = (props) => {
             flex-direction: column;
             background-color: var(--dl-color-scheme-lightgreen);
           }
-          .campaign-text15 {
+          .campaign-text25 {
             align-self: center;
             font-style: normal;
             font-weight: 900;
             margin-bottom: var(--dl-space-space-unit);
             text-transform: uppercase;
           }
-          .campaign-link1 {
+          .campaign-link2 {
             display: contents;
           }
-          .campaign-container14 {
+          .campaign-container24 {
             flex: 0 0 auto;
             width: 80%;
             cursor: pointer;
@@ -815,7 +815,7 @@ const Campaign = (props) => {
             text-decoration: none;
             background-color: var(--dl-color-scheme-white80);
           }
-          .campaign-container15 {
+          .campaign-container25 {
             flex: 0 0 auto;
             width: 70%;
             height: 100%;
@@ -831,14 +831,14 @@ const Campaign = (props) => {
             border-left-width: 0px;
             border-bottom-width: 0px;
           }
-          .campaign-text18 {
+          .campaign-text28 {
             color: var(--dl-color-scheme-darkblue);
             font-size: 2em;
             font-style: normal;
             font-weight: 700;
             text-transform: uppercase;
           }
-          .campaign-text19 {
+          .campaign-text29 {
             font-size: 2em;
             align-self: center;
             font-style: normal;
@@ -860,10 +860,10 @@ const Campaign = (props) => {
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
-          .campaign-text20 {
+          .campaign-text30 {
             text-transform: uppercase;
           }
-          .campaign-container16 {
+          .campaign-container26 {
             flex: 0 0 auto;
             width: 30%;
             display: flex;
@@ -876,7 +876,7 @@ const Campaign = (props) => {
             width: 90%;
             padding: var(--dl-space-space-unit);
           }
-          .campaign-link2 {
+          .campaign-link3 {
             display: contents;
           }
           .campaign-call-us {
@@ -896,7 +896,7 @@ const Campaign = (props) => {
           .campaign-max-width:hover {
             cursor: pointer;
           }
-          .campaign-text21 {
+          .campaign-text31 {
             color: var(--dl-color-scheme-white);
             font-style: normal;
             text-align: center;
@@ -905,7 +905,7 @@ const Campaign = (props) => {
             letter-spacing: 0.1em;
             text-transform: uppercase;
           }
-          .campaign-text22 {
+          .campaign-text32 {
             color: var(--dl-color-scheme-white);
             width: 100%;
             font-size: 46px;
@@ -915,7 +915,7 @@ const Campaign = (props) => {
             margin-bottom: var(--dl-space-space-unit);
             letter-spacing: 0.01em;
           }
-          .campaign-text23 {
+          .campaign-text33 {
             font-weight: 900;
           }
           .campaign-primary {
@@ -938,7 +938,7 @@ const Campaign = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .campaign-container17 {
+          .campaign-container27 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -946,7 +946,7 @@ const Campaign = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .campaign-image08 {
+          .campaign-image18 {
             width: auto;
             margin-top: var(--dl-space-space-twounits);
             object-fit: cover;
@@ -954,7 +954,7 @@ const Campaign = (props) => {
             margin-right: var(--dl-space-space-fiveunits);
             margin-bottom: var(--dl-space-space-twounits);
           }
-          .campaign-image09 {
+          .campaign-image19 {
             width: auto;
             margin-top: var(--dl-space-space-twounits);
             object-fit: cover;
@@ -962,7 +962,7 @@ const Campaign = (props) => {
             margin-right: var(--dl-space-space-fiveunits);
             margin-bottom: var(--dl-space-space-twounits);
           }
-          .campaign-image10 {
+          .campaign-image20 {
             width: auto;
             margin-top: var(--dl-space-space-twounits);
             object-fit: cover;
@@ -970,7 +970,7 @@ const Campaign = (props) => {
             margin-right: var(--dl-space-space-fiveunits);
             margin-bottom: var(--dl-space-space-twounits);
           }
-          .campaign-form1 {
+          .campaign-form2 {
             flex: 0 0 auto;
             width: 1080px;
             display: flex;
@@ -981,17 +981,17 @@ const Campaign = (props) => {
             justify-content: center;
             background-color: var(--dl-color-scheme-lightgreen);
           }
-          .campaign-text26 {
+          .campaign-text36 {
             font-style: normal;
             text-align: center;
             font-weight: 900;
             text-transform: uppercase;
           }
-          .campaign-container18 {
+          .campaign-container28 {
             width: 100%;
             height: 668px;
           }
-          .campaign-container19 {
+          .campaign-container29 {
             display: contents;
           }
           @media (max-width: 1600px) {
@@ -999,13 +999,13 @@ const Campaign = (props) => {
               width: 100%;
               height: auto;
             }
-            .campaign-container12 {
+            .campaign-container22 {
               height: 486px;
             }
             .campaign-coupon {
               width: 1080px;
             }
-            .campaign-text15 {
+            .campaign-text25 {
               align-self: center;
               font-style: normal;
               margin-top: var(--dl-space-space-unit);
@@ -1013,7 +1013,7 @@ const Campaign = (props) => {
               margin-bottom: var(--dl-space-space-unit);
               text-transform: uppercase;
             }
-            .campaign-container14 {
+            .campaign-container24 {
               width: 70%;
               border-color: var(--dl-color-scheme-green);
               border-style: dashed;
@@ -1021,7 +1021,7 @@ const Campaign = (props) => {
               border-radius: var(--dl-radius-radius-radius8);
               flex-direction: row;
             }
-            .campaign-container15 {
+            .campaign-container25 {
               width: 70%;
               height: 100%;
               padding: var(--dl-space-space-threeunits);
@@ -1036,18 +1036,18 @@ const Campaign = (props) => {
               border-left-width: 0px;
               border-bottom-width: 0px;
             }
-            .campaign-text18 {
+            .campaign-text28 {
               font-size: 24px;
               font-style: normal;
               font-weight: 700;
               text-transform: uppercase;
             }
-            .campaign-text20 {
+            .campaign-text30 {
               font-style: normal;
               font-weight: 300;
               text-transform: uppercase;
             }
-            .campaign-container16 {
+            .campaign-container26 {
               width: 30%;
               height: 202px;
               padding: var(--dl-space-space-halfunit);
@@ -1062,10 +1062,10 @@ const Campaign = (props) => {
             .campaign-logo {
               width: auto;
             }
-            .campaign-slider-slide {
+            .campaign-slider-slide1 {
               flex-direction: row;
             }
-            .campaign-slider-slide1 {
+            .campaign-slider-slide2 {
               flex-direction: row;
             }
             .campaign-reviews {
@@ -1073,24 +1073,24 @@ const Campaign = (props) => {
               padding-left: var(--dl-space-space-twounits);
               padding-right: var(--dl-space-space-twounits);
             }
-            .campaign-container12 {
+            .campaign-container22 {
               height: 451px;
             }
             .campaign-coupon {
               width: 1080px;
             }
-            .campaign-text15 {
+            .campaign-text25 {
               align-self: center;
               margin-bottom: var(--dl-space-space-unit);
               text-transform: uppercase;
             }
-            .campaign-container14 {
+            .campaign-container24 {
               width: 70%;
             }
             .campaign-call-us {
               width: 1080px;
             }
-            .campaign-text22 {
+            .campaign-text32 {
               color: var(--dl-color-scheme-white);
               font-size: 46px;
               font-family: Rubik;
@@ -1098,85 +1098,76 @@ const Campaign = (props) => {
               letter-spacing: 0.01em;
               text-decoration: none;
             }
-            .campaign-text23 {
+            .campaign-text33 {
               font-weight: 900;
             }
           }
           @media (max-width: 991px) {
-            .campaign-image {
+            .campaign-image10 {
               width: 50%;
             }
             .campaign-before-after {
               width: 90%;
             }
-            .campaign-slider {
+            .campaign-slider1 {
               padding: var(--dl-space-space-unit);
             }
-            .campaign-slider-slide {
+            .campaign-slider-slide1 {
               width: 100%;
               flex-direction: column;
-            }
-            .campaign-slide {
-              width: 100%;
-              border-radius: var(--dl-radius-radius-radius8);
-            }
-            .campaign-image01 {
-              width: 95%;
-              height: auto;
-              align-self: center;
-            }
-            .campaign-text01 {
-              font-size: 32px;
-            }
-            .campaign-text02 {
-              font-size: 32px;
             }
             .campaign-slide1 {
               width: 100%;
               border-radius: var(--dl-radius-radius-radius8);
             }
-            .campaign-image02 {
+            .campaign-image11 {
               width: 95%;
+              height: auto;
               align-self: center;
             }
-            .campaign-text03 {
+            .campaign-text11 {
               font-size: 32px;
             }
-            .campaign-text04 {
+            .campaign-text12 {
               font-size: 32px;
             }
             .campaign-slide2 {
               width: 100%;
               border-radius: var(--dl-radius-radius-radius8);
             }
-            .campaign-image03 {
+            .campaign-image12 {
               width: 95%;
               align-self: center;
             }
-            .campaign-text05 {
+            .campaign-text13 {
               font-size: 32px;
             }
-            .campaign-text06 {
+            .campaign-text14 {
               font-size: 32px;
-            }
-            .campaign-slider-slide1 {
-              width: 100%;
-              flex-direction: column;
             }
             .campaign-slide3 {
               width: 100%;
               border-radius: var(--dl-radius-radius-radius8);
             }
-            .campaign-image04 {
+            .campaign-image13 {
               width: 95%;
-              height: auto;
               align-self: center;
+            }
+            .campaign-text15 {
+              font-size: 32px;
+            }
+            .campaign-text16 {
+              font-size: 32px;
+            }
+            .campaign-slider-slide2 {
+              width: 100%;
+              flex-direction: column;
             }
             .campaign-slide4 {
               width: 100%;
               border-radius: var(--dl-radius-radius-radius8);
             }
-            .campaign-image05 {
+            .campaign-image14 {
               width: 95%;
               height: auto;
               align-self: center;
@@ -1185,12 +1176,21 @@ const Campaign = (props) => {
               width: 100%;
               border-radius: var(--dl-radius-radius-radius8);
             }
-            .campaign-image06 {
+            .campaign-image15 {
               width: 95%;
               height: auto;
               align-self: center;
             }
-            .campaign-form {
+            .campaign-slide6 {
+              width: 100%;
+              border-radius: var(--dl-radius-radius-radius8);
+            }
+            .campaign-image16 {
+              width: 95%;
+              height: auto;
+              align-self: center;
+            }
+            .campaign-form1 {
               width: 90%;
             }
             .campaign-reviews {
@@ -1199,10 +1199,10 @@ const Campaign = (props) => {
               padding-left: var(--dl-space-space-unit);
               padding-right: var(--dl-space-space-unit);
             }
-            .campaign-container11 {
+            .campaign-container21 {
               padding: var(--dl-space-space-oneandhalfunits);
             }
-            .campaign-container12 {
+            .campaign-container22 {
               width: 100%;
               height: 423px;
               padding-left: var(--dl-space-space-unit);
@@ -1213,7 +1213,7 @@ const Campaign = (props) => {
               align-items: center;
               margin-bottom: var(--dl-space-space-unit);
             }
-            .campaign-container14 {
+            .campaign-container24 {
               width: 80%;
             }
             .campaign-call-us {
@@ -1222,45 +1222,45 @@ const Campaign = (props) => {
             .campaign-stickers {
               width: 90%;
             }
-            .campaign-form1 {
+            .campaign-form2 {
               width: 90%;
             }
           }
           @media (max-width: 767px) {
-            .campaign-image {
+            .campaign-image10 {
               width: 50%;
             }
-            .campaign-slider {
+            .campaign-slider1 {
               padding: 0px;
             }
-            .campaign-slider1 {
+            .campaign-slider2 {
               padding: var(--dl-space-space-unit);
             }
-            .campaign-slide {
+            .campaign-slide1 {
               width: 100%;
             }
-            .campaign-image01 {
-              width: 95%;
-            }
-            .campaign-slide3 {
-              width: 100%;
-            }
-            .campaign-image04 {
+            .campaign-image11 {
               width: 95%;
             }
             .campaign-slide4 {
               width: 100%;
             }
-            .campaign-image05 {
+            .campaign-image14 {
               width: 95%;
             }
             .campaign-slide5 {
               width: 100%;
             }
-            .campaign-image06 {
+            .campaign-image15 {
               width: 95%;
             }
-            .campaign-link {
+            .campaign-slide6 {
+              width: 100%;
+            }
+            .campaign-image16 {
+              width: 95%;
+            }
+            .campaign-link1 {
               align-items: center;
               justify-content: center;
             }
@@ -1269,27 +1269,27 @@ const Campaign = (props) => {
               padding-left: var(--dl-space-space-unit);
               padding-right: var(--dl-space-space-unit);
             }
-            .campaign-text15 {
+            .campaign-text25 {
               margin-bottom: 0px;
             }
-            .campaign-container14 {
+            .campaign-container24 {
               width: 100%;
             }
-            .campaign-text19 {
+            .campaign-text29 {
               font-size: 35px;
             }
-            .campaign-container17 {
+            .campaign-container27 {
               width: 100%;
             }
-            .campaign-image08 {
+            .campaign-image18 {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-right: var(--dl-space-space-oneandhalfunits);
             }
-            .campaign-image09 {
+            .campaign-image19 {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-right: var(--dl-space-space-oneandhalfunits);
             }
-            .campaign-image10 {
+            .campaign-image20 {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-right: var(--dl-space-space-oneandhalfunits);
             }
@@ -1298,42 +1298,42 @@ const Campaign = (props) => {
             .campaign-before-after {
               padding: 0px;
             }
-            .campaign-slider1 {
+            .campaign-slider2 {
               padding: 0px;
             }
-            .campaign-image01 {
+            .campaign-image11 {
               width: 95%;
               padding: 0px;
             }
-            .campaign-image02 {
+            .campaign-image12 {
               padding: 0px;
             }
-            .campaign-image03 {
+            .campaign-image13 {
               padding: 0px;
             }
-            .campaign-image04 {
+            .campaign-image14 {
               width: 95%;
               padding: 0px;
             }
-            .campaign-image05 {
+            .campaign-image15 {
               width: 95%;
               padding: 0px;
             }
-            .campaign-image06 {
+            .campaign-image16 {
               width: 95%;
               padding: 0px;
             }
-            .campaign-link {
+            .campaign-link1 {
               align-items: center;
               justify-content: center;
             }
-            .campaign-text13 {
+            .campaign-text23 {
               font-size: 0.8em;
             }
-            .campaign-form {
+            .campaign-form1 {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .campaign-container09 {
+            .campaign-container19 {
               height: 751px;
             }
             .campaign-reviews {
@@ -1344,32 +1344,32 @@ const Campaign = (props) => {
               border-radius: var(--dl-radius-radius-radius8);
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .campaign-container12 {
+            .campaign-container22 {
               height: 480px;
             }
             .campaign-coupon {
               width: 90%;
             }
-            .campaign-text15 {
+            .campaign-text25 {
               font-size: 1.8em;
               margin-bottom: 0px;
             }
-            .campaign-container14 {
+            .campaign-container24 {
               width: 100%;
             }
-            .campaign-container15 {
+            .campaign-container25 {
               height: auto;
               padding: var(--dl-space-space-twounits);
             }
-            .campaign-text18 {
+            .campaign-text28 {
               font-size: 20px;
             }
-            .campaign-text19 {
+            .campaign-text29 {
               font-size: 35px;
               margin-top: var(--dl-space-space-halfunit);
               margin-bottom: var(--dl-space-space-halfunit);
             }
-            .campaign-container16 {
+            .campaign-container26 {
               height: auto;
               padding-left: var(--dl-space-space-halfunit);
             }
@@ -1383,31 +1383,31 @@ const Campaign = (props) => {
             .campaign-sticker-wrap {
               width: 100%;
             }
-            .campaign-container17 {
+            .campaign-container27 {
               width: 100%;
             }
-            .campaign-image08 {
+            .campaign-image18 {
               width: 30%;
               height: auto;
               margin-left: var(--dl-space-space-halfunit);
               margin-right: var(--dl-space-space-halfunit);
             }
-            .campaign-image09 {
+            .campaign-image19 {
               width: 30%;
               height: auto;
               margin-left: 0px;
               margin-right: 0px;
             }
-            .campaign-image10 {
+            .campaign-image20 {
               width: 30%;
               height: auto;
               margin-left: var(--dl-space-space-halfunit);
               margin-right: var(--dl-space-space-halfunit);
             }
-            .campaign-form1 {
+            .campaign-form2 {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .campaign-container18 {
+            .campaign-container28 {
               height: 751px;
             }
           }

@@ -14,7 +14,7 @@ const Packages = (props) => {
         <div className="packages-max-width max-content-container">
           <div className="packages-heading-container">
             <div className="packages-text-container">
-              <span className="packages-text">{props.ourServices}</span>
+              <span className="packages-text1">{props.ourServices}</span>
               <h2>
                 <span>Air Duct Cleaning Services</span>
                 <br></br>
@@ -27,7 +27,7 @@ const Packages = (props) => {
                 aria-label="slide-left"
                 className="control-btn"
               >
-                <svg viewBox="0 0 1024 1024" className="packages-icon">
+                <svg viewBox="0 0 1024 1024" className="packages-icon1">
                   <path d="M402.746 877.254l-320-320c-24.994-24.992-24.994-65.516 0-90.51l320-320c24.994-24.992 65.516-24.992 90.51 0 24.994 24.994 24.994 65.516 0 90.51l-210.746 210.746h613.49c35.346 0 64 28.654 64 64s-28.654 64-64 64h-613.49l210.746 210.746c12.496 12.496 18.744 28.876 18.744 45.254s-6.248 32.758-18.744 45.254c-24.994 24.994-65.516 24.994-90.51 0z"></path>
                 </svg>
                 {props.buttonLeft}
@@ -38,7 +38,7 @@ const Packages = (props) => {
                 aria-label="slide-right"
                 className="control-btn"
               >
-                <svg viewBox="0 0 1024 1024" className="packages-icon2">
+                <svg viewBox="0 0 1024 1024" className="packages-icon3">
                   <path d="M621.254 877.254l320-320c24.994-24.992 24.994-65.516 0-90.51l-320-320c-24.994-24.992-65.516-24.992-90.51 0-24.994 24.994-24.994 65.516 0 90.51l210.746 210.746h-613.49c-35.346 0-64 28.654-64 64s28.654 64 64 64h613.49l-210.746 210.746c-12.496 12.496-18.744 28.876-18.744 45.254s6.248 32.758 18.744 45.254c24.994 24.994 65.516 24.994 90.51 0z"></path>
                 </svg>
                 {props.buttonRight}
@@ -50,7 +50,7 @@ const Packages = (props) => {
               <a>
                 <PackagesCard
                   details=" "
-                  className="packages-component"
+                  className="packages-component1"
                 ></PackagesCard>
               </a>
             </Link>
@@ -63,7 +63,7 @@ const Packages = (props) => {
                   details="Vacuum up to 12 supply vents "
                   details1="Camera inspection"
                   imageSrc="/file-document-200h.webp"
-                  className="packages-component1"
+                  className="packages-component2"
                 ></PackagesCard>
               </a>
             </Link>
@@ -78,7 +78,7 @@ const Packages = (props) => {
                   details11="Basic furnace cleaning"
                   imageSrc="/dice-5-200h.webp"
                   details1111="Camera inspection"
-                  className="packages-component2"
+                  className="packages-component3"
                 ></PackagesCard>
               </a>
             </Link>
@@ -94,7 +94,7 @@ const Packages = (props) => {
                   imageSrc="/dice-5-200h.webp"
                   details111="Deep cleaning vents and returns "
                   details1111="Camera inspection"
-                  className="packages-component3"
+                  className="packages-component4"
                 ></PackagesCard>
               </a>
             </Link>
@@ -128,7 +128,7 @@ const Packages = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .packages-text {
+          .packages-text1 {
             color: var(--dl-color-scheme-green);
             font-style: normal;
             text-align: center;
@@ -142,16 +142,13 @@ const Packages = (props) => {
             grid-gap: 12px;
             grid-template-columns: 1fr 1fr;
           }
-          .packages-icon {
+          .packages-icon1 {
             width: 16px;
             height: 16px;
           }
-          .packages-icon2 {
+          .packages-icon3 {
             width: 16px;
             height: 16px;
-          }
-          .packages-component {
-            text-decoration: none;
           }
           .packages-component1 {
             text-decoration: none;
@@ -160,6 +157,9 @@ const Packages = (props) => {
             text-decoration: none;
           }
           .packages-component3 {
+            text-decoration: none;
+          }
+          .packages-component4 {
             text-decoration: none;
           }
         `}

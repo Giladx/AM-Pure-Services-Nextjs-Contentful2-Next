@@ -6,11 +6,11 @@ const NavigationLinks3 = (props) => {
   return (
     <>
       <nav className={`navigation-links3-nav ${props.rootClassName} `}>
-        <span className="navigation-links3-text">{props.link1}</span>
-        <span className="navigation-links3-text1">{props.link2}</span>
-        <span className="navigation-links3-text2">{props.link3}</span>
-        <span className="navigation-links3-text3">{props.link4}</span>
-        <span className="navigation-links3-text4">{props.link5}</span>
+        <span className="navigation-links3-text1">{props.link1}</span>
+        <span className="navigation-links3-text2">{props.link2}</span>
+        <span className="navigation-links3-text3">{props.link3}</span>
+        <span className="navigation-links3-text4">{props.link4}</span>
+        <span className="navigation-links3-text5">{props.link5}</span>
       </nav>
       <style jsx>
         {`
@@ -22,15 +22,9 @@ const NavigationLinks3 = (props) => {
             align-items: center;
             flex-direction: row;
           }
-          .navigation-links3-text {
-            cursor: pointer;
-            transition: 0.3s;
-            text-decoration: none;
-          }
           .navigation-links3-text1 {
             cursor: pointer;
             transition: 0.3s;
-            margin-left: var(--dl-space-space-oneandhalfunits);
             text-decoration: none;
           }
           .navigation-links3-text2 {
@@ -49,19 +43,22 @@ const NavigationLinks3 = (props) => {
             cursor: pointer;
             transition: 0.3s;
             margin-left: var(--dl-space-space-oneandhalfunits);
+            text-decoration: none;
+          }
+          .navigation-links3-text5 {
+            cursor: pointer;
+            transition: 0.3s;
+            margin-left: var(--dl-space-space-oneandhalfunits);
             margin-right: var(--dl-space-space-oneandhalfunits);
             text-decoration: none;
           }
 
-          .navigation-links3-root-class-name17 {
+          .navigation-links3root-class-name17 {
             width: auto;
             min-width: auto;
             margin-right: 0px;
           }
           @media (max-width: 1600px) {
-            .navigation-links3-text1 {
-              margin-left: 15px;
-            }
             .navigation-links3-text2 {
               margin-left: 15px;
             }
@@ -69,6 +66,9 @@ const NavigationLinks3 = (props) => {
               margin-left: 15px;
             }
             .navigation-links3-text4 {
+              margin-left: 15px;
+            }
+            .navigation-links3-text5 {
               margin-left: 15px;
               margin-right: 15px;
             }
@@ -78,12 +78,8 @@ const NavigationLinks3 = (props) => {
               align-items: flex-start;
               flex-direction: column;
             }
-            .navigation-links3-text {
-              padding-bottom: var(--dl-space-space-unit);
-            }
             .navigation-links3-text1 {
-              margin-left: 0px;
-              margin-bottom: var(--dl-space-space-unit);
+              padding-bottom: var(--dl-space-space-unit);
             }
             .navigation-links3-text2 {
               margin-left: 0px;
@@ -94,6 +90,10 @@ const NavigationLinks3 = (props) => {
               margin-bottom: var(--dl-space-space-unit);
             }
             .navigation-links3-text4 {
+              margin-left: 0px;
+              margin-bottom: var(--dl-space-space-unit);
+            }
+            .navigation-links3-text5 {
               margin-left: 0px;
               margin-bottom: var(--dl-space-space-unit);
             }

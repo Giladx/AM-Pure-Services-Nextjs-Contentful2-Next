@@ -6,7 +6,7 @@ import Script from 'dangerous-html/react'
 const Coupon = (props) => {
   return (
     <>
-      <div className="coupon-container">
+      <div className="coupon-container1">
         <Head>
           <title>
             Coupon - AM Pure Services | Airduct Cleaning | Drayer Vent Cleaning
@@ -28,8 +28,8 @@ const Coupon = (props) => {
             content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/a9b9a8f2-be01-41ae-838f-381e8ec5a736/20f16b04-d5e9-437e-ac34-d5c544c97085?org_if_sml=1&amp;q=80&amp;force_format=original"
           />
         </Head>
-        <div className="coupon-container1">
-          <div className="coupon-container2">
+        <div className="coupon-container2">
+          <div className="coupon-container3">
             <Script
               html={`
     <iframe
@@ -133,7 +133,7 @@ const Coupon = (props) => {
       </div>
       <style jsx>
         {`
-          .coupon-container {
+          .coupon-container1 {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -141,15 +141,15 @@ const Coupon = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .coupon-container2 {
+          .coupon-container3 {
             display: contents;
           }
           @media (max-width: 1600px) {
-            .coupon-container {
+            .coupon-container1 {
               align-items: center;
               justify-content: center;
             }
-            .coupon-container1 {
+            .coupon-container2 {
               width: 100%;
               height: 720px;
             }

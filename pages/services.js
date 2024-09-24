@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 
@@ -16,7 +16,7 @@ import services1Resource from '../resources/services1'
 const Services = (props) => {
   return (
     <>
-      <div className="services-container">
+      <div className="services-container1">
         <Head>
           <title>
             Services - AM Pure Services | Airduct Cleaning | Drayer Vent
@@ -39,56 +39,56 @@ const Services = (props) => {
             content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/a9b9a8f2-be01-41ae-838f-381e8ec5a736/20f16b04-d5e9-437e-ac34-d5c544c97085?org_if_sml=1&amp;q=80&amp;force_format=original"
           />
         </Head>
-        <Navigation rootClassName="navigation-root-class-name"></Navigation>
+        <Navigation rootClassName="navigationroot-class-name"></Navigation>
         <div className="services-main">
           <div className="services-title">
-            <span className="services-text">
+            <span className="services-text10">
               <span>SERVICES</span>
               <br></br>
             </span>
           </div>
         </div>
         <div className="services-blog">
-          <div className="services-container1">
-            <span className="services-text03">from blog</span>
-            <h2 className="services-text04">
+          <div className="services-container2">
+            <span className="services-text13">from blog</span>
+            <h2 className="services-text14">
               <span>Our Services</span>
               <br></br>
             </h2>
           </div>
           <DataProvider
             renderSuccess={(params) => (
-              <>
-                <div className="services-container2">
+              <Fragment>
+                <div className="services-container3">
                   <Repeater
                     items={params}
                     renderItem={(context_tvp7o9) => (
-                      <>
+                      <Fragment>
                         <div className="services-blog-cards-container">
                           <Link href={`/post/${context_tvp7o9?.slug}`}>
-                            <a className="services-link">
+                            <a className="services-link10">
                               <div className="services-blog-card">
                                 <img
                                   alt="image"
                                   src={context_tvp7o9?.coverImage?.url}
                                   loading="lazy"
-                                  className="services-image"
+                                  className="services-image1"
                                 />
-                                <div className="services-container3">
+                                <div className="services-container4">
                                   <div className="services-tags">
                                     <Repeater
                                       items={context_tvp7o9?.tag || []}
                                       renderItem={(context_9oxe3a) => (
-                                        <>
-                                          <span className="services-text07">
+                                        <Fragment>
+                                          <span className="services-text17">
                                             {context_9oxe3a?.tagName}
                                           </span>
-                                        </>
+                                        </Fragment>
                                       )}
                                       renderEmpty={() => (
-                                        <>
+                                        <Fragment>
                                           <span>Text</span>
-                                        </>
+                                        </Fragment>
                                       )}
                                     />
                                   </div>
@@ -101,14 +101,14 @@ const Services = (props) => {
                                     </span>
                                   </div>
                                 </div>
-                                <span className="services-text09">
+                                <span className="services-text19">
                                   {context_tvp7o9?.title}
                                 </span>
-                                <div className="services-container4">
+                                <div className="services-container5">
                                   <span>Read More</span>
                                   <svg
                                     viewBox="0 0 1024 1024"
-                                    className="services-icon"
+                                    className="services-icon1"
                                   >
                                     <path d="M810 298h86v256h-648l154 154-60 60-256-256 256-256 60 60-154 154h562v-172z"></path>
                                   </svg>
@@ -117,44 +117,44 @@ const Services = (props) => {
                             </a>
                           </Link>
                         </div>
-                      </>
+                      </Fragment>
                     )}
                   />
                 </div>
-              </>
+              </Fragment>
             )}
             initialData={props.contextTvp7o9Prop}
             persistDataDuringLoading={true}
           />
         </div>
-        <Banner rootClassName="banner-root-class-name6"></Banner>
+        <Banner rootClassName="bannerroot-class-name6"></Banner>
         <div className="services-footer section-container">
-          <div className="services-max-width max-content-container">
+          <div className="services-max-width1 max-content-container">
             <div className="services-top-part">
               <div className="services-links-container">
                 <div className="services-product-container">
-                  <span className="services-text11">Product</span>
+                  <span className="services-text21">Product</span>
                   <Link href="/monthly-specials">
-                    <a className="services-link01">MONTHLY SPECIALS</a>
+                    <a className="services-link11">MONTHLY SPECIALS</a>
                   </Link>
                   <DataProvider
                     renderSuccess={(params) => (
-                      <>
-                        <div className="services-container5">
+                      <Fragment>
+                        <div className="services-container6">
                           <Repeater
                             items={params}
                             renderItem={(context_fwbrpn) => (
-                              <>
+                              <Fragment>
                                 <Link href={`/post/${context_fwbrpn?.slug}`}>
-                                  <a className="services-link02">
+                                  <a className="services-link12">
                                     {context_fwbrpn?.title}
                                   </a>
                                 </Link>
-                              </>
+                              </Fragment>
                             )}
                           />
                         </div>
-                      </>
+                      </Fragment>
                     )}
                     initialData={props.contextFwbrpnProp}
                     persistDataDuringLoading={true}
@@ -162,34 +162,34 @@ const Services = (props) => {
                 </div>
               </div>
               <div className="services-navigate-container">
-                <span className="services-text12">Info</span>
+                <span className="services-text22">Info</span>
                 <Link href="/about">
-                  <a className="services-link03">
+                  <a className="services-link13">
                     <span>ABOUT</span>
                     <br></br>
                   </a>
                 </Link>
                 <Link href="/restrictions">
-                  <a className="services-link04">RESTRICTIONS</a>
+                  <a className="services-link14">RESTRICTIONS</a>
                 </Link>
                 <Link href="/contact">
-                  <a className="services-link05">CONTACT</a>
+                  <a className="services-link15">CONTACT</a>
                 </Link>
               </div>
               <div className="services-contact-container">
-                <span className="services-text15">Contact Us</span>
-                <a href="tel:+18885031722" className="services-link06">
+                <span className="services-text25">Contact Us</span>
+                <a href="tel:+18885031722" className="services-link16">
                   (888) 503-1722
                 </a>
                 <a
                   href="mailto:service@ampureservices.com?subject=Site Service Request"
-                  className="services-link07"
+                  className="services-link17"
                 >
                   SERVICE@AMPURESERVICES.COM
                 </a>
               </div>
               <div className="services-subscribe-container">
-                <span className="services-text16">
+                <span className="services-text26">
                   Subscribe to our newsletter
                 </span>
                 <input
@@ -203,20 +203,20 @@ const Services = (props) => {
             </div>
           </div>
           <div className="services-separator"></div>
-          <footer className="services-max-width1 max-content-container">
+          <footer className="services-max-width2 max-content-container">
             <Link href="/">
               <a>
                 <img
                   alt="image"
-                  src="20769734-2b37-4566-8316-77ad864b1180"
+                  src="/logoam-200h.webp"
                   width="150"
                   height="68"
-                  className="services-image1"
+                  className="services-image2"
                 />
               </a>
             </Link>
             <Link href="/">
-              <a className="services-link09">
+              <a className="services-link19">
                 All rights reserved @ AM Pure Services
               </a>
             </Link>
@@ -224,16 +224,25 @@ const Services = (props) => {
               href="https://011.ninja/bio"
               target="_blank"
               rel="noreferrer noopener"
-              className="services-link10"
+              className="services-link20"
             >
               Developed by 011.ninja
             </a>
           </footer>
+          <a
+            href="https://bytii.cloud"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div className="services-signature">
+              <span className="services-text27">Bytii Cloud</span>
+            </div>
+          </a>
         </div>
       </div>
       <style jsx>
         {`
-          .services-container {
+          .services-container1 {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -258,7 +267,7 @@ const Services = (props) => {
             align-items: flex-start;
             background-color: var(--dl-color-scheme-lightgreen);
           }
-          .services-text {
+          .services-text10 {
             width: 100%;
             font-size: 48px;
             align-self: center;
@@ -282,7 +291,7 @@ const Services = (props) => {
             padding-bottom: var(--dl-space-space-sixunits);
             justify-content: center;
           }
-          .services-container1 {
+          .services-container2 {
             flex: 0 0 auto;
             width: auto;
             height: 100px;
@@ -291,7 +300,7 @@ const Services = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .services-text03 {
+          .services-text13 {
             color: var(--dl-color-scheme-green);
             font-style: normal;
             text-align: center;
@@ -300,7 +309,7 @@ const Services = (props) => {
             letter-spacing: 0.1em;
             text-transform: uppercase;
           }
-          .services-text04 {
+          .services-text14 {
             font-size: 46px;
             font-style: normal;
             text-align: center;
@@ -311,7 +320,7 @@ const Services = (props) => {
             letter-spacing: 0.01em;
             text-decoration: none;
           }
-          .services-container2 {
+          .services-container3 {
             display: grid;
             grid-gap: 20px;
             grid-template-columns: repeat(3, 1fr);
@@ -324,7 +333,7 @@ const Services = (props) => {
             flex-direction: row;
             justify-content: space-between;
           }
-          .services-link {
+          .services-link10 {
             display: contents;
           }
           .services-blog-card {
@@ -337,14 +346,14 @@ const Services = (props) => {
             flex-direction: column;
             text-decoration: none;
           }
-          .services-image {
+          .services-image1 {
             width: 100%;
             height: 200px;
             object-fit: cover;
             border-radius: var(--dl-radius-radius-radius8);
             margin-bottom: var(--dl-space-space-halfunit);
           }
-          .services-container3 {
+          .services-container4 {
             flex: 0 0 auto;
             width: 100%;
             display: flex;
@@ -360,7 +369,7 @@ const Services = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .services-text07 {
+          .services-text17 {
             color: var(--dl-color-scheme-white);
             padding: var(--dl-space-space-halfunit);
             font-size: 12px;
@@ -384,11 +393,11 @@ const Services = (props) => {
             text-align: right;
             font-weight: 700;
           }
-          .services-text09 {
+          .services-text19 {
             font-style: normal;
             font-weight: 600;
           }
-          .services-container4 {
+          .services-container5 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -396,7 +405,7 @@ const Services = (props) => {
             align-items: flex-start;
             justify-content: flex-start;
           }
-          .services-icon {
+          .services-icon1 {
             width: 24px;
             height: 24px;
             margin-left: var(--dl-space-space-halfunit);
@@ -404,7 +413,7 @@ const Services = (props) => {
           .services-footer {
             position: relative;
           }
-          .services-max-width {
+          .services-max-width1 {
             max-width: var(--dl-size-size-maxwidth);
             padding-left: 0px;
             padding-right: 0px;
@@ -432,20 +441,20 @@ const Services = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .services-text11 {
+          .services-text21 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .services-link01 {
+          .services-link11 {
             color: var(--dl-color-scheme-darkblue);
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .services-container5 {
+          .services-container6 {
             display: grid;
           }
-          .services-link02 {
+          .services-link12 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -457,20 +466,20 @@ const Services = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .services-text12 {
+          .services-text22 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .services-link03 {
+          .services-link13 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .services-link04 {
+          .services-link14 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .services-link05 {
+          .services-link15 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -482,16 +491,16 @@ const Services = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .services-text15 {
+          .services-text25 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .services-link06 {
+          .services-link16 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .services-link07 {
+          .services-link17 {
             font-size: 14px;
             font-style: normal;
             font-family: Rubik;
@@ -508,7 +517,7 @@ const Services = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .services-text16 {
+          .services-text26 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
@@ -534,29 +543,44 @@ const Services = (props) => {
             margin-bottom: var(--dl-space-space-twounits);
             background-color: #d9d9d9;
           }
-          .services-max-width1 {
+          .services-max-width2 {
             flex-direction: row;
             justify-content: space-between;
           }
-          .services-image1 {
+          .services-image2 {
             width: 150px;
             object-fit: cover;
             text-decoration: none;
           }
-          .services-link09 {
+          .services-link19 {
             width: auto;
             font-style: normal;
             text-align: center;
             font-weight: 300;
             text-decoration: none;
           }
-          .services-link10 {
+          .services-link20 {
             font-style: normal;
             font-weight: 300;
             text-decoration: none;
           }
+          .services-signature {
+            left: 5px;
+            bottom: 5px;
+            display: flex;
+            position: absolute;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            text-decoration: none;
+          }
+          .services-text27 {
+            color: rgb(201, 206, 218);
+            font-style: normal;
+            font-weight: 300;
+          }
           @media (max-width: 1600px) {
-            .services-container3 {
+            .services-container4 {
               width: 100%;
               flex-direction: row;
             }
@@ -564,7 +588,7 @@ const Services = (props) => {
               width: 70%;
               flex-direction: row;
             }
-            .services-text07 {
+            .services-text17 {
               color: var(--dl-color-scheme-white);
               padding: var(--dl-space-space-halfunit);
               font-size: 12px;
@@ -591,22 +615,22 @@ const Services = (props) => {
             .services-contact-container {
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .services-link09 {
+            .services-link19 {
               width: auto;
               text-align: center;
             }
           }
           @media (max-width: 1200px) {
-            .services-image {
+            .services-image1 {
               height: 180px;
             }
-            .services-text09 {
+            .services-text19 {
               font-style: normal;
               font-weight: 700;
               margin-bottom: var(--dl-space-space-unit);
               text-transform: uppercase;
             }
-            .services-max-width {
+            .services-max-width1 {
               padding-left: 0px;
               padding-right: 0px;
             }
@@ -617,10 +641,10 @@ const Services = (props) => {
               align-self: flex-start;
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .services-link06 {
+            .services-link16 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .services-link07 {
+            .services-link17 {
               font-size: 16px;
               font-style: normal;
               font-weight: 900;
@@ -628,7 +652,7 @@ const Services = (props) => {
               margin-bottom: var(--dl-space-space-unit);
               letter-spacing: auto;
             }
-            .services-link09 {
+            .services-link19 {
               width: auto;
               text-align: center;
             }
@@ -641,25 +665,25 @@ const Services = (props) => {
             .services-blog-card {
               max-width: 550px;
             }
-            .services-link09 {
+            .services-link19 {
               text-align: center;
             }
-            .services-link10 {
+            .services-link20 {
               text-align: center;
             }
           }
           @media (max-width: 767px) {
-            .services-text {
+            .services-text10 {
               font-size: 30px;
             }
-            .services-container2 {
+            .services-container3 {
               width: 100%;
               grid-template-columns: repeat(1, 1fr);
             }
             .services-blog-card {
               max-width: 450px;
             }
-            .services-image {
+            .services-image1 {
               height: auto;
             }
             .services-top-part {
@@ -685,15 +709,15 @@ const Services = (props) => {
               padding-left: var(--dl-space-space-oneandhalfunits);
               padding-right: var(--dl-space-space-oneandhalfunits);
             }
-            .services-link09 {
+            .services-link19 {
               text-align: center;
             }
-            .services-link10 {
+            .services-link20 {
               text-align: center;
             }
           }
           @media (max-width: 479px) {
-            .services-text {
+            .services-text10 {
               font-size: 25px;
             }
             .services-blog-card {
@@ -722,16 +746,16 @@ const Services = (props) => {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-bottom: 0px;
             }
-            .services-link07 {
+            .services-link17 {
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }
-            .services-max-width1 {
+            .services-max-width2 {
               flex-direction: column;
             }
-            .services-image1 {
+            .services-image2 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .services-link09 {
+            .services-link19 {
               text-align: center;
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }

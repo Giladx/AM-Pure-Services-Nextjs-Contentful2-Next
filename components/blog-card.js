@@ -16,10 +16,10 @@ const BlogCard = (props) => {
           <button className="blog-card-button button-secondary button">
             {props.button}
           </button>
-          <span className="blog-card-text">{props.text1}</span>
+          <span className="blog-card-text1">{props.text1}</span>
         </div>
-        <span className="blog-card-text1">{props.text2}</span>
-        <span className="blog-card-text2">{props.text}</span>
+        <span className="blog-card-text2">{props.text2}</span>
+        <span className="blog-card-text3">{props.text}</span>
       </div>
       <style jsx>
         {`
@@ -52,12 +52,12 @@ const BlogCard = (props) => {
             font-size: 12px;
             text-transform: uppercase;
           }
-          .blog-card-text {
+          .blog-card-text1 {
             font-size: 12px;
             font-style: normal;
             font-weight: 700;
           }
-          .blog-card-text2 {
+          .blog-card-text3 {
             text-decoration: underline;
           }
 
@@ -65,28 +65,28 @@ const BlogCard = (props) => {
             .blog-card-image {
               height: 180px;
             }
-            .blog-card-text1 {
+            .blog-card-text2 {
               font-style: normal;
               font-weight: 700;
               margin-bottom: var(--dl-space-space-unit);
               text-transform: uppercase;
             }
-            .blog-card-root-class-name8 {
+            .blog-cardroot-class-name8 {
               height: auto;
             }
-            .blog-card-root-class-name11 {
+            .blog-cardroot-class-name11 {
               height: auto;
             }
-            .blog-card-root-class-name14 {
+            .blog-cardroot-class-name14 {
               height: auto;
             }
-            .blog-card-root-class-name17 {
+            .blog-cardroot-class-name17 {
               height: auto;
             }
-            .blog-card-root-class-name21 {
+            .blog-cardroot-class-name21 {
               height: auto;
             }
-            .blog-card-root-class-name23 {
+            .blog-cardroot-class-name23 {
               height: auto;
             }
           }
@@ -99,58 +99,58 @@ const BlogCard = (props) => {
             .blog-card-blog-card {
               max-width: 450px;
             }
-            .blog-card-root-class-name {
+            .blog-cardroot-class-name {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .blog-card-root-class-name1 {
+            .blog-cardroot-class-name1 {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .blog-card-root-class-name2 {
+            .blog-cardroot-class-name2 {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .blog-card-root-class-name3 {
+            .blog-cardroot-class-name3 {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .blog-card-root-class-name4 {
+            .blog-cardroot-class-name4 {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .blog-card-root-class-name5 {
+            .blog-cardroot-class-name5 {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .blog-card-root-class-name6 {
+            .blog-cardroot-class-name6 {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .blog-card-root-class-name7 {
+            .blog-cardroot-class-name7 {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .blog-card-root-class-name9 {
+            .blog-cardroot-class-name9 {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .blog-card-root-class-name10 {
+            .blog-cardroot-class-name10 {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .blog-card-root-class-name12 {
+            .blog-cardroot-class-name12 {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .blog-card-root-class-name13 {
+            .blog-cardroot-class-name13 {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .blog-card-root-class-name15 {
+            .blog-cardroot-class-name15 {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .blog-card-root-class-name16 {
+            .blog-cardroot-class-name16 {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .blog-card-root-class-name18 {
+            .blog-cardroot-class-name18 {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .blog-card-root-class-name19 {
+            .blog-cardroot-class-name19 {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .blog-card-root-class-name20 {
+            .blog-cardroot-class-name20 {
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .blog-card-root-class-name22 {
+            .blog-cardroot-class-name22 {
               margin-bottom: var(--dl-space-space-twounits);
             }
           }

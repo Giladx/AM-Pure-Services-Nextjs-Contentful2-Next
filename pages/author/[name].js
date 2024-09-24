@@ -1,16 +1,16 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Head from 'next/head'
 
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import authorPageInitialPropsTqYyResource from '../../resources/author-page-initial-props-tq_yy'
-import authorPageInitialPathsTqJzResource from '../../resources/author-page-initial-paths-tq_jz'
+import authorPageInitialPropsTqG8Resource from '../../resources/author-page-initial-props-tq_g8'
+import authorPageInitialPathsTqJ7Resource from '../../resources/author-page-initial-paths-tq_j7'
 
 const Author11 = (props) => {
   return (
     <>
-      <div className="author11-container">
+      <div className="author11-container1">
         <Head>
           <title>
             Author1 - AM Pure Services | Airduct Cleaning | Drayer Vent Cleaning
@@ -30,8 +30,8 @@ const Author11 = (props) => {
         </Head>
         <DataProvider
           renderSuccess={(AuthorEntity) => (
-            <>
-              <div className="author11-container1">
+            <Fragment>
+              <div className="author11-container2">
                 <h1>{AuthorEntity?.name}</h1>
                 <img
                   alt="image"
@@ -39,7 +39,7 @@ const Author11 = (props) => {
                   className="author11-image"
                 />
               </div>
-            </>
+            </Fragment>
           )}
           initialData={props.authorEntity}
           persistDataDuringLoading={true}
@@ -48,7 +48,7 @@ const Author11 = (props) => {
       </div>
       <style jsx>
         {`
-          .author11-container {
+          .author11-container1 {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -56,7 +56,7 @@ const Author11 = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .author11-container1 {
+          .author11-container2 {
             gap: 12px;
             width: 100%;
             display: flex;
@@ -88,7 +88,7 @@ export default Author11
 
 export async function getStaticProps(context) {
   try {
-    const response = await authorPageInitialPropsTqYyResource({
+    const response = await authorPageInitialPropsTqG8Resource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {
@@ -111,7 +111,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await authorPageInitialPathsTqJzResource({
+    const response = await authorPageInitialPathsTqJ7Resource({
       content_type: 'author',
       select: 'fields.name',
     })

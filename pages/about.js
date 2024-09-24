@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 
@@ -11,7 +11,7 @@ import aboutResource from '../resources/about'
 const About = (props) => {
   return (
     <>
-      <div className="about-container">
+      <div className="about-container1">
         <Head>
           <title>
             About - AM Pure Services | Airduct Cleaning | Drayer Vent Cleaning
@@ -33,18 +33,18 @@ const About = (props) => {
             content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/a9b9a8f2-be01-41ae-838f-381e8ec5a736/20f16b04-d5e9-437e-ac34-d5c544c97085?org_if_sml=1&amp;q=80&amp;force_format=original"
           />
         </Head>
-        <Navigation rootClassName="navigation-root-class-name3"></Navigation>
+        <Navigation rootClassName="navigationroot-class-name3"></Navigation>
         <main className="about-main">
           <div className="about-title">
             <div className="about-title-wrap">
-              <span className="about-text">
+              <span className="about-text10">
                 <span>ABOUT AM PURE SERVICES</span>
                 <br></br>
               </span>
             </div>
           </div>
-          <span className="about-text03">
-            <span className="about-text04">What we do?</span>
+          <span className="about-text13">
+            <span className="about-text14">What we do?</span>
             <br></br>
             <br></br>
             <span>
@@ -68,7 +68,7 @@ const About = (props) => {
             </span>
             <br></br>
             <br></br>
-            <span className="about-text18">Our experience:</span>
+            <span className="about-text28">Our experience:</span>
             <br></br>
             <br></br>
             <span>
@@ -89,7 +89,7 @@ const About = (props) => {
             </span>
             <br></br>
             <br></br>
-            <span className="about-text30">
+            <span className="about-text40">
               We hope to serve you well!
               <span
                 dangerouslySetInnerHTML={{
@@ -98,35 +98,35 @@ const About = (props) => {
               />
             </span>
           </span>
-          <Banner rootClassName="banner-root-class-name4"></Banner>
+          <Banner rootClassName="bannerroot-class-name4"></Banner>
         </main>
         <div className="about-footer section-container">
-          <div className="about-max-width max-content-container">
+          <div className="about-max-width1 max-content-container">
             <div className="about-top-part">
               <div className="about-links-container">
                 <div className="about-product-container">
-                  <span className="about-text31">Product</span>
+                  <span className="about-text41">Product</span>
                   <Link href="/monthly-specials">
-                    <a className="about-link">MONTHLY SPECIALS</a>
+                    <a className="about-link10">MONTHLY SPECIALS</a>
                   </Link>
                   <DataProvider
                     renderSuccess={(params) => (
-                      <>
-                        <div className="about-container1">
+                      <Fragment>
+                        <div className="about-container2">
                           <Repeater
                             items={params}
                             renderItem={(context_jfwijc) => (
-                              <>
+                              <Fragment>
                                 <Link href={`/post/${context_jfwijc?.slug}`}>
-                                  <a className="about-link01">
+                                  <a className="about-link11">
                                     {context_jfwijc?.title}
                                   </a>
                                 </Link>
-                              </>
+                              </Fragment>
                             )}
                           />
                         </div>
-                      </>
+                      </Fragment>
                     )}
                     initialData={props.contextJfwijcProp}
                     persistDataDuringLoading={true}
@@ -134,34 +134,34 @@ const About = (props) => {
                 </div>
               </div>
               <div className="about-navigate-container">
-                <span className="about-text32">Info</span>
+                <span className="about-text42">Info</span>
                 <Link href="/about">
-                  <a className="about-link02">
+                  <a className="about-link12">
                     <span>ABOUT</span>
                     <br></br>
                   </a>
                 </Link>
                 <Link href="/restrictions">
-                  <a className="about-link03">RESTRICTIONS</a>
+                  <a className="about-link13">RESTRICTIONS</a>
                 </Link>
                 <Link href="/contact">
-                  <a className="about-link04">CONTACT</a>
+                  <a className="about-link14">CONTACT</a>
                 </Link>
               </div>
               <div className="about-contact-container">
-                <span className="about-text35">Contact Us</span>
-                <a href="tel:+18885031722" className="about-link05">
+                <span className="about-text45">Contact Us</span>
+                <a href="tel:+18885031722" className="about-link15">
                   (888) 503-1722
                 </a>
                 <a
                   href="mailto:service@ampureservices.com?subject=Site Service Request"
-                  className="about-link06"
+                  className="about-link16"
                 >
                   SERVICE@AMPURESERVICES.COM
                 </a>
               </div>
               <div className="about-subscribe-container">
-                <span className="about-text36">
+                <span className="about-text46">
                   Subscribe to our newsletter
                 </span>
                 <input
@@ -175,12 +175,12 @@ const About = (props) => {
             </div>
           </div>
           <div className="about-separator"></div>
-          <footer className="about-max-width1 max-content-container">
+          <footer className="about-max-width2 max-content-container">
             <Link href="/">
               <a>
                 <img
                   alt="image"
-                  src="20769734-2b37-4566-8316-77ad864b1180"
+                  src="/logoam-200h.webp"
                   width="150"
                   height="68"
                   className="about-image"
@@ -188,7 +188,7 @@ const About = (props) => {
               </a>
             </Link>
             <Link href="/">
-              <a className="about-link08">
+              <a className="about-link18">
                 All rights reserved @ AM Pure Services
               </a>
             </Link>
@@ -196,16 +196,25 @@ const About = (props) => {
               href="https://011.ninja/bio"
               target="_blank"
               rel="noreferrer noopener"
-              className="about-link09"
+              className="about-link19"
             >
               Developed by 011.ninja
             </a>
           </footer>
+          <a
+            href="https://bytii.cloud"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div className="about-signature">
+              <span className="about-text47">Bytii Cloud</span>
+            </div>
+          </a>
         </div>
       </div>
       <style jsx>
         {`
-          .about-container {
+          .about-container1 {
             width: 100%;
             display: flex;
             position: relative;
@@ -240,7 +249,7 @@ const About = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .about-text {
+          .about-text10 {
             font-size: 48px;
             align-self: center;
             font-style: normal;
@@ -248,7 +257,7 @@ const About = (props) => {
             font-weight: 900;
             margin-bottom: 0px;
           }
-          .about-text03 {
+          .about-text13 {
             width: 768px;
             font-size: 26px;
             align-self: center;
@@ -258,19 +267,19 @@ const About = (props) => {
             padding-right: 0px;
             padding-bottom: var(--dl-space-space-fiveunits);
           }
-          .about-text04 {
+          .about-text14 {
             font-weight: 700;
           }
-          .about-text18 {
+          .about-text28 {
             font-weight: 700;
           }
-          .about-text30 {
+          .about-text40 {
             font-weight: 700;
           }
           .about-footer {
             position: relative;
           }
-          .about-max-width {
+          .about-max-width1 {
             max-width: var(--dl-size-size-maxwidth);
             padding-left: 0px;
             padding-right: 0px;
@@ -298,20 +307,20 @@ const About = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .about-text31 {
+          .about-text41 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .about-link {
+          .about-link10 {
             color: var(--dl-color-scheme-darkblue);
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .about-container1 {
+          .about-container2 {
             display: grid;
           }
-          .about-link01 {
+          .about-link11 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -323,20 +332,20 @@ const About = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .about-text32 {
+          .about-text42 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .about-link02 {
+          .about-link12 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .about-link03 {
+          .about-link13 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .about-link04 {
+          .about-link14 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -348,16 +357,16 @@ const About = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .about-text35 {
+          .about-text45 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .about-link05 {
+          .about-link15 {
             margin-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .about-link06 {
+          .about-link16 {
             font-size: 14px;
             font-style: normal;
             font-family: Rubik;
@@ -374,7 +383,7 @@ const About = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .about-text36 {
+          .about-text46 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
@@ -400,7 +409,7 @@ const About = (props) => {
             margin-bottom: var(--dl-space-space-twounits);
             background-color: #d9d9d9;
           }
-          .about-max-width1 {
+          .about-max-width2 {
             flex-direction: row;
             justify-content: space-between;
           }
@@ -409,17 +418,32 @@ const About = (props) => {
             object-fit: cover;
             text-decoration: none;
           }
-          .about-link08 {
+          .about-link18 {
             width: auto;
             font-style: normal;
             text-align: center;
             font-weight: 300;
             text-decoration: none;
           }
-          .about-link09 {
+          .about-link19 {
             font-style: normal;
             font-weight: 300;
             text-decoration: none;
+          }
+          .about-signature {
+            left: 5px;
+            bottom: 5px;
+            display: flex;
+            position: absolute;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            text-decoration: none;
+          }
+          .about-text47 {
+            color: rgb(201, 206, 218);
+            font-style: normal;
+            font-weight: 300;
           }
           @media (max-width: 1600px) {
             .about-navigate-container {
@@ -428,19 +452,19 @@ const About = (props) => {
             .about-contact-container {
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .about-link08 {
+            .about-link18 {
               width: auto;
               text-align: center;
             }
           }
           @media (max-width: 1200px) {
-            .about-text {
+            .about-text10 {
               font-size: 48px;
               font-style: normal;
               font-family: Rubik;
               font-weight: 900;
             }
-            .about-max-width {
+            .about-max-width1 {
               padding-left: 0px;
               padding-right: 0px;
             }
@@ -451,10 +475,10 @@ const About = (props) => {
               align-self: flex-start;
               margin-left: var(--dl-space-space-oneandhalfunits);
             }
-            .about-link05 {
+            .about-link15 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .about-link06 {
+            .about-link16 {
               font-size: 16px;
               font-style: normal;
               font-weight: 900;
@@ -462,24 +486,24 @@ const About = (props) => {
               margin-bottom: var(--dl-space-space-unit);
               letter-spacing: auto;
             }
-            .about-link08 {
+            .about-link18 {
               width: auto;
               text-align: center;
             }
           }
           @media (max-width: 991px) {
-            .about-link08 {
+            .about-link18 {
               text-align: center;
             }
-            .about-link09 {
+            .about-link19 {
               text-align: center;
             }
           }
           @media (max-width: 767px) {
-            .about-text {
+            .about-text10 {
               font-size: 30px;
             }
-            .about-text03 {
+            .about-text13 {
               width: 100%;
               padding-left: var(--dl-space-space-twounits);
               padding-right: var(--dl-space-space-twounits);
@@ -507,15 +531,15 @@ const About = (props) => {
               padding-left: var(--dl-space-space-oneandhalfunits);
               padding-right: var(--dl-space-space-oneandhalfunits);
             }
-            .about-link08 {
+            .about-link18 {
               text-align: center;
             }
-            .about-link09 {
+            .about-link19 {
               text-align: center;
             }
           }
           @media (max-width: 479px) {
-            .about-text {
+            .about-text10 {
               font-size: 25px;
             }
             .about-top-part {
@@ -541,16 +565,16 @@ const About = (props) => {
               margin-left: var(--dl-space-space-oneandhalfunits);
               margin-bottom: 0px;
             }
-            .about-link06 {
+            .about-link16 {
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }
-            .about-max-width1 {
+            .about-max-width2 {
               flex-direction: column;
             }
             .about-image {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .about-link08 {
+            .about-link18 {
               text-align: center;
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }

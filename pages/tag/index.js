@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Head from 'next/head'
 
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import tagPageInitialPropsTqJ7Resource from '../../resources/tag-page-initial-props-tq_j7'
+import tagPageInitialPropsTqPtResource from '../../resources/tag-page-initial-props-tq_pt'
 
 const Tag1 = (props) => {
   return (
     <>
-      <div className="tag1-container">
+      <div className="tag1-container1">
         <Head>
           <title>
             Tag1 - AM Pure Services | Airduct Cleaning | Drayer Vent Cleaning
@@ -29,22 +29,22 @@ const Tag1 = (props) => {
         </Head>
         <DataProvider
           renderSuccess={(params) => (
-            <>
+            <Fragment>
               <div>
                 <Repeater
                   items={params}
                   renderItem={(TagEntities) => (
-                    <>
-                      <div className="tag1-container2">
+                    <Fragment>
+                      <div className="tag1-container3">
                         <button type="button" className="tag1-button button">
                           {TagEntities?.tagName}
                         </button>
                       </div>
-                    </>
+                    </Fragment>
                   )}
                 />
               </div>
-            </>
+            </Fragment>
           )}
           initialData={props.tagEntities}
           persistDataDuringLoading={true}
@@ -53,7 +53,7 @@ const Tag1 = (props) => {
       </div>
       <style jsx>
         {`
-          .tag1-container {
+          .tag1-container1 {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -61,7 +61,7 @@ const Tag1 = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .tag1-container2 {
+          .tag1-container3 {
             gap: 12px;
             width: 100%;
             display: flex;
@@ -91,7 +91,7 @@ export default Tag1
 
 export async function getStaticProps(context) {
   try {
-    const response = await tagPageInitialPropsTqJ7Resource({
+    const response = await tagPageInitialPropsTqPtResource({
       ...context?.params,
     })
     if (!response) {
