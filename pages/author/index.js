@@ -3,8 +3,9 @@ import Head from 'next/head'
 
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
+import { useTranslations } from 'next-intl'
 
-import authorPageInitialPropsTqCWResource from '../../resources/author-page-initial-props-tq_c-w'
+import authorPageInitialPropsTqK9Resource from '../../resources/author-page-initial-props-tq_k9'
 
 const Author = (props) => {
   return (
@@ -96,8 +97,13 @@ export default Author
 
 export async function getStaticProps(context) {
   try {
-    const response = await authorPageInitialPropsTqCWResource({
+    const messages = (await import('/locales/' + context.locale + '.json'))
+      .default
+    const response = await authorPageInitialPropsTqK9Resource({
       ...context?.params,
+      ...(context?.locale && {
+        locale: context.locale,
+      }),
     })
     if (!response) {
       return {
@@ -106,11 +112,13 @@ export async function getStaticProps(context) {
     }
     return {
       props: {
+        messages,
         authorEntities: response,
         ...response?.meta,
       },
     }
   } catch (error) {
+    console.log(error)
     return {
       notFound: true,
     }

@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 import Script from 'dangerous-html/react'
+import { useTranslations } from 'next-intl'
 
 const Estimate = (props) => {
   return (
@@ -177,3 +178,14 @@ else { window.location="/info";}
 }
 
 export default Estimate
+
+export async function getStaticProps(context) {
+  const messages = (await import('/locales/' + context.locale + '.json'))
+    .default
+  return {
+    props: {
+      messages,
+      ...context,
+    },
+  }
+}

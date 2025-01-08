@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import Script from 'dangerous-html/react'
 import PropTypes from 'prop-types'
+import { useTranslations } from 'next-intl'
 
 import NavigationLinks from './navigation-links'
 

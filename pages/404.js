@@ -2,6 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 
+import { useTranslations } from 'next-intl'
+
 const Page = (props) => {
   return (
     <>
@@ -31,7 +33,7 @@ const Page = (props) => {
           alt="image"
           sizes="(min-width: 768px) 800px, 480px"
           src="/404-800w.gif"
-          srcSet="///404-800w.gif 800w, //404-mobile.gif 480w"
+          srcSet="/404-800w.gif 800w, /404-mobile.gif 480w"
           className="page-image"
         />
         <span className="page-text1">Page Not Found</span>
@@ -122,3 +124,14 @@ const Page = (props) => {
 }
 
 export default Page
+
+export async function getStaticProps(context) {
+  const messages = (await import('/locales/' + context.locale + '.json'))
+    .default
+  return {
+    props: {
+      messages,
+      ...context,
+    },
+  }
+}

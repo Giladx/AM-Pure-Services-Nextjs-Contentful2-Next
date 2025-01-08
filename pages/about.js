@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 
 import { DataProvider, Repeater } from '@teleporthq/react-components'
+import { useTranslations } from 'next-intl'
 
 import Navigation from '../components/navigation'
 import Banner from '../components/banner'
@@ -589,11 +590,14 @@ export default About
 
 export async function getStaticProps(context) {
   try {
+    const messages = (await import('/locales/' + context.locale + '.json'))
+      .default
     const contextJfwijcProp = await aboutResource({
       ...context?.params,
     })
     return {
       props: {
+        messages,
         contextJfwijcProp: contextJfwijcProp,
       },
       revalidate: 60,

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 
 import Script from 'dangerous-html/react'
+import { useTranslations } from 'next-intl'
 
 const Campaign = (props) => {
   return (
@@ -1418,3 +1419,14 @@ const Campaign = (props) => {
 }
 
 export default Campaign
+
+export async function getStaticProps(context) {
+  const messages = (await import('/locales/' + context.locale + '.json'))
+    .default
+  return {
+    props: {
+      messages,
+      ...context,
+    },
+  }
+}

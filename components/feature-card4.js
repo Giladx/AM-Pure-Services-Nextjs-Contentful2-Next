@@ -1,6 +1,7 @@
 import React from 'react'
 
 import PropTypes from 'prop-types'
+import { useTranslations } from 'next-intl'
 
 const FeatureCard4 = (props) => {
   return (
@@ -33,7 +34,6 @@ const FeatureCard4 = (props) => {
           }
           .feature-card4-text1 {
             font-weight: 600;
-            margin-bottom: var(--dl-space-space-unit);
           }
           .feature-card4-text2 {
             color: var(--dl-color-scheme-darkblue);

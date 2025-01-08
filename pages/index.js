@@ -8,9 +8,10 @@ import {
   Repeater,
   DateTimePrimitive,
 } from '@teleporthq/react-components'
+import { useTranslations } from 'next-intl'
 
+import Hero10 from '../components/hero10'
 import Navigation from '../components/navigation'
-import Hero from '../components/hero'
 import Packages from '../components/packages'
 import AboutUs from '../components/about-us'
 import Process from '../components/process'
@@ -44,9 +45,64 @@ const Home = (props) => {
             content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/a9b9a8f2-be01-41ae-838f-381e8ec5a736/20f16b04-d5e9-437e-ac34-d5c544c97085?org_if_sml=1&amp;q=80&amp;force_format=original"
           />
         </Head>
-        <Navigation rootClassName="navigationroot-class-name7"></Navigation>
+        <Hero10
+          action1={
+            <Fragment>
+              <span className="home-text10">Monthly Specials</span>
+            </Fragment>
+          }
+          action2={
+            <Fragment>
+              <span className="home-text11">Call Us Now</span>
+            </Fragment>
+          }
+          content1={
+            <Fragment>
+              <span className="home-text12">
+                <span>
+                  Our certified technicians trained at AM Pure provide
+                  top-quality air duct cleaning services in Michigan. We offer
+                  competitive pricing, monthly specials, and easy appointment
+                  scheduling. Check out our blog posts on the importance of air
+                  duct cleaning to learn more!
+                </span>
+                <br></br>
+                <br></br>
+              </span>
+            </Fragment>
+          }
+          heading1={
+            <Fragment>
+              <span className="home-text16">
+                <span>AM Pure Services </span>
+                <br></br>
+                <span>
+                  {' '}
+                  Professional Air Duct Cleaning
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: ' ',
+                    }}
+                  />
+                </span>
+                <br></br>
+                <span>Michigan &amp; Illinois</span>
+              </span>
+            </Fragment>
+          }
+          buttonUrl="/monthly-specials"
+          image1Alt="Air Duct"
+          buttonUrl1="https://tel:8885031722"
+          rootClassName="hero10root-class-name"
+          image1Src="/photo-new-800w.webp"
+          imageSrc="/photo-new-800w.webp"
+          imageSrc1="/photo-new-800w.webp"
+        ></Hero10>
+        <Navigation
+          button31="(888)-503-1722"
+          rootClassName="navigationroot-class-name7"
+        ></Navigation>
         <main className="home-main">
-          <Hero></Hero>
           <div className="home-stickers">
             <div className="home-sticker-wrap">
               <div className="home-container11">
@@ -105,23 +161,23 @@ const Home = (props) => {
                 sizes="(min-width: 992px) 1200px, (min-width: 768px) 800px, 480px"
                 src="/undraw_absorbed_in_re_ymd6-1500w-1500w.webp"
                 loading="lazy"
-                srcSet="///undraw_absorbed_in_re_ymd6-1500w-1500w.webp 1200w, //undraw_absorbed_in_re_ymd6-1500w-tablet.webp 800w, //undraw_absorbed_in_re_ymd6-1500w-mobile.webp 480w"
+                srcSet="/undraw_absorbed_in_re_ymd6-1500w-1500w.webp 1200w, /undraw_absorbed_in_re_ymd6-1500w-tablet.webp 800w, /undraw_absorbed_in_re_ymd6-1500w-mobile.webp 480w"
                 className="home-image15"
               />
             </div>
             <div data-aos="fade-up" className="home-content-wrap1">
-              <span className="home-text10 Heading1">
+              <span className="home-text22 Heading1">
                 <span>AIR DUCT CLEANING</span>
                 <br></br>
               </span>
-              <span className="home-text13">
+              <span className="home-text25">
                 <span>
                   Is essential process to take full advantage of the cooling
                   &amp; heating system.
                 </span>
                 <br></br>
               </span>
-              <span className="home-text16">
+              <span className="home-text28">
                 <span>
                   The air ducts and filters must be kept clean. Air ducts and
                   filters accumulate dust, odors and even dust mites which can
@@ -142,51 +198,75 @@ const Home = (props) => {
                 </span>
                 <br></br>
               </span>
+              <a
+                href="tel:+18885031722"
+                className="home-button1 thq-button-filled"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <path
+                    d="M6.54 5c.06.89.21 1.76.45 2.59l-1.2 1.2c-.41-1.2-.67-2.47-.76-3.79zm9.86 12.02c.85.24 1.72.39 2.6.45v1.49c-1.32-.09-2.59-.35-3.8-.75zM7.5 3H4c-.55 0-1 .45-1 1c0 9.39 7.61 17 17 17c.55 0 1-.45 1-1v-3.49c0-.55-.45-1-1-1c-1.24 0-2.45-.2-3.57-.57a.8.8 0 0 0-.31-.05c-.26 0-.51.1-.71.29l-2.2 2.2a15.15 15.15 0 0 1-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02A11.4 11.4 0 0 1 8.5 4c0-.55-.45-1-1-1"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                <span className="home-action11">Call Us Now</span>
+              </a>
             </div>
           </div>
           <div data-aos="fade-left" className="home-animation pure"></div>
           <div className="home-content2">
             <div data-aos="fade-right" className="home-content-wrap2">
-              <span className="home-text22">
+              <span className="home-text34">
                 <span>At AM Pure Services</span>
                 <br></br>
               </span>
-              <span className="home-text25 Heading1">
+              <span className="home-text37 Heading1">
                 <span>WE AIM TO BE THE BEST FOR YOU</span>
                 <br></br>
               </span>
-              <span className="home-text28">
+              <span className="home-text40">
                 <span>Here are few good reasons why:</span>
                 <br></br>
               </span>
-              <span className="home-text31">
+              <span className="home-text43">
                 <span>AVAILABILITY</span>
                 <br className="Heading1"></br>
               </span>
-              <span className="home-text34">
+              <span className="home-text46">
                 <span>
                   Weekends and same-day appointments, We are ready to deliver
                   our services.
                 </span>
                 <br></br>
               </span>
-              <span className="home-text37">
+              <span className="home-text49">
                 <span>PROFESSIONALITY</span>
                 <br></br>
               </span>
-              <span className="home-text40">
+              <span className="home-text52">
                 We train the best and brightest duct cleaning technicians that
                 Michigan has to offer. All technicians are certified at AM Pure,
                 allowing them to understand the needs of your air ducts.
               </span>
-              <span className="home-text41">
+              <span className="home-text53">
                 <span>COMPETITIVE</span>
                 <br></br>
               </span>
-              <span className="home-text44">
+              <span className="home-text56">
                 We will beat any competitor prices and service for a limited
                 time only!
               </span>
+              <a
+                href="tel:+18885031722"
+                className="home-button2 thq-button-filled"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <path
+                    d="M6.54 5c.06.89.21 1.76.45 2.59l-1.2 1.2c-.41-1.2-.67-2.47-.76-3.79zm9.86 12.02c.85.24 1.72.39 2.6.45v1.49c-1.32-.09-2.59-.35-3.8-.75zM7.5 3H4c-.55 0-1 .45-1 1c0 9.39 7.61 17 17 17c.55 0 1-.45 1-1v-3.49c0-.55-.45-1-1-1c-1.24 0-2.45-.2-3.57-.57a.8.8 0 0 0-.31-.05c-.26 0-.51.1-.71.29l-2.2 2.2a15.15 15.15 0 0 1-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02A11.4 11.4 0 0 1 8.5 4c0-.55-.45-1-1-1"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                <span className="home-action12">Call Us Now</span>
+              </a>
             </div>
             <div className="home-image16">
               <img
@@ -200,15 +280,26 @@ const Home = (props) => {
           </div>
           <Packages></Packages>
           <AboutUs
+            action1={
+              <Fragment>
+                <span className="home-text57">Call Us Now</span>
+              </Fragment>
+            }
             imageAlt="am pure services - air duct cleaning"
             imageSrc="https://images.unsplash.com/photo-1592967050810-fb4aa3f8bf9d?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDEwfHxNaWNoaWdhbnxlbnwwfHx8fDE2NzgyMDU5NDE&amp;ixlib=rb-4.0.3&amp;w=1000"
             rootClassName="about-usroot-class-name"
           ></AboutUs>
-          <Process></Process>
+          <Process
+            action1={
+              <Fragment>
+                <span className="home-text58">Let&apos;s Get Started</span>
+              </Fragment>
+            }
+          ></Process>
           <div className="home-blog">
             <div className="home-container15">
-              <span className="home-text45">from blog</span>
-              <h2 className="home-text46">
+              <span className="home-text59">from blog</span>
+              <h2 className="home-text60">
                 <span>Our Services</span>
                 <br></br>
               </h2>
@@ -237,7 +328,7 @@ const Home = (props) => {
                                         items={context_1m1e3a?.tag || []}
                                         renderItem={(context_9oxe3a) => (
                                           <Fragment>
-                                            <span className="home-text49">
+                                            <span className="home-text63">
                                               {context_9oxe3a?.tagName}
                                             </span>
                                           </Fragment>
@@ -258,14 +349,14 @@ const Home = (props) => {
                                       </span>
                                     </div>
                                   </div>
-                                  <span className="home-text51">
+                                  <span className="home-text65">
                                     {context_1m1e3a?.title}
                                   </span>
                                   <div className="home-container18">
                                     <span>Read More</span>
                                     <svg
                                       viewBox="0 0 1024 1024"
-                                      className="home-icon1"
+                                      className="home-icon5"
                                     >
                                       <path d="M810 298h86v256h-648l154 154-60 60-256-256 256-256 60 60-154 154h562v-172z"></path>
                                     </svg>
@@ -284,7 +375,7 @@ const Home = (props) => {
               persistDataDuringLoading={true}
             />
           </div>
-          <Banner rootClassName="bannerroot-class-name"></Banner>
+          <Banner rootClassName="bannerroot-class-name24"></Banner>
           <ServiceAreas></ServiceAreas>
         </main>
         <div className="home-footer section-container">
@@ -292,7 +383,7 @@ const Home = (props) => {
             <div className="home-top-part">
               <div className="home-links-container">
                 <div className="home-product-container">
-                  <span className="home-text53">Product</span>
+                  <span className="home-text67">Product</span>
                   <Link href="/monthly-specials">
                     <a className="home-link11">MONTHLY SPECIALS</a>
                   </Link>
@@ -321,7 +412,7 @@ const Home = (props) => {
                 </div>
               </div>
               <div className="home-navigate-container">
-                <span className="home-text54">Info</span>
+                <span className="home-text68">Info</span>
                 <Link href="/about">
                   <a className="home-link13">
                     <span>ABOUT</span>
@@ -336,7 +427,7 @@ const Home = (props) => {
                 </Link>
               </div>
               <div className="home-contact-container">
-                <span className="home-text57">Contact Us</span>
+                <span className="home-text71">Contact Us</span>
                 <a href="tel:+18885031722" className="home-link16">
                   (888) 503-1722
                 </a>
@@ -348,7 +439,7 @@ const Home = (props) => {
                 </a>
               </div>
               <div className="home-subscribe-container">
-                <span className="home-text58">Subscribe to our newsletter</span>
+                <span className="home-text72">Subscribe to our newsletter</span>
                 <input
                   type="text"
                   id="newsletter"
@@ -392,7 +483,7 @@ const Home = (props) => {
             rel="noreferrer noopener"
           >
             <div className="home-signature">
-              <span className="home-text59">Bytii Cloud</span>
+              <span className="home-text73">Bytii Cloud</span>
             </div>
           </a>
         </div>
@@ -408,6 +499,18 @@ const Home = (props) => {
             align-items: center;
             flex-direction: column;
           }
+          .home-text10 {
+            display: inline-block;
+          }
+          .home-text11 {
+            display: inline-block;
+          }
+          .home-text12 {
+            display: inline-block;
+          }
+          .home-text16 {
+            display: inline-block;
+          }
           .home-main {
             flex: 0 0 auto;
             width: 100%;
@@ -419,6 +522,7 @@ const Home = (props) => {
             flex: 0 0 auto;
             width: 100%;
             display: flex;
+            margin-top: 50px;
             align-items: center;
             justify-content: center;
           }
@@ -529,15 +633,15 @@ const Home = (props) => {
             height: auto;
             display: flex;
             padding: var(--dl-space-space-oneandhalfunits);
-            align-items: center;
+            align-items: flex-start;
             flex-direction: column;
             justify-content: center;
           }
-          .home-text10 {
+          .home-text22 {
             width: 100%;
             font-style: normal;
           }
-          .home-text13 {
+          .home-text25 {
             width: 100%;
             font-size: 26px;
             font-style: normal;
@@ -546,11 +650,26 @@ const Home = (props) => {
             line-height: 1.2;
             margin-bottom: var(--dl-space-space-twounits);
           }
-          .home-text16 {
+          .home-text28 {
             width: 100%;
             font-size: 26px;
             font-style: normal;
             font-weight: 400;
+          }
+          .home-button1 {
+            fill: var(--dl-color-scheme-green);
+            color: var(--dl-color-scheme-green);
+            width: 100%;
+            margin-top: var(--dl-space-space-oneandhalfunits);
+            padding-top: var(--dl-space-space-unit);
+            border-color: var(--dl-color-scheme-green);
+            border-radius: var(--dl-radius-radius-radius8);
+            padding-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+            background-color: var(--dl-color-scheme-lightgreen);
+          }
+          .home-action11 {
+            text-transform: uppercase;
           }
           .home-animation {
             height: auto;
@@ -558,7 +677,7 @@ const Home = (props) => {
           }
           .home-content2 {
             width: 100%;
-            height: 820px;
+            height: 860px;
             display: flex;
             position: relative;
             align-items: center;
@@ -569,11 +688,11 @@ const Home = (props) => {
             height: auto;
             display: flex;
             padding: var(--dl-space-space-oneandhalfunits);
-            align-items: center;
+            align-items: flex-start;
             flex-direction: column;
             justify-content: center;
           }
-          .home-text22 {
+          .home-text34 {
             width: 100%;
             font-size: 26px;
             font-style: normal;
@@ -584,19 +703,19 @@ const Home = (props) => {
             padding-bottom: var(--dl-space-space-unit);
             text-decoration: none;
           }
-          .home-text25 {
+          .home-text37 {
             width: 100%;
             font-style: normal;
             margin-bottom: var(--dl-space-space-twounits);
           }
-          .home-text28 {
+          .home-text40 {
             width: 100%;
             font-size: 26px;
             font-style: normal;
             font-weight: 700;
             padding-bottom: var(--dl-space-space-twounits);
           }
-          .home-text31 {
+          .home-text43 {
             width: 100%;
             font-size: 36px;
             font-style: normal;
@@ -606,13 +725,13 @@ const Home = (props) => {
             letter-spacing: 0.01em;
             text-decoration: none;
           }
-          .home-text34 {
+          .home-text46 {
             width: 100%;
             font-size: 26px;
             font-style: normal;
             font-weight: 400;
           }
-          .home-text37 {
+          .home-text49 {
             width: 100%;
             font-size: 36px;
             font-style: normal;
@@ -622,13 +741,13 @@ const Home = (props) => {
             letter-spacing: 0.01em;
             text-decoration: none;
           }
-          .home-text40 {
+          .home-text52 {
             width: 100%;
             font-size: 26px;
             font-style: normal;
             font-weight: 400;
           }
-          .home-text41 {
+          .home-text53 {
             width: 100%;
             font-size: 36px;
             font-style: normal;
@@ -638,11 +757,26 @@ const Home = (props) => {
             letter-spacing: 0.01em;
             text-decoration: none;
           }
-          .home-text44 {
+          .home-text56 {
             width: 100%;
             font-size: 26px;
             font-style: normal;
             font-weight: 400;
+          }
+          .home-button2 {
+            fill: var(--dl-color-scheme-green);
+            color: var(--dl-color-scheme-green);
+            width: 100%;
+            margin-top: var(--dl-space-space-oneandhalfunits);
+            padding-top: var(--dl-space-space-unit);
+            border-color: var(--dl-color-scheme-green);
+            border-radius: var(--dl-radius-radius-radius8);
+            padding-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+            background-color: var(--dl-color-scheme-lightgreen);
+          }
+          .home-action12 {
+            text-transform: uppercase;
           }
           .home-image16 {
             flex: 0 0 auto;
@@ -656,8 +790,14 @@ const Home = (props) => {
           }
           .home-image17 {
             width: 100%;
-            height: 825px;
+            height: 860px;
             object-fit: fill;
+          }
+          .home-text57 {
+            display: inline-block;
+          }
+          .home-text58 {
+            display: inline-block;
           }
           .home-blog {
             flex: 0 0 auto;
@@ -681,7 +821,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .home-text45 {
+          .home-text59 {
             color: var(--dl-color-scheme-green);
             font-style: normal;
             text-align: center;
@@ -690,7 +830,7 @@ const Home = (props) => {
             letter-spacing: 0.1em;
             text-transform: uppercase;
           }
-          .home-text46 {
+          .home-text60 {
             font-size: 46px;
             font-style: normal;
             text-align: center;
@@ -750,7 +890,7 @@ const Home = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home-text49 {
+          .home-text63 {
             color: var(--dl-color-scheme-white);
             padding: var(--dl-space-space-halfunit);
             font-size: 12px;
@@ -774,7 +914,7 @@ const Home = (props) => {
             text-align: right;
             font-weight: 700;
           }
-          .home-text51 {
+          .home-text65 {
             font-style: normal;
             font-weight: 600;
           }
@@ -786,7 +926,7 @@ const Home = (props) => {
             align-items: flex-start;
             justify-content: flex-start;
           }
-          .home-icon1 {
+          .home-icon5 {
             width: 24px;
             height: 24px;
             margin-left: var(--dl-space-space-halfunit);
@@ -822,7 +962,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-text53 {
+          .home-text67 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
@@ -847,7 +987,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-text54 {
+          .home-text68 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
@@ -872,7 +1012,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-text57 {
+          .home-text71 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
@@ -898,7 +1038,7 @@ const Home = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .home-text58 {
+          .home-text72 {
             color: var(--dl-color-scheme-green);
             font-weight: 700;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
@@ -955,7 +1095,7 @@ const Home = (props) => {
             justify-content: center;
             text-decoration: none;
           }
-          .home-text59 {
+          .home-text73 {
             color: rgb(201, 206, 218);
             font-style: normal;
             font-weight: 300;
@@ -994,7 +1134,7 @@ const Home = (props) => {
               width: 70%;
               flex-direction: row;
             }
-            .home-text49 {
+            .home-text63 {
               color: var(--dl-color-scheme-white);
               padding: var(--dl-space-space-halfunit);
               font-size: 12px;
@@ -1046,7 +1186,7 @@ const Home = (props) => {
               height: 452px;
               margin-right: 0px;
             }
-            .home-text13 {
+            .home-text25 {
               margin-bottom: var(--dl-space-space-twounits);
             }
             .home-content2 {
@@ -1057,7 +1197,7 @@ const Home = (props) => {
               padding: var(--dl-space-space-oneandhalfunits);
               margin-right: 0px;
             }
-            .home-text22 {
+            .home-text34 {
               font-size: 26px;
               font-style: normal;
               font-family: Rubik;
@@ -1066,7 +1206,7 @@ const Home = (props) => {
               letter-spacing: 0.01em;
               text-decoration: none;
             }
-            .home-text28 {
+            .home-text40 {
               font-size: 30px;
               font-style: normal;
               font-weight: 700;
@@ -1082,7 +1222,7 @@ const Home = (props) => {
             .home-image18 {
               height: 180px;
             }
-            .home-text51 {
+            .home-text65 {
               font-style: normal;
               font-weight: 700;
               margin-bottom: var(--dl-space-space-unit);
@@ -1195,10 +1335,10 @@ const Home = (props) => {
             .home-content-wrap1 {
               width: 100%;
             }
-            .home-text10 {
+            .home-text22 {
               margin-bottom: var(--dl-space-space-unit);
             }
-            .home-text13 {
+            .home-text25 {
               margin-bottom: var(--dl-space-space-twounits);
             }
             .home-animation {
@@ -1211,19 +1351,19 @@ const Home = (props) => {
               width: 100%;
               height: auto;
             }
-            .home-text28 {
-              margin-bottom: var(--dl-space-space-twounits);
-            }
-            .home-text34 {
-              margin-bottom: var(--dl-space-space-twounits);
-            }
             .home-text40 {
+              margin-bottom: var(--dl-space-space-twounits);
+            }
+            .home-text46 {
+              margin-bottom: var(--dl-space-space-twounits);
+            }
+            .home-text52 {
               margin-top: 0px;
               margin-left: 0px;
               margin-right: 0px;
               margin-bottom: var(--dl-space-space-twounits);
             }
-            .home-text44 {
+            .home-text56 {
               margin-bottom: var(--dl-space-space-twounits);
             }
             .home-image16 {
@@ -1313,10 +1453,16 @@ const Home = (props) => {
             .home-content-wrap1 {
               width: 100%;
             }
+            .home-button1 {
+              width: 100%;
+            }
             .home-animation {
               margin-bottom: var(--dl-space-space-unit);
             }
             .home-content-wrap2 {
+              width: 100%;
+            }
+            .home-button2 {
               width: 100%;
             }
             .home-blog-card {
@@ -1369,6 +1515,8 @@ export default Home
 
 export async function getStaticProps(context) {
   try {
+    const messages = (await import('/locales/' + context.locale + '.json'))
+      .default
     const context0mvdzProp = await home1Resource({
       ...context?.params,
     })
@@ -1377,6 +1525,7 @@ export async function getStaticProps(context) {
     })
     return {
       props: {
+        messages,
         context0mvdzProp: context0mvdzProp,
         context1m1e3aProp: context1m1e3aProp,
       },

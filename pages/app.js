@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 import Script from 'dangerous-html/react'
+import { useTranslations } from 'next-intl'
 
 const App = (props) => {
   return (
@@ -72,3 +73,14 @@ const App = (props) => {
 }
 
 export default App
+
+export async function getStaticProps(context) {
+  const messages = (await import('/locales/' + context.locale + '.json'))
+    .default
+  return {
+    props: {
+      messages,
+      ...context,
+    },
+  }
+}

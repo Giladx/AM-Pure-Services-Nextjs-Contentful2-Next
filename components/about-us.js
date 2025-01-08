@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import PropTypes from 'prop-types'
+import { useTranslations } from 'next-intl'
 
 const AboutUs = (props) => {
   return (
@@ -10,11 +11,11 @@ const AboutUs = (props) => {
       >
         <div className="about-us-max-width max-content-container">
           <div className="about-us-text-container">
-            <span className="about-us-text1">{props.text}</span>
-            <h2 data-aos="fade-right" className="about-us-text2 Heading1">
+            <span className="about-us-text10">{props.text}</span>
+            <h2 data-aos="fade-right" className="about-us-text11 Heading1">
               Peace of Mind, Guaranteed with Us.
             </h2>
-            <span data-aos="fade-left" className="about-us-text3">
+            <span data-aos="fade-left" className="about-us-text12">
               {props.text1}
             </span>
             <div data-aos="fade-down" className="about-us-checklist">
@@ -22,39 +23,57 @@ const AboutUs = (props) => {
                 <svg viewBox="0 0 1024 1024" className="about-us-icon10">
                   <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
                 </svg>
-                <span className="about-us-text4">{props.text2}</span>
+                <span className="about-us-text13">{props.text2}</span>
               </div>
               <div className="about-us-check-item2">
                 <svg viewBox="0 0 1024 1024" className="about-us-icon12">
                   <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
                 </svg>
-                <span className="about-us-text5">{props.text3}</span>
+                <span className="about-us-text14">{props.text3}</span>
               </div>
               <div className="about-us-check-item3">
                 <svg viewBox="0 0 1024 1024" className="about-us-icon14">
                   <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
                 </svg>
-                <span className="about-us-text6">{props.text4}</span>
+                <span className="about-us-text15">{props.text4}</span>
               </div>
               <div className="about-us-check-item4">
                 <svg viewBox="0 0 1024 1024" className="about-us-icon16">
                   <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
                 </svg>
-                <span className="about-us-text7">{props.text5}</span>
+                <span className="about-us-text16">{props.text5}</span>
               </div>
               <div className="about-us-check-item5">
                 <svg viewBox="0 0 1024 1024" className="about-us-icon18">
                   <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
                 </svg>
-                <span className="about-us-text8">{props.text6}</span>
+                <span className="about-us-text17">{props.text6}</span>
               </div>
               <div className="about-us-check-item6">
                 <svg viewBox="0 0 1024 1024" className="about-us-icon20">
                   <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
                 </svg>
-                <span className="about-us-text9">{props.text7}</span>
+                <span className="about-us-text18">{props.text7}</span>
               </div>
             </div>
+            <a
+              href="tel:+18885031722"
+              className="about-us-button thq-button-filled"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path
+                  d="M6.54 5c.06.89.21 1.76.45 2.59l-1.2 1.2c-.41-1.2-.67-2.47-.76-3.79zm9.86 12.02c.85.24 1.72.39 2.6.45v1.49c-1.32-.09-2.59-.35-3.8-.75zM7.5 3H4c-.55 0-1 .45-1 1c0 9.39 7.61 17 17 17c.55 0 1-.45 1-1v-3.49c0-.55-.45-1-1-1c-1.24 0-2.45-.2-3.57-.57a.8.8 0 0 0-.31-.05c-.26 0-.51.1-.71.29l-2.2 2.2a15.15 15.15 0 0 1-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02A11.4 11.4 0 0 1 8.5 4c0-.55-.45-1-1-1"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <span>
+                {props.action1 ?? (
+                  <Fragment>
+                    <span className="about-us-text19">Call Now</span>
+                  </Fragment>
+                )}
+              </span>
+            </a>
           </div>
           <div className="about-us-image-container">
             <img
@@ -86,7 +105,7 @@ const AboutUs = (props) => {
             margin-right: var(--dl-space-space-unit);
             flex-direction: column;
           }
-          .about-us-text1 {
+          .about-us-text10 {
             color: var(--dl-color-scheme-green);
             font-style: normal;
             text-align: center;
@@ -95,10 +114,10 @@ const AboutUs = (props) => {
             letter-spacing: 0.1em;
             text-transform: uppercase;
           }
-          .about-us-text2 {
+          .about-us-text11 {
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .about-us-text3 {
+          .about-us-text12 {
             color: var(--dl-color-scheme-black80);
             font-size: 24px;
             font-style: normal;
@@ -129,7 +148,7 @@ const AboutUs = (props) => {
             height: 18px;
             margin-right: var(--dl-space-space-unit);
           }
-          .about-us-text4 {
+          .about-us-text13 {
             font-style: normal;
             font-weight: 500;
           }
@@ -146,7 +165,7 @@ const AboutUs = (props) => {
             height: 18px;
             margin-right: var(--dl-space-space-unit);
           }
-          .about-us-text5 {
+          .about-us-text14 {
             font-style: normal;
             font-weight: 500;
           }
@@ -163,7 +182,7 @@ const AboutUs = (props) => {
             height: 18px;
             margin-right: var(--dl-space-space-unit);
           }
-          .about-us-text6 {
+          .about-us-text15 {
             font-style: normal;
             font-weight: 500;
           }
@@ -180,7 +199,7 @@ const AboutUs = (props) => {
             height: 18px;
             margin-right: var(--dl-space-space-unit);
           }
-          .about-us-text7 {
+          .about-us-text16 {
             font-style: normal;
             font-weight: 500;
           }
@@ -197,7 +216,7 @@ const AboutUs = (props) => {
             height: 18px;
             margin-right: var(--dl-space-space-unit);
           }
-          .about-us-text8 {
+          .about-us-text17 {
             font-style: normal;
             font-weight: 500;
           }
@@ -213,9 +232,18 @@ const AboutUs = (props) => {
             height: 18px;
             margin-right: var(--dl-space-space-unit);
           }
-          .about-us-text9 {
+          .about-us-text18 {
             font-style: normal;
             font-weight: 500;
+          }
+          .about-us-button {
+            fill: var(--dl-color-scheme-green);
+            color: var(--dl-color-scheme-green);
+            margin-top: var(--dl-space-space-oneandhalfunits);
+            border-color: var(--dl-color-scheme-green);
+            border-radius: var(--dl-radius-radius-radius8);
+            text-decoration: none;
+            background-color: var(--dl-color-scheme-lightgreen);
           }
           .about-us-image {
             flex: 1;
@@ -223,6 +251,9 @@ const AboutUs = (props) => {
             height: auto;
             object-fit: cover;
             border-radius: var(--dl-radius-radius-radius8);
+          }
+          .about-us-text19 {
+            display: inline-block;
           }
 
           @media (max-width: 1600px) {
@@ -252,6 +283,11 @@ const AboutUs = (props) => {
               width: 100%;
             }
           }
+          @media (max-width: 479px) {
+            .about-us-button {
+              width: 100%;
+            }
+          }
         `}
       </style>
     </>
@@ -259,10 +295,11 @@ const AboutUs = (props) => {
 }
 
 AboutUs.defaultProps = {
+  action1: undefined,
   imageAlt: 'image',
   text3: 'Availability',
   text1: 'We are a full air duct cleaning service',
-  imageSrc: '/photo-1621905252507-b35492cc74b4-1100w.webp',
+  imageSrc: 'https://play.teleporthq.io/static/svg/placeholders/no-image.svg',
   text2: 'Quality service all time',
   text7: 'Support in any implementation',
   text4: 'FREE Estimate',
@@ -273,6 +310,7 @@ AboutUs.defaultProps = {
 }
 
 AboutUs.propTypes = {
+  action1: PropTypes.element,
   imageAlt: PropTypes.string,
   text3: PropTypes.string,
   text1: PropTypes.string,

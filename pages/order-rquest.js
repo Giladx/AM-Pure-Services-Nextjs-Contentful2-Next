@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Head from 'next/head'
 
 import Script from 'dangerous-html/react'
+import { useTranslations } from 'next-intl'
 
 import Navigation from '../components/navigation'
 import Process from '../components/process'
@@ -137,7 +138,14 @@ const OrderRquest = (props) => {
             </div>
           </div>
         </div>
-        <Process rootClassName="processroot-class-name1"></Process>
+        <Process
+          action1={
+            <Fragment>
+              <span className="order-rquest-text4">Let&apos;s Get Started</span>
+            </Fragment>
+          }
+          rootClassName="processroot-class-name1"
+        ></Process>
         <Banner rootClassName="bannerroot-class-name8"></Banner>
         <a
           href="https://bytii.cloud"
@@ -146,7 +154,7 @@ const OrderRquest = (props) => {
           className="order-rquest-link"
         >
           <div className="order-rquest-signature">
-            <span className="order-rquest-text4">Bytii Cloud</span>
+            <span className="order-rquest-text5">Bytii Cloud</span>
           </div>
         </a>
       </div>
@@ -203,6 +211,9 @@ const OrderRquest = (props) => {
           .order-rquest-container3 {
             display: contents;
           }
+          .order-rquest-text4 {
+            display: inline-block;
+          }
           .order-rquest-link {
             display: contents;
           }
@@ -216,7 +227,7 @@ const OrderRquest = (props) => {
             justify-content: center;
             text-decoration: none;
           }
-          .order-rquest-text4 {
+          .order-rquest-text5 {
             color: rgb(201, 206, 218);
             font-style: normal;
             font-weight: 300;
@@ -263,3 +274,14 @@ const OrderRquest = (props) => {
 }
 
 export default OrderRquest
+
+export async function getStaticProps(context) {
+  const messages = (await import('/locales/' + context.locale + '.json'))
+    .default
+  return {
+    props: {
+      messages,
+      ...context,
+    },
+  }
+}

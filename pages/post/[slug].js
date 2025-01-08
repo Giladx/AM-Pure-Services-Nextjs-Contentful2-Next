@@ -9,12 +9,13 @@ import {
 } from '@teleporthq/react-components'
 import RichText from '@madebyconnor/rich-text-to-jsx'
 import PropTypes from 'prop-types'
+import { useTranslations } from 'next-intl'
 
 import Navigation from '../../components/navigation'
 import BlogCard from '../../components/blog-card'
 import Banner from '../../components/banner'
-import postPageInitialPropsTqPoResource from '../../resources/post-page-initial-props-tq_po'
-import postPageInitialPathsTqP1Resource from '../../resources/post-page-initial-paths-tq_p1'
+import postPageInitialPropsTq5rResource from '../../resources/post-page-initial-props-tq_5r'
+import postPageInitialPathsTqCuResource from '../../resources/post-page-initial-paths-tq_cu'
 import postResource from '../../resources/post'
 
 const Post = (props) => {
@@ -815,11 +816,16 @@ export default Post
 
 export async function getStaticProps(context) {
   try {
+    const messages = (await import('/locales/' + context.locale + '.json'))
+      .default
     const contextGu7liProp = await postResource({
       ...context?.params,
     })
-    const response = await postPageInitialPropsTqPoResource({
+    const response = await postPageInitialPropsTq5rResource({
       ...context?.params,
+      ...(context?.locale && {
+        locale: context.locale,
+      }),
     })
     if (!response?.data?.[0]) {
       return {
@@ -828,12 +834,14 @@ export async function getStaticProps(context) {
     }
     return {
       props: {
+        messages,
         contextGu7liProp: contextGu7liProp,
         postEntity: response?.data?.[0],
         ...response?.meta,
       },
     }
   } catch (error) {
+    console.log(error)
     return {
       notFound: true,
     }
@@ -842,7 +850,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPathsTqP1Resource({
+    const response = await postPageInitialPathsTqCuResource({
       content_type: 'post',
       select: 'fields.slug',
     })

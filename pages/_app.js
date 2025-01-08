@@ -1,9 +1,13 @@
-import "./style.css";
+import './style.css'
 
-import React from "react";
-export default function MyApp({
-  Component: Component,
-  pageProps: pageProps
-}) {
-  return <Component {...pageProps} />;
+import { GlobalProvider } from '../global-context'
+import { NextIntlProvider } from 'next-intl'
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <NextIntlProvider messages={pageProps?.messages}>
+      <GlobalProvider>
+        <Component {...pageProps} />
+      </GlobalProvider>
+    </NextIntlProvider>
+  )
 }

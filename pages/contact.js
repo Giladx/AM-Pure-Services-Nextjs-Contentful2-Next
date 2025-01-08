@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Head from 'next/head'
 
 import Script from 'dangerous-html/react'
+import { useTranslations } from 'next-intl'
 
 import Navigation from '../components/navigation'
 import Process from '../components/process'
@@ -146,7 +147,14 @@ const Contact = (props) => {
             </div>
           </div>
         </div>
-        <Process rootClassName="processroot-class-name"></Process>
+        <Process
+          action1={
+            <Fragment>
+              <span className="contact-text4">Let&apos;s Get Started</span>
+            </Fragment>
+          }
+          rootClassName="processroot-class-name"
+        ></Process>
         <Banner rootClassName="bannerroot-class-name7"></Banner>
       </div>
       <style jsx>
@@ -202,6 +210,9 @@ const Contact = (props) => {
           .contact-container3 {
             display: contents;
           }
+          .contact-text4 {
+            display: inline-block;
+          }
           @media (max-width: 1200px) {
             .contact-text1 {
               font-size: 48px;
@@ -227,3 +238,14 @@ const Contact = (props) => {
 }
 
 export default Contact
+
+export async function getStaticProps(context) {
+  const messages = (await import('/locales/' + context.locale + '.json'))
+    .default
+  return {
+    props: {
+      messages,
+      ...context,
+    },
+  }
+}

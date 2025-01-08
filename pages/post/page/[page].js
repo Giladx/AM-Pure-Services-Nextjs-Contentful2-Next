@@ -4,11 +4,12 @@ import Head from 'next/head'
 
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
+import { useTranslations } from 'next-intl'
 
 import Navigation from '../../../components/navigation'
 import Banner from '../../../components/banner'
-import postPageInitialPropsTqZmResource from '../../../resources/post-page-initial-props-tq_zm'
-import postPageInitialPathsTqZHResource from '../../../resources/post-page-initial-paths-tq_z-h'
+import postPageInitialPropsTqCxResource from '../../../resources/post-page-initial-props-tq_cx'
+import postPageInitialPathsTqS2Resource from '../../../resources/post-page-initial-paths-tq_s2'
 import post1Resource from '../../../resources/post1'
 
 const Post11 = (props) => {
@@ -640,11 +641,16 @@ export default Post11
 
 export async function getStaticProps(context) {
   try {
+    const messages = (await import('/locales/' + context.locale + '.json'))
+      .default
     const context0kxs0sProp = await post1Resource({
       ...context?.params,
     })
-    const response = await postPageInitialPropsTqZmResource({
+    const response = await postPageInitialPropsTqCxResource({
       ...context?.params,
+      ...(context?.locale && {
+        locale: context.locale,
+      }),
       skip: (context.params.page - 1) * 9,
     })
     if (!response) {
@@ -654,6 +660,7 @@ export async function getStaticProps(context) {
     }
     return {
       props: {
+        messages,
         context0kxs0sProp: context0kxs0sProp,
         postEntities: response,
         ...response?.meta,
@@ -661,6 +668,7 @@ export async function getStaticProps(context) {
       revalidate: 60,
     }
   } catch (error) {
+    console.log(error)
     return {
       notFound: true,
     }
@@ -669,7 +677,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPathsTqZHResource({
+    const response = await postPageInitialPathsTqS2Resource({
       content_type: 'post',
     })
     const totalCount = response?.meta?.pagination?.total

@@ -7,6 +7,7 @@ import {
   Repeater,
   DateTimePrimitive,
 } from '@teleporthq/react-components'
+import { useTranslations } from 'next-intl'
 
 import Navigation from '../components/navigation'
 import Banner from '../components/banner'
@@ -1127,6 +1128,8 @@ export default Restrictions
 
 export async function getStaticProps(context) {
   try {
+    const messages = (await import('/locales/' + context.locale + '.json'))
+      .default
     const contextXps4qrProp = await restrictions1Resource({
       ...context?.params,
     })
@@ -1135,6 +1138,7 @@ export async function getStaticProps(context) {
     })
     return {
       props: {
+        messages,
         contextXps4qrProp: contextXps4qrProp,
         context7mpc8mProp: context7mpc8mProp,
       },

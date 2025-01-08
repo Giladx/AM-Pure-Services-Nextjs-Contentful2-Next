@@ -7,6 +7,7 @@ import {
   Repeater,
   DateTimePrimitive,
 } from '@teleporthq/react-components'
+import { useTranslations } from 'next-intl'
 
 import Navigation from '../components/navigation'
 import Packages from '../components/packages'
@@ -811,6 +812,8 @@ export default MonthlySpecials
 
 export async function getStaticProps(context) {
   try {
+    const messages = (await import('/locales/' + context.locale + '.json'))
+      .default
     const contextRxexonProp = await monthlySpecials1Resource({
       ...context?.params,
     })
@@ -819,6 +822,7 @@ export async function getStaticProps(context) {
     })
     return {
       props: {
+        messages,
         contextRxexonProp: contextRxexonProp,
         contextKof7xProp: contextKof7xProp,
       },

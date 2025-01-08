@@ -2,6 +2,7 @@ import React from 'react'
 
 import Script from 'dangerous-html/react'
 import PropTypes from 'prop-types'
+import { useTranslations } from 'next-intl'
 
 const ListContainer = (props) => {
   return (

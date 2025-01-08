@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 import Script from 'dangerous-html/react'
+import { useTranslations } from 'next-intl'
 
 const Info = (props) => {
   return (
@@ -40,7 +41,7 @@ const Info = (props) => {
             alt="image"
             sizes="(min-width: 992px) 1200px, (min-width: 768px) 800px, 480px"
             src="/fun1-1500w.gif"
-            srcSet="///fun1-1500w.gif 1200w, //fun1-tablet.gif 800w, //fun1-mobile.gif 480w"
+            srcSet="/fun1-1500w.gif 1200w, /fun1-tablet.gif 800w, /fun1-mobile.gif 480w"
             className="info-image"
           />
           <button id="backButton" type="button" className="info-button button">
@@ -151,3 +152,14 @@ const Info = (props) => {
 }
 
 export default Info
+
+export async function getStaticProps(context) {
+  const messages = (await import('/locales/' + context.locale + '.json'))
+    .default
+  return {
+    props: {
+      messages,
+      ...context,
+    },
+  }
+}

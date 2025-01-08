@@ -7,6 +7,7 @@ import {
   Repeater,
   DateTimePrimitive,
 } from '@teleporthq/react-components'
+import { useTranslations } from 'next-intl'
 
 import Navigation from '../components/navigation'
 import Banner from '../components/banner'
@@ -770,6 +771,8 @@ export default Services
 
 export async function getStaticProps(context) {
   try {
+    const messages = (await import('/locales/' + context.locale + '.json'))
+      .default
     const contextFwbrpnProp = await services1Resource({
       ...context?.params,
     })
@@ -778,6 +781,7 @@ export async function getStaticProps(context) {
     })
     return {
       props: {
+        messages,
         contextFwbrpnProp: contextFwbrpnProp,
         contextTvp7o9Prop: contextTvp7o9Prop,
       },

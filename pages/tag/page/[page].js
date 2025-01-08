@@ -3,9 +3,10 @@ import Head from 'next/head'
 
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
+import { useTranslations } from 'next-intl'
 
-import tagPageInitialPropsTqRsResource from '../../../resources/tag-page-initial-props-tq_rs'
-import tagPageInitialPathsTq25Resource from '../../../resources/tag-page-initial-paths-tq_25'
+import tagPageInitialPropsTq8dResource from '../../../resources/tag-page-initial-props-tq_8d'
+import tagPageInitialPathsTq3tResource from '../../../resources/tag-page-initial-paths-tq_3t'
 
 const Tag11 = (props) => {
   return (
@@ -92,8 +93,13 @@ export default Tag11
 
 export async function getStaticProps(context) {
   try {
-    const response = await tagPageInitialPropsTqRsResource({
+    const messages = (await import('/locales/' + context.locale + '.json'))
+      .default
+    const response = await tagPageInitialPropsTq8dResource({
       ...context?.params,
+      ...(context?.locale && {
+        locale: context.locale,
+      }),
       skip: (context.params.page - 1) * 10,
     })
     if (!response) {
@@ -103,12 +109,14 @@ export async function getStaticProps(context) {
     }
     return {
       props: {
+        messages,
         tagEntities: response,
         ...response?.meta,
       },
       revalidate: 60,
     }
   } catch (error) {
+    console.log(error)
     return {
       notFound: true,
     }
@@ -117,7 +125,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await tagPageInitialPathsTq25Resource({
+    const response = await tagPageInitialPathsTq3tResource({
       content_type: 'tag',
     })
     const totalCount = response?.meta?.pagination?.total

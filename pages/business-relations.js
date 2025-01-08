@@ -4,6 +4,7 @@ import Head from 'next/head'
 
 import Script from 'dangerous-html/react'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
+import { useTranslations } from 'next-intl'
 
 import Navigation from '../components/navigation'
 import Banner from '../components/banner'
@@ -673,11 +674,14 @@ export default BusinessRelations
 
 export async function getStaticProps(context) {
   try {
+    const messages = (await import('/locales/' + context.locale + '.json'))
+      .default
     const contextI5k88bProp = await businessRelationsResource({
       ...context?.params,
     })
     return {
       props: {
+        messages,
         contextI5k88bProp: contextI5k88bProp,
       },
       revalidate: 60,

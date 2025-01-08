@@ -3,9 +3,10 @@ import Head from 'next/head'
 
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
+import { useTranslations } from 'next-intl'
 
-import authorPageInitialPropsTqG8Resource from '../../resources/author-page-initial-props-tq_g8'
-import authorPageInitialPathsTqJ7Resource from '../../resources/author-page-initial-paths-tq_j7'
+import authorPageInitialPropsTqFAResource from '../../resources/author-page-initial-props-tq_f-a'
+import authorPageInitialPathsTqIhResource from '../../resources/author-page-initial-paths-tq_ih'
 
 const Author11 = (props) => {
   return (
@@ -88,8 +89,13 @@ export default Author11
 
 export async function getStaticProps(context) {
   try {
-    const response = await authorPageInitialPropsTqG8Resource({
+    const messages = (await import('/locales/' + context.locale + '.json'))
+      .default
+    const response = await authorPageInitialPropsTqFAResource({
       ...context?.params,
+      ...(context?.locale && {
+        locale: context.locale,
+      }),
     })
     if (!response?.data?.[0]) {
       return {
@@ -98,11 +104,13 @@ export async function getStaticProps(context) {
     }
     return {
       props: {
+        messages,
         authorEntity: response?.data?.[0],
         ...response?.meta,
       },
     }
   } catch (error) {
+    console.log(error)
     return {
       notFound: true,
     }
@@ -111,7 +119,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await authorPageInitialPathsTqJ7Resource({
+    const response = await authorPageInitialPathsTqIhResource({
       content_type: 'author',
       select: 'fields.name',
     })

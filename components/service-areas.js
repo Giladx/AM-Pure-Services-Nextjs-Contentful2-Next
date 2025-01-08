@@ -1,6 +1,7 @@
 import React from 'react'
 
 import PropTypes from 'prop-types'
+import { useTranslations } from 'next-intl'
 
 import FeatureCard4 from './feature-card4'
 
@@ -23,7 +24,7 @@ const ServiceAreas = (props) => {
                 description1=" "
                 description2=" "
                 rootClassName="rootClassName1"
-                className="service-areas-component1"
+                className="service-areas-component10"
               ></FeatureCard4>
             </a>
             <a href="tel:+19472190208">
@@ -33,7 +34,7 @@ const ServiceAreas = (props) => {
                 description1=" Farmington hills - (248) 204-4711"
                 description2="West Bloomfield - (248) 817-4297"
                 rootClassName="rootClassName5"
-                className="service-areas-component2"
+                className="service-areas-component11"
               ></FeatureCard4>
             </a>
             <a href="tel:+17348003249">
@@ -43,7 +44,7 @@ const ServiceAreas = (props) => {
                 description1=" "
                 description2=" "
                 rootClassName="rootClassName4"
-                className="service-areas-component3"
+                className="service-areas-component12"
               ></FeatureCard4>
             </a>
             <a href="tel:+13135234027">
@@ -53,7 +54,7 @@ const ServiceAreas = (props) => {
                 description1=" "
                 description2=" "
                 rootClassName="rootClassName3"
-                className="service-areas-component4"
+                className="service-areas-component13"
               ></FeatureCard4>
             </a>
             <a href="tel:+12482120503">
@@ -63,7 +64,7 @@ const ServiceAreas = (props) => {
                 description1=" "
                 description2=" "
                 rootClassName="rootClassName2"
-                className="service-areas-component5"
+                className="service-areas-component14"
               ></FeatureCard4>
             </a>
             <a href="tel:+15867237907">
@@ -73,7 +74,7 @@ const ServiceAreas = (props) => {
                 description1=" "
                 description2=" "
                 rootClassName="rootClassName8"
-                className="service-areas-component6"
+                className="service-areas-component15"
               ></FeatureCard4>
             </a>
             <a href="tel:+18106710777">
@@ -83,7 +84,7 @@ const ServiceAreas = (props) => {
                 description1=" "
                 description2=" "
                 rootClassName="rootClassName9"
-                className="service-areas-component7"
+                className="service-areas-component16"
               ></FeatureCard4>
             </a>
             <FeatureCard4
@@ -92,16 +93,24 @@ const ServiceAreas = (props) => {
               description1=" "
               description2=" "
               rootClassName="rootClassName6"
-              className="service-areas-component8"
+              className="service-areas-component17"
+            ></FeatureCard4>
+            <FeatureCard4
+              title="Genesee County"
+              description="(810) 671-0777"
+              description1=" "
+              description2=" "
+              rootClassName="rootClassName7"
+              className="service-areas-component18"
             ></FeatureCard4>
             <a href="tel:+15174813849">
               <FeatureCard4
-                title="Ann Arbor"
-                description="(734) 238-0529"
+                title="Illinois"
+                description="(708)-898-4889"
                 description1=" "
                 description2=" "
                 rootClassName="rootClassName10"
-                className="service-areas-component9"
+                className="service-areas-component19"
               ></FeatureCard4>
             </a>
           </div>
@@ -153,31 +162,34 @@ const ServiceAreas = (props) => {
             display: grid;
             grid-template-columns: 1fr 1fr;
           }
-          .service-areas-component1 {
+          .service-areas-component10 {
             text-decoration: none;
           }
-          .service-areas-component2 {
+          .service-areas-component11 {
             text-decoration: none;
           }
-          .service-areas-component3 {
+          .service-areas-component12 {
             text-decoration: none;
           }
-          .service-areas-component4 {
+          .service-areas-component13 {
             text-decoration: none;
           }
-          .service-areas-component5 {
+          .service-areas-component14 {
             text-decoration: none;
           }
-          .service-areas-component6 {
+          .service-areas-component15 {
             text-decoration: none;
           }
-          .service-areas-component7 {
+          .service-areas-component16 {
             text-decoration: none;
           }
-          .service-areas-component8 {
+          .service-areas-component17 {
             text-decoration: none;
           }
-          .service-areas-component9 {
+          .service-areas-component18 {
+            text-decoration: none;
+          }
+          .service-areas-component19 {
             text-decoration: none;
           }
           .service-areas-image {

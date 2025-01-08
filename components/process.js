@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import PropTypes from 'prop-types'
+import { useTranslations } from 'next-intl'
 
 const Process = (props) => {
   return (
@@ -43,6 +44,31 @@ const Process = (props) => {
               <span className="process-text23">{props.text9}</span>
             </div>
           </div>
+          <a
+            href="tel:+18885031722"
+            className="process-button thq-button-filled"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <g
+                fill="none"
+                color="currentColor"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M6.6 11.923c5.073-9.454 11.39-9.563 13.913-8.436c1.127 2.524 1.018 8.84-8.436 13.913c-.098-.564-.643-2.04-2.04-3.437s-2.873-1.942-3.437-2.04"></path>
+                <path d="M13.35 16.95c1.839.9 2.035 2.514 2.29 4.05c0 0 3.85-2.846 1.387-6.75M7.05 10.727C6.15 8.888 4.536 8.692 3 8.437c0 0 2.847-3.85 6.75-1.387m-3.732 7.862c-.512.511-1.382 1.996-.768 3.838c1.843.614 3.327-.256 3.84-.767M17.3 8.45a1.75 1.75 0 1 0-3.5 0a1.75 1.75 0 0 0 3.5 0"></path>
+              </g>
+            </svg>
+            <span className="process-action1">
+              {props.action1 ?? (
+                <Fragment>
+                  <span className="process-text24">Let&apos;s Get Started</span>
+                </Fragment>
+              )}
+            </span>
+          </a>
         </div>
       </div>
       <style jsx>
@@ -179,6 +205,24 @@ const Process = (props) => {
           .process-text23 {
             color: var(--dl-color-scheme-white80);
           }
+          .process-button {
+            fill: var(--dl-color-scheme-green);
+            color: var(--dl-color-scheme-green);
+            width: 100%;
+            margin-top: var(--dl-space-space-threeunits);
+            padding-top: var(--dl-space-space-unit);
+            border-color: var(--dl-color-scheme-green);
+            border-radius: var(--dl-radius-radius-radius8);
+            padding-bottom: var(--dl-space-space-unit);
+            text-decoration: none;
+            background-color: var(--dl-color-scheme-lightgreen);
+          }
+          .process-action1 {
+            text-transform: uppercase;
+          }
+          .process-text24 {
+            display: inline-block;
+          }
           .processroot-class-name {
             display: none;
           }
@@ -206,6 +250,9 @@ const Process = (props) => {
             .process-text21 {
               margin-right: var(--dl-space-space-twounits);
             }
+            .process-button {
+              width: 100%;
+            }
           }
         `}
       </style>
@@ -214,6 +261,7 @@ const Process = (props) => {
 }
 
 Process.defaultProps = {
+  action1: undefined,
   text8: 'Inspection of the results',
   rootClassName: '',
   text9:
@@ -231,6 +279,7 @@ Process.defaultProps = {
 }
 
 Process.propTypes = {
+  action1: PropTypes.element,
   text8: PropTypes.string,
   rootClassName: PropTypes.string,
   text9: PropTypes.string,

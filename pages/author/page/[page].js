@@ -3,9 +3,10 @@ import Head from 'next/head'
 
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
+import { useTranslations } from 'next-intl'
 
-import authorPageInitialPropsTqEJResource from '../../../resources/author-page-initial-props-tq_e-j'
-import authorPageInitialPathsTqFWResource from '../../../resources/author-page-initial-paths-tq_f-w'
+import authorPageInitialPropsTqRxResource from '../../../resources/author-page-initial-props-tq_rx'
+import authorPageInitialPathsTqVrResource from '../../../resources/author-page-initial-paths-tq_vr'
 
 const Author1 = (props) => {
   return (
@@ -97,8 +98,13 @@ export default Author1
 
 export async function getStaticProps(context) {
   try {
-    const response = await authorPageInitialPropsTqEJResource({
+    const messages = (await import('/locales/' + context.locale + '.json'))
+      .default
+    const response = await authorPageInitialPropsTqRxResource({
       ...context?.params,
+      ...(context?.locale && {
+        locale: context.locale,
+      }),
       skip: (context.params.page - 1) * 10,
     })
     if (!response) {
@@ -108,12 +114,14 @@ export async function getStaticProps(context) {
     }
     return {
       props: {
+        messages,
         authorEntities: response,
         ...response?.meta,
       },
       revalidate: 60,
     }
   } catch (error) {
+    console.log(error)
     return {
       notFound: true,
     }
@@ -122,7 +130,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await authorPageInitialPathsTqFWResource({
+    const response = await authorPageInitialPathsTqVrResource({
       content_type: 'author',
     })
     const totalCount = response?.meta?.pagination?.total

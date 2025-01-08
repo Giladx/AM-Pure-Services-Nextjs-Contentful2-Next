@@ -1,6 +1,7 @@
 import React from 'react'
 
 import PropTypes from 'prop-types'
+import { useTranslations } from 'next-intl'
 
 const Banner = (props) => {
   return (
@@ -62,10 +63,6 @@ const Banner = (props) => {
           }
           .banner-primary {
             margin-bottom: var(--dl-space-space-threeunits);
-          }
-          .bannerroot-class-name {
-            width: 100%;
-            align-self: center;
           }
 
           .bannerroot-class-name2 {
@@ -133,6 +130,10 @@ const Banner = (props) => {
           .bannerroot-class-name23 {
             width: 100%;
           }
+          .bannerroot-class-name24 {
+            width: 100%;
+            align-self: center;
+          }
           @media (max-width: 1200px) {
             .banner-banner {
               width: 100%;
@@ -148,10 +149,10 @@ const Banner = (props) => {
             .banner-text3 {
               font-weight: 900;
             }
-            .bannerroot-class-name {
+            .bannerroot-class-name18 {
               width: 100%;
             }
-            .bannerroot-class-name18 {
+            .bannerroot-class-name24 {
               width: 100%;
             }
           }

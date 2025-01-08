@@ -4,10 +4,11 @@ import Head from 'next/head'
 
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
+import { useTranslations } from 'next-intl'
 
 import Navigation from '../../components/navigation'
 import Banner from '../../components/banner'
-import postPageInitialPropsTq8zResource from '../../resources/post-page-initial-props-tq_8z'
+import postPageInitialPropsTqE0Resource from '../../resources/post-page-initial-props-tq_e0'
 import post1Resource from '../../resources/post1'
 
 const Post1 = (props) => {
@@ -639,11 +640,16 @@ export default Post1
 
 export async function getStaticProps(context) {
   try {
+    const messages = (await import('/locales/' + context.locale + '.json'))
+      .default
     const context0kxs0sProp = await post1Resource({
       ...context?.params,
     })
-    const response = await postPageInitialPropsTq8zResource({
+    const response = await postPageInitialPropsTqE0Resource({
       ...context?.params,
+      ...(context?.locale && {
+        locale: context.locale,
+      }),
     })
     if (!response) {
       return {
@@ -652,12 +658,14 @@ export async function getStaticProps(context) {
     }
     return {
       props: {
+        messages,
         context0kxs0sProp: context0kxs0sProp,
         postEntities: response,
         ...response?.meta,
       },
     }
   } catch (error) {
+    console.log(error)
     return {
       notFound: true,
     }

@@ -3,8 +3,9 @@ import Head from 'next/head'
 
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
+import { useTranslations } from 'next-intl'
 
-import tagPageInitialPropsTqPtResource from '../../resources/tag-page-initial-props-tq_pt'
+import tagPageInitialPropsTqTdResource from '../../resources/tag-page-initial-props-tq_td'
 
 const Tag1 = (props) => {
   return (
@@ -91,8 +92,13 @@ export default Tag1
 
 export async function getStaticProps(context) {
   try {
-    const response = await tagPageInitialPropsTqPtResource({
+    const messages = (await import('/locales/' + context.locale + '.json'))
+      .default
+    const response = await tagPageInitialPropsTqTdResource({
       ...context?.params,
+      ...(context?.locale && {
+        locale: context.locale,
+      }),
     })
     if (!response) {
       return {
@@ -101,11 +107,13 @@ export async function getStaticProps(context) {
     }
     return {
       props: {
+        messages,
         tagEntities: response,
         ...response?.meta,
       },
     }
   } catch (error) {
+    console.log(error)
     return {
       notFound: true,
     }

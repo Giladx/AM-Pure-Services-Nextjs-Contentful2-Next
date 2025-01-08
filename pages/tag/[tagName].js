@@ -3,9 +3,10 @@ import Head from 'next/head'
 
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
+import { useTranslations } from 'next-intl'
 
-import tagPageInitialPropsTqGjResource from '../../resources/tag-page-initial-props-tq_gj'
-import tagPageInitialPathsTqPkResource from '../../resources/tag-page-initial-paths-tq_pk'
+import tagPageInitialPropsTqVPResource from '../../resources/tag-page-initial-props-tq_v-p'
+import tagPageInitialPathsTqOqResource from '../../resources/tag-page-initial-paths-tq_oq'
 
 const Tag = (props) => {
   return (
@@ -84,8 +85,13 @@ export default Tag
 
 export async function getStaticProps(context) {
   try {
-    const response = await tagPageInitialPropsTqGjResource({
+    const messages = (await import('/locales/' + context.locale + '.json'))
+      .default
+    const response = await tagPageInitialPropsTqVPResource({
       ...context?.params,
+      ...(context?.locale && {
+        locale: context.locale,
+      }),
     })
     if (!response?.data?.[0]) {
       return {
@@ -94,11 +100,13 @@ export async function getStaticProps(context) {
     }
     return {
       props: {
+        messages,
         tagEntity: response?.data?.[0],
         ...response?.meta,
       },
     }
   } catch (error) {
+    console.log(error)
     return {
       notFound: true,
     }
@@ -107,7 +115,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await tagPageInitialPathsTqPkResource({
+    const response = await tagPageInitialPathsTqOqResource({
       content_type: 'tag',
       select: 'fields.tagName',
     })

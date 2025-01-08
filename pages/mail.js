@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import Head from 'next/head'
 
+import { useTranslations } from 'next-intl'
+
 const Mail = (props) => {
   useEffect(() => import('@lottiefiles/lottie-player'), [])
   return (
@@ -106,3 +108,14 @@ const Mail = (props) => {
 }
 
 export default Mail
+
+export async function getStaticProps(context) {
+  const messages = (await import('/locales/' + context.locale + '.json'))
+    .default
+  return {
+    props: {
+      messages,
+      ...context,
+    },
+  }
+}
