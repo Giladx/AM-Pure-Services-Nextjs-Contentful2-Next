@@ -5,8 +5,8 @@ import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 import { useTranslations } from 'next-intl'
 
-import tagPageInitialPropsTq8dResource from '../../../resources/tag-page-initial-props-tq_8d'
-import tagPageInitialPathsTq3tResource from '../../../resources/tag-page-initial-paths-tq_3t'
+import tagPageInitialPropsTqXuResource from '../../../resources/tag-page-initial-props-tq_xu'
+import tagPageInitialPathsTqKaResource from '../../../resources/tag-page-initial-paths-tq_ka'
 
 const Tag11 = (props) => {
   return (
@@ -95,7 +95,7 @@ export async function getStaticProps(context) {
   try {
     const messages = (await import('/locales/' + context.locale + '.json'))
       .default
-    const response = await tagPageInitialPropsTq8dResource({
+    const response = await tagPageInitialPropsTqXuResource({
       ...context?.params,
       ...(context?.locale && {
         locale: context.locale,
@@ -125,7 +125,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await tagPageInitialPathsTq3tResource({
+    const response = await tagPageInitialPathsTqKaResource({
       content_type: 'tag',
     })
     const totalCount = response?.meta?.pagination?.total

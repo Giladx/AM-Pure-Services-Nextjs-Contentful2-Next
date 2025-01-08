@@ -5,7 +5,7 @@ import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 import { useTranslations } from 'next-intl'
 
-import authorPageInitialPropsTqK9Resource from '../../resources/author-page-initial-props-tq_k9'
+import authorPageInitialPropsTqTHResource from '../../resources/author-page-initial-props-tq_t-h'
 
 const Author = (props) => {
   return (
@@ -99,7 +99,7 @@ export async function getStaticProps(context) {
   try {
     const messages = (await import('/locales/' + context.locale + '.json'))
       .default
-    const response = await authorPageInitialPropsTqK9Resource({
+    const response = await authorPageInitialPropsTqTHResource({
       ...context?.params,
       ...(context?.locale && {
         locale: context.locale,

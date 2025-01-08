@@ -5,8 +5,8 @@ import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 import { useTranslations } from 'next-intl'
 
-import authorPageInitialPropsTqRxResource from '../../../resources/author-page-initial-props-tq_rx'
-import authorPageInitialPathsTqVrResource from '../../../resources/author-page-initial-paths-tq_vr'
+import authorPageInitialPropsTqMtResource from '../../../resources/author-page-initial-props-tq_mt'
+import authorPageInitialPathsTqLcResource from '../../../resources/author-page-initial-paths-tq_lc'
 
 const Author1 = (props) => {
   return (
@@ -100,7 +100,7 @@ export async function getStaticProps(context) {
   try {
     const messages = (await import('/locales/' + context.locale + '.json'))
       .default
-    const response = await authorPageInitialPropsTqRxResource({
+    const response = await authorPageInitialPropsTqMtResource({
       ...context?.params,
       ...(context?.locale && {
         locale: context.locale,
@@ -130,7 +130,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await authorPageInitialPathsTqVrResource({
+    const response = await authorPageInitialPathsTqLcResource({
       content_type: 'author',
     })
     const totalCount = response?.meta?.pagination?.total

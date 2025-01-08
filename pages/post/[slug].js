@@ -14,8 +14,8 @@ import { useTranslations } from 'next-intl'
 import Navigation from '../../components/navigation'
 import BlogCard from '../../components/blog-card'
 import Banner from '../../components/banner'
-import postPageInitialPropsTq5rResource from '../../resources/post-page-initial-props-tq_5r'
-import postPageInitialPathsTqCuResource from '../../resources/post-page-initial-paths-tq_cu'
+import postPageInitialPropsTqU6Resource from '../../resources/post-page-initial-props-tq_u6'
+import postPageInitialPathsTqSResource from '../../resources/post-page-initial-paths-tq_s-'
 import postResource from '../../resources/post'
 
 const Post = (props) => {
@@ -821,7 +821,7 @@ export async function getStaticProps(context) {
     const contextGu7liProp = await postResource({
       ...context?.params,
     })
-    const response = await postPageInitialPropsTq5rResource({
+    const response = await postPageInitialPropsTqU6Resource({
       ...context?.params,
       ...(context?.locale && {
         locale: context.locale,
@@ -850,7 +850,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPathsTqCuResource({
+    const response = await postPageInitialPathsTqSResource({
       content_type: 'post',
       select: 'fields.slug',
     })

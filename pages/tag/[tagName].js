@@ -5,8 +5,8 @@ import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 import { useTranslations } from 'next-intl'
 
-import tagPageInitialPropsTqVPResource from '../../resources/tag-page-initial-props-tq_v-p'
-import tagPageInitialPathsTqOqResource from '../../resources/tag-page-initial-paths-tq_oq'
+import tagPageInitialPropsTq58Resource from '../../resources/tag-page-initial-props-tq_58'
+import tagPageInitialPathsTqU0Resource from '../../resources/tag-page-initial-paths-tq_u0'
 
 const Tag = (props) => {
   return (
@@ -87,7 +87,7 @@ export async function getStaticProps(context) {
   try {
     const messages = (await import('/locales/' + context.locale + '.json'))
       .default
-    const response = await tagPageInitialPropsTqVPResource({
+    const response = await tagPageInitialPropsTq58Resource({
       ...context?.params,
       ...(context?.locale && {
         locale: context.locale,
@@ -115,7 +115,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await tagPageInitialPathsTqOqResource({
+    const response = await tagPageInitialPathsTqU0Resource({
       content_type: 'tag',
       select: 'fields.tagName',
     })

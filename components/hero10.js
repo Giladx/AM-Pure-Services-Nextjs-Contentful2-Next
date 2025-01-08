@@ -59,8 +59,8 @@ const Hero10 = (props) => {
           </div>
         </div>
         <img
-          src={props.imageSrc1}
           alt={props.imageAlt1}
+          src={props.imageSrc1}
           className="hero10-image"
         />
       </div>
@@ -172,24 +172,26 @@ const Hero10 = (props) => {
 
 Hero10.defaultProps = {
   action1: undefined,
+  imageAlt1: 'image',
   content1: undefined,
+  imageSrc: 'a9eb4d5e-a592-49d2-98b7-04899a257850',
   buttonUrl: 'https://www.teleporthq.io',
   heading1: undefined,
+  imageSrc1: '/photo-new-800w.webp',
   action2: undefined,
   rootClassName: '',
-  imageSrc1: '/photo-new-800w.webp',
-  imageAlt1: 'image',
 }
 
 Hero10.propTypes = {
   action1: PropTypes.element,
+  imageAlt1: PropTypes.string,
   content1: PropTypes.element,
+  imageSrc: PropTypes.string,
   buttonUrl: PropTypes.string,
   heading1: PropTypes.element,
+  imageSrc1: PropTypes.string,
   action2: PropTypes.element,
   rootClassName: PropTypes.string,
-  imageSrc1: PropTypes.string,
-  imageAlt1: PropTypes.string,
 }
 
 export default Hero10

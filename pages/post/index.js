@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl'
 
 import Navigation from '../../components/navigation'
 import Banner from '../../components/banner'
-import postPageInitialPropsTqE0Resource from '../../resources/post-page-initial-props-tq_e0'
+import postPageInitialPropsTqN5Resource from '../../resources/post-page-initial-props-tq_n5'
 import post1Resource from '../../resources/post1'
 
 const Post1 = (props) => {
@@ -645,7 +645,7 @@ export async function getStaticProps(context) {
     const context0kxs0sProp = await post1Resource({
       ...context?.params,
     })
-    const response = await postPageInitialPropsTqE0Resource({
+    const response = await postPageInitialPropsTqN5Resource({
       ...context?.params,
       ...(context?.locale && {
         locale: context.locale,

@@ -8,8 +8,8 @@ import { useTranslations } from 'next-intl'
 
 import Navigation from '../../../components/navigation'
 import Banner from '../../../components/banner'
-import postPageInitialPropsTqCxResource from '../../../resources/post-page-initial-props-tq_cx'
-import postPageInitialPathsTqS2Resource from '../../../resources/post-page-initial-paths-tq_s2'
+import postPageInitialPropsTqKcResource from '../../../resources/post-page-initial-props-tq_kc'
+import postPageInitialPathsTqQ8Resource from '../../../resources/post-page-initial-paths-tq_q8'
 import post1Resource from '../../../resources/post1'
 
 const Post11 = (props) => {
@@ -646,7 +646,7 @@ export async function getStaticProps(context) {
     const context0kxs0sProp = await post1Resource({
       ...context?.params,
     })
-    const response = await postPageInitialPropsTqCxResource({
+    const response = await postPageInitialPropsTqKcResource({
       ...context?.params,
       ...(context?.locale && {
         locale: context.locale,
@@ -677,7 +677,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPathsTqS2Resource({
+    const response = await postPageInitialPathsTqQ8Resource({
       content_type: 'post',
     })
     const totalCount = response?.meta?.pagination?.total

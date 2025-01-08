@@ -90,13 +90,13 @@ const Home = (props) => {
               </span>
             </Fragment>
           }
+          imageSrc="/photo-new-800w.webp"
           buttonUrl="/monthly-specials"
           image1Alt="Air Duct"
+          image1Src="/photo-new-800w.webp"
+          imageSrc1="/photo-new-800w.webp"
           buttonUrl1="https://tel:8885031722"
           rootClassName="hero10root-class-name"
-          image1Src="/photo-new-800w.webp"
-          imageSrc="/photo-new-800w.webp"
-          imageSrc1="/photo-new-800w.webp"
         ></Hero10>
         <Navigation
           button31="(888)-503-1722"

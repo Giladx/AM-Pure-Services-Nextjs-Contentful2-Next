@@ -5,7 +5,7 @@ import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 import { useTranslations } from 'next-intl'
 
-import tagPageInitialPropsTqTdResource from '../../resources/tag-page-initial-props-tq_td'
+import tagPageInitialPropsTqJvResource from '../../resources/tag-page-initial-props-tq_jv'
 
 const Tag1 = (props) => {
   return (
@@ -94,7 +94,7 @@ export async function getStaticProps(context) {
   try {
     const messages = (await import('/locales/' + context.locale + '.json'))
       .default
-    const response = await tagPageInitialPropsTqTdResource({
+    const response = await tagPageInitialPropsTqJvResource({
       ...context?.params,
       ...(context?.locale && {
         locale: context.locale,

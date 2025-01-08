@@ -5,8 +5,8 @@ import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 import { useTranslations } from 'next-intl'
 
-import authorPageInitialPropsTqFAResource from '../../resources/author-page-initial-props-tq_f-a'
-import authorPageInitialPathsTqIhResource from '../../resources/author-page-initial-paths-tq_ih'
+import authorPageInitialPropsTqMkResource from '../../resources/author-page-initial-props-tq_mk'
+import authorPageInitialPathsTqF5Resource from '../../resources/author-page-initial-paths-tq_f5'
 
 const Author11 = (props) => {
   return (
@@ -91,7 +91,7 @@ export async function getStaticProps(context) {
   try {
     const messages = (await import('/locales/' + context.locale + '.json'))
       .default
-    const response = await authorPageInitialPropsTqFAResource({
+    const response = await authorPageInitialPropsTqMkResource({
       ...context?.params,
       ...(context?.locale && {
         locale: context.locale,
@@ -119,7 +119,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   try {
-    const response = await authorPageInitialPathsTqIhResource({
+    const response = await authorPageInitialPathsTqF5Resource({
       content_type: 'author',
       select: 'fields.name',
     })
